@@ -1,4 +1,4 @@
-Welcome to Hercules
+# Welcome to Hercules
 
 <div style="padding-left: 1em;">
 [[Hercules]] is an [[wikipedia:Open_source|open-source]] project, revolving around the creation of a robust massively multiplayer online role playing game (MMORPG) server package, emulating a [[wikipedia:Ragnarok_Online|Ragnarok Online]] [[wikipedia:Server|Server]]. The project is jointly managed by a group of volunteers located around the world as well as a tremendous community providing QA and support. Hercules is a continuation of the original Athena project.
@@ -8,7 +8,7 @@ Hercules currently runs on most common [[wikipedia:Operating_system|Operating Sy
 
 </div>
 
-<div style="background: #FA9A50; border: 1px solid #000; padding: 5px; margin: 3px; font-weight: bold; text-align: center; font-size: 120%;  color:#363636;">Editing the Wiki</div>
+### Editing the Wiki
 <div style="padding-left: 1em;">
 All users must login to the wiki using their forum account. Any member can edit the wiki, but please keep in mind that the Hercules wiki is released under the [[wikipedia:GNU_Free_Documentation_License|GNU Free Documentation License]] Version 1.2. This means that the wiki and any works put on it can be edited at will. They may also be distributed, provided all history and copylefts remain intact. Please see [[Editing the wiki]] for more information.
 
@@ -42,7 +42,6 @@ Do you enjoy creating new content such as Guides? Maybe you like doing some orga
 <center>[[File:Wiki-contrib.png]]</center>
 </div>
 
-| style="background: #FCFCFC; border: 1px solid #AAA; vertical-align: top;" |
 <div style="width: 260px; background: #FA9A50; border: 1px solid #000; padding: 5px; margin: 3px; font-weight: bold; text-align: center; font-size: 120%; color:#363636;"><div style="float: right; padding: 0 20px;">[[Image:poring1.gif]]</div>Installation</div>
 <div style="padding-left: 1em;">
 ; [[Getting Started]]
