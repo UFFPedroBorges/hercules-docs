@@ -710,7 +710,7 @@ _Hercules note: Removed a lot of linux-specific information._
 
 ## Chapter 14: Allocating memory
 
-HErcules provides the following general purpose memory allocators:
+Hercules provides the following general purpose memory allocators:
 `aMalloc()`, `aCalloc()`, `aRealloc()`, `aReallocz()`, `CREATE()`,
 `RECREATE()`. Please refer to their documentation for further
 information about them.
