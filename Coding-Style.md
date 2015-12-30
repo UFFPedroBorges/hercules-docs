@@ -433,7 +433,7 @@ because it is a simple way to add valuable information for the reader.
 ## Chapter 7: Centralized exiting of functions
 
 _Hercules comment: What follows is quite controversial. Don't just start
-addign goto everywhere, if you can avoid it. If there is a real need,
+adding goto everywhere, if you can avoid it. If there is a real need,
 use it wisely._
 
 Albeit deprecated by some people, the equivalent of the goto statement
