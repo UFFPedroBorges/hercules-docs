@@ -14,89 +14,150 @@ Hercules guarantees a different level of compatibility with each of the platform
 The current stable distribution (currently version 8 'jessie') is a primary platform, while the oldstable (currently version 7 'wheezy') gets gradually phased out from primary to supported.
 Older (obsolete stable releases other than oldstable), or newer (testing, unstable) releases are unsupported.
 
-- debian 8 'jessie': primary platform (*->supported after version 9 is released*)
-- debian 7 'wheezy': supported platform (no known issues; *->unsupported after version 9 is released*)
-- debian 6 'squeeze': unsupported
+| System             | Support Status | Primary platform until | Supported until       |
+| ------------------ | -------------- | ---------------------- | --------------------- |
+| Debian "sid"       | *unsupported*  |                        |                       |
+| Debian 9 "stretch" | *unknown*      |                        |                       |
+| Debian 8 "jessie"  | **primary**    | release of version 9   | release of version 10 |
+| Debian 7 "wheezy"  | supported (1)  |                        | release of version 9  |
+| Debian 6 "squeeze" | *unsupported*  |                        |                       |
+
+(1): There are no known issues, and Hercules is regularly tested on this platform by one or more of the developers despite not being one of the primary platforms.
 
 ## CentOS and Red Hat Enterprise Linux
 
 The current stable version is a primary platform. The previous stable version is supported, but may require upgrading the development tools. Older versions are unsupported, regardless of upstream support.
 
-- CentOS 7, RHEL 7: primary platform (*->supported after version 8 is released*)
-- CentOS 6, RHEL 6: supported platform (recommended upgrade to GCC 4.7 or newer; *->unsupported after version 8 is released*)
-- CentOS 5, RHEL 5: unsupported
+| System   | Support Status | Primary platform until | Supported until      |
+| -------- | -------------- | ---------------------- | -------------------- |
+| CentOS 7 | **primary**    | release of version 8   | release of version 9 |
+| RHEL 7   | **primary**    | release of version 8   | release of version 9 |
+| CentOS 6 | supported (2)  |                        | release of version 8 |
+| RHEL 6   | supported (2)  |                        | release of version 8 |
+| CentOS 5 | *unsupported*  |                        |                      |
+| RHEL 5   | *unsupported*  |                        |                      |
+
+(2): It's recommended to upgrade the development tools to include GCC 4.7 or newer.
 
 ## Ubuntu Server
 
 The latest LTS version is a primary platform. The latest version -- if not a LTS version --  is a supported platform. The previous LTS version is a supported platform for 4 months after the next version is released. Older versions are unsupported.
 
-- Ubuntu 14.04 LTS Trusty Tahr: primary platform (*->supported after 2016-04; ->unsupported after 2016-08*)
-- Ubuntu 15.10 Wily Werewolf: supported platform (no known issues; *->unsupported after 2016-07*)
-- Ubuntu 15.04 Vivid Vervet: unsupported
-- Ubuntu 14.10 Utopic Unicorn: unsupported
-- Ubuntu 13.10 Saucy Salamander: unsupported
-- Ubuntu 13.04 Raring Ringtail: unsupported
-- Ubuntu 12.10 Quantal Quetzal: unsupported
-- Ubuntu 12.04 LTS Precise Pangolin: unsupported
+| System                            | Support Status | Primary platform until  | Supported until          |
+| --------------------------------- | -------------- | ----------------------- | ------------------------ |
+| Ubuntu 16.04 LTS Xenial Xenus     | *unknown*      |                         |                          |
+| Ubuntu 15.10 Wily Werewolf        | supported      |                         | July 2016                |
+| Ubuntu 15.04 Vivid Vervet         | *unsupported*  |                         |                          |
+| Ubuntu 14.10 Utopic Unicorn       | *unsupported*  |                         |                          |
+| Ubuntu 14.04 LTS Trusty Tahr      | **primary**    | April 2016 (rel. 16.04) | August 2016              |
+| Ubuntu 13.10 Saucy Salamander     | *unsupported*  |                         |                          |
+| Ubuntu 13.04 Raring Ringtail      | *unsupported*  |                         |                          |
+| Ubuntu 12.10 Quantal Quetzal      | *unsupported*  |                         |                          |
+| Ubuntu 12.04 LTS Precise Pangolin | *unsupported*  |                         |                          |
 
 ## Gentoo
 
 Gentoo is a rolling release, and has no versions. The stable branch is a primary platform (x86 and amd64), while the unstable (~x86 or ~amd64) is unsupported. Support on other architectures is unknown.
 
-- x86 / amd64: primary (assuming up to date system)
-- ~x86 / ~amd64: unsupported
+| System        | Support Status | Primary platform until   | Supported until |
+| ------------- | -------------- | ------------------------ | --------------- |
+| Gentoo x86    | **primary**    | Always (rolling release) |                 |
+| Gentoo amd64  | **primary**    | Always (rolling release) |                 |
+| Gentoo ~x86   | *unsupported*  |                          |                 |
+| Gentoo ~amd64 | *unsupported*  |                          |                 |
 
 ## FreeBSD
 
 The latest FreeBSD release is a primary platform. The previous release is supported, but only for as long as it is supported upstream. Any older versions are unsupported.
 
-- FreeBSD 10: primary (*->supported after version 11 is released*)
-- FreeBSD 9: supported (*->unsupported after 2016-12*)
-- FreeBSD 8: unsupported
+| System        | Support Status  | Primary platform until   | Supported until             |
+| ------------- | --------------- | ------------------------ | --------------------------- |
+| FreeBSD 10.x  | **primary** (3) | release of version 11    | last 10.x release + 2 years |
+| FreeBSD 10.2  | **primary**     | release of version 11    | December 2016 (expected)    |
+| FreeBSD 10.1  | supported       |                          | December 2016 (expected)    |
+| FreeBSD 10.0  | *unsupported*   |                          |                             |
+| FreeBSD 9.3   | supported       |                          | December 2016 (expected)    |
+| FreeBSD 9.2   | *unsupported*   |                          |                             |
+| FreeBSD 8.4   | *unsupported*   |                          |                             |
+
+(3): version 'y.x' refers to the latest release in the 'y' branch.
 
 ## Mac OS X
 
 The last version of Mac OS X is a primary platform, assuming the latest version os Xcode is installed. The previous version is a supported platform. Older versions are supported
 
-- OS X 10.11 El Capitan: primary platform (*->supported after version 10.12 is released*)
-- OS X 10.10 Yosemite: supported platform (*->unsupported after version 10.12 is released*)
-- OS X 10.9 Mavericks: unsupported
+| System                  | Support Status | Primary platform until   | Supported until             |
+| ----------------------- | -------------- | ------------------------ | --------------------------- |
+| OS X 10.11 El Capitan   | **primary**    | release of version 10.12 | release of version 10.13    |
+| OS X 10.10 Yosemite     | supported      |                          | release of version 10.12    |
+| OS X 10.9 Mavericks     | *unsupported*  |                          |                             |
 
 ## OpenBSD
 
 The latest OpenBSD release is supported, but it isn't a primary platform.
 
+| System      | Support Status | Primary platform until | Supported until               |
+| ----------- | -------------- | ---------------------- | ----------------------------- |
+| OpenBSD 5.8 | supported      |                        | release of version 5.9 or 6.0 |
+| OpenBSD 5.7 | *unsupported*  |                        |                               |
+
 ## NetBSD
 
 The latest NetBSD release is supported, but it isn't a primary platform.
+
+| System     | Support Status | Primary platform until | Supported until        |
+| ---------- | -------------- | ---------------------- | ---------------------- |
+| NetBSD 7.0 | supported      |                        | release of version 8.0 |
+| NetBSD 6.1 | *unsupported*  |                        |                        |
 
 ## Raspbian
 
 Hercules runs on the Raspberry Pi, and was tested on Raspbian. The latest release is a supported platform.
 
+| System          | Support Status | Primary platform until | Supported until             |
+| --------------- | -------------- | ---------------------- | --------------------------- |
+| Raspbian Jessie | supported      |                        | release of the next version |
+
 ## Other Linux / UNIX Distributions
 
 The status on other linux distributions is unknown. Hercules will likely run on them if they derive from, or use similar versions of the development tools as the previously described platforms.
+
+| System                | Support Status | Primary platform until | Supported until             |
+| --------------------- | -------------- | ---------------------- | --------------------------- |
+| Linux Mint            | *unknown*      |                        |                             |
+| SuSE Linux / openSuSE | *unknown*      |                        |                             |
+| Fedora                | *unknown*      |                        |                             |
+| Arch Linux            | *unknown*      |                        |                             |
+| Slackware             | *unknown*      |                        |                             |
+| Elementary OS         | *unknown*      |                        |                             |
+| Mandriva              | *unknown*      |                        |                             |
 
 ## Microsoft Windows
 
 Windows (both server and workstation versions) are primary platform, for as long as they're within their upstream Mainstream Support period. Versions within their upstream Extended Support period are supported. Older versions are unsupported.
 
-- Windows Server 2012: primary (*->supported after 2018-01-09*)
-- Windows Server 2008 R2: supported (*->unsupported after 2020-01-14*)
-- Windows Server 2003 R2: unsupported
-- Windows 10: primary (*->supported after 2020-10-13*)
-- Windows 8.1: primary (*->supported after 2018-01-09*)
-- Windows 7: supported (*->unsupported after 2020-01-14*)
-- Windows Vista: supported (*->unsupported after 2017-04-11*)
-- Windows XP: unsupported
+| System                 | Support Status | Primary platform until | Supported until             |
+| ---------------------- | -------------- | ---------------------- | --------------------------- |
+| Windows Server 2012    | **primary**    | 2018-01-09             | 2023-01-10                  |
+| Windows Server 2008 R2 | supported      |                        | 2020-01-14                  |
+| Windows Server 2003 R2 | *unsupported*  |                        |                             |
+| Windows 10             | **primary**    | 2020-10-13             | 2025-10-14                  |
+| Windows 8.1            | **primary**    | 2018-01-09             | 2023-01-10                  |
+| Windows 7              | supported      |                        | 2020-01-14                  |
+| Windows Vista          | supported      |                        | 2017-04-11                  |
+| Windows XP             | *unsupported*  |                        |                             |
 
 ### Visual Studio
 
 Visual Studio versions are also subject to platform support status. The latest version of Visual Studio (unless there are existing issues) is the primary platform, while older versions are supported at the discretion of the development team and may become unsupported as soon as they are out of their Mainstream Support period.
 
-- Visual Studio 2015: supported (*aiming to move to primary platform*)
-- Visual Studio 2013: primary (*->supported after version 2015 becomes a primary platform*)
-- Visual Studio 2012: supported (*->unsupported likely after 2018-01-09*)
-- Visual Studio 2010: unsupported (currently working for legacy reasons)
-- Visual Studio 2008: unsupported (likely not working)
+| Version                | Support Status  | Primary platform until       | Supported until             |
+| ---------------------- | --------------- | ---------------------------- | --------------------------- |
+| Visual Studio 2015     | supported (4)   | next release                 | 2020-10-13                  |
+| Visual Studio 2013     | **primary**     | version 2015 becomes primary | 2019-04-09                  |
+| Visual Studio 2012     | supported       |                              | 2018-01-09                  |
+| Visual Studio 2010     | **unsupported** |                              |                             |
+| Visual Studio 2008     | **unsupported** |                              |                             |
+
+(4): This version currently shows warnings that should be solved before it can become a primary platform.
+(5): This version is currently known to work, for legacy reasons. Continued support is not guaranteed.
