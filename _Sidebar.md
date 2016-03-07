@@ -1,2 +1,2 @@
-[[Supported Platforms]]
-[[Coding Style]]
+- [[Supported Platforms]]
+- [[Coding Style]]
