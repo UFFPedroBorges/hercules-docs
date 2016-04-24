@@ -150,14 +150,14 @@ Windows (both server and workstation versions) are primary platform, for as long
 ### Visual Studio
 
 Visual Studio versions are also subject to platform support status. The latest version of Visual Studio (unless there are existing issues) is the primary platform, while older versions are supported at the discretion of the development team and may become unsupported as soon as they are out of their Mainstream Support period.
+Support for more than three versions of Visual Studio won't be guaranteed in any case. As such, when a new version is released, the currently oldest supported version may be dropped.
 
-| Version                | Support Status | Primary platform until       | Supported until             |
-| ---------------------- | -------------- | ---------------------------- | --------------------------- |
-| Visual Studio 2015     | supported (4)  | next release                 | 2020-10-13                  |
-| Visual Studio 2013     | **primary**    | version 2015 becomes primary | 2019-04-09                  |
-| Visual Studio 2012     | supported      |                              | 2018-01-09                  |
-| Visual Studio 2010     | *unsupported*  |                              |                             |
-| Visual Studio 2008     | *unsupported*  |                              |                             |
+| Version                | Support Status    | Primary platform until       | Supported until               |
+| ---------------------- | ----------------- | ---------------------------- | ----------------------------- |
+| Visual Studio 2015     | **primary**       | next release                 | 2020-10-13 or next 3 releases |
+| Visual Studio 2013     | supported         |                              | 2019-04-09 or next 2 releases |
+| Visual Studio 2012     | supported         |                              | 2018-01-09 or next release    |
+| Visual Studio 2010     | *unsupported* (4) |                              |                               |
+| Visual Studio 2008     | *unsupported*     |                              |                               |
 
-(4): This version currently shows warnings that should be solved before it can become a primary platform.
-(5): This version is currently known to work, for legacy reasons. Continued support is not guaranteed.
+(4): This version is currently known to work, for legacy reasons. Continued support is not guaranteed.
