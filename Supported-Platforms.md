@@ -45,11 +45,12 @@ The latest LTS version is a primary platform. The latest version -- if not a LTS
 
 | System                            | Support Status | Primary platform until  | Supported until          |
 | --------------------------------- | -------------- | ----------------------- | ------------------------ |
-| Ubuntu 16.04 LTS Xenial Xenus     | *unknown*      |                         |                          |
+| Ubuntu 16.10 Yakkety Yak          | *unknown*      |                         |                          |
+| Ubuntu 16.04 LTS Xenial Xenus     | **primary**    | April 2018 (rel. 18.04) | August 2018              |
 | Ubuntu 15.10 Wily Werewolf        | supported      |                         | July 2016                |
 | Ubuntu 15.04 Vivid Vervet         | *unsupported*  |                         |                          |
 | Ubuntu 14.10 Utopic Unicorn       | *unsupported*  |                         |                          |
-| Ubuntu 14.04 LTS Trusty Tahr      | **primary**    | April 2016 (rel. 16.04) | August 2016              |
+| Ubuntu 14.04 LTS Trusty Tahr      | supported      |                         | August 2016              |
 | Ubuntu 13.10 Saucy Salamander     | *unsupported*  |                         |                          |
 | Ubuntu 13.04 Raring Ringtail      | *unsupported*  |                         |                          |
 | Ubuntu 12.10 Quantal Quetzal      | *unsupported*  |                         |                          |
