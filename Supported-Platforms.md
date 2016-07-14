@@ -99,10 +99,11 @@ The last version of Mac OS X is a primary platform, assuming the latest version 
 
 The latest OpenBSD release is supported, but it isn't a primary platform.
 
-| System      | Support Status | Primary platform until | Supported until               |
-| ----------- | -------------- | ---------------------- | ----------------------------- |
-| OpenBSD 5.8 | supported      |                        | release of version 5.9 or 6.0 |
-| OpenBSD 5.7 | *unsupported*  |                        |                               |
+| System      | Support Status | Primary platform until | Supported until        |
+| ----------- | -------------- | ---------------------- | ---------------------- |
+| OpenBSD 6.0 | *unknown*      |                        |                        |
+| OpenBSD 5.9 | supported      |                        | release of version 6.0 |
+| OpenBSD 5.8 | *unsupported*  |                        |                        |
 
 ## NetBSD
 
