@@ -71,16 +71,17 @@ Gentoo is a rolling release, and has no versions. The stable branch is a primary
 
 The latest FreeBSD release is a primary platform. The previous release is supported, but only for as long as it is supported upstream. Any older versions are unsupported.
 
-| System        | Support Status  | Primary platform until   | Supported until                                       |
-| ------------- | --------------- | ------------------------ | ----------------------------------------------------- |
-| FreeBSD 11.0  | *unknown*       |                          |                                                       |
-| FreeBSD 10.x  | **primary** (3) | release of version 11    | last 10.x release + 2 years, or release of version 12 |
-| FreeBSD 10.2  | **primary**     | release of version 11    | December 2016 (expected), or release of version 12    |
-| FreeBSD 10.1  | supported       |                          | December 2016 (expected), or release of version 12    |
-| FreeBSD 10.0  | *unsupported*   |                          |                                                       |
-| FreeBSD 9.3   | supported       |                          | December 2016 (expected), or release of version 11    |
-| FreeBSD 9.2   | *unsupported*   |                          |                                                       |
-| FreeBSD 8.4   | *unsupported*   |                          |                                                       |
+| System        | Support Status  | Primary platform until | Supported until                                       |
+| ------------- | --------------- | ---------------------- | ----------------------------------------------------- |
+| FreeBSD 11.0  | *unknown*       |                        |                                                       |
+| FreeBSD 10.x  | **primary** (3) | release of version 11  | last 10.x release + 2 years, or release of version 12 |
+| FreeBSD 10.3  | **primary**     | release of version 11  | April 2018 (expected), or release of version 12       |
+| FreeBSD 10.2  | supported       | release of version 11  | December 2016 (expected), or release of version 12    |
+| FreeBSD 10.1  | supported       |                        | December 2016 (expected), or release of version 12    |
+| FreeBSD 10.0  | *unsupported*   |                        |                                                       |
+| FreeBSD 9.3   | supported       |                        | December 2016 (expected), or release of version 11    |
+| FreeBSD 9.2   | *unsupported*   |                        |                                                       |
+| FreeBSD 8.4   | *unsupported*   |                        |                                                       |
 
 (3): version 'y.x' refers to the latest release in the 'y' branch.
 
