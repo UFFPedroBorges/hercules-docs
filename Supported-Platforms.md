@@ -43,18 +43,16 @@ The current stable version is a primary platform. The previous stable version is
 
 The latest LTS version is a primary platform. The latest version -- if not a LTS version --  is a supported platform. The previous LTS version is a supported platform for 4 months after the next version is released. Older versions are unsupported.
 
-| System                            | Support Status | Primary platform until  | Supported until          |
-| --------------------------------- | -------------- | ----------------------- | ------------------------ |
-| Ubuntu 16.10 Yakkety Yak          | *unknown*      |                         |                          |
-| Ubuntu 16.04 LTS Xenial Xenus     | **primary**    | April 2018 (rel. 18.04) | August 2018              |
-| Ubuntu 15.10 Wily Werewolf        | *unsupported*  |                         |                          |
-| Ubuntu 15.04 Vivid Vervet         | *unsupported*  |                         |                          |
-| Ubuntu 14.10 Utopic Unicorn       | *unsupported*  |                         |                          |
-| Ubuntu 14.04 LTS Trusty Tahr      | supported      |                         | August 2016              |
-| Ubuntu 13.10 Saucy Salamander     | *unsupported*  |                         |                          |
-| Ubuntu 13.04 Raring Ringtail      | *unsupported*  |                         |                          |
-| Ubuntu 12.10 Quantal Quetzal      | *unsupported*  |                         |                          |
-| Ubuntu 12.04 LTS Precise Pangolin | *unsupported*  |                         |                          |
+| System                            | Support Status    | Primary platform until  | Supported until |
+| --------------------------------- | ----------------- | ----------------------- | --------------- |
+| Ubuntu 16.10 Yakkety Yak          | *unknown*         |                         |                 |
+| Ubuntu 16.04 LTS Xenial Xenus     | **primary**       | April 2018 (rel. 18.04) | August 2018     |
+| Ubuntu 15.10 Wily Werewolf        | *unsupported*     |                         |                 |
+| Ubuntu 15.04 Vivid Vervet         | *unsupported*     |                         |                 |
+| Ubuntu 14.10 Utopic Unicorn       | *unsupported*     |                         |                 |
+| Ubuntu 14.04 LTS Trusty Tahr      | *unsupported* (3) |                         |                 |
+
+(3): Although unsupported, Hercules is very likely to still work on this version
 
 ## Gentoo
 
@@ -74,7 +72,7 @@ The latest FreeBSD release is a primary platform. The previous release is suppor
 | System        | Support Status  | Primary platform until | Supported until                                       |
 | ------------- | --------------- | ---------------------- | ----------------------------------------------------- |
 | FreeBSD 11.0  | *unknown*       |                        |                                                       |
-| FreeBSD 10.x  | **primary** (3) | release of version 11  | last 10.x release + 2 years, or release of version 12 |
+| FreeBSD 10.x  | **primary** (4) | release of version 11  | last 10.x release + 2 years, or release of version 12 |
 | FreeBSD 10.3  | **primary**     | release of version 11  | April 2018 (expected), or release of version 12       |
 | FreeBSD 10.2  | supported       | release of version 11  | December 2016 (expected), or release of version 12    |
 | FreeBSD 10.1  | supported       |                        | December 2016 (expected), or release of version 12    |
@@ -83,7 +81,7 @@ The latest FreeBSD release is a primary platform. The previous release is suppor
 | FreeBSD 9.2   | *unsupported*   |                        |                                                       |
 | FreeBSD 8.4   | *unsupported*   |                        |                                                       |
 
-(3): version 'y.x' refers to the latest release in the 'y' branch.
+(4): version 'y.x' refers to the latest release in the 'y' branch.
 
 ## Mac OS X
 
@@ -162,7 +160,7 @@ Support for more than three versions of Visual Studio won't be guaranteed in any
 | Visual Studio 2015     | **primary**       | next release                 | 2020-10-13 or next 3 releases |
 | Visual Studio 2013     | supported         |                              | 2019-04-09 or next 2 releases |
 | Visual Studio 2012     | supported         |                              | 2018-01-09 or next release    |
-| Visual Studio 2010     | *unsupported* (4) |                              |                               |
+| Visual Studio 2010     | *unsupported* (5) |                              |                               |
 | Visual Studio 2008     | *unsupported*     |                              |                               |
 
-(4): This version is currently known to work, for legacy reasons. Continued support is not guaranteed.
+(5): This version is currently known to work, for legacy reasons. Continued support is not guaranteed.
