@@ -1,4 +1,0 @@
-{{yellbox|''This {{{type|article}}} is '''incomplete'''. If you'd like to help [{{SERVER}}{{localurl:{{FULLPAGENAME}}|action=edit}} expand it], see the [[wikipedia:Help:Editing|help on editing]] and the [[wikipedia:Wikipedia:Manual_of_style|style guide]], or comment on the [[{{NAMESPACE}} talk:{{PAGENAME}}|talk page]].''}}<includeonly>[[Category:Incomplete]]</includeonly><noinclude>
-<!-- ADD CATEGORIES ON DOCUMENTATION PAGE, NOT HERE -->
-{{Documentation}}
-</noinclude>
