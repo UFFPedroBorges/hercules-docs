@@ -1,3 +1,0 @@
-[https://github.com/HerculesWS/Hercules/blob/master/{{{1|}}} {{#ifeq: {{{2|}}} | full | https://github.com/HerculesWS/Hercules/blob/master/ | }}{{{1|}}}]<noinclude>
-{{documentation}}<!-- ADD CATEGORIES ON DOCUMENTATION PAGE, NOT HERE -->
-</noinclude>
