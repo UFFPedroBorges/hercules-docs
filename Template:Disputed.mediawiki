@@ -1,4 +1,0 @@
-{{yellbox|''This {{{type|article}}}'s '''factual accuracy is [[wikipedia:Wikipedia:Accuracy_dispute|disputed]]'''. Please see the relevant discussion on the [[{{TALKPAGENAME}}|talk page]] and comment on the further proceeding with this {{{type|article}}}.''&nbsp;<small>''({{{date|unknown date}}})''</small>}}<includeonly>{{{nocat|[[Category:Accuracy disputes from {{{date}}}]]}}}</includeonly><noinclude>
-<!-- ADD CATEGORIES ON DOCUMENTATION PAGE, NOT HERE -->
-{{documentation}}
-</noinclude>
