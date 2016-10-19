@@ -1,7 +1,0 @@
-Tag any page dealing with customization of the Sakexe or RE client with the following so it appears on this page:
-
-<pre>[[Category:Client Configuration]]</pre>
-
-this includes articles relating to changing the window title, hexing or diffing the client, client configuration, etc.
-
-Thanks!
