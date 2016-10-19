@@ -1,5 +1,0 @@
-This category is used as a place for all pages covering installation of Hercules or its dependancies to be found. If you want to include a page here, and it covers installation of Hercules in any way, shape or form, or one of it's major dependancies, such as SQL or possibly SVN, tag it with the following:
-
-<pre>[[Category:Installation]]</pre>
-
-Please do not create duplicate articles. Thank you.
