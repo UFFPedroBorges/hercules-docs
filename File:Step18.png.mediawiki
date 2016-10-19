@@ -1,2 +1,0 @@
-Found this in sample property page.
-It's time to disable these stupid warnings from stupid Microsoft builds.
