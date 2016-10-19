@@ -1,3 +1,0 @@
-<sup>''[[Template:Dead link|dead link]]''</sup><includeonly>{{{nocat|[[Category:Articles with broken links]]}}}</includeonly><noinclude>
-{{documentation}}<!-- ADD CATEGORIES ON DOCUMENTATION PAGE, NOT HERE -->
-</noinclude>
