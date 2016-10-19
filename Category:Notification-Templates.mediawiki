@@ -1,1 +1,0 @@
-Notification Templates are methods of flagging an article due to recent changes, to verify completion or for disputes. Notification Templates automatically submit the article they're applied to into the relevant category.
