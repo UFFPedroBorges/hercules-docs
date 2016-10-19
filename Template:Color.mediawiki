@@ -1,4 +1,0 @@
-<span style="color:#{{{color|{{{1|inherit}}}}}};">#{{uc: {{{1|<includeonly>[[Template:Color|<sup>''color?''</sup>]]</includeonly><noinclude>000000</noinclude>}}}}}</span><noinclude>
-<!-- ADD CATEGORIES ON DOCUMENTATION PAGE, NOT HERE -->
-{{Documentation}}
-</noinclude>
