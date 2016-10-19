@@ -1,4 +1,0 @@
-<blockquote>{{yellbox|''This {{{type|script command}}} '''became obsolete''' as of {{{when|<noinclude>some date</noinclude><includeonly>(missing 'when' attribute for template:obsolete)</includeonly>}}}. This page remains intact for legacy purposes.}}''</blockquote><noinclude>
-<!-- ADD CATEGORIES ON DOCUMENTATION PAGE, NOT HERE -->
-{{Documentation}}
-</noinclude>
