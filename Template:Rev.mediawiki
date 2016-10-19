@@ -1,3 +1,0 @@
-[http://trac.rathena.org/changeset/{{{1|}}} r{{{1|}}}]<noinclude>
-{{Documentation}}<!-- ADD CATEGORIES ON DOCUMENTATION PAGE, NOT HERE -->
-</noinclude>
