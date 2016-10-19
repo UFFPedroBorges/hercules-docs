@@ -1,6 +1,6 @@
 # Basic Requirements
 
-[[Hercules]] works off of the [[wikipedia:Client–server_model|client-server model]]. The player, usually using a [[Hexing|hexed]] kRO [[Renewal|RE]] client, first connects to the [[Login Server]]. When the client enters their login information, it is given the list of available char-servers, which the player chooses from. After the server has been chosen, the client connects to the selected [[Character Server]], which displays the characters on that player's account. After selecting a character, the client is directed to the [[Map Server]], which maintains maps and the character positions on the server and relays this information to the client.
+[[Hercules]] works off of the client-server model. The player, usually using a [[Hexing|hexed]] kRO [[Renewal|RE]] client, first connects to the [[Login Server]]. When the client enters their login information, it is given the list of available char-servers, which the player chooses from. After the server has been chosen, the client connects to the selected [[Character Server]], which displays the characters on that player's account. After selecting a character, the client is directed to the [[Map Server]], which maintains maps and the character positions on the server and relays this information to the client.
 
 Hercules is designed to run on a machine that is designated as a Server, either Dedicated or VPS. It can run on a workstation, but using that workstation for other tasks (including playing on the same machine that is running the server) will reduce performance.
 
@@ -26,14 +26,14 @@ Hercules, depending on what you plan to do with it and what platform you run it 
 # Supported Operating Systems
 The following operating systems have been tested and are known to work:
 
-## [[wikipedia:Linux|Linux]]
+## Linux
 * Debian Based: [Debian](http://www.debian.org/), [Knoppix](http://www.knoppix.net), [Ubuntu Server & Desktop](http://www.ubuntu.com/)
 * RPM Based: [CentOS](http://www.centos.org), [Fedora Core](http://fedoraproject.org/), [Mandriva](http://www2.mandriva.com/), [Red Hat Linux](http://www.redhat.com/rhel/), [SUSE Linux](http://www.novell.com/linux/)
 * Others: [Gentoo](https://www.gentoo.org), [Slackware](http://www.slackware.com/)
 
-## [[wikipedia:Unix|Unix]]
+## Unix
 * BSD Based: [FreeBSD](http://www.freebsd.org/), [OpenBSD](http://www.openbsd.org/)
 
-## [[wikipedia:Microsoft_Windows|Windows]]
-* [[wikipedia:Windows_Server|Server Versions]]: Windows Server 2008, Windows Server 2008 R2, Windows Server 2012
-* Home Versions: Windows Vista, Windows 7, Windows 8, Windows 8.1
+## Windows
+* Server Versions: Windows Server 2008, Windows Server 2008 R2, Windows Server 2012
+* Workstation Versions: Windows Vista, Windows 7, Windows 8, Windows 8.1
