@@ -1,5 +1,0 @@
-= Hercules Wiki =
-
-Welcome to the Hercules Wikipedia! Here, one may be able to find documentation pertaining to nearly all aspects of operation, configuration & implementation of the Hercules Ragnarok Online Emulation Project. One may use the Hercules Wikipedia to reference or follow many of the useful guides found here to properly preform some of the many complex or difficult tasks involved with emulation operation and function. All members of the Hercules Wiki are both allowed and encouraged to contribute to the development and expansion of the Wikipedia. So, have you contributed to your Wiki today?
-
-[[Category:Hercules]]
