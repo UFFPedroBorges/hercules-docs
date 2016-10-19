@@ -31,7 +31,7 @@ By the [[wikipedia:Principle_of_least_privilege|principle of least privilege]], 
 ==== Set a root password ====
 The default MySQL Server install creates a MySQL user 'root'@'localhost' with NO password. It is recommended you create a password for the root user. 
 # Run this command and follow the prompts: 
-#: Firest Start MySQL:
+#: First Start MySQL:
 #: <pre>/etc/init.d/mysqld start </pre>
 #: Then configure MySQL by:
 #: <pre>mysql_secure_installation</pre>
