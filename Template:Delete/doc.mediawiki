@@ -1,0 +1,9 @@
+This template is intended for articles, which have been suggested for deletion. The editor, which places this template, should post the reasons that are responsible for this suggestion. Using this template automatically adds the page to the [[:Category:Articles for Deletion|Articles for Deletion]] category.
+==Usage==
+This template is placed at the top of an article.
+ <nowiki>{{deletion suggested
+|date=<month> <year>
+|reason=for ... (optional)
+|type=article (optional)}}</nowiki>
+<noinclude>[[Category:Template Documentation]]</noinclude>
+<includeonly>[[Category:Templates]]</includeonly>

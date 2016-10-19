@@ -1,0 +1,47 @@
+{{infobox
+|heading={{{heading|}}}
+|content=<table style="background-color:transparent; width:100%;">
+<tr style="vertical-align:top;"><td style="white-space:nowrap;">'''Developer(s)'''</td><td>{{{developer|''unknown''}}}</td></tr>
+<tr style="vertical-align:top;"><td style="white-space:nowrap;">'''Current version'''</td><td>{{{version|''unknown''}}}</td></tr>
+<tr style="vertical-align:top;"><td style="white-space:nowrap;">'''Operating system'''</td><td>{{{os|''unknown''}}}</td></tr>
+<tr style="vertical-align:top;"><td style="white-space:nowrap;">'''Available in'''</td><td>{{{lang|''unknown''}}}</td></tr>
+<tr style="vertical-align:top;"><td style="white-space:nowrap;">'''Type'''</td><td>{{{type|''unknown''}}}</td></tr>
+<tr style="vertical-align:top;"><td style="white-space:nowrap;">'''License'''</td><td>{{{license|''unknown''}}}</td></tr>
+<tr style="vertical-align:top;"><td style="white-space:nowrap;">'''Website'''</td><td>{{{web|''unknown''}}}</td></tr>
+</table>}}<noinclude>
+{{documentation|content=This {{tl|infobox}} template is used as short overview for software-related articles.
+
+==Usage==
+ <nowiki>{{infobox/software
+|heading=
+|developer=
+|version=
+|os=
+|lang=
+|type=
+|license=
+|web=
+}}</nowiki>
+
+Each field is optional and can be left out. Left out fields default to ''unknown'', except heading, which defaults to nothing.
+;heading
+:Intended for placing a screen-shot of the software, optionally with some sort of description.<br><pre>[[Image:example-oobe.png|250px]]<br>Example out of the box after basic configuration.</pre>
+;developer
+:Developer or developing organization, as given in the software's version information. If there is no version information, attribution on the software's homepage should be used. If the developer is ambiguous or none of the above sources exists, the field should be omitted.<br><pre>Examplesoft</pre>
+;version
+:Latest stable version of the software and optionally latest development version, if and only if the development is slow or no longer progresses (to avoid the article be required to be updated often). If there is no stable version, development version should be given, regardless of development speed at the cost of inaccuracy. Either version should also be given with a release date, if known.<br><pre>1.2.3.4 / June 24, 2009</pre>
+;os
+:Operating system(s), on which the software is officially intended to run without the use of any emulation (WINE is considered emulation in this case).<br><pre>Windows 2000/XP/Vista/7, BeOS, Haiku</pre>
+;lang
+:All languages this software is available in. If the amount of supported languages exceeds four, "Multiple (''amount'')" should be used instead.<br><pre>English, French, Japanese</pre>
+;type
+:General type of the software. The type should be kept consistent between software infoboxes of articles of the same kind. Currently used are: ''Patch Client'' and ''Map Editor''.<br><pre>Patch Client</pre>
+;license
+:The license, under which the software was released. If not known, it should be determined, if source is being distributed (open source) or not (closed source). The latter should be assumed, when there is no information at all.<br><pre>GPL 2 (open source)</pre><pre>unknown (closed source)</pre>
+;web
+:The official homepage of the software. If the link is no longer valid, but no alternative location is known, the original link should be kept, and marked as {{tl|dead link}}.<br><pre>http://exampleweb.com/</pre>
+}}
+
+[[Category:Templates]]
+[[Category:Infobox Templates]]
+</noinclude>

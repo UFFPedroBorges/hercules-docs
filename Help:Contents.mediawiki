@@ -1,0 +1,27 @@
+{| cellspacing="7" style="width: 100%; background: #EFFBF5; border: 1px solid silver;"
+| colspan="2" style="background: #A1C2CF; border: 1px solid silver; padding: 0.2em 0.4em; font-size: 120%; font-weight: bold;" | Hercules Wiki Help Center
+|-
+| colspan="2" style="padding: 7px;" |
+{{Incomplete}}
+'''[[Hercules Wiki:Welcome to the wiki|The Welcome Center]]''' - For newer Hercules Wiki users - it's full of links and advice for beginners and experienced users alike. It has basic editing tips, as well as links that lead to places where you can help out on the wiki.
+
+'''[[Hercules Wiki:FAQ|Frequently Asked Questions]]'''  contains answers to many common questions about the wiki, including information on why this wiki was created.
+
+'''[[Hercules Wiki:How to help|"How to help"]]''' - A list of suggestions on how to get involved in the wiki. If you're lost, take a look and see if there's something you can help out with!
+
+'''[[Help:Editing|Basic editing help]]''' - The place to go if you're having a problem with basic syntax, or just don't know how to do something. It shows most of the basic wikicode commands, as well as examples of what each one does.
+
+'''[[Help:Reverting|Reverting help]]'''  Has information on how to undo or revert a change to a page. 
+
+'''[[Help:Redirect|Redirecting help]]''' - Learn about redirects, a very useful tool we have available to us here on the Wiki, allowing us to make multiple page titles point to the same article. 
+
+'''[[Help:Archiving|Archiving help]]''' - Learn about something that we do with talk pages in order to keep records of comments that have been made.  We strongly suggest you have a look for more information on how to go about it.
+
+'''[[Help:Searching|Searching help]]''' - How to search for articles and information effectively with MediaWiki search.
+
+'''[[Help:Ask a wiki question|Ask a wiki question]]''' - Any wiki-related questions that you can't find an answer to can be asked, and someone will get back to you as quickly as possible.
+
+'''[[Help:Ask a game question|Ask a game question]]''' - Any game-related questions that you can't find an answer to by searching the wiki can be asked, and someone will get back to you as quickly as possible.
+|- style="vertical-align: middle;"
+| '''[[Hercules Wiki:Helpers|Hercules Wiki Helpers Program]]''' - A way to meet experienced wiki users if you are still having trouble with something, and can't seem to find an answer in another section of the help pages. They're more than happy to answer any questions you may have on their talk pages, so drop them a line if you're having a problem.
+|}

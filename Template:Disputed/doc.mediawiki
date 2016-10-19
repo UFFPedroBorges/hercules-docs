@@ -1,0 +1,16 @@
+This template identifies an article as having content whose truth or factual nature is in dispute.
+
+==Usage==
+Place this template at the top of disputed article or section, together with current month and year in the ''date'' parameter. All pages with this template are automatically placed into ''Category:Accuracy disputes from <month> <year>''.
+
+ <nowiki>{{disputed|date=<month year>}}</nowiki>
+
+==Examples==
+ <nowiki>{{disputed|type=section}}</nowiki>
+{{disputed|type=section|nocat=}}
+
+ <nowiki>{{disputed|date=September 2010}}</nowiki>
+{{disputed|date=September 2010|nocat=}}
+
+<noinclude>[[Category:Template Documentation]]</noinclude>
+<includeonly>[[Category:Notification Templates]]</includeonly>

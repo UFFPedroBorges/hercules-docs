@@ -1,0 +1,96 @@
+=About=
+
+== RO Related ==
+A relatively unknown entity within Hercules. Akkarin helps out around the [http://rathena.org/board/forum/3-rathena-support-releases/ rAthena Support & Releases] forum. Akkarin has been the Documentation Manager for rAthena at the end of 2012 (looked after /trunk/doc/*). In other *Athena incarnations, Akkarin was known as -Caleb-.
+
+Administrator at [http://spriterepository.com The Sprite Repository].
+
+== General ==
+An angry Englishman living in the heart of England. No, he doesn't enjoy the British summer weather. No, he doesn't like crumpets. Yes, he drinks alot of tea.
+
+Akkarin also owns an online alternative clothing store, amongst other websites.
+
+
+=Special Variables=
+
+==Statistics==
+{| class="wikitable"
+|-
+! Variable
+! Output
+! Description
+|-
+| <code><nowiki>{{NUMBEROFPAGES}}</nowiki></code>
+| {{NUMBEROFPAGES}}
+| Number of wiki pages.
+|-
+| <code><nowiki>{{NUMBEROFARTICLES}}</nowiki></code>
+| {{NUMBEROFARTICLES}}
+| Number of pages in namespace.
+|-
+| <code><nowiki>{{NUMBEROFFILES}}</nowiki></code>
+| {{NUMBEROFFILES}}
+| Number of uploaded files.
+|-
+| <code><nowiki>{{NUMBEROFEDITS}}</nowiki></code>
+| {{NUMBEROFEDITS}}
+| Number of page edits.
+|-
+| <code><nowiki>{{NUMBEROFVIEWS}}</nowiki></code>
+| {{NUMBEROFVIEWS}}
+| Number of page views. Usually useless on a wiki using caching.
+|-
+| <code><nowiki>{{NUMBEROFACTIVEUSERS}}</nowiki></code>
+| {{NUMBEROFACTIVEUSERS}}
+| Number of active users, based on the criteria used in [[Special:Statistics]].
+|}
+
+==Stats==
+{| class="wikitable"
+|-
+! Variable
+! Output
+! Description
+|-
+| <code><nowiki>{{REVISIONID}}</nowiki></code>
+| {{REVISIONID}}
+| Unique revision ID
+|-
+| <code><nowiki>{{REVISIONDAY}}</nowiki></code>
+| {{REVISIONDAY}}
+| Day edit was made (unpadded number)
+|-
+| <code><nowiki>{{REVISIONDAY2}}</nowiki></code>
+| {{REVISIONDAY2}}
+| Day edit was made (zero-padded number)
+|-
+| <code><nowiki>{{REVISIONMONTH}}</nowiki></code>
+| {{REVISIONMONTH}}
+| Month edit was made (zero-padded number as of 1.17+, unpadded number in prior versions)
+|-
+| <code><nowiki>{{REVISIONMONTH1}}</nowiki></code>
+| {{REVISIONMONTH1}}
+| Month edit was made (unpadded number)
+|-
+| <code><nowiki>{{REVISIONYEAR}}</nowiki></code>
+| {{REVISIONYEAR}}
+| Year edit was made
+|-
+| <code><nowiki>{{REVISIONTIMESTAMP}}</nowiki></code>
+| {{REVISIONTIMESTAMP}}
+| Timestamp as of time of edit
+|-
+| <code><nowiki>{{REVISIONUSER}}</nowiki></code>
+| {{REVISIONUSER}}
+| The username of the user who made the most recent edit to the page, or the current user when previewing an edit
+|}
+
+
+=Links=
+
+==General==
+* [http://hercules.ws/board/user/60-akkarin/ Hercules Forum Profile]
+* Akkarin's Wiki [[Special:Contributions/Akkarin|Contributions]]
+
+==Akky's test pages==
+[[User:Akkarin/SandboxTitle]]

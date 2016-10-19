@@ -1,0 +1,14 @@
+This is the template used to put a banner at the top of an article to identify it as '''outdated''', i.e. an author signals that he thinks that an article needs to be updated to reflect recent changes.
+
+== Usage ==
+You can get this banner by inserting the following template in your article (usually at the beginning):
+
+ <nowiki>{{outdated}}</nowiki>
+
+If only a section should be marked incomplete, use following at the beginning of the section:
+
+ <nowiki>{{outdated|type=section}}</nowiki>
+
+This will also insert your article in the [[:Category:Articles in need of updating]].
+<noinclude>[[Category:Template Documentation]]</noinclude>
+<includeonly>[[Category:Notification Templates]]</includeonly>

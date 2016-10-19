@@ -1,0 +1,23 @@
+==Syntax==
+*[[countitem]](<itemid>);
+*[[countitem]]("Itemname");
+
+==Description==
+
+Countitem will return the number of items of <itemid> the invoking player holds in his inventory.<br>
+Like in [[getitem]], you can also write the name of the item ("Name"-column in ItemDB).<br>
+
+==Example==
+
+<pre>
+mes "You have "+countitem(501)+"Apples!";
+close;
+</pre>Will print out the number of Apples the char holds...
+<pre>
+if(countitem("Apple")>=5){
+ mes "This will only print if you have 5 or more Apples!";
+ close;
+}
+</pre>
+
+[[Category:Script_Command]]

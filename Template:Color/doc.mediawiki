@@ -1,0 +1,10 @@
+This templates allows to express colors using colored HTML color codes (#RRGGBB).
+
+==Usage==
+Use the following to display a red colored #FF0000:
+ <nowiki>{{color|ff0000}}</nowiki>
+
+If the color is bright (such as yellow) and would be unreadable, use the optional parameter to specify an alternative color, or "inherit" to use the current text color:
+ <nowiki>{{color|ffff00|color=inherit}}</nowiki>
+<noinclude>[[Category:Template Documentation]]</noinclude>
+<includeonly>[[Category:Templates]]</includeonly>

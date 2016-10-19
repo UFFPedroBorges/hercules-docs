@@ -1,0 +1,11 @@
+== Syntax ==
+queuesize(<Queue ID>);
+== Description ==
+queuesize returns the amount of entries in specific QueueID
+== Example ==
+  .@id = [[queue]]();
+  mes queuesize(.@id);    //Returns 0
+  [[queueadd]](.@id,[[getcharid]](3));
+  mes queuesize(.@id);    //Returns 1
+[[Category:Script_Command]]
+[[Category:Queue]]

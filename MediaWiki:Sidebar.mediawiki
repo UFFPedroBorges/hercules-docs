@@ -1,0 +1,12 @@
+* Hercules
+** http://hercules.ws/board|Forum
+** https://github.com/HerculesWS/Hercules/commits/master|Git Timeline
+* navigation
+** mainpage|mainpage-description
+** recentchanges-url|recentchanges
+** Wiki_Basics|Wiki Basics
+** Special:WantedPages|Wanted Pages
+** randompage-url|randompage
+* SEARCH
+* TOOLBOX
+* LANGUAGES

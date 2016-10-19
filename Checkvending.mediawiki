@@ -1,0 +1,2 @@
+#REDIRECT [[checkchatting]]
+[[Category:Script_Command]]

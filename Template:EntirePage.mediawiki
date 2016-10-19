@@ -1,0 +1,17 @@
+<includeonly><blockquote>''For the entire article, see [[{{{1}}}]].''</blockquote></includeonly><noinclude>
+This template should be placed at the top of an section, linking the reader to articles that contain details of a topic, which is summarized in the section only (related content).
+
+==Usage==
+
+ <nowiki>{{EntirePage|otherpage}}</nowiki>
+
+* '''otherpage''': Name of the page, which was summarized by the section (appears as link then).
+
+==Example==
+
+ <nowiki>{{EntirePage|:Category:Templates}}</nowiki>
+turns into
+<blockquote>''For the entire article, see [[:Category:Templates]].''</blockquote>
+
+[[Category:Templates]]
+</noinclude>

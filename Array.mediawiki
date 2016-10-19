@@ -1,0 +1,2 @@
+#REDIRECT [[Variables#Array_Variables]]
+[[Category:Scripting]]

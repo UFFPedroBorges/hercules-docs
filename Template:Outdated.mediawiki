@@ -1,0 +1,4 @@
+{{yellbox|''This {{{type|article}}} '''may need to be updated'''. Please update this {{{type|article}}} to reflect recent events or newly available information, and remove this template when finished. Please see the [[{{TALKPAGENAME}}|talk page]] for more information.''}}<includeonly>[[Category:Articles in need of updating]]</includeonly><noinclude>
+<!-- ADD CATEGORIES ON DOCUMENTATION PAGE, NOT HERE -->
+{{Documentation}}
+</noinclude>

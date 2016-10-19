@@ -1,0 +1,1 @@
+#REDIRECT [[Timers_(Scripting)#Other Timers]]

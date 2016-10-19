@@ -1,0 +1,6 @@
+[[Category:Script_Command]]
+==Syntax==
+* [[bg_updatescore]] "<mapname>",<team1 score>,<team2 score>;
+
+==Description==
+This command is part of the Battleground System and sets the displayed scores(at the client) for all players on the selected map to the new values.

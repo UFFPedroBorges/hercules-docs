@@ -1,0 +1,5 @@
+jaBote:
+
+For creating new items it wasn't on data/cskroption.lub?
+
+Tried with Judas' client to add an item on System/itemInfo.lub for like 2 hours without ANY luck till I saw this and could achieve the modification.

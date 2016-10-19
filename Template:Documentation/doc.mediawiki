@@ -1,0 +1,13 @@
+This template is used for separating template documentation from actual templates, enabling to lock critical templates, while allowing to modify their documentation, categories etc. The documentation is usually read from /doc sub-page, but this can be overridden.
+
+==Usage==
+To use, add the following into the <nowiki><noinclude></nowiki> part of a template:
+ <nowiki>{{documentation}}</nowiki>
+If the template is named ''Template:Test'', then the documentation is included from ''Template:Test/doc''. This is the full version of the template, which allows to specify the page name, and the name space it resides in or enter documentation content in-place.
+ <nowiki>{{documentation
+|namespace=NameSpace:
+|page=PageName
+|content=DocumentationInPlace
+}}</nowiki>
+<noinclude>[[Category:Template Documentation]]</noinclude>
+<includeonly>[[Category:Templates]]</includeonly>

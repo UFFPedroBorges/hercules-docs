@@ -1,0 +1,7 @@
+==Syntax==
+* [[removemapflag]] "<map name>",<flag>;
+==Description==
+This command checks the status of a given mapflag and returns the 
+[[mapflag]]'s state. 
+0 means OFF, and 1 means ON. See [[setmapflag]] for a list of [[mapflags]].
+[[Category:Script_Command]]

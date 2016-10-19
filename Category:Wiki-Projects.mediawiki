@@ -1,0 +1,2 @@
+Wiki Projects are a collaboration of Projects that help maintain a constant formatting and push forth a certain project to completion using a team of members that have a desire to see the wiki succeed. Any page relating to a certain roject and any project page should be tagged with the tag:
+<pre>[[Category:Wiki_Projects]]</pre>

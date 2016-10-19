@@ -1,0 +1,15 @@
+== Syntax ==
+*[[setcashmount]];
+*hascashmount()
+
+== Description ==
+The '[[setcashmount]]' function toggles cash mount for the invoking character.
+It will return 1 if successful, 0 otherwise.
+<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; Note: Character must not be mounting a non-cash mount (eg. dragon, peco, 
+	  wug, etc.)<br />
+<br />
+The accompanying function will return 1 if the invoking character has a 
+cash mount and 0 if they don't.
+
+[[Category:Script Command]]

@@ -1,0 +1,4 @@
+{{yellbox|''This {{{type|article}}} '''duplicates''', in whole or part, the scope of {{{what|other article(s) or section(s)}}}. Please [[{{TALKPAGENAME}}|discuss]] this issue on the talk page and conform with [[wikipedia:Wikipedia:Manual of style|style guide]] by replacing the section with a link and a [[wikipedia:Wikipedia:Summary style|summary]] of the repeated material, or by spinning off the repeated text into an article in its own right.''}}<includeonly>{{{nocat|[[Category:Duplicate articles]]}}}</includeonly><noinclude>
+<!-- ADD CATEGORIES ON DOCUMENTATION PAGE, NOT HERE -->
+{{Documentation}}
+</noinclude>

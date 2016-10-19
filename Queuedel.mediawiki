@@ -1,0 +1,11 @@
+== Syntax ==
+queuedel(<queue_id>);
+== Description ==
+Deletes queue of <queue_id> id.
+Script returns 1 if <queue_id> was not found, if <queue_id> was found and deleted, it returns 0.
+== Example ==
+  if (queuedel(.@queueid)){
+    [[mes]] "Queue was not deleted";
+  }
+[[Category:Script_Command]]
+[[Category:Queue]]

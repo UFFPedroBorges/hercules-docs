@@ -1,0 +1,3 @@
+#REDIRECT [[Loops#For Loop]]
+
+[[Category:Script Command]]

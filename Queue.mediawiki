@@ -1,0 +1,9 @@
+== Queue() ==
+
+Creates a new queue instance and returns the Queue ID.
+
+example:
+ .@id = queue();    //Sets the QueueID into .@id
+
+[[Category:Script_Command]]
+[[Category:Queue]]

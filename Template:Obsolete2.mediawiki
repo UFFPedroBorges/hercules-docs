@@ -1,0 +1,3 @@
+<blockquote>''This {{{type|article}}} '''became obsolete''' as of {{{when|<noinclude>some date</noinclude><includeonly>(missing 'when' attribute for template:obsolete)</includeonly>}}}, see [[{{{see|<noinclude>Template:Obsolete</noinclude><includeonly>obsolete2|how to correct this template parameters</includeonly>}}}]] instead.''</blockquote><noinclude>
+{{documentation|page=obsolete/doc}}
+</noinclude>

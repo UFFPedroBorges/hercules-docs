@@ -1,0 +1,5 @@
+[[Category:Script_Command]]
+==Syntax==
+* [[bg_destroy]] <BG Team ID>;
+==Description==
+This command is part of the Battleground System and destroys the selected BG team.

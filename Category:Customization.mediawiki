@@ -1,0 +1,2 @@
+This category contains customization-related articles, which add value to a server or the game client. Normal configuration articles should be put into [[:Category:Configuration]] instead. To add an article to this category, place following at the end of the article:
+ <nowiki>[[Category:Customization]]</nowiki>

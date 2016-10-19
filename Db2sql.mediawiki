@@ -1,0 +1,45 @@
+== Files Converted ==
+* {{git|db/pre-re/item_db.conf}} (only in pre-renewal mode)
+* {{git|db/re/item_db.conf}} (only in renewal mode)
+* {{git|db/item_db2.conf}}
+* {{git|db/pre-re/mob_db.conf}} (only in pre-renewal mode)
+* {{git|db/re/mob_db.conf}} (only in renewal mode)
+* {{git|db/mob_db2.conf}}
+
+== Description ==
+This plugin converts the item database configuration files for use with SQL servers.
+
+
+== Compiling ==
+The plugin needs to be compiled. If you've already compiled your server and/or other plugins, input these commands:
+ ./configure
+ make plugin.db2sql
+
+=== Windows ===
+In Windows, compile the '''db2sql''' plugin in Visual Studio.
+
+
+== Enabling db2sql ==
+Next, the plugin needs to be enabled in {{git|conf/plugins.conf}}:
+ plugins_list: [
+ 	/* Enable HPMHooking when plugins in use rely on Hooking */
+ 	//"HPMHooking",
+ 	"db2sql",
+ 	//"sample",
+ 	//"other",
+ ]
+
+
+== Usage ==
+To use the converter, update your changes in the desired item database (using {{git|db/item_db2.conf}} for customisations is recommended); then, run this command:
+ ./map-server --db2sql
+
+=== Windows ===
+In Windows, run {{git|db2sql.bat}} in the root directory.
+
+
+== Output ==
+The resulting files will be output in the {{git|sql-files}} folder as {{git|sql-files/item_db.sql}}, {{git|sql-files/item_db_re.sql}}, and {{git|sql-files/item_db2.sql}}.
+
+
+[[Category:Tools]]

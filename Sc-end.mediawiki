@@ -1,0 +1,2 @@
+#REDIRECT [[sc_start]]
+[[Category:Script_Command]]

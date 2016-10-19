@@ -1,0 +1,19 @@
+<includeonly><blockquote>''This article is about {{{1}}}. For {{{2}}}, see [[{{{3}}}]].''</blockquote></includeonly><noinclude>
+This template should be placed at the top of an article, linking the reader to articles with similar titles or concepts that they may have been seeking instead.
+
+==Usage==
+
+ <nowiki>{{OtherUse|about|otherabout|otherpage}}</nowiki>
+
+* '''about''': Short description of the page, in which the template is used.
+* '''otherabout''': Short description of the suggested page, that the reader might have looked for instead.
+* '''otherpage''': Name of the suggested page (appears as link then).
+
+==Example==
+
+ <nowiki>{{OtherUse|a specific template|templates in general|:Category:Templates}}</nowiki>
+turns into
+<blockquote>''This article is about a specific template. For templates in general, see [[:Category:Templates]].''</blockquote>
+
+[[Category:Templates]]
+</noinclude>

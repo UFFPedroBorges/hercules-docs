@@ -1,0 +1,4 @@
+This category is a collection of pages that make use of the Outdated template. When editing pages, the code for the template is:
+<pre>{{outdated}}</pre>
+
+Additional markup and syntax can be found on it's template page: [[Template:Outdated/doc]]

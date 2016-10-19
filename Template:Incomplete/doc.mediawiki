@@ -1,0 +1,14 @@
+This is the template used to put a banner at the top of an article to identify it as '''incomplete''', i.e. an author signals that he thinks that an article needs more work.
+
+==Usage==
+You can get this banner by inserting the following template in your article (usually at the beginning):
+
+ <nowiki>{{incomplete}}</nowiki>
+
+For sections use:
+
+ <nowiki>{{incomplete|type=section}}</nowiki>
+
+This will also insert your article in the [[:Category:Incomplete]].
+<noinclude>[[Category:Template Documentation]]</noinclude>
+<includeonly>[[Category:Notification Templates]]</includeonly>

@@ -1,0 +1,4 @@
+There is a wide range of programs that can be used to create custom maps. This category contains articles related to such programs and guides on their usage. To add an article to this category, put the following at the end of the page:
+ <nowiki>[[Category:Mapping]]</nowiki>
+
+[[Category:Customization]]

@@ -1,0 +1,17 @@
+This in-line template is used by an author to indicate, that he or she is not sure about the factual accuracy of the content, where the template is placed or to indicate, that the text uses instances of ''maybe'', ''probably'', ''do not know'' and the like. For obvious inaccuracies or large-scale accuracy doubt use {{Tl|disputed}} instead.
+
+==Usage==
+For use, place at the affected article part following:
+ <nowiki>{{unsure}}</nowiki>
+If the statement in question might be wrong, or might look wrong, but a clarification would fix it, {{Tl|why}} can be used instead, to make authors familiar with the topic, to clarify the marked statement.
+ <nowiki>{{why}}</nowiki>
+All articles, that contain one or more instances of this template are automatically placed into [[:Category:Articles requiring verification on accuracy]].
+
+==Examples==
+ <nowiki>It you do something, something else might{{unsure}} or might not happen.</nowiki>
+It you do something, something else might<sup>''[[Template:Unsure|unsure?]]''</sup> or might not happen.
+ <nowiki>Before subject ''a'' is opened, subject ''b'' must be processed{{why}}.</nowiki>
+Before subject ''a'' is opened, subject ''b'' must be processed<sup>''[[Template:Unsure|why?]]''</sup>.
+
+<noinclude>[[Category:Template Documentation]]</noinclude>
+<includeonly>[[Category:Templates]]</includeonly>

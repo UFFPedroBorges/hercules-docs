@@ -1,0 +1,3 @@
+<div style="padding: 1em; border: 1px solid #aaa; background-color: #ECFCF4;"><div style="padding-bottom: 3px; border-bottom: 1px solid #aaa; margin-bottom: 1ex;"><span class="editsection plainlinks">[[{{fullurl:{{FULLPAGENAME}}/doc|action=edit}} edit]]</span><span style="font-weight: bold; font-size: 125%">Template Documentation</span></div>__FORCETOC__
+{{{content|{{#ifexist: {{{namespace|{{SUBJECTSPACE}}:}}}{{{page|{{PAGENAME}}/doc}}} | {{{{{namespace|{{SUBJECTSPACE}}:}}}{{{page|{{PAGENAME}}/doc}}}}}| A documentation for this template does not exist. [[{{{namespace|{{SUBJECTSPACE}}:}}}{{{page|{{PAGENAME}}/doc}}}|Go here to start a documentation page.]]}} }}}
+</div>

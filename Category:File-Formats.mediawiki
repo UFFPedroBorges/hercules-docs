@@ -1,0 +1,5 @@
+Tag any page dealing with particular file extensions and/or formats with the following so it appears on this page:
+<pre>
+[[Category:File Formats]]
+</pre>
+Thanks!

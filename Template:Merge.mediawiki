@@ -1,0 +1,4 @@
+{{mergebox|''It has been suggested that this {{{type|article}}} be [[wikipedia:Wikipedia:Merging|merged]] with {{{target|another article}}}. Please see the relevant discussion on the [[{{{talk|{{TALKPAGENAME}}}}}|talk page]] and comment on the further proceeding with this {{{type|article}}}.''&nbsp;<small>''({{{date|unknown date}}})''}}<includeonly>{{{nocat|[[Category:Articles to be merged]]}}}</includeonly><noinclude>
+<!-- ADD CATEGORIES ON DOCUMENTATION PAGE, NOT HERE -->
+{{Documentation}}
+</noinclude>

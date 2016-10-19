@@ -1,0 +1,7 @@
+== Syntax ==
+*[[getbrokencount]]()
+== Description ==
+This function will return the total amount of broken equipment on the
+invoking character.
+
+[[Category:Script Command]]

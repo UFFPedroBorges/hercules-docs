@@ -1,0 +1,10 @@
+[[Category:Incomplete]]
+
+= Intro =
+This page will try to explain the file {{git|db/pre-re/mob_race2_db.txt}}
+
+== What is it for? ==
+The mob_race2_db.txt file is used to define groups of monsters "racially".
+
+== Usage and Syntax ==
+The values in this file don't seem to be referenced in {{git|doc/script_commands.txt}}, nor in {{git|db/const.txt}} {{why}}

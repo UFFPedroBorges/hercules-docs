@@ -1,0 +1,116 @@
+{| style="width: 100%;" cellspacing="5" cellpadding="0"
+| colspan="3" | 
+|-
+| style="background: #FCFCFC; border: 1px solid #AAA; vertical-align: top;" |
+<div style="background: #ACD; border: 1px solid #7BC; padding: 10px; margin: 3px; font-weight: bold; text-align: center; font-size: 180%;">Welcome to Hercules!</div>
+<div style="padding-left: 1em;">
+[[Hercules]] is an [[wikipedia:Open_source|open-source]] project, revolving around the creation of a robust massively multiplayer online role playing game (MMORPG) server package, emulating a [[wikipedia:Ragnarok_Online|Ragnarok Online]] [[wikipedia:Server|Server]]. Written in [[wikipedia:C_(programming_language)|C]] the program is very versatile and provides NPCs, warps and modifications. and is currently version controlled via [[wikipedia:Git_(software)|Git]]. The project is jointly managed by a group of volunteers located around the world as well as a tremendous community providing QA and support. Hercules is a continuation of the original Athena project.
+
+Hercules currently runs on most common [[wikipedia:Operating_system|Operating Systems]] currently available today. For a full list, please see the [[System Requirements]].
+
+<br>
+<center><b>[[Hercules|About Hercules]]&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;[[Editing_the_wiki|Editing the Wiki]]&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;[https://github.com/HerculesWS/Hercules/blob/master/ GitHub]&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;[http://hercules.ws/board/forum/13-support-releases/ Help & Support]</b></center>
+<br>
+</div>
+|}
+
+{| style="border:0; margin: 0;" width="100%" cellspacing="8"
+
+| style="background: #FCFCFC; border: 1px solid #AAA; vertical-align: top;" |
+
+<div style="background: #ACD; border: 1px solid #7BC; padding: 5px; margin: 3px; font-weight: bold; text-align: center; font-size: 120%;">'''[[Getting_Started|Getting Started]]'''</div>
+<div style="background: #FCFCFC; vertical-align: top; padding: 5px; margin: 3px; font-size: 120%;text-align: center;font-weight: bold;">
+[[File:Getstarted.png|128px|center|link=Getting_Started]]
+Where Do I Start??
+<hr>
+</div>
+<div>
+* '''[[:Category:Installation|Installation]]''' instructions
+* '''[[Compiling|Compiling]]''' on your OS
+* '''[[Connecting|Connecting & Starting]]''' Hercules
+</div>
+
+| style="background: #FCFCFC; border: 1px solid #AAA; vertical-align: top;" |
+
+<div style="background: #ACD; border: 1px solid #7BC; padding: 5px; margin: 3px; font-weight: bold; text-align: center; font-size: 120%;">'''[[:Category:Configuration|Configure]] your Server'''</div>
+<div style="background: #FCFCFC; vertical-align: top; padding: 5px; margin: 3px; font-size: 120%;text-align: center;font-weight: bold;">
+[[File:Configserver.png|128px|center|link=:Category:Configuration]]
+Making Hercules Work
+<hr>
+</div>
+<div>
+* '''[[Scripting|Scripting]]''' like a pro!
+* '''[[Server_Modification|Server Modifications]]''' and what to expect
+* '''[[:Category:Database|Database]]''' Configurations - say what??
+</div>
+
+| style="background: #FCFCFC; border: 1px solid #AAA; vertical-align: top;" |
+
+<div style="background: #ACD; border: 1px solid #7BC; padding: 5px; margin: 3px; font-weight: bold; text-align: center; font-size: 120%;">'''[[:Category:Client_Configuration|Setup the Client]]'''</div>
+<div style="background: #FCFCFC; vertical-align: top; padding: 5px; margin: 3px; font-size: 120%;text-align: center;font-weight: bold;">
+[[File:Configclient.png|128px|center|link=:Category:Client_Configuration]]
+Creating Connections
+<hr>
+</div>
+<div>
+* '''[[Data_Folder_Structure|Data]]''' folder
+* '''[[Spriting|Spriting]]''', pixel by pixel
+* '''[[:Category:Mapping|Mapping]]''' tutorials
+* '''[[:Category:Client_Configuration|Client Configs]]''' make you original
+* '''[[:Category:Patchers|Patchers]]''' keep you up-to date!
+</div>
+|}
+
+{| style="border:0; margin: 0;" width="100%" cellspacing="8"
+
+| style="background: #FCFCFC; border: 1px solid #AAA; vertical-align: top;" |
+
+<div style="background: #ACD; border: 1px solid #7BC; padding: 5px; margin: 3px; font-weight: bold; text-align: center; font-size: 120%;">'''Editing the Wiki'''</div>
+<div style="padding: 1em;">
+All users must login to the wiki using their forum account. Any member can edit the wiki, but please keep in mind that the Hercules wiki is released under the [[wikipedia:GNU_Free_Documentation_License|GNU Free Documentation License]] Version 1.2. This means that the wiki and any works put on it can be edited at will. They may also be distributed, provided all history and copylefts remain intact. Please see [[Editing the wiki]] for more information.
+
+Don't know where to start? Check the [[Special:WantedPages]] page and create a page that is listed there!
+
+Please do not create pages for custom content, such as custom projects not relating to Hercules in any way. A full list of content that should not be on the wiki is listed at [[Editing the wiki]].
+
+Please see [[:Category:Wiki_Projects|Wiki Projects]] for any ongoing projects that you might be able to help with!
+
+</div>
+
+<div style="background: #ACD; border: 1px solid #7BC; padding: 5px; margin: 3px; font-weight: bold; text-align: center; font-size: 120%;">'''Quick Tips'''</div>
+<div>
+* Spell check your work!
+* Use correct English.
+* Do not vandalize the wiki. Vandalization will come with harsh punishment.
+* See [[mw:Help:Formatting|Formatting a wiki]] for tips on wiki formats and syntaxes.
+</div>
+
+
+| style="background: #FCFCFC; border: 1px solid #AAA; vertical-align: top;" |
+
+<div style="background: #ACD; border: 1px solid #7BC; padding: 5px; margin: 3px; font-weight: bold; text-align: center; font-size: 120%;">'''Latest Tweets'''</div>
+<div style="padding: 1em;">
+1 Nov
+Septober Digest 2013: As mentioned in my previous news, here is the Septober Digest that covers the month of S...<br /> http://bit.ly/1e0HG2E 
+<div style="text-align: center;">
+<hr>
+</div>
+
+25 Oct
+Hercules: Changes, Adjustments, and Explanations!: Hello Hercules Community!<br />
+As you may have noticed, the st... <br />http://bit.ly/19GdJAG 
+<div style="text-align: center;">
+<hr>
+</div>
+
+15 Oct
+Monster Transform Update: Monster Transform Update<br />
+What is it? A new feature when in you can transform your c... <br />http://bit.ly/1cpQHyP 
+<div style="text-align: center;">
+<hr>
+</div>
+
+10 Oct
+Introducing Bank Support: Bank SupportAccount-Wide Bank May store up to 2.1 Billion Zeny. Works on clients from 2... <br />http://bit.ly/1c4A7o5 
+</div>
+|}

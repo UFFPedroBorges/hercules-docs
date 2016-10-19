@@ -1,0 +1,12 @@
+This template is intended for construction of specific info-box templates, it usually is not included in articles by itself. It generates a right-aligned, floating box, which provides a centered head-piece for images and left-aligned content-part for structured information about the subject it refers to. Info-box templates are created as sub-pages of this core template.
+
+==Usage==
+ <nowiki>{{infobox</nowiki>
+ |heading=''images, description''
+ |content=''structured data''<nowiki>}}</nowiki>
+
+==Examples==
+For an example, see the code of one of the [[:Category:Infobox Templates|derived templates]].
+
+<noinclude>[[Category:Template Documentation]]</noinclude>
+<includeonly>[[Category:Templates]]</includeonly>

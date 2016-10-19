@@ -1,0 +1,184 @@
+= Guide =
+There are 2 guides on how to prepare your MSVC environment for a new [[HPM]] plugin. You can choose to follow either one.
+== New Method ==
+=== Step 1 ===
+Download the '''YourProject.c''' file in the '''\src\plugins\''' folder
+[[File:MSVC step0.png|center|750px]]
+=== Step 2 ===
+If using MSVC 2010, navigate to \vcproj-10\
+[[File:MSVC step1.png|center|750px]]
+=== Step 3 ===
+Select '''plugin-sample.vcxproj''', copy paste it
+[[File:MSVC step2.png|center|750px]]
+=== Step 4 ===
+Rename '''plugin-sample - Copy.vcxproj''' into '''YourProject.vcxproj'''<br>
+While renaming, Highlight the word '''YourProject''' and Copy it by ''Ctrl+C''
+[[File:MSVC step3.png|center|750px]]
+=== Step 5 ===
+Right-Click on '''YourFile.vcxproj''', Select '''Edit with Notepad++''', or Microsoft Notepad
+[[File:MSVC step4.png|center|750px]]
+=== Step 6 ===
+Find this line
+ <ProjectName>plugin-sample</ProjectName>
+[[File:MSVC step5.png|center|750px]]
+Rename '''plugin-sample''' to '''YourProject''' by ''Ctrl+V''
+[[File:MSVC step5 .png|center|750px]]
+=== Step 7 ===
+Find this line
+ <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sample</TargetName>
+[[File:MSVC step6.png|center|750px]]
+Rename '''sample''' to '''YourProject''' by ''Ctrl+V''
+ <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">YourProject</TargetName>
+[[File:MSVC step6 .png|center|750px]]
+=== Step 8 ===
+Find this line
+ <ClCompile Include="..\src\plugins\sample.c" />
+[[File:MSVC step7.png|center|750px]]
+Rename '''sample''' to '''YourProject''' by ''Ctrl+V''
+[[File:MSVC step7 .png|center|750px]]
+=== Step 9 ===
+Press '''Ctrl+S''' to save the file.
+=== Step 10 ===
+Open MSVC, Right-click '''Hercules-10''', Select '''Add'' -> '''Existing Project...'''
+[[File:MSVC step9.png|center|750px]]
+=== Step 11 ===
+Select '''YourProject.vcxproj''' in the '''\vcproj-10\''' folder
+[[File:MSVC step10.png|center|600px]]
+=== Step 12 ===
+Right-click '''Hercules-10''', Select '''Build-Solution'''
+[[File:MSVC step11.png|center|600px]]
+== Old Method ==
+=== Step 1 ===
+Go to '''src/plugins/''' folder, create a new '''.c''' file, e.g. '''dance.c''' (this name will be used throughout this guide)
+[[File:step1.JPG|center|750px]]
+=== Step 2 ===
+Open dance.c and paste this code
+<pre>
+#include "common/hercules.h" // Should always be the first Hercules file included! (if you don't make it first, you won't be able to use interfaces)
+#include <stdio.h>
+#include <string.h>
+#include "common/HPMi.h"
+#include "map/script.h"
+#include "map/pc.h"
+#include "common/HPMDataCheck.h" // should always be the last file included! (if you don't make it last, it'll intentionally break compile time)
+
+HPExport struct hplugin_info pinfo = {
+	"dance",		// Plugin name
+	SERVER_TYPE_MAP,// Which server types this plugin works with?
+	"0.2",			// Plugin version
+	HPM_VERSION,	// HPM Version (don't change, macro is automatically updated)
+};
+
+ACMD(dance) {
+	if (!message || !*message) {
+		clif->message(fd, "usage: @dance 1-9");
+		return -1;
+	}
+	if ( atoi(message) == 1 ) {
+		clif->specialeffect(&sd->bl, 413, ALL_CLIENT);
+	} else if ( atoi(message) == 2 ) {
+		clif->specialeffect(&sd->bl, 414, ALL_CLIENT);
+	} else if ( atoi(message) == 3 ) {
+		clif->specialeffect(&sd->bl, 415, ALL_CLIENT);
+	} else if ( atoi(message) == 4 ) {
+		clif->specialeffect(&sd->bl, 426, ALL_CLIENT);
+	} else if ( atoi(message) == 5 ) {
+		clif->specialeffect(&sd->bl, 458, ALL_CLIENT);
+	} else if ( atoi(message) == 6 ) {
+		clif->specialeffect(&sd->bl, 466, ALL_CLIENT);
+	} else if ( atoi(message) == 7 ) {
+		clif->specialeffect(&sd->bl, 501, ALL_CLIENT);
+	} else if ( atoi(message) == 8 ) {
+		clif->specialeffect(&sd->bl, 540, ALL_CLIENT);
+	} else if ( atoi(message) == 9 ) {
+		clif->specialeffect(&sd->bl, 550, ALL_CLIENT);
+	} else {
+		clif->message(fd, "usage: @dance 1-9"); 
+	}
+	return true;
+}
+
+/* Server Startup */
+HPExport void plugin_init (void) {
+	addAtcommand("dance",dance);
+}
+</pre>
+
+=== Step 3 ===
+Open your MSVC project (e.g. '''Hercules-10.sln'')
+[[File:step2.JPG|center|750px]]
+=== Step 4 ===
+Go to the '''Solution Explorer'''
+[[File:step3.JPG|center|750px]]
+=== Step 5 ===
+Right click the Hercules project (first item in '''Solution Explorer'''), and click '''Add->New Project'''
+[[File:step4.JPG|center|750px]]
+=== Step 6 ===
+Select '''General''', and pick '''Empty Project'''.
+[[File:step5.JPG|center|750px]]
+=== Step 7 ===
+Enter the name of your plugin in the '''Name''' field, and click OK.
+=== Step 8 ===
+In the solution explorer it'll display the new project.
+[[File:step6.JPG|center|750px]]
+=== Step 9 ===
+Right click the new project, and open '''Add->Existing Item'''
+[[File:step7.JPG|center|750px]]
+=== Step 10 ===
+Browse to '''src/plugins/''' and select the '''dance.c''' file, and hit OK.
+[[File:step8.JPG|center|750px]]
+=== Step 11 ===
+It will place the '''dance.c''' file under the '''Source Files''' folder, drag it to the project you created and drop it (in a manner it be placed out of the source files folder.)
+[[File:step9.JPG|center|750px]]
+(It should look like the image below)
+[[File:step10.JPG|center|750px]]
+=== Step 12 ===
+With the '''dance.c''' out of the folders, delete the 3 of them (select the 3, hit delete, hit ok)
+[[File:step11.JPG|center|750px]]
+(It should look like the image below)
+[[File:step12.JPG|center|750px]]
+=== Step 13 ===
+Right click the project you created, open '''Properties'''
+[[File:step13.JPG|center|750px]]
+=== Step 14 ===
+Under '''Configuration Properties''' click '''General''', change '''Output Directory''' to '''..\plugins\''', '''Intermediate Directory''' to '''$(ProjectName)\$(ConfigurationName)\''' and  '''Configuration Type''' to '''Dynamic Library (.dll)'''
+[[File:step14.JPG|center|750px]]
+=== Step 15 ===
+Under '''Configuration Properties''' click '''C/C++''' and open '''General''', change '''Additional Include Directories''' to '''..\src;..\3rdparty;..\3rdparty\msinttypes\include;%(AdditionalIncludeDirectories)'''
+[[File:step15.JPG|center|750px]]
+=== Step 16 ===
+Under '''Configuration Properties''' click '''Linker''' and open '''General''', change '''Output File''' to '''$(OutDir)\$(ProjectName).dll'''
+[[File:step16.JPG|center|750px]]
+=== Step 17 ===
+Under '''Configuration Properties''' click '''C/C++''' and open '''Preprocessor''', change '''Preprocessor Definitions''' to '''_WINDLL;PCRE_SUPPORT;%(PreprocessorDefinitions)'''
+[[File:step17.jpg|center|750px]]
+=== Step 18 ===
+Under '''Configuration Properties''' click '''C/C++''' and open '''Advanced''', on '''Disable Specific Warnings''' add '''4996;%(DisableSpecificWarnings)'''
+<br>This step can prevent errors like ''sscanf'' or ''sprintf'' that only happen with Microsoft compiler.
+[[File:step18.png|center|750px]]
+
+=== Step 19 ===
+Add your code to the '''dance.c''' file, and then right-click the project you created, and select '''Build'''
+=== Step 20 ===
+Add it to ''' /conf/plugins.conf'''
+<pre>
+plugins_list: [
+	/* Enable HPMHooking when plugins in use rely on Hooking */
+	//"HPMHooking",
+	//"db2sql",
+	//"sample",
+	//"other",
+	"dance", // loads dance plugin
+]
+</pre>
+
+= Notes =
+* This guide is probably the worst I've ever written, if you can do better please hit the 'Edit' button, will be most welcome. - Ind
+* I used MSVC 2008 when testing this guide.
+
+= New Note =
+* Sorry for editing this page, I added step by step images for other people to follow so they can easily follow one of the best feature Hercules have, the HPM. - Thanna
+* The tutorial is tested on MSVC 2010.
+* Another method idea by hemagx, sorry for publish it first - AnnieRuru.
+
+[[Category:Installation]]

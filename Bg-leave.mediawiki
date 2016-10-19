@@ -1,0 +1,5 @@
+[[Category:Script_Command]]
+==Syntax==
+* [[bg_leave]];
+==Description==
+This command is part of the Battleground System and removes the invoking player from his BG team.

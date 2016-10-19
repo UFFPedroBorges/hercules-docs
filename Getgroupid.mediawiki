@@ -1,0 +1,16 @@
+Getgroupid is the new getgmlevel as the gm level system has been rewritten to fit for group id's.
+
+== Syntax ==
+* [[getgroupid]]()
+
+== Description ==
+This function will return the id of player group the account to which the invoking player belongs.
+
+== Examples ==
+ [[mes]] "Your group ID is: " + [[getgroupid]]();
+ [[close]];
+
+== See Also ==
+* {{git|conf/groups.conf}}
+
+[[Category:Script Command]]

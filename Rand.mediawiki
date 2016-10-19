@@ -1,0 +1,10 @@
+[[Category:Script_Command]]
+==Syntax==
+* [[rand]](<number>{,<number>});
+==Description==
+This function returns a number, randomly positioned between 0 and the number you 
+specify (if you only specify one) and the two numbers you specify if you give it 
+two.
+==Examples==
+ 	[[set]] .number,rand(10);    // Gives Output between 0 to 10 (0,1,2,3,4,5,6,7,8,9,10)
+ 	[[set]] .number,rand(2,10); // Gives Output between 2 to 10 (2,3,4,5,6,7,8,9,10)

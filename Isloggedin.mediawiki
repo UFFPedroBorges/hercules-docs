@@ -1,0 +1,24 @@
+==Syntax==
+*'''isloggedin'''(<account id>[, <char id>]);
+
+==Description==
+This function checks, whether an character with given [[AID|account id]] is currently online (1) or not (0). Additionally a [[CID|char id]] can be specified, for exact character matching.
+
+==Examples==
+ [[input]] .@aid;
+ if(isloggedin(.@aid))
+ {
+     [[mes]] "A character with account id "+.@aid+" is currently around.";
+ }
+ else
+ {
+     mes "Sorry, there is no character online with account id "+.@aid+",";
+     mes "or the account does not exist.";
+ }
+
+==See Also==
+* [[attachrid]]
+
+
+
+[[Category:Script Command]]

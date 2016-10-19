@@ -1,0 +1,10 @@
+This template aids in creating merge templates. Do not use it for normal articles. If you want to place some merge notice inside an article, create a general template (if it [[:Category:Templates|does not already exist]]) and put the template in the article instead.
+
+ <nowiki>{{mergebox|content}}</nowiki>
+
+ <nowiki>{{mergebox|Multi-line content 1
+Multi-line content 2
+.
+.}}</nowiki>
+<noinclude>[[Category:Template Documentation]]</noinclude>
+<includeonly>[[Category:Box Templates]]</includeonly>
