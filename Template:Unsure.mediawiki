@@ -1,3 +1,0 @@
-<sup>''[[Template:Unsure|unsure?]]''</sup><includeonly>[[Category:Articles requiring verification on accuracy]]</includeonly><noinclude>
-{{documentation}}<!-- ADD CATEGORIES ON DOCUMENTATION PAGE, NOT HERE -->
-</noinclude>
