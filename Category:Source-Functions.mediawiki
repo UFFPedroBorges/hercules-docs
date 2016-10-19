@@ -1,8 +1,0 @@
-All source functions syntax will go here.
-
-* [[Status]]: status.c and status.h
-* [[Timers]]:  timer.c and timer.h
-* [[PC]]: pc.c and pc.h
-* [[Mob]]: mob.c and mob.h
-* [[Clif]]: clif.c and clif.h
-* [[Map]]: map.c and map.h
