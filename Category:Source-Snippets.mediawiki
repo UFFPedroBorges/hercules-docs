@@ -1,8 +1,0 @@
-Any page you need to make in this category should be tagged with 
-
-<pre>[[Category:Source Snippets]]</pre>
-
-This includes any little thing to modify the source, such as editing max levels, editing @go, editing skills or such. 
-
-
-This does ''NOT'' include custom source additions.
