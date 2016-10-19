@@ -1,2 +1,0 @@
-https://github.com/HerculesWS/Hercules/commit/1e2f24a2fcb13b8a2fe06f4cc829670303760929
-After this revision, all plugin has to include PCRE_SUPPORT; for all windows platform plugin
