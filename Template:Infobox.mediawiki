@@ -1,8 +1,0 @@
-{| align="right" style="background-color:#eee; border:#aaa 1px solid; font-size:11px; margin-left:10px; margin-bottom:10px; padding:5px; width:300px;"
-|<center>{{{heading|<noinclude>Sample Heading</noinclude>}}}</center>
-|-
-|{{{content|<noinclude>Sample Content</noinclude>}}}
-|}<noinclude>
-<br style="clear:both;">
-{{documentation}}<!-- ADD CATEGORIES ON DOCUMENTATION PAGE, NOT HERE -->
-</noinclude>
