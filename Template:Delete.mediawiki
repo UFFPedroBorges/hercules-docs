@@ -1,4 +1,0 @@
-{{delbox|''This {{{type|article}}} is a '''''candidate for deletion'''''{{{reason|}}}. Please see the relevant discussion on the [[{{TALKPAGENAME}}|talk page]] and comment on whether or not this {{{type|article}}} should be kept.''&nbsp;<small>''({{{date|unknown date}}})''}}</small><includeonly>{{{nocat|[[Category:Articles for Deletion]]}}}</includeonly><noinclude>
-<!-- ADD CATEGORIES ON DOCUMENTATION PAGE, NOT HERE -->
-{{Documentation}}
-</noinclude>
