@@ -1,8 +1,0 @@
-{| class="messagebox" style="border-top:solid 1px #c0c; border-right:solid 1px #c0c; border-bottom:solid 1px #c0c; border-left:solid 10px #c0c; background-color:#fff; margin:2px auto 7px auto; padding:10px;"
-|-
-| style="font-size:24px; padding-right:5px;" | <span style="color:#c00">→</span><span style="color:#00c">←</span>
-| {{{1|''Template''}}}
-|}<noinclude>
-<!-- ADD CATEGORIES ON DOCUMENTATION PAGE, NOT HERE -->
-{{Documentation}}
-</noinclude>
