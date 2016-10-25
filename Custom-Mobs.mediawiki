@@ -123,41 +123,65 @@ Note: If you're adding custom mobs, it's better to add them to mob_db2.conf
 |-
 | '''<u>ChaseRange</u>''' || Sight limit for mobs. If set to 1000 or beyond, mobs will follow you all over the map.
 |-
-| '''<u>Size</u>''' || 0 if its Small, 1 if its Medium, 2 if its Large
-or Small=Size_Small, Medium=Size_Medium, Large=Size_Large
+| '''<u>Size</u>''' ||
+{| class="wikitable"
 |-
-| '''<u>Race</u>''' || 0=formless, 1=undead, 2=animal, 3=plant, 4=insect, 5=fish, 6=demon, 7=demihuman, 8=angel, 9=dragon.
-or formless=RC_Formless, undead=RC_Undead, animal=RC_Brute, plant=RC_Plant, fish=RC_Fish, demihuman=RC_DemiHuman, angel=RC_Angel, dragon=RC_Dragon.
+| 0 || Small || Size_Small
+|-
+| 1 || Medium || Size_Medium
+|-
+| 2 || Large || Size_Large
+|}
+|-
+| '''<u>Race</u>''' ||
+{| class="wikitable"
+|-
+| 0 || formless || RC_Formless
+|-
+| 1 || undead || RC_Undead
+|-
+| 2 || animal || RC_Brute
+|-
+| 3 || plant || RC_Plant
+|-
+| 4 || insect || RC_Insect
+|-
+| 5 || fish || RC_Fish
+|-
+| 6 || demon || RC_Demon
+|-
+| 7 || demihuman || RC_DemiHuman
+|-
+| 8 || angel || RC_Angel
+|-
+| 9 || dragon || RC_Dragon
+|}
+
 |-
 | '''<u>Element</u>''' || This is a two-digit number representing the rank (level) and element of the mob.<br />
 |-
 | '''<u>Element(Type)</u>''' || Element Type of mob as mentioned below.<br />
-{| class="wikitable" style="text-align: center;"
- |
- |Neutral
- |Water
- |Earth
- |Fire
- |Wind
- |Poison
- |Holy
- |Shadow
- |Ghost
- |Undead
- |-
- | Type
- |0
- |1
- |2
- |3
- |4
- |5
- |6
- |7
- |8
- |9
- |}
-or "Ele_Name" (Neutral, Water, Earth, Fire, Wind, Poison, Holy, Shadow, Ghost, Undead.)
+{| class="wikitable"
+| 0 || Ele_Neutral
+|-
+| 1 || Ele_Water
+|-
+| 2 || Ele_Earth
+|-
+| 3 || Ele_Fire
+|-
+| 4 || Ele_Wind
+|-
+| 5 || Ele_Poison
+|-
+| 6 || Ele_Holy
+|-
+| 7 || Ele_Dark
+|-
+| 8 || Ele_Ghost
+|-
+| 9 || Ele_Undead
+|}
 
 
 
