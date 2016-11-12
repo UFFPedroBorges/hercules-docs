@@ -100,9 +100,9 @@ The latest OpenBSD release is supported, but it isn't a primary platform.
 
 | System      | Support Status | Primary platform until | Supported until        |
 | ----------- | -------------- | ---------------------- | ---------------------- |
-| OpenBSD 6.0 | *unknown*      |                        |                        |
-| OpenBSD 5.9 | supported      |                        | release of version 6.0 |
-| OpenBSD 5.8 | *unsupported*  |                        |                        |
+| OpenBSD 6.1 | *unknown*      |                        |                        |
+| OpenBSD 6.0 | supported      |                        | release of version 6.1 |
+| OpenBSD 5.9 | *unsupported*  |                        |                        |
 
 ## NetBSD
 
@@ -138,14 +138,18 @@ The status on other linux distributions is unknown. Hercules will likely run on 
 ## Microsoft Windows
 
 Windows (both server and workstation versions) are primary platform, for as long as they're within their upstream Mainstream Support period. Versions within their upstream Extended Support period are supported. Older versions are unsupported.
+Primary support for more than two versions of Windows Server and more than two versions of Windows won't be guaranteed in any case. As such, when a new version is released, the currently oldest primary supported version may switch to supported.
 
 | System                 | Support Status | Primary platform until | Supported until             |
 | ---------------------- | -------------- | ---------------------- | --------------------------- |
-| Windows Server 2012    | **primary**    | 2018-01-09             | 2023-01-10                  |
+| Windows Server 2016    | **primary**    | 2022-01-11             | 2027-01-11                  |
+| Windows Server 2012 R2 | **primary**    | 2018-01-09             | 2023-01-10                  |
+| Windows Server 2012    | supported      |                        | 2023-01-10                  |
 | Windows Server 2008 R2 | supported      |                        | 2020-01-14                  |
-| Windows Server 2003 R2 | *unsupported*  |                        |                             |
+| Windows Server 2008    | *unsupported*  |                        |                             |
 | Windows 10             | **primary**    | 2020-10-13             | 2025-10-14                  |
 | Windows 8.1            | **primary**    | 2018-01-09             | 2023-01-10                  |
+| Windows 8              | *unsupported*  |                        |                             |
 | Windows 7              | supported      |                        | 2020-01-14                  |
 | Windows Vista          | supported      |                        | 2017-04-11                  |
 | Windows XP             | *unsupported*  |                        |                             |
@@ -157,6 +161,7 @@ Support for more than three versions of Visual Studio won't be guaranteed in any
 
 | Version                | Support Status    | Primary platform until       | Supported until               |
 | ---------------------- | ----------------- | ---------------------------- | ----------------------------- |
+| Visual Studio "15"     | *unknown*         |                              |                               |
 | Visual Studio 2015     | **primary**       | next release                 | 2020-10-13 or next 3 releases |
 | Visual Studio 2013     | supported         |                              | 2019-04-09 or next 2 releases |
 | Visual Studio 2012     | supported         |                              | 2018-01-09 or next release    |
