@@ -72,15 +72,13 @@ The latest FreeBSD release is a primary platform. The previous release is suppor
 
 | System        | Support Status  | Primary platform until | Supported until                                       |
 | ------------- | --------------- | ---------------------- | ----------------------------------------------------- |
-| FreeBSD 11.0  | *unknown*       |                        |                                                       |
-| FreeBSD 10.x  | **primary** (4) | release of version 11  | last 10.x release + 2 years, or release of version 12 |
-| FreeBSD 10.3  | **primary**     | release of version 11  | April 2018 (expected), or release of version 12       |
-| FreeBSD 10.2  | supported       | release of version 11  | December 2016 (expected), or release of version 12    |
+| FreeBSD 11.x  | **primary** (4) | release of version 12  | last 11.x release + 2 years, or release of version 13 |
+| FreeBSD 11.0  | **primary**     | release of version 12  | October 2018 (expected), or release of version 13     |
+| FreeBSD 10.3  | supported       |                        | April 2018 (expected), or release of version 12       |
+| FreeBSD 10.2  | supported       |                        | December 2016 (expected), or release of version 12    |
 | FreeBSD 10.1  | supported       |                        | December 2016 (expected), or release of version 12    |
 | FreeBSD 10.0  | *unsupported*   |                        |                                                       |
-| FreeBSD 9.3   | supported       |                        | December 2016 (expected), or release of version 11    |
-| FreeBSD 9.2   | *unsupported*   |                        |                                                       |
-| FreeBSD 8.4   | *unsupported*   |                        |                                                       |
+| FreeBSD 9.3   | *unsupported*   |                        |                                                       |
 
 (4): version 'y.x' refers to the latest release in the 'y' branch.
 
