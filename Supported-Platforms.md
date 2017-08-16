@@ -11,16 +11,17 @@ Hercules guarantees a different level of compatibility with each of the platform
 
 ## Debian Linux
 
-The current stable distribution (currently version 8 'jessie') is a primary platform, while the oldstable (currently version 7 'wheezy') gets gradually phased out from primary to supported.
+The current stable distribution (currently version 9 'stretch') is a primary platform, while the oldstable (currently version 8 'jessie') gets gradually phased out from primary to supported.
 Older (obsolete stable releases other than oldstable), or newer (testing, unstable) releases are unsupported.
 
-| System             | Support Status | Primary platform until | Supported until       |
-| ------------------ | -------------- | ---------------------- | --------------------- |
-| Debian "sid"       | *unsupported*  |                        |                       |
-| Debian 9 "stretch" | *unknown*      |                        |                       |
-| Debian 8 "jessie"  | **primary**    | release of version 9   | release of version 10 |
-| Debian 7 "wheezy"  | supported (1)  |                        | release of version 9  |
-| Debian 6 "squeeze" | *unsupported*  |                        |                       |
+| System             | Support Status     | Primary platform until | Supported until       |
+| ------------------ | ------------------ | ---------------------- | --------------------- |
+| Debian "sid"       | *unsupported*      |                        |                       |
+| Debian 10 "buster" | *unknown*          |                        |                       |
+| Debian 9 "stretch" | **primary**        | release of version 10  | release of version 11 |
+| Debian 8 "jessie"  | supported          |                        | release of version 10 |
+| Debian 7 "wheezy"  | *unsupported* (1)  |                        |                       |
+| Debian 6 "squeeze" | *unsupported*      |                        |                       |
 
 (1): There are no known issues, and Hercules is regularly tested on this platform by one or more of the developers despite not being one of the primary platforms.
 
