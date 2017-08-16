@@ -59,14 +59,14 @@ The latest LTS version is a primary platform. The latest version -- if not a LTS
 
 ## Gentoo
 
-Gentoo is a rolling release, and has no versions. The stable branch is a primary platform (x86 and amd64), while the unstable (~x86 or ~amd64) is unsupported. Support on other architectures is unknown.
+Gentoo is a rolling release, and has no versions. The stable branch is a primary platform (amd64) or a supported platform (x86), while the unstable (~x86 or ~amd64) is unsupported. Support on other architectures is unknown.
 
-| System        | Support Status | Primary platform until   | Supported until |
-| ------------- | -------------- | ------------------------ | --------------- |
-| Gentoo x86    | **primary**    | Always (rolling release) |                 |
-| Gentoo amd64  | **primary**    | Always (rolling release) |                 |
-| Gentoo ~x86   | *unsupported*  |                          |                 |
-| Gentoo ~amd64 | *unsupported*  |                          |                 |
+| System        | Support Status | Primary platform until   | Supported until          |
+| ------------- | -------------- | ------------------------ | ------------------------ |
+| Gentoo x86    | supported      |                          | Always (rolling release) |
+| Gentoo amd64  | **primary**    | Always (rolling release) |                          |
+| Gentoo ~x86   | *unsupported*  |                          |                          |
+| Gentoo ~amd64 | *unsupported*  |                          |                          |
 
 ## FreeBSD
 
