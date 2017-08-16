@@ -110,7 +110,8 @@ The latest NetBSD release is supported, but it isn't a primary platform.
 
 | System     | Support Status | Primary platform until | Supported until        |
 | ---------- | -------------- | ---------------------- | ---------------------- |
-| NetBSD 7.0 | supported      |                        | release of version 8.0 |
+| NetBSD 7.1 | supported      |                        | release of version 8.0 |
+| NetBSD 7.0 | *unsupported*  |                        |                        |
 | NetBSD 6.1 | *unsupported*  |                        |                        |
 
 ## Raspbian
