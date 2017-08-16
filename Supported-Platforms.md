@@ -83,17 +83,16 @@ The latest FreeBSD release is a primary platform. The previous release is suppor
 
 (4): version 'y.x' refers to the latest release in the 'y' branch.
 
-## Mac OS X
+## macOS
 
-The last version of Mac OS X is a primary platform, assuming the latest version os Xcode is installed. The previous version is a supported platform. Older versions are supported
+The last version of macOS is a primary platform, assuming the latest version os Xcode is installed. The previous version is a supported platform. Older versions are supported.
 
 | System                  | Support Status | Primary platform until   | Supported until             |
 | ----------------------- | -------------- | ------------------------ | --------------------------- |
-| macOS 10.13             | *unknown*      |                          |                             |
+| macOS 10.13 High Sierra | *unknown*      |                          |                             |
 | macOS 10.12 Sierra      | **primary**    | release of version 10.13 | release of version 10.14    |
 | OS X 10.11 El Capitan   | supported      |                          | release of version 10.13    |
 | OS X 10.10 Yosemite     | *unsupported*  |                          |                             |
-| OS X 10.9 Mavericks     | *unsupported*  |                          |                             |
 
 ## OpenBSD
 
