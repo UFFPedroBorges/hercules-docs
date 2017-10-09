@@ -5,7 +5,6 @@ permalink: /Custom_Jobs/
 
 \[Guide\] Add Custom Job
 
-By: **Ratalaika**
 
 On this page, you will be able to learn the steps on how to add your Custom Job. First off:
 
