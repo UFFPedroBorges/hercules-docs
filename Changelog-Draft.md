@@ -4,7 +4,7 @@
 
 ### Added
 
-- ...
+- Added an option to restrict party leader changes to characters on the same map. Controlled by the setting `party_change_leader_same_map` (defaults to true). (#1812)
 
 ### Changed
 
@@ -25,6 +25,10 @@
 ### Security
 
 - ...
+
+### Other
+
+- New versioning scheme and project changelogs/release notes (#1853)
 
 ## [v.2017.10.22] - (2017-10-22)
 
