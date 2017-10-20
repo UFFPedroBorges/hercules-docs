@@ -6,7 +6,7 @@ and this project does not adhere to [Semantic Versioning](http://semver.org/spec
 
 ## [Unreleased]
 
-## [v2017.10.22] <sub>October 22 2017</sub>
+## [v2017.10.22] `October 22 2017`
 ### Added
 - Added the script command `getmapinfo()`, allowing to obtain misc information about a map. (#1852)
 - Added an option to restrict party leader changes to characters on the same map. Controlled by the setting `party_change_leader_same_map` (defaults to true). (#1812)
