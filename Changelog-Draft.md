@@ -1,6 +1,6 @@
 # Changelog
 
-## [Unreleased]
+## [v2017.10.22] <sub>October 22 2017</sub>
 
 ### Added
 
@@ -32,9 +32,4 @@
 
 - New versioning scheme and project changelogs/release notes (#1853)
 
-## [v.2017.10.22] - (2017-10-22)
-
-- [Milestone](https://github.com/HerculesWS/Hercules/milestone/9)
-
-[Unreleased]: https://github.com/HerculesWS/Hercules/compare/v.2017.10.22..HEAD
-[v.2017.10.22]: https://github.com/HerculesWS/Hercules/compare/6b1fe2d069cb0251bc5798767f97454ab63a47c0..v.2017.10.22
+[v2017.10.22]: https://github.com/HerculesWS/Hercules/compare/6b1fe2d069cb0251bc5798767f97454ab63a47c0..v.2017.10.22
