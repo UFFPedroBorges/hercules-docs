@@ -4,11 +4,12 @@
 
 ### Added
 
+- Added the script command `getmapinfo()`, allowing to obtain misc information about a map. (#1852)
 - Added an option to restrict party leader changes to characters on the same map. Controlled by the setting `party_change_leader_same_map` (defaults to true). (#1812)
 
 ### Changed
 
-- ...
+- Extended the script command `logmes()` with an option to log to the `atcommandlog` table. (#1843)
 
 ### Deprecated
 
