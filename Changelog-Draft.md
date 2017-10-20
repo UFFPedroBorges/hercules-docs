@@ -21,7 +21,7 @@
 
 ### Fixed
 
-- ...
+- Corrected the Kafra dialog in case a Doram without the Summoner's Basic Skill attempts to open the Storage. (#1864)
 
 ### Security
 
