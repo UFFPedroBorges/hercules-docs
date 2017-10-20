@@ -1,9 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
+and this project does not adhere to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
+
 ## [Unreleased]
 
-## [v2017.10.22] <sub>October 22 2017</sub>
+## [v2017.10.22] <sub>2017-10-22</sub>
 ### Added
 - Added the script command `getmapinfo()`, allowing to obtain misc information about a map. (#1852)
 - Added an option to restrict party leader changes to characters on the same map. Controlled by the setting `party_change_leader_same_map` (defaults to true). (#1812)
