@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project does not adhere to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+<!-- If you are reading this in a text editor, simply ignore this section -->
 
 ## [v2017.10.22] `October 22 2017`
 ### Added
