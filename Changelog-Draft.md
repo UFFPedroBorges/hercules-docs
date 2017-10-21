@@ -13,9 +13,12 @@ If you are reading this in a text editor, simply ignore this section
 ### Added
 - Added the script command `getmapinfo()`, allowing to obtain misc information about a map. (#1852)
 - Added an option to restrict party leader changes to characters on the same map. Controlled by the setting `party_change_leader_same_map` (defaults to true). (#1812)
+- Added initial support (shuffle packets, obfuscation keys) for clients 2017-09-27, 2017-10-02, 2017-10-11, 2017-10-18. (#1859)
 
 ### Changed
 - Extended the script command `logmes()` with an option to log to the `atcommandlog` table. (#1843)
+- Updated RODEX with support for packetver 20170419 and newer. (#1859)
+- Updated Exp-related packets and handling functions to support values larger than 2 billions (as seen in packetver 20170830 and newer). (#1859)
 
 ### Deprecated
 - ...
