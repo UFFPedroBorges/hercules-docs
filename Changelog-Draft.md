@@ -19,6 +19,7 @@ If you are reading this in a text editor, simply ignore this section
 - Extended the script command `logmes()` with an option to log to the `atcommandlog` table. (#1843)
 - Updated RODEX with support for packetver 20170419 and newer. (#1859)
 - Updated Exp-related packets and handling functions to support values larger than 2 billions (as seen in packetver 20170830 and newer). (#1859)
+- Changed the diagnostic message in `skill_init_unit_layout()` to report the skill ID instead of its index. (#1854)
 
 ### Deprecated
 - ...
