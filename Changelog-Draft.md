@@ -38,5 +38,5 @@ If you are reading this in a text editor, simply ignore this section
 ### Other
 - New versioning scheme and project changelogs/release notes (#1853)
 
-[Unreleased]: https://github.com/olivierlacan/keep-a-changelog/compare/stable...master
+[Unreleased]: https://github.com/HerculesWS/Hercules/compare/stable...master
 [v2017.10.22]: https://github.com/HerculesWS/Hercules/compare/6b1fe2d...v2017.10.22
