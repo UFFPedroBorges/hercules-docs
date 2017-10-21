@@ -14,6 +14,7 @@ If you are reading this in a text editor, simply ignore this section
 - Added the script command `getmapinfo()`, allowing to obtain misc information about a map. (#1852)
 - Added an option to restrict party leader changes to characters on the same map. Controlled by the setting `party_change_leader_same_map` (defaults to true). (#1812)
 - Added initial support (shuffle packets, obfuscation keys) for clients 2017-09-27, 2017-10-02, 2017-10-11, 2017-10-18. (#1859)
+- Added the `noautoloot` mapflag, allowing to disable the `@autoloot` functionality on a map by map basis. (#1833)
 
 ### Changed
 - Extended the script command `logmes()` with an option to log to the `atcommandlog` table. (#1843)
