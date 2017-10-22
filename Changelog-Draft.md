@@ -9,7 +9,7 @@ and this project does not adhere to [Semantic Versioning](http://semver.org/spec
 If you are reading this in a text editor, simply ignore this section
 -->
 
-## [v2017.10.22] `October 22 2017` `PATCH 1`
+## [v2017.10.22-1] `October 22 2017` `PATCH 1`
 ### Fixed
 - Fixed a wrong null pointer check in `logmes()`, which caused the command to never log and instead print debug information.
 
