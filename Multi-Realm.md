@@ -15,3 +15,9 @@ The Multi-Realm configuration makes it possible to link together many entirely d
 
 ## Inter-Realm communication
 (TO-DO)
+
+
+<br><br>
+
+---
+See also [Multi-Zone](Multi-Zone)
