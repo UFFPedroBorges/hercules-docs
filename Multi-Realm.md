@@ -11,6 +11,10 @@ In this configuration, each [Realm](Realm) is isolated from one another, but use
 The Multi-Realm configuration makes it possible to link together many entirely different games. Each Realm has its own separate mob dbs, npc scripts, items, configuration, etc. The Realms can be spread over multiple hosts, which makes it possible to have different servers for each region (ie America, Europe, Asia) to improve latency.
 
 ## Configuration
+### Single host
+(TO-DO)
+
+### Multi hosts
 (TO-DO)
 
 ## Inter-Realm communication
