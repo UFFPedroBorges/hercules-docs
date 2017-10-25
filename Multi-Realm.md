@@ -10,12 +10,15 @@ In this configuration, each [Realm](Realm) is isolated from one another, but use
 
 <br>
 
-### Table of contents
+<table><tr><th>Table of contents
+<tr><td>
+
 1. [Rationale](#rationale)
 2. [Configuration](#configuration)
     1. [Nexus](#nexus-configuration)
     2. [Realm](#realm-configuration)
 3. [Inter-Realm communication](#inter-realm-communication)
+</table>
 
 <br>
 
