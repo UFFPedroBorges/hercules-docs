@@ -14,7 +14,7 @@ The Multi-Realm configuration makes it possible to link together many entirely d
 ### Single host
 (TO-DO)
 
-### Multi hosts
+### Multiple hosts
 (TO-DO)
 
 ## Inter-Realm communication
