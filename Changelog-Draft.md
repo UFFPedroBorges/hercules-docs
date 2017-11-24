@@ -80,6 +80,7 @@ If you are reading this in a text editor, simply ignore this section
 - New versioning scheme and project changelogs/release notes (#1853)
 
 [Unreleased]: https://github.com/HerculesWS/Hercules/compare/stable...master
+[v2017.11.19-1]: https://github.com/HerculesWS/Hercules/compare/v2017.11.19...v2017.11.19-1
 [v2017.11.19]: https://github.com/HerculesWS/Hercules/compare/v2017.10.22-1...v2017.11.19
 [v2017.10.22-1]: https://github.com/HerculesWS/Hercules/compare/v2017.10.22...v2017.10.22-1
 [v2017.10.22]: https://github.com/HerculesWS/Hercules/compare/6b1fe2d...v2017.10.22
