@@ -9,6 +9,10 @@ and this project does not adhere to [Semantic Versioning](http://semver.org/spec
 If you are reading this in a text editor, simply ignore this section
 -->
 
+## [v2017.11.19-1] `November 24 2017` `PATCH 1`
+### Fixed
+- Suppressed assertions in the Skill DB accessors when called with `skill_id = 0` (normal attacks). (#1910, issue #1909)
+
 ## [v2017.11.19] `November 19 2017`
 ### Added
 - Added several missing members to the login interface. (Part of #1891)
