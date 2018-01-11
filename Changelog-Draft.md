@@ -10,7 +10,7 @@ If you are reading this in a text editor, simply ignore this section
 -->
 
 ## [v2017.12.17] `December 17 2017`
-## Added
+### Added
 - Implemented Homunculus Autofeeding, available on the 2017 clients. The feature can be disabled by flipping `features.enable_homun_autofeed` in feature.conf. (#1898)
 - Added support for the newly released Ragnarok Zero clients. The client type is controlled with the `--enable-packetver-zero` configure-time flag (disabled by default). (#1923)
 
