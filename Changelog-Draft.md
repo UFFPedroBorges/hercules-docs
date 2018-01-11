@@ -10,7 +10,7 @@ If you are reading this in a text editor, simply ignore this section
 -->
 
 ## [v2017.12.17] `December 17 2017`
-# Added
+## Added
 - Implemented Homunculus Autofeeding, available on the 2017 clients. The feature can be disabled by flipping `features.enable_homun_autofeed` in feature.conf. (#1898)
 - Added support for the newly released Ragnarok Zero clients. The client type is controlled with the `--enable-packetver-zero` configure-time flag (disabled by default). (#1923)
 
@@ -18,16 +18,16 @@ If you are reading this in a text editor, simply ignore this section
 - Applied script standardization to the Old Glast Heim instance script. (#1883)
 - Split packets.h into two files: packets.h and packets_shuffle.h. (part of #1923)
 
-## Fixed
+### Fixed
 - Corrected a wrong path displayed in an error message pointing to the map-server configuration. (#1913)
 - Fixed the natural expiration of the Poison status when under the effect of Slow Poison. (#1925)
 
-## [v2017.11.19-2] `November 28 2017` `PATCH 2`
+## [v2017.11.19+2] `November 28 2017` `PATCH 2`
 ### Fixed
 - Fixed an item loading failure in RODEX. (#1917, issue #1912)
 - Fixed invisible NPCs (such as `FAKE_NPC`) being displayed as novices. (#1918, issue #1916)
 
-## [v2017.11.19-1] `November 24 2017` `PATCH 1`
+## [v2017.11.19+1] `November 24 2017` `PATCH 1`
 ### Fixed
 - Suppressed assertions in the Skill DB accessors when called with `skill_id = 0` (normal attacks). (#1910, issue #1909)
 
@@ -71,7 +71,7 @@ If you are reading this in a text editor, simply ignore this section
 - Corrected some incorrect data types passed to the SQL `StmtBind` functions, causing query errors and data loss. Said functions will now have a runtime assertion to ensure the right data type is passed. Third party code needs to be updated to reflect this stricter requirement. (#1901, issue #1531)
 - Corrected some RODEX related queries in case `MAX_SLOTS` or `MAX_ITEM_OPTIONS` are set to custom values. (part of #1901)
 
-## [v2017.10.22-1] `October 22 2017` `PATCH 1`
+## [v2017.10.22+1] `October 22 2017` `PATCH 1`
 ### Fixed
 - Fixed a wrong null pointer check in `logmes()`, which caused the command to never log and instead print debug information.
 
@@ -99,8 +99,8 @@ If you are reading this in a text editor, simply ignore this section
 
 [Unreleased]: https://github.com/HerculesWS/Hercules/compare/stable...master
 [v2017.12.17]: https://github.com/HerculesWS/Hercules/compare/v2017.11.19+2...v2017.12.17
-[v2017.11.19-2]: https://github.com/HerculesWS/Hercules/compare/v2017.11.19-1...v2017.11.19-2
-[v2017.11.19-1]: https://github.com/HerculesWS/Hercules/compare/v2017.11.19...v2017.11.19-1
-[v2017.11.19]: https://github.com/HerculesWS/Hercules/compare/v2017.10.22-1...v2017.11.19
-[v2017.10.22-1]: https://github.com/HerculesWS/Hercules/compare/v2017.10.22...v2017.10.22-1
+[v2017.11.19+2]: https://github.com/HerculesWS/Hercules/compare/v2017.11.19+1...v2017.11.19+2
+[v2017.11.19+1]: https://github.com/HerculesWS/Hercules/compare/v2017.11.19...v2017.11.19+1
+[v2017.11.19]: https://github.com/HerculesWS/Hercules/compare/v2017.10.22+1...v2017.11.19
+[v2017.10.22+1]: https://github.com/HerculesWS/Hercules/compare/v2017.10.22...v2017.10.22+1
 [v2017.10.22]: https://github.com/HerculesWS/Hercules/compare/6b1fe2d...v2017.10.22
