@@ -19,7 +19,7 @@ If you are reading this in a text editor, simply ignore this section
   - Note: This requires the SQL migrations `2017-06-04--15-04.sql` and `2017-06-04--15-05.sql`.
   - Note: The `npc/re/other/clans.txt` script is now loaded by default in renewal mode.
 - Added several (status-icon related) constants to the script engine (through the new `constants.inc` file). (part of #1718)
-- Implemented the missing HPM interfaces in the login server (account, upban, lchrif), added the missing variables into the login interfaces. (#1963, issue #1908)
+- Implemented the missing HPM interfaces in the login server (account, ipban, lchrif), added the missing variables into the login interfaces. (#1963, issue #1908)
   - The `_sql` suffix has been removed from the source files in the login server.
   - Functions in `account.c` and `loginlog.c` have been prefixed with `account_` and `loginlog_` respectively.
   - The `chrif_` functions of the login server have been renamed to `lchrif_`.
