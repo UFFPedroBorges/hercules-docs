@@ -44,16 +44,17 @@ The current stable version is a primary platform. The previous stable version is
 
 The latest LTS version is a primary platform. The latest version -- if not a LTS version --  is a supported platform. The previous LTS version is a supported platform for 4 months after the next version is released. Older versions are unsupported.
 
-| System                            | Support Status    | Primary platform until  | Supported until |
-| --------------------------------- | ----------------- | ----------------------- | --------------- |
-| Ubuntu 17.10 Artful Aardvark      | *unknown*         |                         |                 |
-| Ubuntu 17.04 Zesty Zapus          | supported         |                         | January 2018    |
-| Ubuntu 16.10 Yakkety Yak          | *unsupported*     |                         |                 |
-| Ubuntu 16.04 LTS Xenial Xenus     | **primary**       | April 2018 (rel. 18.04) | August 2018     |
-| Ubuntu 15.10 Wily Werewolf        | *unsupported*     |                         |                 |
-| Ubuntu 15.04 Vivid Vervet         | *unsupported*     |                         |                 |
-| Ubuntu 14.10 Utopic Unicorn       | *unsupported*     |                         |                 |
-| Ubuntu 14.04 LTS Trusty Tahr      | *unsupported* (3) |                         |                 |
+| System                        | Support Status    | Primary platform until  | Supported until |
+| ----------------------------- | ----------------- | ----------------------- | --------------- |
+| Ubuntu 18.04 Bionic Beaver    | *unknown*         |                         |                 |
+| Ubuntu 17.10 Artful Aardvark  | supported         |                         | July 2018       |
+| Ubuntu 17.04 Zesty Zapus      | *unsupported*     |                         |                 |
+| Ubuntu 16.10 Yakkety Yak      | *unsupported*     |                         |                 |
+| Ubuntu 16.04 LTS Xenial Xenus | **primary**       | April 2018 (rel. 18.04) | August 2018     |
+| Ubuntu 15.10 Wily Werewolf    | *unsupported*     |                         |                 |
+| Ubuntu 15.04 Vivid Vervet     | *unsupported*     |                         |                 |
+| Ubuntu 14.10 Utopic Unicorn   | *unsupported*     |                         |                 |
+| Ubuntu 14.04 LTS Trusty Tahr  | *unsupported* (3) |                         |                 |
 
 (3): Although unsupported, Hercules is very likely to still work on this version
 
