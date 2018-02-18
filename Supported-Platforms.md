@@ -145,19 +145,22 @@ Primary support for more than two versions of Windows Server and more than two v
 
 | System                     | Support Status | Primary platform until    | Supported until             |
 | -------------------------- | -------------- | ------------------------- | --------------------------- |
+| Windows Server v.1803      | *unknown*      |                           |                             |
+| Windows Server v.1709      | **primary**    | March 2018 (estimated)    | 2019-09-04                  |
 | Windows Server 2016        | **primary**    | 2022-01-11                | 2027-01-11                  |
-| Windows Server 2012 R2     | **primary**    | 2018-01-09                | 2023-01-10                  |
+| Windows Server 2012 R2     | supported      |                           | 2023-01-10                  |
 | Windows Server 2012        | supported      |                           | 2023-01-10                  |
 | Windows Server 2008 R2 SP1 | supported      |                           | 2020-01-14                  |
 | Windows Server 2008 R2     | *unsupported*  |                           |                             |
 | Windows Server 2008 SP2    | *unsupported*  |                           |                             |
 | Windows Server 2008        | *unsupported*  |                           |                             |
 | Windows 10 (latest ver.)   | **primary**    | 2020-10-13                | 2025-10-14                  |
-| Windows 10 v.1703          | **primary**    | 2020-10-13 or next update | September 2017 (estimated)  |
-| Windows 10 v.1607          | supported      |                           | March 2018 (estimated)      |
-| Windows 10 v.1511          | supported      |                           | 2017-10-10                  |
-| Windows 10 RTM (v.1507)    | unsupported    |                           |                             |
-| Windows 8.1                | **primary**    | 2018-01-09 or next update | 2023-01-10                  |
+| Windows 10 v.1709          | **primary**    | 2020-10-13 or next update | 2019-04-09                  |
+| Windows 10 v.1703          | supported      |                           | 2018-10-09                  |
+| Windows 10 v.1607          | supported      |                           | 2018-04-10                  |
+| Windows 10 v.1511          | *unsupported*  |                           |                             |
+| Windows 10 RTM (v.1507)    | *unsupported*  |                           |                             |
+| Windows 8.1                | supported      |                           | 2023-01-10                  |
 | Windows 8                  | *unsupported*  |                           |                             |
 | Windows 7 SP1              | supported      |                           | 2020-01-14                  |
 | Windows 7                  | *unsupported*  |                           |                             |
@@ -173,10 +176,10 @@ Support for more than three versions of Visual Studio won't be guaranteed in any
 
 | Version                | Support Status    | Primary platform until       | Supported until               |
 | ---------------------- | ----------------- | ---------------------------- | ----------------------------- |
-| Visual Studio "15"     | *unknown*         |                              |                               |
-| Visual Studio 2015     | **primary**       | next release                 | 2020-10-13 or next 3 releases |
-| Visual Studio 2013     | supported         |                              | 2019-04-09 or next 2 releases |
-| Visual Studio 2012     | supported         |                              | 2018-01-09 or next release    |
+| Visual Studio 2017     | supported         |                              |                               |
+| Visual Studio 2015     | **primary**       | next release                 | 2020-10-13 or next 2 releases |
+| Visual Studio 2013     | supported         |                              | 2019-04-09 or next release    |
+| Visual Studio 2012     | *unsupported* (5) |                              |                               |
 | Visual Studio 2010     | *unsupported* (5) |                              |                               |
 | Visual Studio 2008     | *unsupported*     |                              |                               |
 
