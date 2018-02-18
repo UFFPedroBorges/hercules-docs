@@ -86,7 +86,7 @@ The latest FreeBSD release is a primary platform. The previous release is suppor
 
 ## macOS
 
-The last version of macOS is a primary platform, assuming the latest version of Xcode is installed. The previous version is a supported platform. Older versions are supported.
+The last version of macOS is a primary platform, assuming the latest version of Xcode is installed. The previous version is a supported platform. Older versions are unsupported.
 
 | System                  | Support Status | Primary platform until   | Supported until             |
 | ----------------------- | -------------- | ------------------------ | --------------------------- |
@@ -119,9 +119,10 @@ The latest NetBSD release is supported, but it isn't a primary platform.
 
 Hercules runs on the Raspberry Pi, and was tested on Raspbian. The latest release is a supported platform.
 
-| System          | Support Status | Primary platform until | Supported until             |
-| --------------- | -------------- | ---------------------- | --------------------------- |
-| Raspbian Jessie | supported      |                        | release of the next version |
+| System           | Support Status | Primary platform until | Supported until             |
+| ---------------- | -------------- | ---------------------- | --------------------------- |
+| Raspbian Stretch | supported      |                        | release of the next version |
+| Raspbian Jessie  | *unsupported*  |                        |                             |
 
 ## Other Linux / UNIX Distributions
 
