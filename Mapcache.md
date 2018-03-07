@@ -1,4 +1,5 @@
 ## Building Mapcache
+### Windows
 To use Hercules' Mapcache, open up its vcxproj located in the vcproj-11 to vcproj-14 folders. Which one you will need depends on the version of Microsoft Visual Studio you are using. Microsoft Visual Studio 2015 will use vcproj-14, earlier versions of the software will use the other folders instead. Alternatively, you can open "Hercules-14.sln" which compiles your entire server plus the mapcache.
 
 Next, [[compile|Compiling-Windows]] your mapcache.
