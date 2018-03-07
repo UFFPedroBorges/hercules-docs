@@ -5,7 +5,7 @@ To use Hercules' Mapcache, open up its vcxproj located in the vcproj-11 to vcpro
 Next, [[compile|Compiling-Windows]] your mapcache.
 
 ## Required Mapcache Files
-Open conf/grf-files.txt and add your .grf or data folder path (NOT including the data folder itself in the path!) In order to use a GRF file, it must not already be open in a grf editor or any other software. If a GRF is currently in use when mapcache tries to use it, you may get an error that says: "grf read error".
+Open conf/grf-files.txt and add your .grf or data folder path, **NOT** including the data folder itself in the path! In order to use a GRF file, it must not already be open in a grf editor or any other software. If a GRF is currently in use when mapcache tries to use it, you may get an error that says: "grf read error".
 
 **Examples:**
 
