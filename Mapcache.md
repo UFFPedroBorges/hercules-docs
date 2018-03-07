@@ -14,7 +14,7 @@ NOTE: This will go to C:\Users\JohnD\Documents\Data Folder\data
 
 grf: C:\Program Files (x86)\YourServer\Server.grf
 
-In order for mapcache to work, you must have your desired map listed in db/map_index, conf/map/maps.conf, and it must also be inside of resnametable.txt and mapnametable.txt client side. Additionally, you must have a .gnd, .rsw, and .gat file for your map inside of your data folder.
+In order for mapcache to work, you must have your desired map listed in db/map_index, conf/map/maps.conf, and it must also be inside of data/resnametable.txt and data/mapnametable.txt client side. Additionally, you must have a .gnd, .rsw, and .gat file for your map inside of your data folder.
 
 ## Using Mapcache
 Run mapcache.exe and it will start building the cache. If you did something incorrectly, close mapcache, delete the db/mapcache.dat it created, and run mapcache again. If you run mapcache again without deleting the old mapcache, you may get an error stating: "An error as occured while reading map_cache_fp" or "An error as occured in fread while reading map_cache."
