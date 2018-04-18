@@ -1,20 +1,21 @@
 ## Building Mapcache
 ### Windows
-To use Hercules' Mapcache, open up its vcxproj located in the vcproj-11 to vcproj-14 folders. Which one you will need depends on the version of Microsoft Visual Studio you are using. Microsoft Visual Studio 2015 will use vcproj-14, earlier versions of the software will use the other folders instead. Alternatively, you can open "Hercules-14.sln" which compiles your entire server plus the mapcache.
+First download [this vcxproj file](http://www.mediafire.com/file/nb9dh5vjl6ceqis/mapcache.vcxproj) and place it in the respective vcproj folder. Vcproj-14 is for the most recent version of Microsoft Visual Studio, the other folders are for older versions of it. Open the respective Hercules-xx.sln, Hercules-14.sln is for the most recent version of MVS, then right click the solution and hover over "Add" and select "Existing project..." from the menu.
 
 Next, [[compile|Compiling-Windows]] your mapcache.
 
+Then for Windows 7+ operating systems, navigate to your root Hercules folder (same place where your Hercules-xx.sln's are), click the address bar so the folder path is highlighted, then type cmd and hit enter. A command prompt will open for that folder's path. Copy and paste this into the command prompt, then hit enter:
+
+map-server --load-plugin mapcache --rebuild-mapcache
+
+If your conf/grf-files.txt is configured correctly, it will begin rebuilding the mapcache.
+
 ## Required Mapcache Files
-Open conf/grf-files.txt and add your .grf or data folder path, **NOT** including the data folder itself in the path! In order to use a GRF file, it must not already be open in a grf editor or any other software. If a GRF is currently in use when mapcache tries to use it, you may get an error that says: "grf read error".
+Open conf/grf-files.txt and add your data folder path, **NOT** including the data folder itself in the path! GRF files are no longer supported by the mapcache tool, use only a data folder. An existing GRF can be extracted with a GRF tool to obtain its data folder.
 
 **Examples:**
 
 data_dir: C:\Users\JohnD\Documents\Data Folder\
 NOTE: This will go to C:\Users\JohnD\Documents\Data Folder\data
 
-grf: C:\Program Files (x86)\YourServer\Server.grf
-
-In order for mapcache to work, you must have your desired map listed in db/map_index, conf/map/maps.conf, and it must also be inside of data/resnametable.txt and data/mapnametable.txt client side. Additionally, you must have a .gnd, .rsw, and .gat file for your map inside of your data folder.
-
-## Using Mapcache
-Run mapcache.exe and it will start building the cache. If you did something incorrectly, close mapcache, delete the db/mapcache.dat it created, and run mapcache again. If you run mapcache again without deleting the old mapcache, you may get an error stating: "An error as occured while reading map_cache_fp" or "An error as occured in fread while reading map_cache."
+In order for mapcache to work, you must have your desired map listed in db/map_index, conf/map/maps.conf, and it must also be inside of data/resnametable.txt client side. Additionally, you must have a .gnd, .rsw, and .gat file for your map inside of your data folder.
