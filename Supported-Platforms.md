@@ -36,7 +36,7 @@ The current stable version is a primary platform. The previous stable version is
 | CentOS 5 | *unsupported*  |                        |                      |
 | RHEL 5   | *unsupported*  |                        |                      |
 
-(2): It's recommended to upgrade the development tools to include GCC 4.7 or newer.
+(2): It's recommended to upgrade the development tools to include GCC 4.9 or newer (devtoolset-3 or newer).
 
 ## Ubuntu Server
 
