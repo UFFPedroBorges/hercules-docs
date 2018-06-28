@@ -146,8 +146,9 @@ Primary support for more than two versions of Windows Server and more than two v
 
 | System                     | Support Status | Primary platform until    | Supported until             |
 | -------------------------- | -------------- | ------------------------- | --------------------------- |
-| Windows Server v.1803      | *unknown*      |                           |                             |
-| Windows Server v.1709      | **primary**    | March 2018 (estimated)    | 2019-09-04                  |
+| Windows Server v.1809      | *unknown*      |                           |                             |
+| Windows Server v.1709      | **primary**    | October 2018 (estimated)  | 2019-11-12                  |
+| Windows Server v.1709      | supported      |                           | 2019-04-09                  |
 | Windows Server 2016        | **primary**    | 2022-01-11                | 2027-01-11                  |
 | Windows Server 2012 R2     | supported      |                           | 2023-01-10                  |
 | Windows Server 2012        | supported      |                           | 2023-01-10                  |
@@ -155,10 +156,11 @@ Primary support for more than two versions of Windows Server and more than two v
 | Windows Server 2008 R2     | *unsupported*  |                           |                             |
 | Windows Server 2008 SP2    | *unsupported*  |                           |                             |
 | Windows Server 2008        | *unsupported*  |                           |                             |
-| Windows 10 (latest ver.)   | **primary**    | 2020-10-13                | 2025-10-14                  |
-| Windows 10 v.1709          | **primary**    | 2020-10-13 or next update | 2019-04-09                  |
+| Windows 10 (latest ver.)   | **primary**    | 2021-10-12                | 2026-10-13                  |
+| Windows 10 v.1803          | **primary**    | 2021-10-12 or next update | 2019-11-12                  |
+| Windows 10 v.1709          | supported      |                           | 2019-04-09                  |
 | Windows 10 v.1703          | supported      |                           | 2018-10-09                  |
-| Windows 10 v.1607          | supported      |                           | 2018-04-10                  |
+| Windows 10 v.1607          | *unsupported*  |                           |                             |
 | Windows 10 v.1511          | *unsupported*  |                           |                             |
 | Windows 10 RTM (v.1507)    | *unsupported*  |                           |                             |
 | Windows 8.1                | supported      |                           | 2023-01-10                  |
@@ -181,7 +183,7 @@ Support for more than three versions of Visual Studio won't be guaranteed in any
 | Visual Studio 2015     | **primary**       | next release                 | 2020-10-13 or next 2 releases |
 | Visual Studio 2013     | supported         |                              | 2019-04-09 or next release    |
 | Visual Studio 2012     | *unsupported* (5) |                              |                               |
-| Visual Studio 2010     | *unsupported* (5) |                              |                               |
+| Visual Studio 2010     | *unsupported*     |                              |                               |
 | Visual Studio 2008     | *unsupported*     |                              |                               |
 
 (5): This version is currently known to work, for legacy reasons. Continued support is not guaranteed.
