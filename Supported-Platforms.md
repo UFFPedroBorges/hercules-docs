@@ -90,7 +90,7 @@ The last version of macOS is a primary platform, assuming the latest version of 
 
 | System                  | Support Status | Primary platform until   | Supported until             |
 | ----------------------- | -------------- | ------------------------ | --------------------------- |
-| macOS 10.14             | *unknown*      |                          |                             |
+| macOS 10.14 Mojave      | *unknown*      |                          |                             |
 | macOS 10.13 High Sierra | **primary**    | release of version 10.14 | release of version 10.15    |
 | macOS 10.12 Sierra      | supported      |                          | release of version 10.14    |
 | OS X 10.11 El Capitan   | *unsupported*  |                          |                             |
