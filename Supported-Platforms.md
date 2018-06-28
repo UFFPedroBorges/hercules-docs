@@ -101,8 +101,9 @@ The latest OpenBSD release is supported, but it isn't a primary platform.
 
 | System      | Support Status | Primary platform until | Supported until        |
 | ----------- | -------------- | ---------------------- | ---------------------- |
-| OpenBSD 6.2 | *unknown*      |                        |                        |
-| OpenBSD 6.1 | supported      |                        | release of version 6.2 |
+| OpenBSD 6.3 | supported      |                        | release of version 6.4 |
+| OpenBSD 6.2 | *unsupported*  |                        |                        |
+| OpenBSD 6.1 | *unsupported*  |                        |                        |
 | OpenBSD 6.0 | *unsupported*  |                        |                        |
 
 ## NetBSD
