@@ -31,7 +31,7 @@ If you are reading this in a text editor, simply ignore this section
 - Microsoft Visual Studio 2012 is no longer officially supported. (#2131)
 
 ### Removed
-- Removed the `EF_ANGEL3` effect from the novice academy, as it is not triggered by the Achievements system. (#2156)
+- Removed the `EF_ANGEL3` effect from the novice academy, as it is now triggered by the Achievements system. (#2156)
 
 ### Fixed
 - Fixed a bug which made the `Venom Splasher` skill consume gemstones twice. (#2148)
