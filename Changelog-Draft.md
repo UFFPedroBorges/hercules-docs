@@ -1,3 +1,4 @@
+
 # Changelog
 All notable changes to this project will be documented in this file.
 
@@ -8,6 +9,175 @@ and this project does not adhere to [Semantic Versioning](http://semver.org/spec
 <!--
 If you are reading this in a text editor, simply ignore this section
 -->
+
+## [v2018.07.29] `Jul 29 2018`
+### Added
+- Added support for the Achievements system and the Titles system. (#2067)
+- Added a stylist db option to restrict some hairstyles for the Doram race. (#2155)
+- Added/updated packets, encryption keys, and message tables for clients up to 2018-07-18. (#2139, #2126)
+- Added support for the overweight percentage packet for clients older than 2017-10-25. (#2139)
+- Added support for the chat commands `/changedress` and `/nocosplay`. (#2139)
+- Added support for the party member death notification packet for clients older than 2017-05-02. (#2139)
+- Added support for body style to the stylist. (#2138)
+- Added a `dead_area_size` battle config option to configure the area to which player death packets are sent. (#2088)
+
+### Changed
+- Updated the warp list packet for clients older than 2017-04-19. (#2139)
+- Simplified the `questinfo()` script command and added `setquestinfo()`. This may break some scripts, but is easily fixable with a regular expression search/replace. (#2107)
+- The constants database will now also be reloaded when calling `@reloadscript`. (#2130)
+- The maximum item ID for the item database is now `65535` for clients older than 2018-07-04, and `131072` for newer clients. It may be increased up to a maximum of `2147483648` in the future, as needed. (#2134)
+
+### Deprecated
+- Microsoft Visual Studio 2012 is no longer officially supported. (#2131)
+
+### Removed
+- Removed the `EF_ANGEL3` effect from the novice academy, as it is not triggered by the Achievements system. (#2156)
+
+### Fixed
+- Fixed a bug which made the `Venom Splasher` skill consume gemstones twice. (#2148)
+- Fixed a bug that could make skill cooldowns never expire, rendering the skill unusable. (#2147)
+- Fixed the maximum array size being higher than the maximum integer (uint32 vs int32), which could cause integer overflows in scripts. (#2093)
+- Fixed a wrongly named constant, which made `Sea-Otter Card` not increase the `Sushi` heal rate. (#2117)
+- Fixed misc bugs related to pet evolution. (#2136)
+- Fixed a bug that sent an attendance system message without the attendence ui being opened. (#2129)
+
+## [v2018.07.01+1] `Jul 1 2018` `PATCH 1`
+### Fixed
+- Fixed a regression that made it impossible to invite guild members. (#2124, issue #2122)
+
+## [v2018.07.01] `Jul 1 2018`
+### Added
+- Added/updated packets and message tables for clients from 2018-05-30 to 2018-06-12. (#2064)
+- Added/updated a pair of enums (`cz_ui_types`, `zc_ui_types`) for the values used by packets 0xa68 and 0x0ae2, fixed compatibility with older clients. (part of #2064)
+- Added the possibility for a plugin to abort the skill currently being cast by returning true from `skill_check_condition_castend_unknown()`. (#2076)
+- Implemented Pet Evolution. This adds a new `Evolve` field to the Pet DB, and a generator script is provided, to automatically create entries from the pet evolution lua. (#2063)
+- Implemented Pet Autofeeding. This adds a new `AutoFeed` field to the Pet DB, and can be completely disabled through the `enabe_pet_autofeed` flag in `feature.conf`. (#2063)
+- Added the script command `setparam()`, the setter counterpart of `readparam()`, accepting an optional account id argument. (#2081)
+- Updated maps database/mapcache with new maps (part of #2098)
+- Added/updated packets and message tables for clients from 2018-06-20 to 2018-06-27. (#2095)
+- Added new map/mapserver-change packets for the airship system. (part of #2095)
+- Added new (unused) 'dns host' field in `char_send_map_info()`, compatible with clients newer than 2017-03-29. (part of #2095)
+- Added an option to hide names in the script commands `unittalk()` and `npctalk()` (#1831, formerly #1571, issue #1523)
+
+### Changed
+- Updated README with more info about the development dependencies. (b57232ac29)
+- Updated `instance_create()` when trying to create an already existing instance, to match the official behavior. (#1924, issue #1651)
+- Removed the `RTLD_DEEPBIND` flag from the plugin-loading functions, for compatibility with asan in gcc-8. (#2079)
+- Standardized the function call syntax in the script command documentation. (#2084)
+- Changed the way pet eggs are handles in the inventory (they don't get deleted when hatched), for compatibility with the pet evolution system. (part of #2063)
+- Extended the script command `readparam()` with the ability to receive an account id as optional argument, as an alternative to the character name. (#part of 2081)
+- Updated the Private Airship map list to match the main kRO servers, and enabled the functionality on the main packetvers. (#2098)
+- Updated pin code status packets for the 2018 clients. (part of #2095)
+- Updated the authentication error packets in the map server to use the most recent version for the current packetver. (part of #2095)
+- Updated the roulette packets for the 2018 clients. (part of #2095)
+- Updated GitLab-CI builds to include more recent compilers and platforms: clang-5.0, clang-6.0, clang-7, gcc-7, gcc-8 ubuntu 18.04, MariaDB 10.1 are now tested. (part of #2111)
+- Updated GitLab-CI builds to include builds with a recent Zero packetver, to ensure that recent code is compiled/tested. (part of #2111)
+- Split the function `clif_disp_overhead` into two and converted its packet handling into the struct format. (part of #1831)
+- Cleaned up the mapif-related code, splitting `mapif` packet processing from `inter` logic and moving the `mapif` functions to `mapif.c`. (#2108)
+- Changed all the functions (where possible) to have static linking, in order to prevent incorrect symbols to be used by plugins, as a safer alternative to `RTLD_DEEPBIND`. Plugin authors are still advised to avoid naming their local symbols with the same name as non-static symbols exported by the code. (#2112)
+- Prevented compilation of the non-memmgr memory management function wrappers when the memory manager is enabled. (part of #2112)
+
+### Fixed
+- Fixed a crash when entries from the `job_db` are removed. (#2071, issue #2070)
+- Fixed `getunits()` to always return a value, even in case of error. (d2c0e453fc)
+- Fixed an incorrect response message in the stylist shop. (#2066, issue #2065)
+- Fixed an issue in the `clif_parse_OpenVending()` processing when the item list is empty. (#2072)
+- Fixed various typos in code documentation/comments. (#2069)
+- Fixed a field size in the character creation packet. (part of #2064)
+- Added some missing fields in the `AC_ACCEPT_LOGIN` packet structure. (part of #2064)
+- Fixed compilation with packetvers older than 20090805. (part of #2064)
+- Fixed the `rodex_sendmail_acc()` command to correctly use the `account_id` field as stated in the documentation. (#2075, issue #2024)
+- Fixed the shutdown callback calls, that weren't getting called any longer since core.c was interfaced. (#2106)
+- Fixed a parsing error when the pre-increment/pre-decrement operator is used in a conditional's body without braces. (#2077, issues #705, #912, #1553, #1710)
+- Fixed `SC_NOEQUIPWEAPON`/`RG_STRIPWEAPON` (Renewal only) and `SC_INCATKRATE`/`NPC_POWERUP` whose ATK increment/reduction were ineffective on monsters. (#2097)
+- Fixed an error when a player's PIN code is set for the first time. (#2100, issue #2046)
+- Fixed the searchstore packet for compatibility with item options. (part of #2095)
+- Fixed GitLab-CI build failures caused by MySQL client versions incompatible with the updated docker images. (#2111)
+- Fixed the novending map/cell flag that would cause players to get stuck. (#2091, issue #662)
+- Fixed the documentation for the `queueopt()` script command. (#2086)
+- Fixed documentation comments related to the `exp_group_db` (#2114, #2115)
+- Fixed an issue in the travis builds when the console error output is too long. (part of #2112)
+
+## [v2018.06.03] `Jun 3 2018`
+### Added
+- Added/updated packets support for clients from 2018-05-09 to 2018-05-23. (#2043)
+- Added client/version-specific `enum clif_messages` values for msgstringtable message IDs. All the related functions have been updated. (#2038)
+- Added the script commands `setpcblock()` and `checkpcblock()`, to prevent various character actions - see the script command docs for details. (#842)
+- Implemented the Stylist UI, available in clients starting from 2015. Configurable in `stylist_db.conf`, accessible to scripts through `openstylist()`. (#2004)
+
+### Changed
+- Extended the script command `getunits()` with support to look up units globally, making the map argument optional. (#1851)
+- Updated copyright headers to year 2018. (#2054)
+- Converted `exp.txt` (now `exp_group_db.conf`) to the libconfig format, now better integrated with `job_db.conf`. (#2036, originally #1944)
+
+### Fixed
+- Fixed an issue in the mob skill db parser that limited the mob skills to a maximum of 5 (#2042, issue #2044)
+- Fixed some incorrect msgstringtable IDs. (part of #2038)
+- Fixed inheritance in the mob DB, no longer overwriting the Range field with a default value. (#2055)
+- Fixed the skill element getter for levels above `MAX_SKILL_LEVEL`. (#2059)
+- Fixed interaction between the `pvp_nocalcrank` mapflag and the script/atcommands to toggle PvP. (#2057, issue #2056)
+
+### Deprecated
+- While not officially deprecated yet, use of `maprespawnguildid()` and `playbgmall()` has been superseded by `getunits()`. (part of #1851)
+- Deprecated the `pcblockmove()` script command. Use the more flexible `setpcblock()` instead. (part pf #842)
+
+## [v2018.05.06] `May 6 2018`
+### Added
+- Added a configurable PIN code blacklist, to prevent use of certain codes. (#2007 and #2029, issue #769)
+- Added/updated packets support for clients from 2018-04-11 to 2018-05-02. (#2021, #2030)
+- Implemented option to allow guild skill cooldowns to continue when the leader is logged out. Enabled by default and controlled by the `guild_skill_relog_delay` flag in guild.conf. (#2005, issue #1774)
+- Implemented the Private Airship system, currently using the list of maps from the Zero server. (#1998)
+- Added the constants `DEFAULT_MOB_JNAME` and `DEFAULT_MOB_NAME` (source only) to replace hardcoded use of `"--ja--"` and `"--en--"` respectively. (part of #2027)
+
+### Changed
+- Replaced custom messages related to the PIN code system with the official ones. (part of #2007)
+- Updated the minimum client version that enables certain features: new drop packet now in `PACKETVER >= 20180418`, attendance system now in `PACKETVER_ZERO_NUM >= 20180411`. (#2020)
+- Introduced a friendly error message when the `delwall()` script command fails due to a non-existent wall. (#2017)
+- Refactored some code to move `MAPID_*` related code into separate functions. (#2022)
+- Changed the plugins Makefile to honor the `$MYPLUGIN` variable passed through the environment, to make it easier to compile specific plugins without editing files. (#2025)
+- Converted the Mob Skill DB to the libconfig format. A converter script (`mobskilldbconverter.py`) has been provided for convenience. (#2019)
+
+### Fixed
+- Fixed interaction between Curse and Blessing. When under Curse or Stone Curse, Blessing will only remove the negative statuses and will need to be cast again to obtain the buff. (#1706, issue #680)
+- Added support for `time_t` as return type in the HPMHookGen. (bb0e228bd29dd689ca76f64578de8759415a763b)
+- Fixed some possible buffer overflows. (#2028)
+- Fixed the return value of `BUILDIN(getunitdata)`. (d6785d389cbee4f34078f6762626ca61b2d6cc25)
+- Improved support for clients version 2018-02-07 and Zero 2018-01-31. (part of #2030)
+- Fixed the clan names in some clan-related NPC dialogs. (#2032)
+- Fixed the display name of monster summoned through the `SA_SUMMONMONSTER` skill. (#2027)
+
+### Removed
+- Removed all the code related to the anonymous-stat-reporting system. (#2023)
+
+## [v2018.04.08] `April 8 2018`
+### Added
+- Added/updated packets support for clients from 2018-03-14 to 2018-04-04. (#1994 and #2014)
+- Introduced macros `PACKETVER_RE_NUM`, `PACKETVER_ZERO_NUM` and `PACKETVER_MAIN_NUM` to simplify client type-specific version checks.
+  These macros are defined to `PACKETVER` only if, respectively, `PACKETVER_RE`, `PACKETVER_ZERO` or neither are defined. (part of #1994)
+- Implemented Hat Effects, available in clients starting from 2015-04-22. (#1965)
+  - The `hateffect()` script command has been implemented.
+  - The related constants (with prefix `HAT_EF_*`) have been added and made available to the script engine.
+- Added the 2015 variant of the quest-related packets. (#1111)
+- Added login date information for guild members, on clients starting from 2016-10-26. The message format can be customized on the client side, by editing line 3012 of msgstringtable.txt. (#1986)
+- Added support for the `ZC_FORMATSTRING_MSG` and `ZC_MSG_COLOR` packets, handling msgstringtable messages. (#2012)
+- Added a setting (`storage_use_item` in `items.conf`) to control the use of items (usable/consumable/boxes) when the storage is open. (#1868, issue #1806)
+- Implemented the Attendance System, requiring client 2018-03-07bRagexeRE or newer. Configuration is available in `feature.conf` and `db/attendance_db.conf`. (#1990)
+- Added a configurable delay to the MVP Tombstone. The delay can be configured through the `mvp_tomb_spawn_delay` setting in `monster.conf`. (#2001, issue #1980)
+
+### Changed
+- Updated the functions handling quest-related packets to use the struct-based form. (part of #1111)
+- Converted the Pet DB to the libconfig format. A converter script (`petdbconverter.py`) has been provided for convenience. (#2000)
+- The `noteleport` mapflag has been added to the Archer Village (`pay_arche`), to match official servers. (part of #2006)
+- The `script->sprintf()` function has been renamed to `script->sprintf_helper()`. (part of #2009)
+
+### Fixed
+- Removed a duplicated line in the login server VS project that would prevent Visual Studio from loading it. (#1992)
+- Prevented a console warning when a nonexistent map is passed to the `getmapinfo()` script command. (584e8de35)
+- Fixed a RODEX loading data problem when a message's expiration date was manually edited. (#1995)
+- Corrected the error messages displayed when using various restricted items to match the official servers. (#2006)
+- Added a missing status refresh for the Homunculus Autofeed system when changing maps. (#2002)
+- Fixed a NULL pointer check failure when `TK_JUMPKICK` is used by a non-player. (#2015, issue #1875)
+- Fixed compilation of the HPMHooking plugin on systems where `sprintf()` is a macro. (#2009, issue #2003)
 
 ## [v2018.03.11] `March 11 2018`
 ### Added
@@ -190,6 +360,12 @@ If you are reading this in a text editor, simply ignore this section
 - New versioning scheme and project changelogs/release notes (#1853)
 
 [Unreleased]: https://github.com/HerculesWS/Hercules/compare/stable...master
+[v2018.07.29]: https://github.com/HerculesWS/Hercules/compare/v2018.07.01+1...v2018.07.29
+[v2018.07.01+1]: https://github.com/HerculesWS/Hercules/compare/v2018.07.01...v2018.07.01+1
+[v2018.07.01]: https://github.com/HerculesWS/Hercules/compare/v2018.06.03...v2018.07.01
+[v2018.06.03]: https://github.com/HerculesWS/Hercules/compare/v2018.05.06...v2018.06.03
+[v2018.05.06]: https://github.com/HerculesWS/Hercules/compare/v2018.04.08...v2018.05.06
+[v2018.04.08]: https://github.com/HerculesWS/Hercules/compare/v2018.03.11...v2018.04.08
 [v2018.03.11]: https://github.com/HerculesWS/Hercules/compare/v2018.02.11+1...v2018.03.11
 [v2018.02.11+1]: https://github.com/HerculesWS/Hercules/compare/v2018.02.11...v2018.02.11+1
 [v2018.02.11]: https://github.com/HerculesWS/Hercules/compare/v2018.01.14...v2018.02.11
