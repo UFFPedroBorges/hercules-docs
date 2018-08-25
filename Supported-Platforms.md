@@ -46,7 +46,7 @@ The latest LTS version is a primary platform. The latest version -- if not a LTS
 | ------------------------------ | ----------------- | ----------------------- | --------------- |
 | Ubuntu 18.10 Cosmic Cuttlefish | *unknown*         |                         |                 |
 | Ubuntu 18.04 Bionic Beaver     | **primary**       | April 2020 (rel. 20.04) | August 2020     |
-| Ubuntu 17.10 Artful Aardvark   | supported         |                         | July 2018       |
+| Ubuntu 17.10 Artful Aardvark   | *unsupported*     |                         |                 |
 | Ubuntu 17.04 Zesty Zapus       | *unsupported*     |                         |                 |
 | Ubuntu 16.10 Yakkety Yak       | *unsupported*     |                         |                 |
 | Ubuntu 16.04 LTS Xenial Xenus  | supported         |                         | August 2018     |
@@ -78,7 +78,7 @@ The latest FreeBSD release is a primary platform. The previous release is suppor
 | FreeBSD 11.2  | **primary**     | release of version 12  | 11.3 release + 3 months, or release of version 13     |
 | FreeBSD 11.1  | supported       |                        | September 2018 (expected), or release of version 13   |
 | FreeBSD 11.0  | *unsupported*   |                        |                                                       |
-| FreeBSD 10.4  | supported       |                        | October 2018 (expected), or release of version 13     |
+| FreeBSD 10.4  | supported       |                        | October 2018 (expected), or release of version 12     |
 | FreeBSD 10.3  | *unsupported*   |                        |                                                       |
 | FreeBSD 9.3   | *unsupported*   |                        |                                                       |
 
@@ -112,7 +112,8 @@ The latest NetBSD release is supported, but it isn't a primary platform.
 
 | System     | Support Status | Primary platform until | Supported until        |
 | ---------- | -------------- | ---------------------- | ---------------------- |
-| NetBSD 7.1 | supported      |                        | release of version 8.0 |
+| NetBSD 8.0 | supported      |                        | release of version 8.1 |
+| NetBSD 7.1 | *unsupported*  |                        |                        |
 | NetBSD 7.0 | *unsupported*  |                        |                        |
 | NetBSD 6.1 | *unsupported*  |                        |                        |
 
