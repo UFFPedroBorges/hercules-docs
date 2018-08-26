@@ -34,7 +34,7 @@ If you are reading this in a text editor, simply ignore this section
 - Fixed some vague item bonus documentation for `bHealPower` and `bHealPower2`. (#2125)
 - Fixed some issues in the GitLab CI CentOS builds that prevented the pipelines from succeeding. (#2191)
 - Reverted [v2018.07.29+1] and fixed the underlying issue, which caused some script variables to end up with an incorrect type. (#2164)
-- Fixed some constants that had an invalid type, which caused undefined behaviour with `getdatatype`. (#2164)
+- Fixed some constants that had an invalid type, which caused undefined behaviour with `getdatatype`. (#1801, #2164)
 - Fixed zeny spending achievements recording the zeny amount in negative values. (#2171)
 
 ## [v2018.07.29+2] `August 1 2018` `PATCH 2`
