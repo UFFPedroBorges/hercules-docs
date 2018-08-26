@@ -11,6 +11,35 @@ If you are reading this in a text editor, simply ignore this section
 
 ## [v2018.08.26] `August 26 2018`
 
+### Added
+- Added the `@setzone` command, which allows changing the zone of the current map on the fly. (#2162)
+- Added/updated packets, encryption keys, and message tables for clients up to 2018-08-08. (#2176)
+- Added support for `sak` and `ad` clients. (#2185)
+- Made the server display the client type (`main`, `RE`, `zero`, `sak`, `ad`) on startup. (#2185)
+- Added support for `mob_skill_db` to the `db2sql` plugin. (#2128, #2149)
+
+### Changed
+- Made the map zone db also reload when `@reloadscript` is used. (#2162)
+- Updated the `is_function` script command to support built-in commands, local functions, and local subroutines. (#2154)
+- Updated the `debugmes` script command to support printf format strings. (#2146)
+- Changed the language specification to `C11` in autoconf builds. (#2189)
+
+### Deprecated
+- `script->add_str()` should no longer be used by plugins to inject variables, as `script->add_variable()` supersedes it. (#2164)
+
+### Removed
+
+### Fixed
+- Fixed the `@mapflag` command not working with the `town` mapflag. (#2133, #2162)
+- Fixed some issues with the banking and roulette packets. (#2190)
+- Fixed the compiler throwing a warning when `MAGIC_REFLECTION_TYPE` is set to `0`. (#1920, 2175)
+- Fixed some vague item bonus documentation for `bHealPower` and `bHealPower2`. (#2125)
+- Fixed some issues in the GitLab CI CentOS builds that prevented the pipelines from succeeding. (#2191)
+- Reverted [v2018.07.29+1] and fixed the underlying issue, which caused some script variables to end up with an incorrect type. (#2164)
+- Fixed some constants that had an invalid type, which caused undefined behaviour with `getdatatype`. (#2164)
+
+### Security
+
 ## [v2018.07.29+2] `August 1 2018` `PATCH 2`
 ### Fixed
 - Fixed a wrong preprocessor directive that prevented some clients from connecting. (#2165, #2166)
