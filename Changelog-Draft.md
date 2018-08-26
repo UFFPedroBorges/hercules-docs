@@ -1,4 +1,3 @@
-
 # Changelog
 All notable changes to this project will be documented in this file.
 
@@ -9,6 +8,16 @@ and this project does not adhere to [Semantic Versioning](http://semver.org/spec
 <!--
 If you are reading this in a text editor, simply ignore this section
 -->
+
+## [v2018.08.26] `August 26 2018`
+
+## [v2018.07.29+2] `August 1 2018` `PATCH 2`
+### Fixed
+- Fixed a wrong preprocessor directive that prevented some clients from connecting. (#2165, #2166)
+
+## [v2018.07.29+1] `Jul 30 2018` `PATCH 1`
+### Fixed
+- Added a temporary patch for getd when variable types are C_NOP. (#2163)
 
 ## [v2018.07.29] `Jul 29 2018`
 ### Added
@@ -365,6 +374,9 @@ If you are reading this in a text editor, simply ignore this section
 - New versioning scheme and project changelogs/release notes (#1853)
 
 [Unreleased]: https://github.com/HerculesWS/Hercules/compare/stable...master
+[v2018.08.26]: https://github.com/HerculesWS/Hercules/compare/v2018.07.29+2...v2018.08.26
+[v2018.07.29+2]: https://github.com/HerculesWS/Hercules/compare/v2018.07.29+1...v2018.07.29+2
+[v2018.07.29+1]: https://github.com/HerculesWS/Hercules/compare/v2018.07.29...v2018.07.29+1
 [v2018.07.29]: https://github.com/HerculesWS/Hercules/compare/v2018.07.01+1...v2018.07.29
 [v2018.07.01+1]: https://github.com/HerculesWS/Hercules/compare/v2018.07.01...v2018.07.01+1
 [v2018.07.01]: https://github.com/HerculesWS/Hercules/compare/v2018.06.03...v2018.07.01
