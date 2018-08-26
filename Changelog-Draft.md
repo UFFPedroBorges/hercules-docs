@@ -27,8 +27,6 @@ If you are reading this in a text editor, simply ignore this section
 ### Deprecated
 - `script->add_str()` should no longer be used by plugins to inject variables, as `script->add_variable()` supersedes it. (#2164)
 
-### Removed
-
 ### Fixed
 - Fixed the `@mapflag` command not working with the `town` mapflag. (#2133, #2162)
 - Fixed some issues with the banking and roulette packets. (#2190)
@@ -37,8 +35,7 @@ If you are reading this in a text editor, simply ignore this section
 - Fixed some issues in the GitLab CI CentOS builds that prevented the pipelines from succeeding. (#2191)
 - Reverted [v2018.07.29+1] and fixed the underlying issue, which caused some script variables to end up with an incorrect type. (#2164)
 - Fixed some constants that had an invalid type, which caused undefined behaviour with `getdatatype`. (#2164)
-
-### Security
+- Fixed zeny spending achievements recording the zeny amount in negative values. (#2171)
 
 ## [v2018.07.29+2] `August 1 2018` `PATCH 2`
 ### Fixed
