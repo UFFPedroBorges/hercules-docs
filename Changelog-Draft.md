@@ -16,7 +16,7 @@ If you are reading this in a text editor, simply ignore this section
 - Added/updated packets, encryption keys, and message tables for clients up to 2018-08-08. (#2176)
 - Added support for `sak` and `ad` clients. (#2185)
 - Made the server display the client type (`main`, `RE`, `zero`, `sak`, `ad`) on startup. (#2185)
-- Added support for `mob_skill_db` to the `db2sql` plugin. (#2128, #2149)
+- Added const-correct wrappers for `strchr()`, `strrchr()`, `strstr()`, when building with C11-compatible compilers. (#2189)
 
 ### Changed
 - Made the map zone db also reload when `@reloadscript` is used. (#2162)
