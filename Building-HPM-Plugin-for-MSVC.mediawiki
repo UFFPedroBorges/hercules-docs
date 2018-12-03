@@ -1,52 +1,128 @@
 = Guide =
-There are 2 guides on how to prepare your MSVC environment for a new [[HPM]] plugin. You can choose to follow either one.
+
+After you've either built your own plugin or downloaded a plugin from the forums, you need to configure your build to include the plugin as a sub project.
+
+There are 2 guides on how to prepare your Microsoft Visual Studio C++ (MSVC) environment for a new [[HPM]] plugin.
+
+You can choose to follow either one.
+
 == New Method ==
-=== Step 1 ===
-Download the '''YourProject.c''' file in the '''\src\plugins\''' folder
+
+This new method 
+
+=== Requirements ===
+
+You need the following software:
+
+1. [https://visualstudio.microsoft.com/vs/ Microsoft Visual Studio IDE] - This [https://en.wikipedia.org/wiki/Integrated_development_environment?oldformat=true IDE] will be used to build your main build solution (your Hercules server), and to include your plugins as new sub projects.
+
+As of December 2018, the IDE version I used for updating this guide uses <code>Microsoft Visual Studio Community 2017, Version 15.2</code>. This property can be viewed when you open the IDE and go to <code>Help > About Microsoft Visual Studio</code>.
+
+2. [https://notepad-plus-plus.org/ Notepad++] - A convenient improvement to the standard notepad editor. This is recommended when editing <code>.conf</code> files or <code>.c</code>.
+
+3. The plugin you wish to install - For this tutorial on how to build your HPM plugin, we will use <code>YourProject</code> as the name of the plugin. This means that it is contained in a file called <code>YourProject.c</code>.
+
+=== Integrating the Plugin ===
+
+'''Step 1'''
+
+Download the <code>YourProject.c</code> from the [http://herc.ws/board/forum/142-plugin-releases/ Hercules Board, Plugin Releases] or build it yourself.
+
+'''Step 2'''
+
+Copy or move the <code>YourProject.c</code> file into your <code>/src/plugins/</code> folder.
 [[File:MSVC step0.png|center|750px]]
-=== Step 2 ===
-If using MSVC 2010, navigate to \vcproj-10\
+
+'''Step 3'''
+
+Depending on which Visual Studio C project version (<code>.vcproj</code>) you are using, navigate to the appropriate folder.
+
+For example, if you are using Microsoft Visual Studio IDE (2018), navigate to the directory <code>\vcproj-14\</code>. We use 14 because that is the latest build type available (better to use 14 instead of using the older build solutions).
 [[File:MSVC step1.png|center|750px]]
-=== Step 3 ===
-Select '''plugin-sample.vcxproj''', copy paste it
+
+'''Step 4'''
+
+Select <code>plugin-sample.vcxproj</code>, copy the file, and paste it on the same directory. This will produce a copy of the file with filename <code>plugin-sample - Copy.vcxproj</code>.
 [[File:MSVC step2.png|center|750px]]
-=== Step 4 ===
-Rename '''plugin-sample - Copy.vcxproj''' into '''YourProject.vcxproj'''<br>
+
+'''Step 5'''
+
+Rename <code>plugin-sample - Copy.vcxproj</code> into <code>YourProject.vcxproj</code>
+
 While renaming, Highlight the word '''YourProject''' and Copy it by ''Ctrl+C''
 [[File:MSVC step3.png|center|750px]]
-=== Step 5 ===
-Right-Click on '''YourFile.vcxproj''', Select '''Edit with Notepad++''', or Microsoft Notepad
+
+'''Step 6'''
+
+Right click on <code>YourProject.vcxproj</code>, select <code>Edit with Notepad++</code> or Microsoft Notepad.
 [[File:MSVC step4.png|center|750px]]
-=== Step 6 ===
-Find this line
+
+'''Step 7'''
+
+Find the following line:
  <ProjectName>plugin-sample</ProjectName>
 [[File:MSVC step5.png|center|750px]]
-Rename '''plugin-sample''' to '''YourProject''' by ''Ctrl+V''
+Replace <code>plugin-sample</code> with <code>YourProject</code>. Make sure that you copy this correctly and not make typos.
+
+To avoid typos, you can use <code>CTRL+C</code> to copy the name of the plugin and <code>CTRL+V</code> to paste the name of the plugin without making mistakes.
 [[File:MSVC step5 .png|center|750px]]
-=== Step 7 ===
-Find this line
+
+'''Step 8'''
+
+Find the following line:
  <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sample</TargetName>
 [[File:MSVC step6.png|center|750px]]
-Rename '''sample''' to '''YourProject''' by ''Ctrl+V''
+
+Replace <code>sample</code> to <code>YourProject</code>.
  <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">YourProject</TargetName>
 [[File:MSVC step6 .png|center|750px]]
-=== Step 8 ===
-Find this line
+
+'''Step 9'''
+
+Find the following line:
  <ClCompile Include="..\src\plugins\sample.c" />
 [[File:MSVC step7.png|center|750px]]
-Rename '''sample''' to '''YourProject''' by ''Ctrl+V''
+
+Replace <code>sample</code> to <code>YourProject</code>.
 [[File:MSVC step7 .png|center|750px]]
-=== Step 9 ===
-Press '''Ctrl+S''' to save the file.
-=== Step 10 ===
-Open MSVC, Right-click '''Hercules-10''', Select '''Add'' -> '''Existing Project...'''
+
+'''Step 10'''
+
+Save the file by pressing <code>CTRL+S</code>.
+
+'''Step 11'''
+
+From your the main folder of your server, open the appropriate Visual Studio solution file <code>Hercules-N.sln</code> using y. In this example, we used <code>Hercules-14.sln</code> because we are using Microsoft Visual Studio (2018). 
+
+'''Step 12'''
+
+On the Solution Explorer tab, right click <code>Hercules-14</code>, select <code>Add > Existing Project...</code>
 [[File:MSVC step9.png|center|750px]]
-=== Step 11 ===
-Select '''YourProject.vcxproj''' in the '''\vcproj-10\''' folder
+
+'''Step 13'''
+
+Select <code>YourProject.vcxproj</code> in the <code>\vcproj-14\</code> folder.
 [[File:MSVC step10.png|center|600px]]
-=== Step 12 ===
-Right-click '''Hercules-10''', Select '''Build-Solution'''
+
+'''Step 14'''
+
+Right click <code>Solution 'Hercules-14'</code> and select <code>Build Solution</code>.
 [[File:MSVC step11.png|center|600px]]
+
+This will now re-build your Hercules server while also integrating your plugin. This patches up the source code as necessary and includes the code into the appropriate <code>.c</code> files without you having to go to the individual files.
+
+=== Adding your plugin to the configuration ===
+
+Finally, we will open the file <code>/conf/plugins.conf</code> and include the name of our new plugin into the list.
+  plugins_list: [
+  	/* Enable HPMHooking when plugins in use rely on Hooking */
+  	//"HPMHooking",
+  	//"db2sql",
+  	//"sample",
+  	//"other",
+  	"YourProject"
+  ]
+
 == Old Method ==
 === Step 1 ===
 Go to '''src/plugins/''' folder, create a new '''.c''' file, e.g. '''dance.c''' (this name will be used throughout this guide)
