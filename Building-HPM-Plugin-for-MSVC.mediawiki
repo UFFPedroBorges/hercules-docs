@@ -1,16 +1,10 @@
-= Guide =
-
 After you've either built your own plugin or downloaded a plugin from the forums, you need to configure your build to include the plugin as a sub project.
 
 There are 2 guides on how to prepare your Microsoft Visual Studio C++ (MSVC) environment for a new [[HPM]] plugin.
 
 You can choose to follow either one.
 
-== New Method ==
-
-This new method 
-
-=== Requirements ===
+= Requirements =
 
 You need the following:
 
@@ -28,7 +22,15 @@ As of December 2018, the IDE version I used for updating this guide uses <code>M
 
 For this tutorial on how to build your HPM plugin, we will use <code>YourProject</code> as the name of the plugin. This means that it is contained in a file called <code>YourProject.c</code>. Plugins can be downloaded from the [http://herc.ws/board/forum/142-plugin-releases/ Hercules Board, Plugin Releases].
 
-=== Integrating the Plugin ===
+= New Method =
+
+This new method is recommended. There are two parts to the new method: integrating the plugin into your project's build solution and adding your plugin to the configuration files.
+
+It uses the latest build software (Visual Studio IDE Community 2017) and would most likely be the software that you can access and download as of this date.
+
+This method was imported from the Wiki data in 2016, and was updated as of December 2018.
+
+== Integrating the Plugin ==
 
 '''Step 1'''
 
@@ -37,60 +39,60 @@ Download the <code>YourProject.c</code> from the [http://herc.ws/board/forum/142
 '''Step 2'''
 
 Copy or move the <code>YourProject.c</code> file into your <code>/src/plugins/</code> folder.
-[[File:MSVC step0.png|center|750px]]
+[[http://herc.ws/wiki/images/thumb/3/3a/MSVC_step0.png/750px-MSVC_step0.png]]
 
 '''Step 3'''
 
 Depending on which Visual Studio C project version (<code>.vcproj</code>) you are using, navigate to the appropriate folder.
 
 For example, if you are using Microsoft Visual Studio IDE (Community 2017), navigate to the directory <code>\vcproj-14\</code>. We use 14 because that is the latest build type available (better to use 14 instead of using the older build solutions).
-[[File:MSVC step1.png|center|750px]]
+[[http://herc.ws/wiki/images/thumb/d/d1/MSVC_step1.png/750px-MSVC_step1.png]]
 
 '''Step 4'''
 
 Select <code>plugin-sample.vcxproj</code>, copy the file, and paste it on the same directory. This will produce a copy of the file with filename <code>plugin-sample - Copy.vcxproj</code>.
-[[File:MSVC step2.png|center|750px]]
+[[http://herc.ws/wiki/images/thumb/3/33/MSVC_step2.png/750px-MSVC_step2.png]]
 
 '''Step 5'''
 
 Rename <code>plugin-sample - Copy.vcxproj</code> into <code>YourProject.vcxproj</code>
 
 While renaming, Highlight the word '''YourProject''' and Copy it by ''Ctrl+C''
-[[File:MSVC step3.png|center|750px]]
+[[http://herc.ws/wiki/images/thumb/7/78/MSVC_step3.png/750px-MSVC_step3.png]]
 
 '''Step 6'''
 
 Right click on <code>YourProject.vcxproj</code>, select <code>Edit with Notepad++</code> or Microsoft Notepad.
-[[File:MSVC step4.png|center|750px]]
+[[http://herc.ws/wiki/images/thumb/7/7c/MSVC_step4.png/750px-MSVC_step4.png]]
 
 '''Step 7'''
 
 Find the following line:
  <ProjectName>plugin-sample</ProjectName>
-[[File:MSVC step5.png|center|750px]]
+[[http://herc.ws/wiki/images/thumb/d/d8/MSVC_step5.png/750px-MSVC_step5.png]]
 Replace <code>plugin-sample</code> with <code>YourProject</code>. Make sure that you copy this correctly and not make typos.
 
 To avoid typos, you can use <code>CTRL+C</code> to copy the name of the plugin and <code>CTRL+V</code> to paste the name of the plugin without making mistakes.
-[[File:MSVC step5 .png|center|750px]]
+[[http://herc.ws/wiki/images/thumb/c/c2/MSVC_step5_.png/750px-MSVC_step5_.png]]
 
 '''Step 8'''
 
 Find the following line:
  <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sample</TargetName>
-[[File:MSVC step6.png|center|750px]]
+[[http://herc.ws/wiki/images/thumb/5/5c/MSVC_step6.png/750px-MSVC_step6.png]]
 
 Replace <code>sample</code> to <code>YourProject</code>.
  <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">YourProject</TargetName>
-[[File:MSVC step6 .png|center|750px]]
+[[http://herc.ws/wiki/images/thumb/b/b6/MSVC_step6_.png/750px-MSVC_step6_.png]]
 
 '''Step 9'''
 
 Find the following line:
  <ClCompile Include="..\src\plugins\sample.c" />
-[[File:MSVC step7.png|center|750px]]
+[[http://herc.ws/wiki/images/thumb/2/23/MSVC_step7.png/750px-MSVC_step7.png]]
 
 Replace <code>sample</code> to <code>YourProject</code>.
-[[File:MSVC step7 .png|center|750px]]
+[[http://herc.ws/wiki/images/thumb/7/75/MSVC_step7_.png/750px-MSVC_step7_.png]]
 
 '''Step 10'''
 
@@ -103,21 +105,18 @@ From your the main folder of your server, open the appropriate Visual Studio sol
 '''Step 12'''
 
 On the Solution Explorer tab, right click <code>Hercules-14</code>, select <code>Add > Existing Project...</code>
-[[File:MSVC step9.png|center|750px]]
 
 '''Step 13'''
 
 Select <code>YourProject.vcxproj</code> in the <code>\vcproj-14\</code> folder.
-[[File:MSVC step10.png|center|600px]]
 
 '''Step 14'''
 
 Right click <code>Solution 'Hercules-14'</code> and select <code>Build Solution</code>.
-[[File:MSVC step11.png|center|600px]]
 
 This will now re-build your Hercules server while also integrating your plugin. This patches up the source code as necessary and includes the code into the appropriate <code>.c</code> files without you having to go to the individual files.
 
-=== Adding your plugin to the configuration ===
+== Adding your plugin to the configuration ==
 
 Finally, we will open the file <code>/conf/plugins.conf</code> and include the name of our new plugin into the list.
   plugins_list: [
@@ -129,11 +128,18 @@ Finally, we will open the file <code>/conf/plugins.conf</code> and include the n
   	"YourProject"
   ]
 
-== Old Method ==
-=== Step 1 ===
+= Old Method =
+
+{{Quote|text=This guide used Microsoft Visual Studio C++ (MSVC) 2008 as an IDE. This guide was tested using that IDE as well. It was also tested using Microsoft Visual Studio C++ 2010.|sign=Ind}}
+
+== Instructions ==
+
+'''Step 1'''
+
 Go to '''src/plugins/''' folder, create a new '''.c''' file, e.g. '''dance.c''' (this name will be used throughout this guide)
 [[File:step1.JPG|center|750px]]
-=== Step 2 ===
+
+'''Step 2'''
 Open dance.c and paste this code
 <pre>
 #include "common/hercules.h" // Should always be the first Hercules file included! (if you don't make it first, you won't be able to use interfaces)
@@ -186,62 +192,96 @@ HPExport void plugin_init (void) {
 }
 </pre>
 
-=== Step 3 ===
+'''Step 3'''
+
 Open your MSVC project (e.g. '''Hercules-10.sln'')
 [[File:step2.JPG|center|750px]]
-=== Step 4 ===
+
+'''Step 4'''
+
 Go to the '''Solution Explorer'''
 [[File:step3.JPG|center|750px]]
-=== Step 5 ===
+
+'''Step 5'''
+
 Right click the Hercules project (first item in '''Solution Explorer'''), and click '''Add->New Project'''
 [[File:step4.JPG|center|750px]]
-=== Step 6 ===
+
+'''Step 6'''
+
 Select '''General''', and pick '''Empty Project'''.
 [[File:step5.JPG|center|750px]]
-=== Step 7 ===
+
+'''Step 7'''
+
 Enter the name of your plugin in the '''Name''' field, and click OK.
-=== Step 8 ===
+
+'''Step 8'''
+
 In the solution explorer it'll display the new project.
 [[File:step6.JPG|center|750px]]
-=== Step 9 ===
+
+'''Step 9'''
+
 Right click the new project, and open '''Add->Existing Item'''
 [[File:step7.JPG|center|750px]]
-=== Step 10 ===
+
+'''Step 10'''
+
 Browse to '''src/plugins/''' and select the '''dance.c''' file, and hit OK.
 [[File:step8.JPG|center|750px]]
-=== Step 11 ===
+
+'''Step 11'''
+
 It will place the '''dance.c''' file under the '''Source Files''' folder, drag it to the project you created and drop it (in a manner it be placed out of the source files folder.)
 [[File:step9.JPG|center|750px]]
 (It should look like the image below)
 [[File:step10.JPG|center|750px]]
-=== Step 12 ===
+
+'''Step 12'''
+
 With the '''dance.c''' out of the folders, delete the 3 of them (select the 3, hit delete, hit ok)
 [[File:step11.JPG|center|750px]]
 (It should look like the image below)
 [[File:step12.JPG|center|750px]]
-=== Step 13 ===
+
+'''Step 13'''
+
 Right click the project you created, open '''Properties'''
 [[File:step13.JPG|center|750px]]
-=== Step 14 ===
+
+'''Step 14'''
+
 Under '''Configuration Properties''' click '''General''', change '''Output Directory''' to '''..\plugins\''', '''Intermediate Directory''' to '''$(ProjectName)\$(ConfigurationName)\''' and  '''Configuration Type''' to '''Dynamic Library (.dll)'''
 [[File:step14.JPG|center|750px]]
-=== Step 15 ===
+
+'''Step 15'''
+
 Under '''Configuration Properties''' click '''C/C++''' and open '''General''', change '''Additional Include Directories''' to '''..\src;..\3rdparty;..\3rdparty\msinttypes\include;%(AdditionalIncludeDirectories)'''
 [[File:step15.JPG|center|750px]]
-=== Step 16 ===
+
+'''Step 16'''
+
 Under '''Configuration Properties''' click '''Linker''' and open '''General''', change '''Output File''' to '''$(OutDir)\$(ProjectName).dll'''
 [[File:step16.JPG|center|750px]]
-=== Step 17 ===
+
+'''Step 17'''
+
 Under '''Configuration Properties''' click '''C/C++''' and open '''Preprocessor''', change '''Preprocessor Definitions''' to '''_WINDLL;PCRE_SUPPORT;%(PreprocessorDefinitions)'''
 [[File:step17.jpg|center|750px]]
-=== Step 18 ===
+
+'''Step 18'''
+
 Under '''Configuration Properties''' click '''C/C++''' and open '''Advanced''', on '''Disable Specific Warnings''' add '''4996;%(DisableSpecificWarnings)'''
 <br>This step can prevent errors like ''sscanf'' or ''sprintf'' that only happen with Microsoft compiler.
 [[File:step18.png|center|750px]]
 
-=== Step 19 ===
+'''Step 19'''
+
 Add your code to the '''dance.c''' file, and then right-click the project you created, and select '''Build'''
-=== Step 20 ===
+
+'''Step 20'''
+
 Add it to ''' /conf/plugins.conf'''
 <pre>
 plugins_list: [
