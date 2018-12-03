@@ -12,15 +12,21 @@ This new method
 
 === Requirements ===
 
-You need the following software:
+You need the following:
 
-1. [https://visualstudio.microsoft.com/vs/ Microsoft Visual Studio IDE] - This [https://en.wikipedia.org/wiki/Integrated_development_environment?oldformat=true IDE] will be used to build your main build solution (your Hercules server), and to include your plugins as new sub projects.
+'''An IDE to build your server with'''
+
+[https://visualstudio.microsoft.com/vs/ Microsoft Visual Studio IDE] - This [https://en.wikipedia.org/wiki/Integrated_development_environment?oldformat=true IDE] will be used to build your main build solution (your Hercules server), and to include your plugins as new sub projects.
 
 As of December 2018, the IDE version I used for updating this guide uses <code>Microsoft Visual Studio Community 2017, Version 15.2</code>. This property can be viewed when you open the IDE and go to <code>Help > About Microsoft Visual Studio</code>.
 
-2. [https://notepad-plus-plus.org/ Notepad++] - A convenient improvement to the standard notepad editor. This is recommended when editing <code>.conf</code> files or <code>.c</code>.
+'''A reliable text editor'''
 
-3. The plugin you wish to install - For this tutorial on how to build your HPM plugin, we will use <code>YourProject</code> as the name of the plugin. This means that it is contained in a file called <code>YourProject.c</code>.
+[https://notepad-plus-plus.org/ Notepad++] - A convenient improvement to the standard notepad editor. This will be used when editing <code>.conf</code> files or <code>.c</code>. Unlike more complicated text editors ([https://www.sublimetext.com/3 Sublime Text 3], [https://code.visualstudio.com/ Visual Code]), Notepad++ is much much simpler and would be less confusing for new programmers.
+
+'''The plugin you wish to install'''
+
+For this tutorial on how to build your HPM plugin, we will use <code>YourProject</code> as the name of the plugin. This means that it is contained in a file called <code>YourProject.c</code>. Plugins can be downloaded from the [http://herc.ws/board/forum/142-plugin-releases/ Hercules Board, Plugin Releases].
 
 === Integrating the Plugin ===
 
@@ -37,7 +43,7 @@ Copy or move the <code>YourProject.c</code> file into your <code>/src/plugins/</
 
 Depending on which Visual Studio C project version (<code>.vcproj</code>) you are using, navigate to the appropriate folder.
 
-For example, if you are using Microsoft Visual Studio IDE (2018), navigate to the directory <code>\vcproj-14\</code>. We use 14 because that is the latest build type available (better to use 14 instead of using the older build solutions).
+For example, if you are using Microsoft Visual Studio IDE (Community 2017), navigate to the directory <code>\vcproj-14\</code>. We use 14 because that is the latest build type available (better to use 14 instead of using the older build solutions).
 [[File:MSVC step1.png|center|750px]]
 
 '''Step 4'''
@@ -92,7 +98,7 @@ Save the file by pressing <code>CTRL+S</code>.
 
 '''Step 11'''
 
-From your the main folder of your server, open the appropriate Visual Studio solution file <code>Hercules-N.sln</code> using y. In this example, we used <code>Hercules-14.sln</code> because we are using Microsoft Visual Studio (2018). 
+From your the main folder of your server, open the appropriate Visual Studio solution file <code>Hercules-N.sln</code> using your IDE. In this example, we used <code>Hercules-14.sln</code> because we are using Microsoft Visual Studio (Community 2017). 
 
 '''Step 12'''
 
