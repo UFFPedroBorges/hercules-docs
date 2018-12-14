@@ -1,21 +1,69 @@
-## Building Mapcache
-### Windows
-First download [this vcxproj file](http://www.mediafire.com/file/nb9dh5vjl6ceqis/mapcache.vcxproj) and place it in the respective vcproj folder. Vcproj-14 is for the most recent version of Microsoft Visual Studio, the other folders are for older versions of it. Open the respective Hercules-xx.sln, Hercules-14.sln is for the most recent version of MVS, then right click the solution and hover over "Add" and select "Existing project..." from the menu.
+## What is the mapcache?
 
-Next, [[compile|Compiling-Windows]] your mapcache.
+Utilising the mapcache allows you to process the maps you've configured in the `db` and `conf` folder, with respect to the `conf/grf-files.txt`. Building the mapcache allows you to:
 
-Then for Windows 7+ operating systems, navigate to your root Hercules folder (same place where your Hercules-xx.sln's are), click the address bar so the folder path is highlighted, then type cmd and hit enter. A command prompt will open for that folder's path. Copy and paste this into the command prompt, then hit enter:
+* make custom maps,
+* edit existing maps,
+* allows your server to recognize the maps found in the client,
+* allows your server and client to agree on map information (passable and non-passable terrain among other information),
+* stores this information in a [cache](https://en.wikipedia.org/wiki/Cache_(computing)?oldformat=true) format easily usable by your server executables.
 
+## Building Mapcache for Hercules
+
+Back in eAthena and rAthena days, mapcache was a separate executable file `mapcache.exe` that you run to process the client.
+
+In Hercules, the mapcache tool is incorporated as a [Hercules Plugin](https://github.com/HerculesWS/Hercules/wiki/Hercules-Plugin-Manager), which is run using the `map-server.exe` as a loaded plugin that processes the maps as the map-server is starting up.
+
+To be able to use the mapcache tool, you must:
+
+1. Configure the mapcache plugin for your server
+2. Recompile the plugins to build the mapcache plugin
+3. On a terminal or command prompt, run the `map-server` with the the mapcache plugin loaded and instructions to rebuild the cache.
+
+# Instructions
+
+1. Determine what your operating system is. _Is it Windows? Unix?_ This will determine which guides you should follow on compiling and running the command line/terminal scripts.
+
+2. Configure the mapcache plugin. To do so, you must read about [how plugins are compiled](https://github.com/HerculesWS/Hercules/wiki/Hercules-Plugin-Manager#Building_a_plugin).
+
+3. Next, you need to [compile your server](https://github.com/HerculesWS/Hercules/wiki/Compiling). 
+
+4. Configure your `conf/grf-files.txt` so that the server knows where to find the client-side map files.
+
+5. On your server, configure your `db/map_index.txt` and `conf/map/maps.conf` so that you can include your custom maps. Read and follow the Configuring the `grf-files.txt` section below.
+
+6. On your client, ensure that your custom map is included in the `data/resnametable.txt` file, and that the corresponding `yourmap.gnd`, `yourmap.rsw`, and `yourmap.gat` is found in the data folder of your client.
+
+7. Open your command prompt or terminal to your root server folder, and run the following command:
+
+```
 map-server --load-plugin mapcache --rebuild-mapcache
+```
 
-If your conf/grf-files.txt is configured correctly, it will begin rebuilding the mapcache.
+8. That will execute the `map-server` executable with the `mapcache` plugin and instructing it to rebuild the mapcache.
 
-## Required Mapcache Files
-Open conf/grf-files.txt and add your data folder path, **NOT** including the data folder itself in the path! GRF files are no longer supported by the mapcache tool, use only a data folder. An existing GRF can be extracted with a GRF tool to obtain its data folder.
+9. Once it has finished running, your mapcache has been rebuilt and your server and client agree on the data about the maps. Go and test whether your map exists.
+
+***
+
+### Configuring the `grf-files.txt`
+
+1. Open `conf/grf-files.txt`
+2. Add your data folder path.
+3. Do not include the data folder itself in the path (see example).
+
+**Can I use the GRF files option?**
+
+No. GRF files are no longer supported by the `mapcache` tool, so use only the data folder option.
+
+**But I need to use the GRF cause my files are there!**
+
+If you have files in the GRF which you have to include, use a [[GRF extraction]] tool to obtain its data folder.
 
 **Examples:**
 
+```
 data_dir: C:\Users\JohnD\Documents\Data Folder\
-NOTE: This will go to C:\Users\JohnD\Documents\Data Folder\data
+```
 
-In order for mapcache to work, you must have your desired map listed in db/map_index, conf/map/maps.conf, and it must also be inside of data/resnametable.txt client side. Additionally, you must have a .gnd, .rsw, and .gat file for your map inside of your data folder.
+This will refer to the data folder found at `C:\Users\JohnD\Documents\Data Folder\data`.
