@@ -24,9 +24,9 @@ For this tutorial on how to build your HPM plugin, we will use <code>YourProject
 
 = Are there any tools that I can use to automate this? = 
 
-In May 2018, User [http://herc.ws/board/profile/8365-kiriez/ Kiriez] introduced the [http://herc.ws/board/topic/15917-vs-plugin-creator/#comment-90025 VS Plugin Creator], which automates steps 1 to 13 of the New Method described below. I suggest you try this first to see if it works. Give feedback on the tool (whether it works or not, errors you might encounter) on the [http://herc.ws/board/topic/15917-vs-plugin-creator/#comment-90025 thread itself].
+In May 2018, User [http://herc.ws/board/profile/8365-kiriez/ Kiriez] introduced the [http://herc.ws/board/topic/15917-vs-plugin-creator VS Plugin Creator], which automates steps 1 to 13 of the New Method described below. I suggest you try this first to see if it works. Give feedback on the tool (whether it works or not, errors you might encounter) on the [http://herc.ws/board/topic/15917-vs-plugin-creator thread itself].
 
-If his tool didn't work, try using the [http://herc.ws/board/topic/16480-plugin-automator-for-windows/#comment-90014 Plugin Automator for Windows] by User [http://herc.ws/board/profile/17499-fourxhackd/ fourxhackd], which automates steps 1 to 10 of the New Method.
+If his tool didn't work, try using the [http://herc.ws/board/topic/16480-plugin-automator-for-windows Plugin Automator for Windows] by User [http://herc.ws/board/profile/17499-fourxhackd/ fourxhackd], which automates steps 1 to 10 of the New Method.
 
 Using the tools will make sure you don't make simple typo-related mistakes, or placing the files in the wrong folder. Doing it manually, as described in the New Method, will show you exactly what the tools do.
 
