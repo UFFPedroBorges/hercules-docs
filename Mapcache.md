@@ -1,4 +1,4 @@
-## What is the mapcache?
+# What is the mapcache?
 
 Utilising the mapcache allows you to process the maps you've configured in the `db` and `conf` folder, with respect to the `conf/grf-files.txt`. Building the mapcache allows you to:
 
@@ -8,7 +8,7 @@ Utilising the mapcache allows you to process the maps you've configured in the `
 * allows your server and client to agree on map information (passable and non-passable terrain among other information),
 * stores this information in a [cache](https://en.wikipedia.org/wiki/Cache_(computing)?oldformat=true) format easily usable by your server executables.
 
-## Building Mapcache for Hercules
+# Building Mapcache for Hercules
 
 Back in eAthena and rAthena days, mapcache was a separate executable file `mapcache.exe` that you run to process the client.
 
@@ -20,7 +20,7 @@ To be able to use the mapcache tool, you must:
 2. Recompile the plugins to build the mapcache plugin
 3. On a terminal or command prompt, run the `map-server` with the the mapcache plugin loaded and instructions to rebuild the cache.
 
-# Instructions
+## Instructions
 
 1. Determine what your operating system is. _Is it Windows? Unix?_ This will determine which guides you should follow on compiling and running the command line/terminal scripts.
 
@@ -67,3 +67,6 @@ data_dir: C:\Users\JohnD\Documents\Data Folder\
 ```
 
 This will refer to the data folder found at `C:\Users\JohnD\Documents\Data Folder\data`.
+
+# References / Extended Reading
+1. [Myriad's Mapcache Generation 2018](http://herc.ws/board/topic/15868-guide-mapcache-generation-2018/#comment-90027)
