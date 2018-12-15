@@ -4,7 +4,7 @@ The **Hercules Plugin Manager**, often referred to as the [[HPM]], is yet anothe
 
 ### What does building a plugin mean?
 
-To build a plugin is the same as to [compile](https://github.com/HerculesWS/Hercules/wiki/Compiling) a plugin. This means that you want to use an existing plugin in a server.
+To build a plugin is the same as to [compile](https://github.com/HerculesWS/Hercules/wiki/Compiling) a plugin. This means that you want to use an existing plugin (that you may have downloaded from [the Plugin Releases forum](http://herc.ws/board/forum/142-plugin-releases/)) in a server.
 
 ### Where do I start?
 
