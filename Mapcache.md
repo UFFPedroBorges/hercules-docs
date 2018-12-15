@@ -16,19 +16,21 @@ In Hercules, the mapcache tool is incorporated as a [Hercules Plugin](https://gi
 
 ## Requirements
 
-To be able to build and use the mapcache tool, you must:
+You must know what your Operating System is. Is it a Windows? a Unix-based system?
 
-1. Know what your Operating System is (Windows? Unix-based systems?).
+## What you will learn
 
-2. Know how to configure the mapcache plugin for your server.
+In building the mapcache for Hercules, you will learn how to:
 
-3. Know how to recompile the plugins to build the mapcache plugin.
+1. Configure the mapcache plugin for your server.
 
-4. Know how to use a terminal or command prompt, to run the `map-server` with the the mapcache plugin loaded and instructions to rebuild the cache.
+2. Recompile the plugins to build the mapcache plugin.
+
+3. Know how to use a terminal or command prompt, to run the `map-server` with the the mapcache plugin loaded and instructions to rebuild the cache.
 
 ## Instructions
 
-1. Determine what your operating system is. _Is it Windows? Unix?_ This will determine which guides you should follow on compiling and running the command line/terminal scripts.
+1. Determine what your operating system is. _Is it Windows? Unix?_ This will determine which guides you should follow when [compiling](https://github.com/HerculesWS/Hercules/wiki/Compiling) and running command line/terminal scripts.
 
 2. Configure the mapcache plugin. To do so, you must read about [how plugins are compiled](https://github.com/HerculesWS/Hercules/wiki/Hercules-Plugin-Manager#Building_a_plugin).
 
