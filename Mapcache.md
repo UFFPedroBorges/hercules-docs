@@ -14,11 +14,17 @@ Back in eAthena and rAthena days, mapcache was a separate executable file `mapca
 
 In Hercules, the mapcache tool is incorporated as a [Hercules Plugin](https://github.com/HerculesWS/Hercules/wiki/Hercules-Plugin-Manager), which is run using the `map-server.exe` as a loaded plugin that processes the maps as the map-server is starting up.
 
-To be able to use the mapcache tool, you must:
+## Requirements
 
-1. Configure the mapcache plugin for your server
-2. Recompile the plugins to build the mapcache plugin
-3. On a terminal or command prompt, run the `map-server` with the the mapcache plugin loaded and instructions to rebuild the cache.
+To be able to build and use the mapcache tool, you must:
+
+1. Know what your Operating System is (Windows? Unix-based systems?).
+
+2. Know how to configure the mapcache plugin for your server.
+
+3. Know how to recompile the plugins to build the mapcache plugin.
+
+4. Know how to use a terminal or command prompt, to run the `map-server` with the the mapcache plugin loaded and instructions to rebuild the cache.
 
 ## Instructions
 
