@@ -144,35 +144,36 @@ The status on other linux distributions is unknown. Hercules will likely run on 
 ## Microsoft Windows
 
 Windows (both server and workstation versions) are primary platform, for as long as they're within their upstream Mainstream Support period. Versions within their upstream Extended Support period are supported. Older versions are unsupported.
-Primary support for more than two versions of Windows Server and more than two versions of Windows won't be guaranteed in any case. As such, when a new version is released, the currently oldest primary supported version may switch to supported.
+Primary support for more than one version of Windows Server and more than one version of Windows won't be guaranteed in any case. As such, when a new version is released, the current primary supported version may switch to supported.
 
-| System                     | Support Status | Primary platform until    | Supported until             |
-| -------------------------- | -------------- | ------------------------- | --------------------------- |
-| Windows Server v.1809      | *unknown*      |                           |                             |
-| Windows Server v.1709      | **primary**    | October 2018 (estimated)  | 2019-11-12                  |
-| Windows Server v.1709      | supported      |                           | 2019-04-09                  |
-| Windows Server 2016        | **primary**    | 2022-01-11                | 2027-01-11                  |
-| Windows Server 2012 R2     | supported      |                           | 2023-01-10                  |
-| Windows Server 2012        | supported      |                           | 2023-01-10                  |
-| Windows Server 2008 R2 SP1 | supported      |                           | 2020-01-14                  |
-| Windows Server 2008 R2     | *unsupported*  |                           |                             |
-| Windows Server 2008 SP2    | *unsupported*  |                           |                             |
-| Windows Server 2008        | *unsupported*  |                           |                             |
-| Windows 10 (latest ver.)   | **primary**    | 2021-10-12                | 2026-10-13                  |
-| Windows 10 v.1803          | **primary**    | 2021-10-12 or next update | 2019-11-12                  |
-| Windows 10 v.1709          | supported      |                           | 2019-04-09                  |
-| Windows 10 v.1703          | supported      |                           | 2018-10-09                  |
-| Windows 10 v.1607          | *unsupported*  |                           |                             |
-| Windows 10 v.1511          | *unsupported*  |                           |                             |
-| Windows 10 RTM (v.1507)    | *unsupported*  |                           |                             |
-| Windows 8.1                | supported      |                           | 2023-01-10                  |
-| Windows 8                  | *unsupported*  |                           |                             |
-| Windows 7 SP1              | supported      |                           | 2020-01-14                  |
-| Windows 7                  | *unsupported*  |                           |                             |
-| Windows Vista SP2          | *unsupported*  |                           |                             |
-| Windows Vista              | *unsupported*  |                           |                             |
-| Windows XP SP3             | *unsupported*  |                           |                             |
-| Windows XP                 | *unsupported*  |                           |                             |
+| System                     | Support Status | Primary platform until | Supported until |
+| -------------------------- | -------------- | ---------------------- | --------------- |
+| Windows Server v.1903      | *unknown*      |                        |                 |
+| Windows Server v.1809      | **primary**    | April 2019 (estimated) | 2020-05-11      |
+| Windows Server v.1709      | supported      |                        | 2019-04-09      |
+| Windows Server 2016        | supported      | 2022-01-11             | 2027-01-11      |
+| Windows Server 2012 R2     | supported      |                        | 2023-01-10      |
+| Windows Server 2012        | supported      |                        | 2023-01-10      |
+| Windows Server 2008 R2 SP1 | supported      |                        | 2020-01-14      |
+| Windows Server 2008 R2     | *unsupported*  |                        |                 |
+| Windows Server 2008 SP2    | *unsupported*  |                        |                 |
+| Windows Server 2008        | *unsupported*  |                        |                 |
+| Windows 10 (latest ver.)   | **primary**    | next update            | 2026-10-13      |
+| Windows 10 v.1809          | **primary**    | next update            | 2020-05-12      |
+| Windows 10 v.1803          | supported      |                        | 2019-11-12      |
+| Windows 10 v.1709          | supported      |                        | 2019-04-09      |
+| Windows 10 v.1703          | *unsupported*  |                        |                 |
+| Windows 10 v.1607          | *unsupported*  |                        |                 |
+| Windows 10 v.1511          | *unsupported*  |                        |                 |
+| Windows 10 RTM (v.1507)    | *unsupported*  |                        |                 |
+| Windows 8.1                | supported      |                        | 2023-01-10      |
+| Windows 8                  | *unsupported*  |                        |                 |
+| Windows 7 SP1              | supported      |                        | 2020-01-14      |
+| Windows 7                  | *unsupported*  |                        |                 |
+| Windows Vista SP2          | *unsupported*  |                        |                 |
+| Windows Vista              | *unsupported*  |                        |                 |
+| Windows XP SP3             | *unsupported*  |                        |                 |
+| Windows XP                 | *unsupported*  |                        |                 |
 
 ### Visual Studio
 
