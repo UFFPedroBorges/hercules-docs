@@ -75,13 +75,13 @@ The latest FreeBSD release is a primary platform. The previous release is suppor
 
 | System        | Support Status  | Primary platform until | Supported until                                       |
 | ------------- | --------------- | ---------------------- | ----------------------------------------------------- |
-| FreeBSD 11.x  | **primary** (4) | release of version 12  | last 11.x release + 2 years, or release of version 13 |
-| FreeBSD 11.2  | **primary**     | release of version 12  | 11.3 release + 3 months, or release of version 13     |
-| FreeBSD 11.1  | supported       |                        | September 2018 (expected), or release of version 13   |
+| FreeBSD 11.x  | **primary** (4) | release of version 13  | last 12.x release + 2 years, or release of version 14 |
+| FreeBSD 12.0  | **primary**     | release of version 13  | 12.1 release + 3 months, or release of version 14     |
+| FreeBSD 11.x  | supported (4)   |                        | last 11.x release + 2 years, or release of version 13 |
+| FreeBSD 11.2  | supported       |                        | September 2021 (expected), or release of version 13   |
+| FreeBSD 11.1  | *unsupported*   |                        |                                                       |
 | FreeBSD 11.0  | *unsupported*   |                        |                                                       |
-| FreeBSD 10.4  | supported       |                        | October 2018 (expected), or release of version 12     |
-| FreeBSD 10.3  | *unsupported*   |                        |                                                       |
-| FreeBSD 9.3   | *unsupported*   |                        |                                                       |
+| FreeBSD 10.4  | *unsupported*   |                        |                                                       |
 
 (4): version 'y.x' refers to the latest release in the 'y' branch.
 
