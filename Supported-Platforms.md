@@ -40,11 +40,12 @@ The current stable version is a primary platform. The previous stable version is
 
 ## Ubuntu Server
 
-The latest LTS version is a primary platform. The latest version -- if not a LTS version --  is a supported platform. The previous LTS version is a supported platform for 4 months after the next version is released. Older versions are unsupported.
+The latest LTS version is a primary platform. The latest version -- if not an LTS version -- is a supported platform. The previous LTS version is a supported platform for 4 months after the next version is released. Older versions are unsupported.
 
 | System                         | Support Status    | Primary platform until  | Supported until |
 | ------------------------------ | ----------------- | ----------------------- | --------------- |
-| Ubuntu 18.10 Cosmic Cuttlefish | *unknown*         |                         |                 |
+| Ubuntu 19.04 Disco Dingo       | *unknown*         |                         |                 |
+| Ubuntu 18.10 Cosmic Cuttlefish | supported         |                         | April 2019      |
 | Ubuntu 18.04 Bionic Beaver     | **primary**       | April 2020 (rel. 20.04) | August 2020     |
 | Ubuntu 17.10 Artful Aardvark   | *unsupported*     |                         |                 |
 | Ubuntu 17.04 Zesty Zapus       | *unsupported*     |                         |                 |
