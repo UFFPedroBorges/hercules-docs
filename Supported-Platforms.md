@@ -180,18 +180,18 @@ Primary support for more than one version of Windows Server and more than one ve
 Visual Studio versions are also subject to platform support status. The latest version of Visual Studio (unless there are existing issues) is the primary platform, while older versions are supported at the discretion of the development team and may become unsupported as soon as they are out of their Mainstream Support period.
 Support for more than three versions of Visual Studio won't be guaranteed in any case. As such, when a new version is released, the currently oldest supported version may be dropped.
 
-| Version                     | Support Status | Primary platform until       | Supported until               |
-| --------------------------- | -------------- | ---------------------------- | ----------------------------- |
-| Visual Studio 2017          | **primary**    | next release                 | 2022-04-12 or next 3 releases |
-| Visual Studio 2015 Update 3 | supported      |                              | 2020-10-13 or next 2 releases |
-| Visual Studio 2015 Update 2 | *unsupported*  |                              |                               |
-| Visual Studio 2015          | *unsupported*  |                              |                               |
-| Visual Studio 2013 Update 5 | supported      |                              | 2019-04-09 or next release    |
-| Visual Studio 2013 Update 4 | *unsupported*  |                              |                               |
-| Visual Studio 2013          | *unsupported*  |                              |                               |
-| Visual Studio 2012 Update 4 | *unsupported*  |                              |                               |
-| Visual Studio 2012          | *unsupported*  |                              |                               |
-| Visual Studio 2010          | *unsupported*  |                              |                               |
-| Visual Studio 2008          | *unsupported*  |                              |                               |
+| Version                         | Support Status | Primary platform until       | Supported until               |
+| ------------------------------- | -------------- | ---------------------------- | ----------------------------- |
+| Visual Studio 2019              | *unknown*      |                              |                               |
+| Visual Studio 2017 Version 15.9 | **primary**    | Release of VS 2019           | 2022-04-12 or next 3 releases |
+| Visual Studio 2017              | *unsupported*  |                              |                               |
+| Visual Studio 2015 Update 3     | supported      |                              | 2020-10-13 or next 2 releases |
+| Visual Studio 2015 Update 2     | *unsupported*  |                              |                               |
+| Visual Studio 2015              | *unsupported*  |                              |                               |
+| Visual Studio 2013 Update 5     | supported      |                              | 2019-04-09 or next release    |
+| Visual Studio 2013 Update 4     | *unsupported*  |                              |                               |
+| Visual Studio 2013              | *unsupported*  |                              |                               |
+| Visual Studio 2012              | *unsupported*  |                              |                               |
+| Visual Studio 2010              | *unsupported*  |                              |                               |
 
 (5): This version is currently known to work, for legacy reasons. Continued support is not guaranteed.
