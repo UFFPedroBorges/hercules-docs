@@ -113,4 +113,4 @@ map-server\_sql, char-server\_sql, in main folder
 
 ## Windows
 
-[Category:Installation](Category:Installation "wikilink")
+See this guide for [Compiling on Windows](https://github.com/HerculesWS/Hercules/wiki/Compiling-Windows).
