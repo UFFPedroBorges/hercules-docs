@@ -9,6 +9,23 @@ and this project does not adhere to [Semantic Versioning](http://semver.org/spec
 If you are reading this in a text editor, simply ignore this section
 -->
 
+## [v2019.05.05] `May 5 2019`
+
+### Added
+- Added `consolemes()` script function which allow the script engine to print error, warning, status, debug and info messages into console. (part of #2440)
+
+### Changed
+- Extend `@dropall` to accept an optional argument for item type (#2439).
+
+### Fixed
+- Corrected MSVC version naming in console (#2450).
+- Fixed an issue in monster death lable callback in `npc/custom/events/mushroom_event.txt` happens when no player is attached and lable called (#1955 and #2442).
+- Fixed an issue where when a chat room handler leaves the following leader won't be checked for `cell_chknochat` and will bypass it (#1569 and #2443)
+- Corrected a bad usage of sprite number instead of constant in README.md.
+
+### Deprecated
+- Deprecated the script function `debugmes()`, superseded by `consolemes()`. (part of #2440)
+
 ## [v2019.04.07+1] `April 7 2019` `PATCH 1`
 
 ### Fixed
