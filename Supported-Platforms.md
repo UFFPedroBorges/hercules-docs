@@ -44,8 +44,9 @@ The latest LTS version is a primary platform. The latest version -- if not an LT
 
 | System                         | Support Status    | Primary platform until  | Supported until |
 | ------------------------------ | ----------------- | ----------------------- | --------------- |
-| Ubuntu 19.04 Disco Dingo       | *unknown*         |                         |                 |
-| Ubuntu 18.10 Cosmic Cuttlefish | supported         |                         | April 2019      |
+| Ubuntu 19.10                   | *unknown*         |                         |                 |
+| Ubuntu 19.04 Disco Dingo       | supported         |                         | October 2019    |
+| Ubuntu 18.10 Cosmic Cuttlefish | *unsupported*     |                         |                 |
 | Ubuntu 18.04 Bionic Beaver     | **primary**       | April 2020 (rel. 20.04) | August 2020     |
 | Ubuntu 17.10 Artful Aardvark   | *unsupported*     |                         |                 |
 | Ubuntu 17.04 Zesty Zapus       | *unsupported*     |                         |                 |
