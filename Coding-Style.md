@@ -8,7 +8,7 @@ the same principles and guidelines.
 Hercules follows the same guidelines as the Linux Kernel (because Linus
 is pretty much always right, and he doubtlessly knows what he's doing),
 with some small modifications.  The original, unmodified, document can
-be found at: https://www.kernel.org/doc/Documentation/CodingStyle
+be found at: https://www.kernel.org/doc/html/latest/process/coding-style.html
 
 # Linux kernel coding style (Hercules version)
 
