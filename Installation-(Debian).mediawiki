@@ -67,6 +67,8 @@ Note that the sql_updates table is needed by all three servers.
  ./configure
  make sql
 
+'''Note:''' If during the configure step you run into the "MySQL not found or incompatible" error, you may be able to fix it by installing "libssl-dev".
+
 *If you have added plugins for use with Hercules please use the below syntax instead of the above:
  cd Hercules
  ./configure
