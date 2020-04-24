@@ -216,6 +216,17 @@ single statement; in the latter case use braces in both branches:
 	}
 ```
 
+If the condition is broken into multiple lines use braces, too:
+
+```
+	if (condition
+	    && condition) {
+		do_this();
+	} else {
+		otherwise();
+	}
+```
+
 ### 3.1:  Spaces
 
 Linux kernel style for use of spaces depends (mostly) on
