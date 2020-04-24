@@ -104,9 +104,13 @@ Statements longer than 120 columns will be broken into sensible chunks,
 unless exceeding 120 columns significantly increases readability and
 does not hide information. Descendants are always substantially shorter
 than the parent and are placed substantially to the right. The same
-applies to function headers with a long argument list. However, never
-break user-visible strings such as `ShowMessage` messages, because that
-breaks the ability to grep for them.
+applies to function headers with a long argument list. When breaking
+if-statements, break before the logical operator. Long function headers
+and calls are broken after a comma. A calculation should not be broken.
+Split it into logical chunks by creating variables for partial results
+instead.  
+However, never break user-visible strings such as `ShowMessage` messages,
+because that breaks the ability to grep for them.
 
 ## Chapter 3: Placing Braces and Spaces
 
