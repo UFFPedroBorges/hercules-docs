@@ -42,18 +42,16 @@ The latest LTS version is a primary platform. The latest version -- if not an LT
 
 | System                         | Support Status    | Primary platform until  | Supported until |
 | ------------------------------ | ----------------- | ----------------------- | --------------- |
-| Ubuntu 19.10                   | *unknown*         |                         |                 |
-| Ubuntu 19.04 Disco Dingo       | supported         |                         | October 2019    |
+| Ubuntu 20.10 Groovy Gorilla    | *unknown*         |                         |                 |
+| Ubuntu 20.04 Focal Fossa       | **primary**       | April 2022 (rel. 22.04) | August 2022     |
+| Ubuntu 19.10 Eoan Ermine       | *unsupported*     |                         |                 |
+| Ubuntu 19.04 Disco Dingo       | *unsupported*     |                         |                 |
 | Ubuntu 18.10 Cosmic Cuttlefish | *unsupported*     |                         |                 |
-| Ubuntu 18.04 Bionic Beaver     | **primary**       | April 2020 (rel. 20.04) | August 2020     |
+| Ubuntu 18.04 Bionic Beaver     | *supported*       |                         | August 2020     |
 | Ubuntu 17.10 Artful Aardvark   | *unsupported*     |                         |                 |
 | Ubuntu 17.04 Zesty Zapus       | *unsupported*     |                         |                 |
 | Ubuntu 16.10 Yakkety Yak       | *unsupported*     |                         |                 |
 | Ubuntu 16.04 LTS Xenial Xenus  | *unsupported* (3) |                         |                 |
-| Ubuntu 15.10 Wily Werewolf     | *unsupported*     |                         |                 |
-| Ubuntu 15.04 Vivid Vervet      | *unsupported*     |                         |                 |
-| Ubuntu 14.10 Utopic Unicorn    | *unsupported*     |                         |                 |
-| Ubuntu 14.04 LTS Trusty Tahr   | *unsupported*     |                         |                 |
 
 (3): Although unsupported, Hercules is very likely to still work on this version
 
