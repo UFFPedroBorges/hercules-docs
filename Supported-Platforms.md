@@ -27,16 +27,14 @@ Older (obsolete stable releases other than oldstable), or newer (testing, unstab
 
 The current stable version is a primary platform. The previous stable version is supported, but may require upgrading the development tools. Older versions are unsupported, regardless of upstream support.
 
-| System   | Support Status | Primary platform until | Supported until      |
-| -------- | -------------- | ---------------------- | -------------------- |
-| CentOS 7 | **primary**    | release of version 8   | release of version 9 |
-| RHEL 7   | **primary**    | release of version 8   | release of version 9 |
-| CentOS 6 | supported (2)  |                        | release of version 8 |
-| RHEL 6   | supported (2)  |                        | release of version 8 |
-| CentOS 5 | *unsupported*  |                        |                      |
-| RHEL 5   | *unsupported*  |                        |                      |
-
-(2): It's recommended to upgrade the development tools to include GCC 4.9 or newer (devtoolset-3 or newer).
+| System   | Support Status | Primary platform until | Supported until       |
+| -------- | -------------- | ---------------------- | --------------------- |
+| CentOS 8 | **primary**    | release of version 9   | release of version 10 |
+| RHEL 8   | **primary**    | release of version 9   | release of version 10 |
+| CentOS 7 | supported      |                        | release of version 9  |
+| RHEL 7   | supported      |                        | release of version 9  |
+| CentOS 6 | *unsupported*  |                        |                       |
+| RHEL 6   | *unsupported*  |                        |                       |
 
 ## Ubuntu Server
 
