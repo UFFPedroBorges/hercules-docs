@@ -116,26 +116,40 @@ Get a decent editor and don't leave whitespace at the end of lines.
 
 ## Chapter 2: Breaking long lines and strings
 
-Coding style is all about readability and maintainability using commonly
-available tools.
+Coding style is all about readability and maintainability using commonly available tools.
 
-The limit on the length of lines is 120 columns and this is a preferred
-limit (not a hard limit).
+The limit on the length of lines is 120 columns and this is a preferred limit (not a hard limit).
 
-_Hercules change: This was originally 80, we change it to 120 and make
-it less strict._
+_Hercules change: This was originally 80, we change it to 120 and make it less strict._
 
 Statements longer than 120 columns will be broken into sensible chunks,
 unless exceeding 120 columns significantly increases readability and
 does not hide information. Descendants are always substantially shorter
 than the parent and are placed substantially to the right. The same
-applies to function headers with a long argument list. When breaking
-if-statements, break before the logical operator. Long function headers
-and calls are broken after a comma. A calculation should not be broken.
-Split it into logical chunks by creating variables for partial results
-instead.  
-However, never break user-visible strings such as `ShowMessage` messages,
-because that breaks the ability to grep for them.
+applies to function headers/calls with a long parameter/argument list
+and long conditions of if-statements.
+* Long function headers and calls are broken after a comma.
+```
+	// Long function header.
+	static void do_something(int parameter1, int parameter2,
+				 int parameter3)
+	{
+		// Function body.
+	}
+
+	// Long function call.
+	do_something(argument1, argument2,
+		     argument3);
+```
+* When breaking conditions of an if-statement, break before the logical operator.
+```
+	if ((condition1 && condition2)
+	    || condition3) {
+		do_this();
+	}
+```
+* A calculation should not be broken. Split it into logical chunks by creating variables for partial results instead.
+* However, never break user-visible strings such as `ShowMessage` messages, because that breaks the ability to grep for them.
 
 ## Chapter 3: Placing Braces and Spaces
 
