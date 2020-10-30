@@ -81,7 +81,7 @@ The preferred way to ease multiple indentation levels in a switch
 statement is to align the "switch" and its subordinate "case" labels in
 the same column instead of "double-indenting" the "case" labels.  E.g.:
 
-```
+```c
 	switch (suffix) {
 	case 'G':
 	case 'g':
@@ -103,7 +103,7 @@ the same column instead of "double-indenting" the "case" labels.  E.g.:
 Don't put multiple statements on a single line unless you have something
 to hide:
 
-```
+```c
 	if (condition) do_this;
 	  do_something_everytime;
 ```
@@ -131,7 +131,7 @@ than the parent and are placed substantially to the right. The same
 applies to function headers/calls with a long parameter/argument list
 and long conditions of if-statements.
 * Long function headers and calls are broken after a comma.
-```
+```c
 	// Long function header.
 	static void do_something(int parameter1, int parameter2,
 				 int parameter3)
@@ -144,7 +144,7 @@ and long conditions of if-statements.
 		     argument3);
 ```
 * When breaking conditions of an if-statement, break before the logical operator.
-```
+```c
 	if ((condition1 && condition2)
 	    || condition3) {
 		do_this();
@@ -163,7 +163,7 @@ choose one placement strategy over the other, but the preferred way, as
 shown to us by the prophets Kernighan and Ritchie, is to put the opening
 brace last on the line, and put the closing brace first, thusly:
 
-```
+```c
 	if (x is true) {
 		we do y
 	}
@@ -172,7 +172,7 @@ brace last on the line, and put the closing brace first, thusly:
 This applies to all non-function statement blocks (if, switch, for,
 while, do).  E.g.:
 
-```
+```c
 	switch (action) {
 	case KOBJ_ADD:
 		return "add";
@@ -188,7 +188,7 @@ while, do).  E.g.:
 However, there is one special case, namely functions: they have the
 opening brace at the beginning of the next line, thus:
 
-```
+```c
 int function(int x)
 {
 	body of function
@@ -205,7 +205,7 @@ the cases where it is followed by a continuation of the same statement,
 ie a `while` in a `do`-statement or an `else` in an `if`-statement, like
 this:
 
-```
+```c
 	do {
 		body of do-loop
 	} while (condition);
@@ -213,7 +213,7 @@ this:
 
 and
 
-```
+```c
 	if (x == y) {
 		..
 	} else if (x > y) {
@@ -233,14 +233,14 @@ lines to put comments on.
 
 Do not unnecessarily use braces where a single statement will do.
 
-```
+```c
 	if (condition)
 		action();
 ```
 
 and
 
-```
+```c
 	if (condition)
 		do_this();
 	else
@@ -250,7 +250,7 @@ and
 This does not apply if only one branch of a conditional statement is a
 single statement; in the latter case use braces in both branches:
 
-```
+```c
 	if (condition) {
 		do_this();
 		do_that();
@@ -261,7 +261,7 @@ single statement; in the latter case use braces in both branches:
 
 If the condition is broken into multiple lines use braces, too:
 
-```
+```c
 	if (condition
 	    && condition) {
 		do_this();
@@ -282,20 +282,20 @@ declared).
 
 So use a space after these keywords:
 
-```
+```c
 	if, switch, case, for, do, while
 ```
 
 but not with `sizeof`, `typeof`, `alignof`, or `__attribute__`.  E.g.,
 
-```
+```c
 	s = sizeof(struct file);
 ```
 
 Do not add spaces around (inside) parenthesized expressions.  This
 example is *bad*:
 
-```
+```c
 	s = sizeof( struct file );
 ```
 
@@ -303,7 +303,7 @@ When declaring pointer data or a function that returns a pointer type,
 the preferred use of `*` is adjacent to the data name or function name
 and not adjacent to the type name.  Examples:
 
-```
+```c
 	char *linux_banner;
 	unsigned long long memparse(char *ptr, char **retptr);
 	char *match_strdup(substring_t *s);
@@ -312,25 +312,25 @@ and not adjacent to the type name.  Examples:
 Use one space around (on each side of) most binary and ternary operators,
 such as any of these:
 
-```
+```c
 	=  +  -  <  >  *  /  %  |  &  ^  <=  >=  ==  !=  ?  :
 ```
 
 but no space after unary operators:
 
-```
+```c
 	&  *  +  -  ~  !  sizeof  typeof  alignof  __attribute__  defined
 ```
 
 no space before the postfix increment & decrement unary operators:
 
-```
+```c
 	++  --
 ```
 
 no space after the prefix increment & decrement unary operators:
 
-```
+```c
 	++  --
 ```
 
@@ -387,14 +387,14 @@ Please don't use things like `vps_t`.
 It's a _mistake_ to use `typedef` for structures and pointers. When you
 see a
 
-```
+```c
 	vps_t a;
 ```
 
 in the source, what does it mean?  
 In contrast, if it says
 
-```
+```c
 	struct virtual_container *a;
 ```
 
@@ -422,7 +422,7 @@ b. Clear integer types, where the abstraction _helps_ avoid confusion
    NOTE! Again - there needs to be a _reason_ for this. If something is
    `unsigned long`, then there's no reason to do
 
-   ```
+   ```c
    	typedef unsigned long myflags_t;
    ```
 
@@ -515,7 +515,7 @@ The rationale for using gotos is:
   modifications are prevented
 - saves the compiler work to optimize redundant code away ;)
 
-```
+```c
 int fun(int a)
 {
 	int result = 0;
@@ -542,7 +542,7 @@ out_buffer:
 A common type of bug to be aware of it "one err bugs" which look like
 this:
 
-```
+```c
 err:
 	kfree(foo->bar);
 	kfree(foo);
@@ -580,7 +580,7 @@ was omitted._
 
 The preferred style for long (multi-line) comments is:
 
-```
+```c
 /* 
  * This is the preferred style for multi-line
  * comments in the Linux kernel source code.
@@ -613,7 +613,7 @@ So, you can either get rid of GNU emacs, or change it to use saner
 values.  To do the latter, you can stick the following in your .emacs
 file:
 
-```
+```vim
 (defun c-lineup-arglist-tabs-only (ignored)
   "Line up argument lists by tabs, not spaces"
   (let* ((anchor (c-langelem-pos c-syntactic-element))
@@ -677,7 +677,7 @@ preserve chapter numbers.  It may get re-used at a later time._
 
 Names of macros defining constants and labels in enums are capitalized.
 
-```
+```c
 #define CONSTANT 0x12345
 ```
 
@@ -692,7 +692,7 @@ functions.
 Macros with multiple statements should be enclosed in a `do - while`
 block:
 
-```
+```c
 #define macrofun(a, b, c)              \
 	do {                           \
 		if (a == 5)            \
@@ -704,7 +704,7 @@ Things to avoid when using macros:
 
 1. macros that affect control flow:
 
-   ```
+   ```c
    #define FOO(x)                          \
    	do {                               \
    		if (blah(x) < 0)           \
@@ -722,7 +722,7 @@ Things to avoid when using macros:
 
 2. macros that depend on having a local variable with a magic name:
 
-   ```
+   ```c
    #define FOO(val) bar(index, val)
    ```
 
@@ -737,7 +737,7 @@ Things to avoid when using macros:
    expressions must enclose the expression in parentheses. Beware of
    similar issues with macros using parameters.
 
-   ```
+   ```c
    #define CONSTANT 0x4000
    #define CONSTEXP (CONSTANT | 3)
    ```
@@ -745,7 +745,7 @@ Things to avoid when using macros:
 5. namespace collisions when defining local variables in macros
    resembling functions:
 
-   ```
+   ```c
    #define FOO(x)                       \
    	do {                            \
    		int ret = calc_ret(x);  \
@@ -777,7 +777,7 @@ information about them.
 
 The preferred form for passing a size of a struct is the following:
 
-```
+```c
 	p = aMalloc(sizeof(*p));
 ```
 
@@ -792,13 +792,13 @@ the C programming language.
 
 The preferred form for allocating an array is the following:
 
-```
+```c
 	p = aMalloc(n * sizeof(...));
 ```
 
 The preferred form for allocating a zeroed array is the following:
 
-```
+```c
 	p = aCalloc(n, sizeof(...));
 ```
 
@@ -878,13 +878,13 @@ than explicitly coding some variant of them yourself.  For example, if
 you need to calculate the length of an array, take advantage of the
 macro
 
-```
+```c
 #define ARRAYLENGTH(A) ( (int)(sizeof(A)/sizeof((A)[0])) )
 ```
 
 Similarly, if you need to find an element in an array, use
 
-```
+```c
 #define ARR_FIND(_start, _end, _var, _cmp) \
 	do { \
 		for ((_var) = (_start); (_var) < (_end); ++(_var)) \
@@ -901,13 +901,13 @@ Some editors can interpret configuration information embedded in source
 files, indicated with special markers.  For example, emacs interprets
 lines marked like this:
 
-```
+```vim
 -*- mode: c -*-
 ```
 
 Or like this:
 
-```
+```vim
 /*
 Local Variables:
 compile-command: "gcc -DMAGIC_DEBUG_FLAG foo.c"
@@ -917,7 +917,7 @@ End:
 
 Vim interprets markers that look like this:
 
-```
+```vim
 /* vim:set sw=8 noet */
 ```
 
