@@ -41,9 +41,11 @@ and NOT read it.  Burn them, it's a great symbolic gesture.
 * [Chapter 14: Allocating memory](#chapter-14-allocating-memory)
 * [Chapter 15: The inline disease](#chapter-15-the-inline-disease)
 * [Chapter 16: Function return values and names](#chapter-16-function-return-values-and-names)
-* [Chapter 17: Don't re-invent the Hercules macros](#chapter-17-dont-re-invent-the-hercules-macros)
-* [Chapter 18: Editor modelines and other cruft](#chapter-18-editor-modelines-and-other-cruft)
-* [Chapter 19: (empty)](#chapter-19-empty)
+* [Chapter 17: (empty)](#chapter-17-empty)
+* [Chapter 18: Don't re-invent the Hercules macros](#chapter-18-dont-re-invent-the-hercules-macros)
+* [Chapter 19: Editor modelines and other cruft](#chapter-19-editor-modelines-and-other-cruft)
+* [Chapter 20: (empty)](#chapter-20-empty)
+* [Chapter 21: (empty)](#chapter-21-empty)
 * [Appendix I: References](#appendix-i-references)
 
 ***
@@ -863,7 +865,12 @@ pointers; they use `NULL` to report failure.
 
 _Hercules note: Minor Hercules-specific edits_
 
-## Chapter 17: Don't re-invent the Hercules macros
+## Chapter 17: (empty)
+
+_Hercules note: This chapter has been intentionally left blank, to
+preserve chapter numbers.  It may get re-used at a later time._
+
+## Chapter 18: Don't re-invent the Hercules macros
 
 The header files `common/cbasetypes.h`, `common/utils.h` and
 `common/db.h` contain a number of macros that you should use, rather
@@ -888,7 +895,7 @@ Similarly, if you need to find an element in an array, use
 
 _Hercules note: Edited with Hercules-specific information._
 
-## Chapter 18: Editor modelines and other cruft
+## Chapter 19: Editor modelines and other cruft
 
 Some editors can interpret configuration information embedded in source
 files, indicated with special markers.  For example, emacs interprets
@@ -920,7 +927,12 @@ override them.  This includes markers for indentation and mode
 configuration.  People may use their own custom mode, or may have some
 other magic method for making indentation work correctly.
 
-## Chapter 19: (empty)
+## Chapter 20: (empty)
+
+_Hercules note: This chapter has been intentionally left blank, to
+preserve chapter numbers.  It may get re-used at a later time._
+
+## Chapter 21: (empty)
 
 _Hercules note: This chapter has been intentionally left blank, to
 preserve chapter numbers.  It may get re-used at a later time._
