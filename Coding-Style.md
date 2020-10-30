@@ -104,8 +104,8 @@ Don't put multiple statements on a single line unless you have something
 to hide:
 
 ```c
-	if (condition) do_this;
-	  do_something_everytime;
+	if (condition) do_this_once();
+		do_that_everytime();
 ```
 
 Don't put multiple assignments on a single line either.  Kernel coding
@@ -132,16 +132,12 @@ applies to function headers/calls with a long parameter/argument list
 and long conditions of if-statements.
 * Long function headers and calls are broken after a comma.
 ```c
-	// Long function header.
-	static void do_something(int parameter1, int parameter2,
-				 int parameter3)
-	{
-		// Function body.
-	}
-
-	// Long function call.
-	do_something(argument1, argument2,
-		     argument3);
+static void do_this(int parameter1, int parameter2,
+		    int parameter3)
+{
+	do_that(argument1, argument2,
+		argument3);
+}
 ```
 * When breaking conditions of an if-statement, break before the logical operator.
 ```c
@@ -164,13 +160,13 @@ shown to us by the prophets Kernighan and Ritchie, is to put the opening
 brace last on the line, and put the closing brace first, thusly:
 
 ```c
-	if (x is true) {
-		we do y
+	if (condition) {
+		do_this();
 	}
 ```
 
-This applies to all non-function statement blocks (if, switch, for,
-while, do).  E.g.:
+This applies to all non-function statement blocks (`if`, `switch`, `for`,
+`while`, `do`).  E.g.:
 
 ```c
 	switch (action) {
@@ -189,9 +185,9 @@ However, there is one special case, namely functions: they have the
 opening brace at the beginning of the next line, thus:
 
 ```c
-int function(int x)
+static void do_this()
 {
-	body of function
+	do_that();
 }
 ```
 
@@ -207,7 +203,7 @@ this:
 
 ```c
 	do {
-		body of do-loop
+		do_this();
 	} while (condition);
 ```
 
@@ -215,11 +211,11 @@ and
 
 ```c
 	if (x == y) {
-		..
+		do_this();
 	} else if (x > y) {
-		...
+		do_that();
 	} else {
-		....
+		otherwise();
 	}
 ```
 
@@ -235,7 +231,7 @@ Do not unnecessarily use braces where a single statement will do.
 
 ```c
 	if (condition)
-		action();
+		do_this();
 ```
 
 and
@@ -262,8 +258,8 @@ single statement; in the latter case use braces in both branches:
 If the condition is broken into multiple lines use braces, too:
 
 ```c
-	if (condition
-	    && condition) {
+	if (condition1
+	    && condition2) {
 		do_this();
 	} else {
 		otherwise();
@@ -516,23 +512,22 @@ The rationale for using gotos is:
 - saves the compiler work to optimize redundant code away ;)
 
 ```c
-int fun(int a)
+static int do_this(int a)
 {
 	int result = 0;
-	char *buffer;
+	char *buffer = kmalloc(SIZE, GFP_KERNEL);
 
-	buffer = kmalloc(SIZE, GFP_KERNEL);
-	if (!buffer)
+	if (buffer == NULL)
 		return -ENOMEM;
 
 	if (condition1) {
-		while (loop1) {
-			...
-		}
+		while (condition2)
+			do_that();
+
 		result = 1;
 		goto out_buffer;
 	}
-	...
+
 out_buffer:
 	kfree(buffer);
 	return result;
@@ -693,7 +688,7 @@ Macros with multiple statements should be enclosed in a `do - while`
 block:
 
 ```c
-#define macrofun(a, b, c)              \
+#define do_this_macro(a, b, c)         \
 	do {                           \
 		if (a == 5)            \
 			do_this(b, c); \
@@ -705,9 +700,9 @@ Things to avoid when using macros:
 1. macros that affect control flow:
 
    ```c
-   #define FOO(x)                          \
+   #define DO_THIS_MACRO(x)                   \
    	do {                               \
-   		if (blah(x) < 0)           \
+   		if (do_this(x) < 0)        \
    			return -EBUGGERED; \
    	} while (0)
    ```
@@ -723,7 +718,7 @@ Things to avoid when using macros:
 2. macros that depend on having a local variable with a magic name:
 
    ```c
-   #define FOO(val) bar(index, val)
+   #define DO_THIS_MACRO(val) do_this(index, val)
    ```
 
    might look like a good thing, but it's confusing as hell when one
@@ -746,10 +741,10 @@ Things to avoid when using macros:
    resembling functions:
 
    ```c
-   #define FOO(x)                       \
-   	do {                            \
-   		int ret = calc_ret(x);  \
-   		do_something_with(ret); \
+   #define DO_THIS_MACRO(x)              \
+   	do {                          \
+   		int ret = do_this(x); \
+   		do_that(ret);         \
    	} while (0)
    ```
 
@@ -885,11 +880,11 @@ macro
 Similarly, if you need to find an element in an array, use
 
 ```c
-#define ARR_FIND(_start, _end, _var, _cmp) \
-	do { \
+#define ARR_FIND(_start, _end, _var, _cmp)                         \
+	do {                                                       \
 		for ((_var) = (_start); (_var) < (_end); ++(_var)) \
-			if (_cmp) \
-				break; \
+			if (_cmp)                                  \
+				break;                             \
 	} while(false)
 ```
 
