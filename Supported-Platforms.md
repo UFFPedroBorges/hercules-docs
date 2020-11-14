@@ -166,7 +166,7 @@ Primary support for more than one version of Windows Server and more than one ve
 | Windows 10 RTM (v.1507)    | *unsupported*  |                        |                 |
 | Windows 8.1                | supported      |                        | 2023-01-10      |
 | Windows 8                  | *unsupported*  |                        |                 |
-| Windows 7 SP1              | supported      |                        | 2020-01-14      |
+| Windows 7 SP1              | *unsupported*  |                        |                 |
 | Windows 7                  | *unsupported*  |                        |                 |
 | Windows Vista SP2          | *unsupported*  |                        |                 |
 | Windows Vista              | *unsupported*  |                        |                 |
@@ -180,7 +180,7 @@ Support for more than three versions of Visual Studio won't be guaranteed in any
 
 | Version                         | Support Status | Primary platform until       | Supported until               |
 | ------------------------------- | -------------- | ---------------------------- | ----------------------------- |
-| Visual Studio 2019              | *unknown*      |                              |                               |
+| Visual Studio 2019              | supported      |                              |                               |
 | Visual Studio 2017 Version 15.9 | **primary**    | Release of VS 2019           | 2022-04-12 or next 3 releases |
 | Visual Studio 2017              | *unsupported*  |                              |                               |
 | Visual Studio 2015 Update 3     | supported      |                              | 2020-10-13 or next 2 releases |
@@ -191,5 +191,3 @@ Support for more than three versions of Visual Studio won't be guaranteed in any
 | Visual Studio 2013              | *unsupported*  |                              |                               |
 | Visual Studio 2012              | *unsupported*  |                              |                               |
 | Visual Studio 2010              | *unsupported*  |                              |                               |
-
-(5): This version is currently known to work, for legacy reasons. Continued support is not guaranteed.
