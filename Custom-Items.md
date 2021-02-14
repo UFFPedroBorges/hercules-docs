@@ -3,98 +3,100 @@
 First, let's take a look at the item\_db.conf in the db folder, and its
 structure:
 
-`item_db: (`  
-`{`  
-`   // =================== Mandatory fields ===============================`  
-`   Id: ID                        (int)`  
-`   AegisName: "Aegis_Name"       (string, optional if Inherit: true)`  
-`   Name: "Item Name"             (string, optional if Inherit: true)`  
-`   // =================== Optional fields ================================`  
-`   Type: Item Type               (int, defaults to 3 = etc item)`  
-`   Buy: Buy Price                (int, defaults to Sell * 2)`  
-`   Sell: Sell Price              (int, defaults to Buy / 2)`  
-`   Weight: Item Weight           (int, defaults to 0)`  
-`   Atk: Attack                   (int, defaults to 0)`  
-`   Matk: Magical Attack          (int, defaults to 0, ignored in pre-re)`  
-`   Def: Defense                  (int, defaults to 0)`  
-`   Range: Attack Range           (int, defaults to 0)`  
-`   Slots: Slots                  (int, defaults to 0)      `  
-`   Job: {                        (defaults to all job)`  
-`             All: true/false               (boolean, defaults to false)`  
-`             Novice: true/false            (boolean, defaults to false)`  
-`             Swordsman: true/false         (boolean, defaults to false)`  
-`             Magician: true/false          (boolean, defaults to false)`  
-`             Archer: true/false            (boolean, defaults to false)`  
-`             Acolyte: true/false           (boolean, defaults to false)        `  
-`             Merchant: true/false          (boolean, defaults to false)`  
-`             Thief: true/false             (boolean, defaults to false)`  
-`             Knight: true/false            (boolean, defaults to false)`  
-`             Priest: true/false            (boolean, defaults to false)`  
-`             Wizard: true/false            (boolean, defaults to false)`  
-`             Blacksmith: true/false        (boolean, defaults to false)`  
-`             Hunter: true/false            (boolean, defaults to false)`  
-`             Assassin: true/false          (boolean, defaults to false)`  
-`             Crusader: true/false          (boolean, defaults to false)        `  
-`             Monk: true/false              (boolean, defaults to false)`  
-`             Sage: true/false              (boolean, defaults to false)`  
-`             Rogue: true/false             (boolean, defaults to false)`  
-`             Alchemist: true/false         (boolean, defaults to false)`  
-`             Bard: true/false              (boolean, defaults to false)`  
-`             Taekwon: true/false           (boolean, defaults to false)`  
-`             Star_Gladiator: true/false    (boolean, defaults to false)`  
-`             Soul_Linker: true/false       (boolean, defaults to false)`  
-`             Gunslinger: true/false        (boolean, defaults to false)`  
-`             Ninja: true/false             (boolean, defaults to false)`  
-`             Gangsi: true/false            (boolean, defaults to false)`  
-`             Death_Knight: true/false      (boolean, defaults to false)`  
-`             Dark_Collector: true/false    (boolean, defaults to false)`  
-`             Kagerou: true/false           (boolean, defaults to false)`  
-`             Rebellion: true/false         (boolean, defaults to false)`  
-`   }`  
-`   Job: Job mask                 (int, defaults to all jobs = 0xFFFFFFFF)`  
-`   Upper: Upper mask             (int, defaults to any = 0x3f)`  
-`   Gender: Gender                (int, defaults to both = 2)`  
-`   Loc: Equip location           (int, required value for equipment)`  
-`   WeaponLv: Weapon Level        (int, defaults to 0)`  
-`   EquipLv: Equip required level (int, defaults to 0)`  
-`   EquipLv: [min, max]           (alternative syntax with min / max level)`  
-`   Refine: Refineable            (boolean, defaults to true)`  
-`   View: View ID                 (int, defaults to 0)`  
-`   BindOnEquip: true/false       (boolean, defaults to false)`  
-`   ForceSerial: true/false       (boolean, defaults to false)`  
-`   BuyingStore: true/false       (boolean, defaults to false)`  
-`   Delay: Delay to use item      (int, defaults to 0)`  
-`   KeepAfterUse: true/false      (boolean, defaults to false)`  
-`   Trade: {                      (defaults to no restrictions)`  
-`       override: GroupID             (int, defaults to 100)`  
-`       nodrop: true/false            (boolean, defaults to false)`  
-`       notrade: true/false           (boolean, defaults to false)`  
-`       nostorage: true/false         (boolean, defaults to false)`  
-`       nocart: true/false            (boolean, defaults to false)`  
-`       noselltonpc: true/false       (boolean, defaults to false)`  
-`       nomail: true/false            (boolean, defaults to false)`  
-`       noauction: true/false         (boolean, defaults to false)`  
-`       nogstorage: true/false        (boolean, defaults to false)`  
-`       partneroverride: true/false   (boolean, defaults to false)`  
-`   }`  
-`   Nouse: {                      (defaults to no restrictions)`  
-`   override: GroupID             (int, defaults to 100)`  
-`       sitting: true/false           (boolean, defaults to false)`  
-`   }`  
-`   Stack: [amount, type]         (int, defaults to 0)`  
-`   Sprite: SpriteID              (int, defaults to 0)`  
-`   Script: <"`  
-`       Script`  
-`       (it can be multi-line)`  
-`   ">`  
-`   OnEquipScript: <" OnEquip Script (can also be multi-line) ">`  
-`   OnUnequipScript: <" OnUnequip Script (can also be multi-line) ">`  
-`   // =================== Optional fields (item_db2 only) ================`  
-`   Inherit: true/false           (boolean, if true, inherit the values`  
-`                                 that weren't specified, from item_db.conf,`  
-`                                 else override it and use default values)`  
-`},`  
-`)`
+```txt
+item_db: (
+{
+   // =================== Mandatory fields ===============================
+   Id: ID                        (int)
+   AegisName: "Aegis_Name"       (string, optional if Inherit: true)
+   Name: "Item Name"             (string, optional if Inherit: true)
+   // =================== Optional fields ================================
+   Type: Item Type               (int, defaults to 3 = etc item)
+   Buy: Buy Price                (int, defaults to Sell * 2)
+   Sell: Sell Price              (int, defaults to Buy / 2)
+   Weight: Item Weight           (int, defaults to 0)
+   Atk: Attack                   (int, defaults to 0)
+   Matk: Magical Attack          (int, defaults to 0, ignored in pre-re)
+   Def: Defense                  (int, defaults to 0)
+   Range: Attack Range           (int, defaults to 0)
+   Slots: Slots                  (int, defaults to 0)
+   Job: {                        (defaults to all job)
+             All: true/false               (boolean, defaults to false)
+             Novice: true/false            (boolean, defaults to false)
+             Swordsman: true/false         (boolean, defaults to false)
+             Magician: true/false          (boolean, defaults to false)
+             Archer: true/false            (boolean, defaults to false)
+             Acolyte: true/false           (boolean, defaults to false)
+             Merchant: true/false          (boolean, defaults to false)
+             Thief: true/false             (boolean, defaults to false)
+             Knight: true/false            (boolean, defaults to false)
+             Priest: true/false            (boolean, defaults to false)
+             Wizard: true/false            (boolean, defaults to false)
+             Blacksmith: true/false        (boolean, defaults to false)
+             Hunter: true/false            (boolean, defaults to false)
+             Assassin: true/false          (boolean, defaults to false)
+             Crusader: true/false          (boolean, defaults to false)
+             Monk: true/false              (boolean, defaults to false)
+             Sage: true/false              (boolean, defaults to false)
+             Rogue: true/false             (boolean, defaults to false)
+             Alchemist: true/false         (boolean, defaults to false)
+             Bard: true/false              (boolean, defaults to false)
+             Taekwon: true/false           (boolean, defaults to false)
+             Star_Gladiator: true/false    (boolean, defaults to false)
+             Soul_Linker: true/false       (boolean, defaults to false)
+             Gunslinger: true/false        (boolean, defaults to false)
+             Ninja: true/false             (boolean, defaults to false)
+             Gangsi: true/false            (boolean, defaults to false)
+             Death_Knight: true/false      (boolean, defaults to false)
+             Dark_Collector: true/false    (boolean, defaults to false)
+             Kagerou: true/false           (boolean, defaults to false)
+             Rebellion: true/false         (boolean, defaults to false)
+   }
+   Job: Job mask                 (int, defaults to all jobs = 0xFFFFFFFF)
+   Upper: Upper mask             (int, defaults to any = 0x3f)
+   Gender: Gender                (int, defaults to both = 2)
+   Loc: Equip location           (int, required value for equipment)
+   WeaponLv: Weapon Level        (int, defaults to 0)
+   EquipLv: Equip required level (int, defaults to 0)
+   EquipLv: [min, max]           (alternative syntax with min / max level)
+   Refine: Refineable            (boolean, defaults to true)
+   View: View ID                 (int, defaults to 0)
+   BindOnEquip: true/false       (boolean, defaults to false)
+   ForceSerial: true/false       (boolean, defaults to false)
+   BuyingStore: true/false       (boolean, defaults to false)
+   Delay: Delay to use item      (int, defaults to 0)
+   KeepAfterUse: true/false      (boolean, defaults to false)
+   Trade: {                      (defaults to no restrictions)
+       override: GroupID             (int, defaults to 100)
+       nodrop: true/false            (boolean, defaults to false)
+       notrade: true/false           (boolean, defaults to false)
+       nostorage: true/false         (boolean, defaults to false)
+       nocart: true/false            (boolean, defaults to false)
+       noselltonpc: true/false       (boolean, defaults to false)
+       nomail: true/false            (boolean, defaults to false)
+       noauction: true/false         (boolean, defaults to false)
+       nogstorage: true/false        (boolean, defaults to false)
+       partneroverride: true/false   (boolean, defaults to false)
+   }
+   Nouse: {                      (defaults to no restrictions)
+   override: GroupID             (int, defaults to 100)
+       sitting: true/false           (boolean, defaults to false)
+   }
+   Stack: [amount, type]         (int, defaults to 0)
+   Sprite: SpriteID              (int, defaults to 0)
+   Script: <"
+       Script
+       (it can be multi-line)
+   ">
+   OnEquipScript: <" OnEquip Script (can also be multi-line) ">
+   OnUnequipScript: <" OnUnequip Script (can also be multi-line) ">
+   // =================== Optional fields (item_db2 only) ================
+   Inherit: true/false           (boolean, if true, inherit the values
+                                 that weren't specified, from item_db.conf,
+                                 else override it and use default values)
+},
+)
+```
 
   - **ID**: ID of the item.
   - **AegisName**: Server name to reference the item in scripts and
@@ -104,17 +106,19 @@ structure:
   - **Type**: Purpose of the
 item.
 
-`0 = Usable : healing`  
-`2 = Usable : other`  
-`3 = Misc`  
-`4 = Weapon`  
-`5 = Armor`  
-`6 = Card`  
-`7 = Pet Egg`  
-`8 = Pet Equipment`  
-`10 = Arrow/Ammunition`  
-`11 = Usable : delayed consumption (items with script "pet" or "itemskill")`  
-`18 = Another delayed consume that requires user confirmation before using item.`
+```txt
+0 = Usable : healing
+2 = Usable : other
+3 = Misc
+4 = Weapon
+5 = Armor
+6 = Card
+7 = Pet Egg
+8 = Pet Equipment
+10 = Arrow/Ammunition
+11 = Usable : delayed consumption (items with script "pet" or "itemskill")
+18 = Another delayed consume that requires user confirmation before using item.
+```
 
   - **Buy**: Default [NPC](NPC "wikilink") buying price in Zeny. When
     not specified, becomes double the sell price.
@@ -139,40 +143,43 @@ item.
     combined to achieve availability for multiple job classes, i. e.
     `0x2|0x4 -> 0x6` (Swordman+Mage)
 
-`(S.) Novice         (2^00): 0x00000001`  
-`Swordman            (2^01): 0x00000002`  
-`Mage                (2^02): 0x00000004`  
-`Archer              (2^03): 0x00000008`  
-`Acolyte             (2^04): 0x00000010`  
-`Merchant            (2^05): 0x00000020`  
-`Thief               (2^06): 0x00000040`  
-`Knight              (2^07): 0x00000080`  
-`Priest              (2^08): 0x00000100`  
-`Wizard              (2^09): 0x00000200`  
-`Blacksmith          (2^10): 0x00000400`  
-`Hunter              (2^11): 0x00000800`  
-`Assassin            (2^12): 0x00001000`  
-*`Unused`*`              (2^13): 0x00002000`  
-`Crusader            (2^14): 0x00004000`  
-`Monk                (2^15): 0x00008000`  
-`Sage                (2^16): 0x00010000`  
-`Rogue               (2^17): 0x00020000`  
-`Alchemist           (2^18): 0x00040000`  
-`Bard/Dancer         (2^19): 0x00080000`  
-*`Unused`*`              (2^20): 0x00100000`  
-`Taekwon             (2^21): 0x00200000`  
-`StarGladiator       (2^22): 0x00400000`  
-`Soul Linker         (2^23): 0x00800000`  
-`Gunslinger          (2^24): 0x01000000`  
-`Ninja               (2^25): 0x02000000`  
-`Gangsi              (2^26): 0x04000000`  
-`Death Knight        (2^27): 0x08000000`  
-`Dark Collector      (2^28): 0x10000000`  
-`Kagerou/Oboro       (2^29): 0x20000000`  
-`Rebellion           (2^30): 0x40000000`  
-**`Some``   ``other``   ``commonly``   ``used``   ``values:`**  
-`All Classes               : 0xFFFFFFFF`  
-`Every Job Except Novice   : 0xFFFFFFFE`
+```txt
+(S.) Novice         (2^00): 0x00000001
+Swordman            (2^01): 0x00000002
+Mage                (2^02): 0x00000004
+Archer              (2^03): 0x00000008
+Acolyte             (2^04): 0x00000010
+Merchant            (2^05): 0x00000020
+Thief               (2^06): 0x00000040
+Knight              (2^07): 0x00000080
+Priest              (2^08): 0x00000100
+Wizard              (2^09): 0x00000200
+Blacksmith          (2^10): 0x00000400
+Hunter              (2^11): 0x00000800
+Assassin            (2^12): 0x00001000
+*Unused*            (2^13): 0x00002000
+Crusader            (2^14): 0x00004000
+Monk                (2^15): 0x00008000
+Sage                (2^16): 0x00010000
+Rogue               (2^17): 0x00020000
+Alchemist           (2^18): 0x00040000
+Bard/Dancer         (2^19): 0x00080000
+*Unused*            (2^20): 0x00100000
+Taekwon             (2^21): 0x00200000
+StarGladiator       (2^22): 0x00400000
+Soul Linker         (2^23): 0x00800000
+Gunslinger          (2^24): 0x01000000
+Ninja               (2^25): 0x02000000
+Gangsi              (2^26): 0x04000000
+Death Knight        (2^27): 0x08000000
+Dark Collector      (2^28): 0x10000000
+Kagerou/Oboro       (2^29): 0x20000000
+Rebellion           (2^30): 0x40000000
+
+Some commonly used values:
+All Classes               : 0xFFFFFFFF
+Every Job Except Novice   : 0xFFFFFFFE
+```
 
   - **Upper**: Specifies whether the item can be used by normal, baby or
     reborn classes. Values below can be combined, i. e. `1|4 -> 5`
@@ -181,49 +188,55 @@ item.
         classes. Use `8` to enable the item for 3rd classes
 only.
 
-`Normal jobs:      0x01 (1)`  
-`Upper jobs:       0x02 (2)`  
-`Baby jobs:        0x04 (4)`  
-`Third jobs:       0x08 (8)`  
-`Upper Third jobs: 0x10 (16)`  
-`Baby Third jobs:  0x20 (32)`  
-  
-`Under pre-re mode third classes are considered upper, making use of`  
-`the 8 and above masks is therefore not necessary unless in renewal`  
-`mode. When no value is specified, all classes (mask 0x3f) are able to`  
-`equip the item.`
+```txt
+Normal jobs:      0x01 (1)
+Upper jobs:       0x02 (2)
+Baby jobs:        0x04 (4)
+Third jobs:       0x08 (8)
+Upper Third jobs: 0x10 (16)
+Baby Third jobs:  0x20 (32)
+
+Under pre-re mode third classes are considered upper, making use of
+the 8 and above masks is therefore not necessary unless in renewal
+mode. When no value is specified, all classes (mask 0x3f) are able to
+equip the item.
+```
 
   - **Gender**: Gender restriction for the item.
 
-`0 = Female`  
-`1 = Male`  
-`2 = No restriction (both)`
+```txt
+0 = Female
+1 = Male
+2 = No restriction (both)
+```
 
   - **Loc**: Equipment location of armor and arrow-type items. Values
     below can be combined, i. e. 136 would indicate both accessory slots
     (typical value for accessories).
 
-`(2^0)        1 = Lower headgear`  
-`(2^1)        2 = Right hand`  
-`(2^2)        4 = Mantle`  
-`(2^3)        8 = Accessory 1`  
-`(2^4)       16 = Armor`  
-`(2^5)       32 = Left hand`  
-`(2^6)       64 = Shoes`  
-`(2^7)      128 = Accessory 2`  
-`(2^8)      256 = Upper headgear`  
-`(2^9)      512 = Middle headgear`  
-`(2^10)    1024 = Costume Top Headgear`  
-`(2^11)    2048 = Costume Mid Headgear`  
-`(2^12)    4096 = Costume Low Headgear`  
-`(2^13)    8192 = Costume Garment/Robe`  
-`(2^15)   32768 = Arrow (arrow-type items only)`  
-`(2^16)   65536 = Shadow Armor`  
-`(2^17)  131072 = Shadow Weapon`  
-`(2^18)  262144 = Shadow Shield`  
-`(2^19)  524288 = Shadow Shoes`  
-`(2^20) 1048576 = Shadow Accessory 2`  
-`(2^21) 2097152 = Shadow Accessory 1`
+```txt
+(2^0)        1 = Lower headgear
+(2^1)        2 = Right hand
+(2^2)        4 = Mantle
+(2^3)        8 = Accessory 1
+(2^4)       16 = Armor
+(2^5)       32 = Left hand
+(2^6)       64 = Shoes
+(2^7)      128 = Accessory 2
+(2^8)      256 = Upper headgear
+(2^9)      512 = Middle headgear
+(2^10)    1024 = Costume Top Headgear
+(2^11)    2048 = Costume Mid Headgear
+(2^12)    4096 = Costume Low Headgear
+(2^13)    8192 = Costume Garment/Robe
+(2^15)   32768 = Arrow (arrow-type items only)
+(2^16)   65536 = Shadow Armor
+(2^17)  131072 = Shadow Weapon
+(2^18)  262144 = Shadow Shield
+(2^19)  524288 = Shadow Shoes
+(2^20) 1048576 = Shadow Accessory 2
+(2^21) 2097152 = Shadow Accessory 1
+```
 
   - **WeaponLv**: Weapon level of an item (1-4), Becomes 0 when not
     specified.
@@ -232,10 +245,12 @@ only.
     following
 syntax:
 
-`EquipLv: [minLv, maxLv]`  
-  
-`   If only one value is specified, maxLv becomes the current server's`  
-`   MAX_LEVEL. If no values are specified, minLv becomes 0.`
+```txt
+EquipLv: [minLv, maxLv]
+
+   If only one value is specified, maxLv becomes the current server's
+   MAX_LEVEL. If no values are specified, minLv becomes 0.
+```
 
   - **Refineable**: Whether the item is available for refining (1) or
     not (0). If no value is specified, it defaults to true.
@@ -350,10 +365,12 @@ item name contains spaces, replace those with \_ (underscore).
 This file contains the description of your item, when it is
 right-clicked. The syntax for an item is:
 
-`ItemID#`  
-`Item Description Line 1`  
-`Item Description Line 2 (And so on)`  
-`#`
+```txt
+ItemID#
+Item Description Line 1
+Item Description Line 2 (And so on)
+#
+```
 
 You can use any amount of lines for the description. If your description
 contains a \#, make sure it is followed by a space character. You can
@@ -423,16 +440,18 @@ file.
 
 Syntax:
 
-`[`<item id>`] = {`  
-`   unidentifiedDisplayName = `<item name to show when not magnified>`,`  
-`   unidentifiedResourceName = `<file name prefix used for all the images and drop sprite when not magnified>`,`  
-`   unidentifiedDescriptionName = { `<comma separated list of strings>`,`<to get multiple lines>`,`<in item description>` },`  
-`   identifiedDisplayName = `<item name to show when magnified>`,`  
-`   identifiedResourceName = `<file name prefix used for all the images and drop sprite when magnified>`,`  
-`   identifiedDescriptionName = { `<same format as unidentifiedDescriptionName but for magnified items>` },`  
-`   slotCount = `<number of slots>`,`  
-`   ClassNum = <View ID - yes the same one that was there item_db>`  
-` },`
+```txt
+[<item id>] = {
+  unidentifiedDisplayName = <item name to show when not magnified>,
+  unidentifiedResourceName = <file name prefix used for all the images and drop sprite when not magnified>,
+  unidentifiedDescriptionName = { <comma separated list of strings>,<to get multiple lines>,<in item description> },
+  identifiedDisplayName = <item name to show when magnified>,
+  identifiedResourceName = <file name prefix used for all the images and drop sprite when magnified>,
+  identifiedDescriptionName = { <same format as unidentifiedDescriptionName but for magnified items> },
+  slotCount = <number of slots>,
+  ClassNum = <View ID - yes the same one that was there item_db>
+},
+```
 
 <b>For Weapons, ClassNum = View ID specified in Weapon\_IDs table
 (inside weapontable.lub file). Look
@@ -447,24 +466,26 @@ sword named Devastator with 3 slots and the image/drop sprite files are
 all named Black\_Sword.\* . Also I want to display a Sword when not
 identified.
 
-`[25000] = {`  
-`   unidentifiedDisplayName = "Sword",`  
-`   unidentifiedResourceName = "¼Òµå",`  
-`   unidentifiedDescriptionName = { "Unidentified item, can be identified with [Magnifier]." },`  
-`   identifiedDisplayName = "Devastator",`  
-`   identifiedResourceName = "Black_Sword",`  
-`   identifiedDescriptionName = { `  
-`                                 "An Unholy Sword that was created with the sole purpose of destruction",`  
-`                                 "Class :^777777 Sword^000000",`  
-`                                 "Attack :^777777 325^000000",`  
-`                                 "Weight :^777777 80^000000",`  
-`                                 "Weapon Level :^777777 4^000000",`  
-`                                 "Required Level :^777777 100^000000",`  
-`                                 "Applicable Job :^777777 Novice, Swordsman Class, Merchant Class, Thief Class^000000"`  
-`                               },`  
-`   slotCount = 3,`  
-`   ClassNum = 2`  
-` },`
+```txt
+[25000] = {
+  unidentifiedDisplayName = "Sword",
+  unidentifiedResourceName = "¼Òµå",
+  unidentifiedDescriptionName = { "Unidentified item, can be identified with [Magnifier]." },
+  identifiedDisplayName = "Devastator",
+  identifiedResourceName = "Black_Sword",
+  identifiedDescriptionName = {
+    "An Unholy Sword that was created with the sole purpose of destruction",
+    "Class :^777777 Sword^000000",
+    "Attack :^777777 325^000000",
+    "Weight :^777777 80^000000",
+    "Weapon Level :^777777 4^000000",
+    "Required Level :^777777 100^000000",
+    "Applicable Job :^777777 Novice, Swordsman Class, Merchant Class, Thief Class^000000"
+  },
+  slotCount = 3,
+  ClassNum = 2
+},
+```
 
 The unidentifiedResourceName is the Sword item's sprite name, so the
 client will show it as a sword when not identified. The ClassNum is also
@@ -478,12 +499,14 @@ apply it to your custom item's unidentifiedResourceName value.
 Most custom items will have 6 files (if yours does not, see [Less Than 6
 Files](Custom_Items#Less_Than_6_Files "wikilink")):
 
-`1) Drop sprite -> Helmet_drop.spr `  
-`2) Drop act file -> Helmet_drop.act`  
-`3) Item Inventory image -> Helmet_item.bmp`  
-`4) Item Collection image -> Helmet_collection.bmp (the one you see on its description window)`  
-`5) Headgear View sprite -> Helmet.spr`  
-`6) Headgear View act file -> Helmet.act`
+```txt
+1) Drop sprite -> Helmet_drop.spr 
+2) Drop act file -> Helmet_drop.act
+3) Item Inventory image -> Helmet_item.bmp
+4) Item Collection image -> Helmet_collection.bmp (the one you see on its description window)
+5) Headgear View sprite -> Helmet.spr
+6) Headgear View act file -> Helmet.act
+```
 
 Lets say I downloaded a custom item called Helmet which serves as a
 headgear and the above six files were in them.
@@ -570,11 +593,11 @@ Well, to replace it, just delete everything in the hat line but its ID,
 and paste there your custom item, all the line but the ID. Should be
 like this:
 
-**`2220`**`,Hat,Hat,5,1000,,200,,2,,0,10477567,2,256,,0,1,16,{},{},{}`  
-`15000,`**`Angel_Wing,Angel`` 
- ``Wing,4,,10,10,0,,1,0,0,3,0,0,0,0,0,{},{},{}`**  
-**`2220,Angel_Wing,Angel`` 
- ``Wing,4,,10,10,0,,1,0,0,3,0,0,0,0,0,{},{},{}`**
+```txt
+2220,Hat,Hat,5,1000,,200,,2,,0,10477567,2,256,,0,1,16,{},{},{}
+15000,Angel_Wing,Angel Wing,4,,10,10,0,,1,0,0,3,0,0,0,0,0,{},{},{}
+2220,Angel_Wing,Angel Wing,4,,10,10,0,,1,0,0,3,0,0,0,0,0,{},{},{}
+```
 
 All you need to do now is changing the View ID to the Hat, and change
 your file names to its name. You can find them on the
@@ -614,13 +637,15 @@ Now, the pattern for a flag is:
     dropped, stored or traded. These values can be combined to achieve
     multiple effects.
 
-`1:Item can't be dropped`  
-`2:Item can't be traded (nor vended)`  
-`4:Item can only be traded with wedded partner`  
-`8:Item can't be sold to NPCs`  
-`16:Item can't be placed in the cart`  
-`32:Item can't be placed in the storage`  
-`64:Item can't be placed in the guild storage`
+```txt
+1:Item can't be dropped
+2:Item can't be traded (nor vended)
+4:Item can only be traded with wedded partner
+8:Item can't be sold to NPCs
+16:Item can't be placed in the cart
+32:Item can't be placed in the storage
+64:Item can't be placed in the guild storage
+```
 
   - **GM-Level Override**: This is the minimum GM level a player must
     have to avoid these restrictions.
@@ -751,11 +776,13 @@ Clients \<= 2012-07-10a)== For these clients, Weapons are limited to use
 a range of Item IDs hardcoded in the clientn for each type. For
 e.g.
 
-`1265,Bloody_Roar,Bloody Roar,4,,10,1000,120,,1,0,4096,7,2,34,4,75,1,16,{ bonus bIgnoreDefRace,RC_DemiHuman; bonus bFlee,-160; bonus bFlee2,-160; bonus bNoRegen,1; bonus bNoRegen,2; },{},{}`  
-`1266,Test,Test,4,4000,2000,10,165,,1,0,4096,7,2,34,3,33,1,16,{}`
+```txt
+1265,Bloody_Roar,Bloody Roar,4,,10,1000,120,,1,0,4096,7,2,34,4,75,1,16,{ bonus bIgnoreDefRace,RC_DemiHuman; bonus bFlee,-160; bonus bFlee2,-160; bonus bNoRegen,1; bonus bNoRegen,2; },{},{}
+1266,Test,Test,4,4000,2000,10,165,,1,0,4096,7,2,34,3,33,1,16,{}
 
-`// 1-Handed Axes`  
-`1301,Axe,Axe,4,500,,800,38,,1,3,8803555,7,2,2,1,3,1,6,{}`
+// 1-Handed Axes
+1301,Axe,Axe,4,500,,800,38,,1,3,8803555,7,2,2,1,3,1,6,{}
+```
 
 Here the item 1266 is a custom katar and it does show up as a katar (if
 you have the proper sprite files ofcourse). but if i use some id like
