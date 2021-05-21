@@ -343,12 +343,35 @@ all the scripts items can have and how they work.
 For more information about this structure read [Item DB file structure
 overhaul](http://herc.ws/board/topic/2954-item-db-file-structure-overhaul/)
 
-# Defining Item clientside (Renewal Clients \<
+# Defining Items clientside - all clients
 
-2012-04-10a & Main Clients \<= 2012-07-10a) = After you make your item,
-put it in your item\_db2.txt, so that you will not run into conflicts
-when updating your repository later. Then go to your data folder and
-modify the following files, one after another.
+For old and new clients alike, the following two files need to be updated
+
+## accname.lub
+
+accname.lub can be found with the other lua files under RO
+folder/data/luafiles514/luafiles/datainfo. If you do not have these
+folders or this file, [see this
+topic](http://herc.ws/board/topic/398-client-translation-project/) and
+download the latest translated data folder. It points to the item's
+sprite file. It is as follows:
+
+` [ACCESSORY_IDs.ACCESSORY_ITEM_NAME] = "Item_Name",`
+
+## accessoryid.lub
+
+This is where the view ID for your item can be found. It can be located
+in the same folder as accname.lub. It is as follows:
+
+` ACCESSORY_ITEM_NAME = ViewID#,`
+
+# Defining Items clientside - old clients
+
+Renewal Clients \< 2012-04-10a & Main Clients \<= 2012-07-10a
+
+After you make your item, put it in your item\_db2.txt, so that you
+will not run into conflicts when updating your repository later. Then
+go to your data folder and modify the following files, one after another.
 
 ## idnum2itemdisplaynametable.txt
 
@@ -412,25 +435,7 @@ headgears).
   - num2itemdisplaynametable.txt
   - num2itemresnametable.txt
 
-## accname.lub
-
-accname.lub can be found with the other lua files under RO
-folder/data/luafiles514/luafiles/datainfo. If you do not have these
-folders or this file, [see this
-topic](http://herc.ws/board/topic/398-client-translation-project/) and
-download the latest translated data folder. It points to the item's
-sprite file. It is as follows:
-
-` [ACCESSORY_IDs.ACCESSORY_ITEM_NAME] = "Item_Name",`
-
-## accessoryid.lub
-
-This is where the view ID for your item can be found. It can be located
-in the same folder as accname.lub. It is as follows:
-
-` ACCESSORY_ITEM_NAME = ViewID#,`
-
-# Defining Items clientside (For New Clients)
+# Defining Items clientside - new clients
 
 If your client date is newer than specified above then you need to
 specify all the above item information in 1
