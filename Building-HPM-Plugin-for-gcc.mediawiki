@@ -13,7 +13,7 @@ In your '''src/plugins/Makefile.in''' file you should find something like:
  
  MYPLUGINS = 
 add your plugin name (without the .c extension), after '''MYPLUGINS =''' save and close.<br/>
-Lastly, run '''make plugins''' command at the root folder of Hercules, and you're good to go.
+Lastly, run '''./configure''' and '''make plugins''' command at the root folder of Hercules, and you're good to go.
 
 
 Edit '''conf/plugins.conf'''
