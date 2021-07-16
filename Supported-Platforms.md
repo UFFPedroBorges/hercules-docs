@@ -146,20 +146,27 @@ Primary support for more than one version of Windows Server and more than one ve
 
 | System                     | Support Status | Primary platform until | Supported until |
 | -------------------------- | -------------- | ---------------------- | --------------- |
-| Windows Server v.1903      | *unknown*      |                        |                 |
-| Windows Server v.1809      | **primary**    | April 2019 (estimated) | 2020-05-11      |
-| Windows Server v.1709      | supported      |                        | 2019-04-09      |
+| Windows Server v.20H2      | **primary**    |                        | 2022-05-10      |
+| Windows Server v.2004      | supported      |                        | 2021-12-14      |
+| Windows Server v.1909      | *unsupported*  |                        | 2021-05-11      |
+| Windows Server v.1903      | *unsupported*  |                        | 2020-12-08      |
+| Windows Server v.1809      | *unsupported*  | April 2019 (estimated) | 2020-05-11      |
+| Windows Server v.1709      | *unsupported*  |                        | 2019-04-09      |
 | Windows Server 2016        | supported      | 2022-01-11             | 2027-01-11      |
 | Windows Server 2012 R2     | supported      |                        | 2023-01-10      |
 | Windows Server 2012        | supported      |                        | 2023-01-10      |
-| Windows Server 2008 R2 SP1 | supported      |                        | 2020-01-14      |
+| Windows Server 2008 R2 SP1 | *unsupported*  |                        | 2020-01-14      |
 | Windows Server 2008 R2     | *unsupported*  |                        |                 |
 | Windows Server 2008 SP2    | *unsupported*  |                        |                 |
 | Windows Server 2008        | *unsupported*  |                        |                 |
-| Windows 10 (latest ver.)   | **primary**    | next update            | 2026-10-13      |
-| Windows 10 v.1809          | **primary**    | next update            | 2020-05-12      |
-| Windows 10 v.1803          | supported      |                        | 2019-11-12      |
-| Windows 10 v.1709          | supported      |                        | 2019-04-09      |
+| Windows 10 v.21H1          | **primary**    | next update            | 2022-12-13      |
+| Windows 10 v.20H2          | supported      |                        | 2022-05-10      |
+| Windows 10 v.2004          | supported      |                        | 2021-12-14      |
+| Windows 10 v.1909          | *unsupported*  |                        | 2021-05-11      |
+| Windows 10 v.1903          | *unsupported*  |                        | 2020-12-08      |
+| Windows 10 v.1809          | *unsupported*  |                        | 2020-11-10      |
+| Windows 10 v.1803          | *unsupported*  |                        | 2019-11-12      |
+| Windows 10 v.1709          | *unsupported*  |                        | 2019-04-09      |
 | Windows 10 v.1703          | *unsupported*  |                        |                 |
 | Windows 10 v.1607          | *unsupported*  |                        |                 |
 | Windows 10 v.1511          | *unsupported*  |                        |                 |
