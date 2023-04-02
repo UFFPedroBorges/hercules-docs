@@ -48,3 +48,12 @@ make
 ```
 
 HPM Hooks will be generated.
+
+## Troubleshooting: `Can't locate XML/Simple.pm in @INC`
+
+In case you have the error saying that it can't locate `XML/Simple.pm`, you should install `libxml-simple-perl`. On Debian/Ubuntu, you may run:
+```
+sudo apt-get install libxml-simple-perl
+```
+
+Once it installs, you can try running `make` again and it should work.
