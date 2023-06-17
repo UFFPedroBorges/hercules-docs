@@ -1,16 +1,9 @@
-{{merge
-|target=[[Alternate Palette Guide]]
-|talk=Talk:Alternate Palette Guide
-|date=July 2010
-}}
+## What you need
 
+* SPR Conview
+* Photoshop or something else that can make .pal palette files
 
-== What you need ==
-
-*SPR Conview
-*Photoshop or something else that can make .pal palette files
-
-== Editing Pallets With Photoshop ==
+## Editing Pallets With Photoshop
 
 Editing pallets with Photoshop is a simple task. Simply load a sprite with a sprite viewer such as SPR Conview or SprTool+4-6 and export a single frame of the sprite as an image and load it with Photoshop. If your doing job sprites use a image from the job class you wish to make your pallet for and the same goes for hairs, head gear and monsters. As each sprite can have it's own pallet.
 
@@ -27,7 +20,7 @@ If the color table is grayed out then the image isn't 256 colors and you won't b
 
 Once your new pallet is created simple click the save button in the color table window and save your pallet to a .pal file.
 
-== Editing The .Pal File For Use in Ragnarok With Notepad ==
+## Editing The .Pal File For Use in Ragnarok With Notepad
 
 Ragnarok Online Pallet files are simply normal pallet files (.pal) with the header removed. Simply open the file like so
 
@@ -35,21 +28,21 @@ Ragnarok Online Pallet files are simply normal pallet files (.pal) with the head
 
 Then selecting whats highlighted in the image and delete it and save. It's that simple.
 
-== Editing The .Pal File For Use in Ragnarok Without Notepad ==
+## Editing The .Pal File For Use in Ragnarok Without Notepad
 
 If you have a tool or something please fill in this area.
 
-== Replacing A Sprite's Pallet ==
+## Replacing A Sprite's Pallet
 
 Replacing a sprite's pallet in order to recolor it there are a few options, the most simple and probably the easiest way is to load the sprite into SPR Conview and under 'Pallet > Open Pallet' select the pallet you made before (normal non RO pallet) and then save the sprite. It's that easy.
 
-== Client naming scheme for palettes ==
+## Client naming scheme for palettes
 
 Cloth palettes go to '''data\palette\¸ö\''' (data\palette\몸\), each file name follows the pattern '''<jobname>_<gender>_<palette id>.pal''', ex. ¸¶¹ý»ç_¿©_4.pal (마법사_여_4.pal) for a female wizard palette).
 
 The hair palettes go to '''data\palette\¸Ó¸®\''' (data\palette\머리\) and follow the pattern '''¸Ó¸®<head sprite id>_<gender>_<palette id>.pal''', ex. ¸Ó¸®8_¿©_2.pal (머리8_여_2.pal) for a female head sprite 8.
 
-== Technical Support, or FAQs ==
+## Technical Support, or FAQs
 *Q: My palettes won't show up in game, it says invalid number, I cannot access my palettes in the dye changer. How do I fix this?
 *A: Athena servers must have the conf settings changed to support new palettes for dyes before commands and npcs can use them. Once the conf is edited the dye npc your using must also have it's max dyes increased in number or players will not be able to select any new dyes. Also not all jobs have their own pallet files. Most jobs will use the pallets of the first jobs that come before them instead of using their own, this was done in order to save space in the grf file and thou save on download bandwidth, also time and effort in making them.
 *Q: My palette shows up as black with a bunch of neon lines and crap. Why?
