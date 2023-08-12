@@ -1,353 +1,339 @@
----
-title: Custom Jobs
-permalink: /Custom_Jobs/
----
+On this page, you will be able to learn the steps on how to add your Custom Job.
 
-\[Guide\] Add Custom Job
+## Pre-Requirements
+Before you begin, it is a good idea to prepare some things you will need:
+- A Job ID (referenced as `<YOUR_JOB_ID>`)
+- A Job Constant (referenced as `<YOUR_JOB_CONST>` and `<Your_Job_Const>` -- for different cases)
+- A eAthena Job System Job ID (referenced as `<YOUR_EA_JOB_ID>`)
 
+### Job ID (`<YOUR_JOB_ID>`)
+Job IDs are the unique numerical value that represents it (just like we have IDs for items, monsters, etc). They must:
+- Not conflict with other Jobs, Monsters, Homunculus, Mercenaries, NPCs IDs.
+- Be in a range the client understands as Job IDs
 
-On this page, you will be able to learn the steps on how to add your Custom Job. First off:
+**TODO:** Document the ranges that the client considers as Job IDs.
 
-**1.** Open the file
+**TIP:** Try to keep it close to an existing ID range. You can view the existing IDs in `db/constants.conf`, search for `comment__: "Job IDs"`.
 
-Search for the lines:
+For this page, whenever you see `<YOUR_JOB_ID>`, use this number (without `<>`).
 
-`   JOB_SUMMER,`
-`   JOB_MAX_BASIC,`
+### Job Constant (`<YOUR_JOB_CONST>` and `<Your_Job_Const>`)
+Job Constants are unique names associated to each job number (just like we have AegisName and Sprite for items and monsters). This allows you to reference this job by a name instead of a magical number in your code.
 
-Then replace it with:
+They must be unique in Hercules and are usually all uppercase (example: `MY_COOL_JOB`) in some cases and camel cased in others.
 
-`   JOB_SUMMER,`
-`   JOB_BURGLAR= 35,`
-`   JOB_MAX_BASIC,`
+For this page, whenever you see `<YOUR_JOB_CONST>`, use this constant name (without `<>`) in all upper case (e.g.: `MY_COOL_JOB`). And when you see `<Your_Job_Const>` use it as `My_Cool_Job`.
 
-Save the file.
 
-Next, open
+### eAthena Job System ID (`<YOUR_EA_JOB_ID>`)
+The eAthena Job System ID is a special ID that uses bit flags to create certain relationships between jobs.
 
-Search for the lines:
+Opposed to the plain job IDs used by RO, eAthena job system IDs carries information such as the base class of an character (regardless of their current job upper), their job upper (regardless of their class), etc.
 
-`           { "ninja",    25 },`
-`           { "high novice",    4001 },`
+This is used by Hercules to make certain comparisons, both in source and scripts. So it is recommended to follow the pattern when adding your job.
 
-Then replace it with:
+You can read more about it in [eAthena Job ID System](https://github.com/HerculesWS/Hercules/blob/stable/doc/ea_job_system.txt)
 
-`           { "ninja",    25 },`
-`           { "burglar",    35 },`
-`           { "high novice",    4001 },`
+Some examples:
+```C
+MAPID_MY_JOB = 16, // 1-1 job (YOUR_EA_JOB_ID = 16)
 
-Save the file and open
+MAPID_MY_21_JOB = JOBL_2_1 | MAPID_MY_JOB, // 2-1 job of "My_Job" (YOUR_EA_JOB_ID = JOBL_2_1 | MAPID_MY_JOB)
+```
 
-Search for the lines:
+For this page, whenever you see `<YOUR_EA_JOB_ID>`, use this eAthena job ID.
 
-`   MAPID_NINJA,`
-`   MAPID_XMAS,`
-`   MAPID_SUMMER,`
 
-Then replace it with:
 
-`   MAPID_NINJA,`
-`   MAPID_XMAS,`
-`   MAPID_SUMMER,`
-`   MAPID_BURGLAR = 0x0E,`
+# Server-side changes
 
-Save the file and open
+## Conf changes
 
-Search for the lines:
+### `conf/messages.conf`
 
-`   if (jobmask & 1<<JOB_NINJA)`
-`       bclass[0] |= 1<<MAPID_NINJA;`
-`}`
+> Note: You can alternatively use `confg/import/msg_conf.txt` if you want to use imports/avoid touching herc files.
 
-Then replace it with:
+In this file you will add the human-readable name of your job. Used for some server messages.
 
-`   if (jobmask & 1<<JOB_NINJA)`
-`       bclass[0] |= 1<<MAPID_NINJA;`
-`   //items job`
-`   if (jobmask & 1<<35)`
-`       bclass[0] |= 1<<MAPID_BURGLAR;`
-`}`
+Find an empty ID (the range around 600 ~ 700 is reserved for jobs, you may use it) and add a row for your job:
+```
+682: Baby Soul Reaper
+// Add
+683: My Custom Job
+```
 
-Save the file and open
+For this page, whenever you see `<MSG_ID>`, use the ID you set here (example: `683`)
 
-Search for the lines:
 
-`       case JOB_SUMMER:`
-`           class_ = MAPID_SUMMER;`
-`           break;`
-`       default:`
-`           return -1;`
-`   }`
-`   return class_;`
-`}`
+## Source changes
+1. Open the file `src/common/class.h`
+2. Add your job constant and ID in it, like that: (It is recommended to keep it sorted by ID)
+```C
+ENUM_VALUE(<YOUR_JOB_CONST>, <YOUR_JOB_ID>)
+```
 
-Then replace it with:
 
-`       case JOB_SUMMER:`
-`           class_ = MAPID_SUMMER;`
-`           break;`
-`       case JOB_BURGLAR:`
-`           class_ |= MAPID_BURGLAR;`
-`           break;`
-`       default:`
-`           return -1;`
-`   }`
-`   return class_;`
-`}`
+3. Open the file `src/map/map.h`
+4. Search for the enum that has the first element:
+```
+MAPID_NOVICE = 0,
+```
+5. Add your Job's eAthena Job ID in there, for example: (It is recommended to put it at the right place, sorted by ID)
 
-Search for the lines:
 
-`       case MAPID_SUMMER:          return JOB_SUMMER;`
+	> **Note:** Do not put first jobs after `MAPID_1_1_MAX`.
+```C
+MAPID_<YOUR_JOB_CONST> = <YOU_EA_JOB_ID>,
+```
 
-Replace it with:
 
-`       case MAPID_BURGLAR:            return JOB_BURGLAR;`
-
-Finally search for the lines:
-
-`   case JOB_SUMMER:`
-`       return msg_txt(621);`
-
-And replace it with:
-
-`   case JOB_BURGLAR:`
-`       return msg_txt(700);`
-
-Now you have finally modified the src files, once that is done recompile it.
-
-**2.** Now we need to edit the **db** files, in order to do that, find the **db** folder. Once the folder is opened, look for and open it.
-
-Once done, look for the lines:
-
-`Job_Gunslinger    24`
-`Job_Ninja    25`
-`Job_Xmas    26`
-
-Then replace it with:
-
-`Job_Gunslinger    24`
-`Job_Ninja    25`
-`Job_Xmas    26`
-`Job_Burglar    35`
-
-Now after that, find the lines that are shown below (The lines are still under **const.txt**):
-
-`EAJ_TAEKWON    0x7`
-`EAJ_GUNSLINGER    0x9`
-`EAJ_NINJA    0x0A`
-
-Then replace it with:
-
-`EAJ_TAEKWON    0x7`
-`EAJ_GUNSLINGER    0x9`
-`EAJ_NINJA    0x0A`
-`EAJ_BURGLAR    0x0E`
-
-Once you have finished editing those lines, save it then close.
-
-Now, you will have to look for the txt file named **exp.txt**.
-
-`Maximum Level Syntax line: `**`0:1:2:3:4:5:6:7:8:9:10:11:12...`**
-
-Then replace it with:
-
-`Maximum Level Syntax line: `**`0:1:2:3:4:5:6:7:8:9:10:11:12:35...`**
-
-In the same file we look for:
-
-`your max level,1:2:3:4:5:6:26:4046,1`
-
-We need to change to code like this:
-
-`your max level,1:2:3:4:5:6:26:4046:35,1`
-
-We need to edit job_db1.txt And at the end of everything we need to paste this:
-
-`//Burglar`
-`35,    28000,70   ,500  ,200  ,400  ,500  ,550  ,600  ,650  ,700  ,700  ,750  ,650  ,700  ,2000 ,2000 ,2000 ,2000 ,2000 ,2000 ,2000 ,2000 ,2000 ,2000 ,2000 ,2000 ,2000 ,2000`
-
-This line is the one of the swordman but you can copy any other just changing the first number which is the jobid or if you prefer you can make your own.
-
-Edit the file job_db2.txt At the end:
-
-`//Burglar`
-`35,0,1,0,0,0,3,0,0,0,5,0,0,0,1,0,0,0,3,0,0,0,5,0,0,0,6,0,0,0,2,0,0,1,0,0,5,0,3,0`
-
-1,0,3,0,6,0,2,1,0,1,1
-
-This line is the Swordsman you can copy any classes job id (first number) or you can make your own
-
-Now it's time to add this skill to skill_tree.txt At the end of everything we put this
-
-`//Burglar`
-`//REQUIRED`
-`35,1,9,0,0,0,0,0,0,0,0,0,0 //NV_BASIC#Basic Skill#`
-`35,142,1,0,0,0,0,0,0,0,0,0,0 //NV_FIRSTAID#First Aid#`
-`//What ever skills you want you can add`
-`35,2,10,0,0,0,0,0,0,0,0,0,0 //SM_SWORD#Sword Mastery#`
-`35,4,10,0,0,0,0,0,0,0,0,0,0 //SM_RECOVERY#Increase HP Recovery#`
-`35,5,10,0,0,0,0,0,0,0,0,0,0 //SM_BASH#Bash#`
-`35,6,10,0,0,0,0,0,0,0,0,0,0 //SM_PROVOKE#Provoke#`
-`35,7,10,5,5,0,0,0,0,0,0,0,0 //SM_MAGNUM#Magnum Break#`
-`35,8,10,6,5,0,0,0,0,0,0,0,0 //SM_ENDURE#Endure#`
-`35,26,2,24,1,0,0,0,0,0,0,0,0 //AL_TELEPORT#Teleport#`
-`35,27,4,26,2,0,0,0,0,0,0,0,0 //AL_WARP#Warp Portal#`
-`35,28,10,0,0,0,0,0,0,0,0,0,0 //AL_HEAL#Heal#`
-`35,33,10,22,3,0,0,0,0,0,0,0,0 //AL_ANGELUS#Angelus#`
-`35,34,10,22,5,0,0,0,0,0,0,0,0 //AL_BLESSING#Blessing#`
-`35,35,1,28,2,0,0,0,0,0,0,0,0 //AL_CURE#Cure#`
-`//REQUIRED`
-`35,410,1,0,0,0,0,0,0,0,0,0,0 //WE_CALLBABY#Call Baby#`
-`35,681,1,0,0,0,0,0,0,0,0,0,0 //ALL_INCCARRY#Enlarge Weight Limit R#`
-
-And that's the skill that will take the Job you want to put your job of copying the line you want such as:
-
-`//Double Attack Skill`
-`12,48,10,0,0,0,0,0,0,0,0,0,0 //TF_DOUBLE#Double Attack#`
-
-And so it is our job so we would have to modify
-
-`35,48,10,0,0,0,0,0,0,0,0,0,0 //TF_DOUBLE#Double Attack#`
-
-We changed the first number to get the id of our job if you design your own set of skills you can't forget to put these:
-
-`35,1,9,0,0,0,0,0,0,0,0,0,0 //NV_BASIC#Basic Skill#`
-`35,142,1,0,0,0,0,0,0,0,0,0,0 //NV_FIRSTAID#First Aid#`
-`35,410,1,0,0,0,0,0,0,0,0,0,0 //WE_CALLBABY#Call Baby#`
-`35,681,1,0,0,0,0,0,0,0,0,0,0 //ALL_INCCARRY#Enlarge Weight Limit R#`
-
-Please refer to [adding new skills](/adding_new_skills "wikilink") to add new custom skills.
-
-If you do not put them there will be errors
-
-Next, open the file
-
-Look for this:
-
-`620: Ninja`
-`621: Summer`
-
-And add your custom class before "Summer"
-
-`620: Ninja`
-`621: Summer`
-`700: Burglar`
+6. Open the file `src/char/inter.c`
+7. Search for `inter_job_name` function
+8. Add another case for your job and its name message id:
+```C
+static const char *inter_job_name(int class)
+{
+	switch (class) {
+	// ...
+	case JOB_<YOUR_JOB_CONST>:
+		return inter->msg_txt(<MSG_ID>);
+	// ...
+	default:
+	// ...
+	}
+}
+```
+
+
+6. Open the file `src/map/pc.c`
+7. Search for `pc_job_name` function
+8. Add another case for your job and its name message id:
+```C
+static const char *pc_job_name(int class)
+{
+	switch (class) {
+	// ...
+	case JOB_<YOUR_JOB_CONST>:
+		return msg_txt(<MSG_ID>);
+	// ...
+	default:
+	// ...
+	}
+}
+```
+9. Search for `pc_check_job_name` function
+10. Add an entry in the `names` array for your job:
+
+	> This string will be used for ItemDB, etc.
+
+```C
+	{ "<My_Job_Const>", JOB_<My_Job_Const> },
+```
+
+11. Open `src/map/script.c`
+12. Search for `script->constdb_comment("Job masks / Job map_ids");`
+	> This is where Hercules adds source constants to the script engine
+13. Add your constant here:
+```C
+	script->set_constant("EAJ_<YOUR_JOB_CONST>", MAPID_<YOUR_JOB_CONST>, false, false);
+```
+
+14. Recompile your source.
+
+## Database
+
+### db/constants.conf
+This file gives constant values to the script engine.
+
+Search for:
+```
+comment__: "Job IDs"
+```
+
+And add your job constant somewhere below it (keep it sorted by ID to make it easier)
+```
+	Job_<Your_Job_Const>:        <YOUR_JOB_ID>
+```
+
+
+### db/{pre-}re/job_db.conf
+This file contains the general definitions of the job.
+
+Copy the structure on the "Entry Structure" section and make a new entry in the file using it.
+
+Replace `Job_Name` with `<Your_Job_Const>` and configure the other fields as you wish, following the documentation in the file.
+
+A minimal example may look like that:
+```
+<Your_Job_Const>: {
+	BaseExpGroup: "FirstClasses"
+	JobExpGroup: "SoulLinker"
+	ParametersGroup: "ThirdClasses"
+	Inherit: ("Soul_Linker")
+}
+```
+
+
+### db/job_db2.tx
+This file contains the stats bonus the job gains in each level.
+
+Add an entry for your job in the following structure:
+```
+// Your job name
+<YOUR_JOB_ID>,<JobLv1_Bonus>,<JobLv2_Bonus>,...
+```
+
+`JobLvX_Bonus` is one of the following values:
+- 0 = No stat bonus at this job level
+- 1 = STR increased by 1 at this job level
+- 2 = AGI increased by 1 at this job level
+- 3 = VIT increased by 1 at this job level
+- 4 = INT increased by 1 at this job level
+- 5 = DEX increased by 1 at this job level
+- 6 = LUK increased by 1 at this job level
+
+
+### db/{pre-}re/skill_tree.conf
+This file contains the skill tree of your job.
+
+Copy the structure on the "Entry Structure" section and make a new entry in the file using it.
+
+Replace `Job_Name` with `<Your_Job_Const>` and configure the other fields as you wish, following the documentation in the file.
+
+A minimal example may look like that:
+```
+<Your_Job_Const>: {
+	skills: {
+		SM_SWORD: 10 // SM_SWORD goes up to level 10
+		SM_TWOHAND: {
+			MaxLevel: 10 // SM_TWOHAND goes up to level 10
+			SM_SWORD: 1  // And requires SM_SWORD Lv 1 to be learned first
+		}
+	}
+}
+```
 
 And with that ends the server-side modifications.
 
-Client Side: (XRAY Required unless you plan to replace 3rd class id's.)
 
-first start by editing
 
-Class_tab.txt
+# Client side changes (Lua clients)
+> **TODO**
 
-Find this
+# Client Side changes (Very old clients before Lua)
 
-`!52`
-`°Ë»ç`
-`¸¶¹ý»ç`
+> **Note 1:** XRAY Required unless you plan to replace 3rd class id's.
 
-Add your custom class
+> **Note 2:** This guide is meant for very old clients (prior to renewal, like 2010 and before)
 
-`!35`
-`Burglar`
-`!52`
-`°Ë»ç`
-`¸¶¹ý»ç`
+> **Note 3:** This guide continues using `<Your_Job_Const>` but it is not really required to be the same as in the server, using the same is just meant to help visualizing the flow.
 
-Second edit
+## Sprites
+Copy the sprite files of your job to:
+- Male: `data\sprite\ÀÎ°£Á·\¸öÅë\³²\` folder
+- Female: `data\sprite\ÀÎ°£Á·\¸öÅë\¿©\` folder
 
-imf_tab.txt
+Male sprite names:
+- `<Your_Job_Const>_³².spr`
+- `<Your_Job_Const>_³².act`
 
-Find this
+Female sprite names:
+- `<Your_Job_Const>_¿©.spr`
+- `<Your_Job_Const>_¿©.act`
 
-`!52`
-`°Ë»ç`
-`¸¶¹ý»ç`
 
-Add your custom class
+## data/Class_tab.txt
+1. Find this
+```
+!52
+°Ë»ç
+¸¶¹ý»ç
+```
 
-`!35`
-`¼ºÁ÷ÀÚ`
-`!52`
-`°Ë»ç`
-`¸¶¹ý»ç`
+2. Add your custom class
+```
+!<YOUR_JOB_ID>
+<Your_Job_Const>
+!52
+°Ë»ç
+¸¶¹ý»ç
+```
 
-Third edit
 
-reality_dir_tab.txt
+## data/imf_tab.txt
+1. Find this
+```
+!52
+°Ë»ç
+¸¶¹ý»ç
+```
 
-Find this
+2. Add your custom class
 
-`!52`
-`°Ë»ç\\°Ë»ç`
-`¸¶¹ý»ç\\¸¶¹ý»ç`
+> **FIXME:** What is this name?
+```
+!<YOUR_JOB_ID>
+¼ºÁ÷ÀÚ
+!52
+°Ë»ç
+¸¶¹ý»ç
+```
 
-Add your custom class (!35)
 
-`!35`
-`¼ºÁ÷ÀÚ\\¼ºÁ÷ÀÚ`
-`!52`
-`°Ë»ç\\°Ë»ç`
-`¸¶¹ý»ç\\¸¶¹ý»ç`
+## data/reality_dir_tab.txt
+1. Find this
+```
+!52
+°Ë»ç\\°Ë»ç
+¸¶¹ý»ç\\¸¶¹ý»ç
+```
 
-Fourth edit
+2. Add your custom class
+> **FIXME:** What is this value?
+```
+!<YOUR_JOB_ID>
+¼ºÁ÷ÀÚ\\¼ºÁ÷ÀÚ
+!52
+°Ë»ç\\°Ë»ç
+¸¶¹ý»ç\\¸¶¹ý»ç
+```
 
-reality_tab.txt
 
-Find this
+## data/reality_tab.txt
+1. Find this
+```
+!52
+°Ë»ç
+¸¶¹ý»ç
+```
 
-`!52`
-`°Ë»ç`
-`¸¶¹ý»ç`
+2. Add your custom class
+> **FIXME:** What is this value?
+```
+!<YOUR_JOB_ID>
+¼ºÁ÷ÀÚ
+!52
+°Ë»ç
+¸¶¹ý»ç
+```
 
-Add your custom class (!35)
 
-`!35`
-`¼ºÁ÷ÀÚ`
-`!52`
-`°Ë»ç`
-`¸¶¹ý»ç`
+## data/monstrosity_tab.txt
+1. Find this
+```
+!47
+1_M_01
+1_M_02
+1_M_03
+```
 
-Fourth edit
-
-monstrosity_tab.txt
-
-Find this
-
-`!47`
-`1_M_01`
-`1_M_02`
-`1_M_03`
-
-Add your custom class ()
-
-`!35`
-`Burglar`
-`!47`
-`1_M_01`
-`1_M_02`
-`1_M_03`
-`1_M_04`
-
-Now copy the sprite files that will go on
-
-Male:
-
-`sprite\ÀÎ°£Á·\¸öÅë\³²`
-
-Female:
-
-`sprite\ÀÎ°£Á·\¸öÅë\¿©`
-
-Male:
-
-`Burglar_³².spr`
-`Burglar_³².act`
-
-Female:
-
-`Burglar_¿©.spr`
-`Burglar_¿©.act`
-
-[Category:Customization](/Category:Customization "wikilink") [Category:Source Snippets](/Category:Source_Snippets "wikilink")
+2. Add your custom class
+```
+!<YOUR_JOB_ID>
+<Your_Job_Const>
+!47
+1_M_01
+1_M_02
+1_M_03
+1_M_04
+```
