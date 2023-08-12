@@ -66,30 +66,34 @@ For this page, whenever you see `<MSG_ID>`, use the ID you set here (example: `6
 
 
 ## Source changes
-1. Open the file `src/common/class.h`
-2. Add your job constant and ID in it, like that: (It is recommended to keep it sorted by ID)
+
+### `src/common/class.h`
+1. Add your job constant and ID in it, like that:
 ```C
 ENUM_VALUE(<YOUR_JOB_CONST>, <YOUR_JOB_ID>)
 ```
 
+  > **Note:** It is recommended to keep it sorted by ID
 
-3. Open the file `src/map/map.h`
-4. Search for the enum that has the first element:
+
+### `src/map/map.h`
+1. Search for the enum with the `MAPID_*` values, its first element is:
 ```
 MAPID_NOVICE = 0,
 ```
-5. Add your Job's eAthena Job ID in there, for example: (It is recommended to put it at the right place, sorted by ID)
-
-
-	> **Note:** Do not put first jobs after `MAPID_1_1_MAX`.
+2. Add your Job's eAthena Job ID in there, for example:
 ```C
 MAPID_<YOUR_JOB_CONST> = <YOU_EA_JOB_ID>,
 ```
 
+  > **Note 1:** It is recommended to put it at the right place, sorted by ID
 
-6. Open the file `src/char/inter.c`
-7. Search for `inter_job_name` function
-8. Add another case for your job and its name message id:
+  > **Note 2:** Do not put first jobs after `MAPID_1_1_MAX`. Doing so will mess how Hercules understands each job and may cause other errors.
+
+
+### `src/char/inter.c`
+1. Search for `inter_job_name` function
+2. Add another case for your job and its name message id:
 ```C
 static const char *inter_job_name(int class)
 {
@@ -104,10 +108,9 @@ static const char *inter_job_name(int class)
 }
 ```
 
-
-6. Open the file `src/map/pc.c`
-7. Search for `pc_job_name` function
-8. Add another case for your job and its name message id:
+### `src/map/pc.c`
+1. Search for `pc_job_name` function
+2. Add another case for your job and its name message id:
 ```C
 static const char *pc_job_name(int class)
 {
@@ -121,8 +124,9 @@ static const char *pc_job_name(int class)
 	}
 }
 ```
-9. Search for `pc_check_job_name` function
-10. Add an entry in the `names` array for your job:
+
+3. Search for `pc_check_job_name` function
+4. Add an entry in the `names` array for your job:
 
 	> This string will be used for ItemDB, etc.
 
@@ -130,19 +134,24 @@ static const char *pc_job_name(int class)
 	{ "<My_Job_Const>", JOB_<My_Job_Const> },
 ```
 
-11. Open `src/map/script.c`
-12. Search for `script->constdb_comment("Job masks / Job map_ids");`
+
+### `src/map/script.c`
+1. Search for `script->constdb_comment("Job masks / Job map_ids");`
+
 	> This is where Hercules adds source constants to the script engine
-13. Add your constant here:
+
+2. Add your constant here:
 ```C
 	script->set_constant("EAJ_<YOUR_JOB_CONST>", MAPID_<YOUR_JOB_CONST>, false, false);
 ```
 
-14. Recompile your source.
+### Recompile the server
+Now that you have performed all required source changes, recompile it.
+
 
 ## Database
 
-### db/constants.conf
+### `db/constants.conf`
 This file gives constant values to the script engine.
 
 Search for:
@@ -156,7 +165,7 @@ And add your job constant somewhere below it (keep it sorted by ID to make it ea
 ```
 
 
-### db/{pre-}re/job_db.conf
+### `db/{pre-}re/job_db.conf`
 This file contains the general definitions of the job.
 
 Copy the structure on the "Entry Structure" section and make a new entry in the file using it.
@@ -174,7 +183,7 @@ A minimal example may look like that:
 ```
 
 
-### db/job_db2.tx
+### `db/job_db2.txt`
 This file contains the stats bonus the job gains in each level.
 
 Add an entry for your job in the following structure:
@@ -193,7 +202,7 @@ Add an entry for your job in the following structure:
 - 6 = LUK increased by 1 at this job level
 
 
-### db/{pre-}re/skill_tree.conf
+### `db/{pre-}re/skill_tree.conf`
 This file contains the skill tree of your job.
 
 Copy the structure on the "Entry Structure" section and make a new entry in the file using it.
