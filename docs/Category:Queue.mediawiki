@@ -1,1 +1,0 @@
-New Queue System is a improved command for battleground, replacing waitingroom

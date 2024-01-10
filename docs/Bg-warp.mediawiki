@@ -1,6 +1,0 @@
-[[Category:Script_Command]]
-==Syntax==
-* [[bg_warp]] <BG Team ID>,"<mapname>",<x>,<y>;
-
-==Description==
-This command is part of the Battleground System and warps the selected BG team to the selected point.

@@ -1,3 +1,0 @@
-#REDIRECT [[switch]]
-
-[[Category:Script Command]]

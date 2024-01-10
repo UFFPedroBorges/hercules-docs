@@ -1,2 +1,0 @@
-#REDIRECT [[Addtimer]]
-[[Category:Script_Command]]

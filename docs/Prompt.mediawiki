@@ -1,2 +1,0 @@
-#REDIRECT [[select]]
-[[Category:Script_Command]]

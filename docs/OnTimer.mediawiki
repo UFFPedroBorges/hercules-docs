@@ -1,1 +1,0 @@
-#REDIRECT [[Timers_(Scripting)#NPC_Timers_in_detail]]

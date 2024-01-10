@@ -1,2 +1,0 @@
-#REDIRECT [[disablenpc]]
-[[Category:Script_Command]]

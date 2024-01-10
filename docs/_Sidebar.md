@@ -1,3 +1,0 @@
-- [[Supported Platforms]]
-- [[Coding Style]]
-- [[Bugtracker Labels]]

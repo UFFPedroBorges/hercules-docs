@@ -1,2 +1,0 @@
-#REDIRECT [[Variables#Parameter Constants]]
-[[Category:Scripting]]

@@ -1,4 +1,0 @@
-This category contains all the script commands available on [[Hercules]]. To include script command pages to this category, include following at the end of the script command page:
- <nowiki>[[Category:Script Command]]</nowiki>
-
-[[Category:Scripting]]
