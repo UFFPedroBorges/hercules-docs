@@ -1,4 +1,4 @@
-Status effects can affect a character through an item's effect, a skill's effect, or called from an NPC. Below is the list of all the possible status effects a character can have (taken from {{git|db/const.txt}}).
+Status effects can affect a character through an item's effect, a skill's effect, or called from an NPC. Below is the list of all the possible status effects a character can have (taken from [`db/const.txt`](https://github.com/HerculesWS/Hercules/blob/stable/db/const.txt)).
 
 Status can be started by the [[sc_start]] function.
 =Status Effects=
