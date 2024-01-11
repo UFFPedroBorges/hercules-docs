@@ -1,3 +1,5 @@
+# `network.conf`
+
 Network.conf consists of three main sections:
 
 ==lan_subnets==

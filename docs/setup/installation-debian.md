@@ -1,3 +1,5 @@
+# Installation (Debian)
+
 This guide covers how to install [[Hercules]] on [[wikipedia:Debian|Debian]] and other [[wikipedia:List_of_Linux_distributions#Debian-based|versions of Linux]] that use apt-get.
 
 == Requirements ==

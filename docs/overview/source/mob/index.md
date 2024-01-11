@@ -1,3 +1,5 @@
+# `mob`
+
 [[Category:incomplete]]
 A [[Mob]] is basically a monster. Mobs range from Poring to Baphomet. Most commonly, the word 'mob' is used to refer to monster.
 

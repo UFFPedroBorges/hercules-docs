@@ -1,3 +1,5 @@
+# Compiling (Windows)
+
 For compiling on Windows, Visual Studio is the preferred method, although using Cygwin is also possible.
 
 === Using Visual Studio ===

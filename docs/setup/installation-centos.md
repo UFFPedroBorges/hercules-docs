@@ -1,3 +1,5 @@
+# Installation (CentOS)
+
 This guide covers how to install [[Hercules]] on [[wikipedia:CentOS|CentOS]] and other [[wikipedia:List_of_Linux_distributions#RPM-based|versions of Linux]] that use [[wikipedia:Yellowdog_Updater,_Modified|yum]].
 
 == Requirements ==

@@ -1,3 +1,5 @@
+# `mmo.h`
+
 [[Category:Incomplete]]
 
 [`src/common/mmo.h`](https://github.com/HerculesWS/Hercules/blob/stable/src/common/mmo.h) This source file holds global declarations and hard-coded settings, that are used by the login, char and map server. If you modify anything, you have to recompile all three servers, otherwise you may run into errors.

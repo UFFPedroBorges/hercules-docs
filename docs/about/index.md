@@ -1,3 +1,5 @@
+# About Hercules
+
 {{infobox/software
 |developer=[[Staff|Hercules Developers]]
 |version=[https://github.com/HerculesWS/Hercules/commit/ GitHub]

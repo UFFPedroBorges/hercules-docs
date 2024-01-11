@@ -1,3 +1,5 @@
+# `status`
+
 All functions inside status.c and status.h will go here.
 This is where all passive and positive/negative status codes are stored.
 

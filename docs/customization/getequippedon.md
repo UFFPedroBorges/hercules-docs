@@ -1,3 +1,5 @@
+# `getequippedon()`
+
 == Introduction ==
 === Why use this command ===
 An often unknown feature of equipment is that they can be slotted wherever they like. More specifically, cards can be defined to be slotted in more than just one type of equipment. You can define that a card can be equipped in either an Armor, a Shield or a Garment. The only problem is that, if you want a card to perform different scripts when in different items, you may run into problems finding which type of equipment the card is slotted in.

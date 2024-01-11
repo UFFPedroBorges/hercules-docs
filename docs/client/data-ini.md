@@ -1,3 +1,5 @@
+# `data.ini`
+
 '''DATA.INI''' is a client-side file, which is used to specify multiple [[GRF]] archives to be loaded by the client. It is only supported by [[Hexing|hexed]] clients, which have been diffed with the option ''[Data] Enable Multiple GRFs''. Official clients for main servers and [[Sakray]] read data.grf, and rdata.grf or sdata.grf respectively.
 
 ==File Format==

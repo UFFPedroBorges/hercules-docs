@@ -1,4 +1,5 @@
-=IRC?=
+# IRC
+
 [[IRC]] stands for [[wikipedia:Internet_Relay_Chat|Internet Relay Chat]]. Basically, it's chatroom server and client software in general. In [[IRC]], you have servers and channels. Servers hold the channels, and are hosted on dedicated machines. The channels are the actual chatrooms. [[IRC]] allows you to chat with people in real-time around the world. 
 
 == Connecting to IRC ==

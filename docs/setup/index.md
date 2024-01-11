@@ -1,3 +1,5 @@
+# Setup guides
+
 This category contains complete, detailed Hercules installation guides for various operating systems and software.
 [[Category:Installation]]
 Temporary:

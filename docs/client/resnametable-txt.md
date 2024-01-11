@@ -1,3 +1,5 @@
+# `resnametable.txt`
+
 The '''resource name table''' or resnametable, is responsible for creating pathname aliases for client-side files, regardless of whether inside or outside a [[GRF]] archive. The server can also read this file when [[:Category:Configuration#Overriding_map-cache|using GRFs for map data]], as well. It is stored in <code>data\resnametable.txt</code>, typically inside the archive.
 
 == Usage ==

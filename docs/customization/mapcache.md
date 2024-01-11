@@ -1,4 +1,6 @@
-# What is the mapcache?
+# Mapcache
+
+## What is the mapcache?
 
 Utilising the mapcache allows you to process the maps you've configured in the `db` and `conf` folder, with respect to the `conf/grf-files.txt`. Building the mapcache allows you to:
 
@@ -8,17 +10,17 @@ Utilising the mapcache allows you to process the maps you've configured in the `
 * allows your server and client to agree on map information (passable and non-passable terrain among other information),
 * stores this information in a [cache](https://en.wikipedia.org/wiki/Cache_(computing)?oldformat=true) format easily usable by your server executables.
 
-# Building Mapcache for Hercules
+## Building Mapcache for Hercules
 
 Back in eAthena and rAthena days, mapcache was a separate executable file `mapcache.exe` that you run to process the client.
 
 In Hercules, the mapcache tool is incorporated as a [Hercules Plugin](https://github.com/HerculesWS/Hercules/wiki/Hercules-Plugin-Manager), which is run using the `map-server.exe` as a loaded plugin that processes the maps as the map-server is starting up.
 
-## Requirements
+### Requirements
 
 You must know what your Operating System is. Is it a Windows? a Unix-based system?
 
-## What you will learn
+### What you will learn
 
 In building the mapcache for Hercules, you will learn how to:
 
@@ -28,7 +30,7 @@ In building the mapcache for Hercules, you will learn how to:
 
 3. Know how to use a terminal or command prompt, to run the `map-server` with the the mapcache plugin loaded and instructions to rebuild the cache.
 
-## Instructions
+### Instructions
 
 1. Determine what your operating system is. _Is it Windows? Unix?_ This will determine which guides you should follow when [compiling](https://github.com/HerculesWS/Hercules/wiki/Compiling) and running command line/terminal scripts.
 
@@ -54,7 +56,7 @@ map-server --load-plugin mapcache --rebuild-mapcache
 
 ***
 
-### Configuring the `grf-files.txt`
+#### Configuring the `grf-files.txt`
 
 1. Open `conf/grf-files.txt`
 2. Add your data folder path.
@@ -76,5 +78,5 @@ data_dir: C:\Users\JohnD\Documents\Data Folder\
 
 This will refer to the data folder found at `C:\Users\JohnD\Documents\Data Folder\data`.
 
-# References / Extended Reading
+## References / Extended Reading
 1. [Myriad's Mapcache Generation 2018](http://herc.ws/board/topic/15868-guide-mapcache-generation-2018/#comment-90027)

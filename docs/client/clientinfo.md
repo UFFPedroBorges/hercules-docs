@@ -1,1 +1,1 @@
-#REDIRECT [[Clientinfo.xml]]
+# `clientinfo.xml`

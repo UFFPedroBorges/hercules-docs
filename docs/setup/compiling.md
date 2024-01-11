@@ -1,4 +1,6 @@
-# What is Compiling and what does Compile mean?
+# Compiling
+
+## What is Compiling and what does Compile mean?
 
 > A compiler is a computer program that translates computer code written in one programming language into another programming language. -[Simple Wikipedia](https://simple.wikipedia.org/wiki/Compiler?oldformat=true)
 

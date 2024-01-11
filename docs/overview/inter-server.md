@@ -1,1 +1,3 @@
-#REDIRECT [[Character Server]]
+# Inter server
+
+See [Character Server](character-server.md)

@@ -1,4 +1,4 @@
-# Introduction
+# Overview of errors
 
 
 This article will, in the end, contain all possible script related errors, what their causes are and what you should do to fix them.
