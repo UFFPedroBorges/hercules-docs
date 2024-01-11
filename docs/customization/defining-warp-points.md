@@ -11,6 +11,4 @@ SpanX and SpanY will make the warp sensitive to a character who didn't step dire
 So here is an example how our warp must look:
  prontera,107,215,0	warp	prt01	2,2,prt_in,240,139
 
-When we have completed defining our warp, we can add it to a existing warp file (placed in {{git|npc/warps/}} folder) or create a new file. If you choose the last don't forget to [[Adding Script|add the new file to script list]]!
-
-[[Category:Scripting]]
+When we have completed defining our warp, we can add it to a existing warp file (placed in [`npc/warps/`](https://github.com/HerculesWS/Hercules/tree/stable/npc/warps) folder) or create a new file. If you choose the last don't forget to [[Adding Script|add the new file to script list]]!

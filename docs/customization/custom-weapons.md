@@ -1,7 +1,7 @@
 == The ID ==
 Why the ID first?  The ID controls what type of weapon sprite is displayed.  Going outside the ID range will cause you to "punch" when attacking.
 
-Open your {{git|db/re/item_db.conf}} or {{git|db/pre-re/item_db.conf}} and find the section with the weapon type you need.  The allowable range is usually obvious.
+Open your [`db/re/item_db.conf`](https://github.com/HerculesWS/Hercules/blob/stable/db/re/item_db.conf) or [`db/pre-re/item_db.conf`](https://github.com/HerculesWS/Hercules/blob/stable/db/pre-re/item_db.conf) and find the section with the weapon type you need.  The allowable range is usually obvious.
 
 {| {| class="wikitable" border="1"
 !Item ID

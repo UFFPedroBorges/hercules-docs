@@ -2,7 +2,7 @@
 
 When modifying your server, the time may come when you need to add or ammend status effects, and the bonuses or the 'scripts' that they provide. To do so, will require some source modifications, but will result in the ability to create and initialize status effects.
 
-== Open {{git|src/map/status.h}} ==
+== Open [`src/map/status.h`](https://github.com/HerculesWS/Hercules/blob/stable/src/map/status.h) ==
 
 You will notice a large enumerator called "sc_type", which defines the different statuses. When creating a new status, we need to move to the ''end'' of the enumerator, and add a custom SC type like below:
 
@@ -15,7 +15,7 @@ You will notice a large enumerator called "sc_type", which defines the different
 
 Note that SC_CUSTOMSTATUS is placed ''before'' the SC_MAX entry. Any new status effects must be placed before SC_MAX and preceed with a comma. Here we have declared a new status effect, so we can now move onto use it.
 
-== Open {{git|src/map/status.c}} ==
+== Open [`src/map/status.c`](https://github.com/HerculesWS/Hercules/blob/stable/src/map/status.c) ==
 
 Jump to the function ''status_change_start'':
 
@@ -78,7 +78,7 @@ As you can see, SC_MERC_HIT directly influences the HIT rate as calculated in ''
 
 This means that HIT will be decreased by whatever value is in val2 (as calculated in ''status_change_start'').
 
-== Open {{git|db/const.txt}} ==
+== Open [`db/const.txt`](https://github.com/HerculesWS/Hercules/blob/stable/db/const.txt) ==
 
 === Implementing ===
 

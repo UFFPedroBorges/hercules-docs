@@ -14,7 +14,7 @@ Typical *.conf entry layout:
  // npc: npc/path/to/yourscript2.txt
 Note how the second line is preceded with a double slash.  Content on the same line after double slashes will not be parsed.  In other words, ''script2.txt'' will not be loaded.  The slashes can be used to write comments.
 
-{{git|npc/pre-re/scripts_main.conf}} or {{git|npc/re/scripts_main.conf}} determines which of the *.conf will be read by the server.
+[`npc/pre-re/scripts_main.conf`](https://github.com/HerculesWS/Hercules/blob/stable/npc/pre-re/scripts_main.conf) or [`npc/re/scripts_main.conf`](https://github.com/HerculesWS/Hercules/blob/stable/npc/re/scripts_main.conf) determines which of the *.conf will be read by the server.
  import: npc/path/to/configuration.conf
 
 === The NPC in Game ===
@@ -47,6 +47,4 @@ The sprite part is straightforward, just Teddy.spr is fine, you don't need Teddy
 * If you are copy/pasting a script from a forum, be sure to check that the tabs are still intact.
 * Remember that paths and file names are case sensitive.
 * Remember to save after editing.
-* Create your own NPC folder and *.conf file.  This will make it much easier to keep track of your own scripts and can reduce the hassle when merging new revisions of Hercules.  Follow the basic layout of the other *.conf files and remember to import the *.conf in {{git|npc/scripts_main.conf}}
-
-[[Category:Scripting]]
+* Create your own NPC folder and *.conf file.  This will make it much easier to keep track of your own scripts and can reduce the hassle when merging new revisions of Hercules.  Follow the basic layout of the other *.conf files and remember to import the *.conf in [`npc/scripts_main.conf`](https://github.com/HerculesWS/Hercules/blob/stable/npc/scripts_main.conf)

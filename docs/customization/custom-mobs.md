@@ -215,7 +215,7 @@ Example:
 
 == Making it visible ==
 === Server Side ===
-If you've got a sprite and you're happy with it, then you can skip this part. If you would like to make your mob look like another mob, or even a player, then you need to take a look at {{git|db/mob_avail.txt|full}}
+If you've got a sprite and you're happy with it, then you can skip this part. If you would like to make your mob look like another mob, or even a player, then you need to take a look at [`db/mob_avail.txt`](https://github.com/HerculesWS/Hercules/blob/stable/conf/mob_avail.txt)
 
 For normal mobs, you can use the data that's already in the file as an example to work on:
  // mob_id,sprite_id,equip #
@@ -254,7 +254,7 @@ Job_Priest 8
 Job_Wizard 9
 Job_Blacksmith 10
 etc</pre>
-They can also be found on {{git|db/const.txt}} file.
+They can also be found on [`db/const.txt`](https://github.com/HerculesWS/Hercules/blob/stable/db/const.txt) file.
 
 <br>'''<u>Sex</u>''': 0 for female, 1 for male
 <br>'''<u>Hair</u>''': The mob hair style, goes from 1 to 23
@@ -304,19 +304,19 @@ In this file, the value after the = sign is the name of the actual sprite in you
 
 == Your mob in other files ==
 === Dead Branch ===
-Adding your mob to {{git|db/pre-re/mob_branch.txt}} or {{git|db/re/mob_branch.txt}} will allow Dead Branches to summon it.
+Adding your mob to [`db/pre-re/mob_branch.txt`](https://github.com/HerculesWS/Hercules/blob/stable/db/pre-re/mob_branch.txt) or [`db/re/mob_branch.txt`](https://github.com/HerculesWS/Hercules/blob/stable/db/re/mob_branch.txt) will allow Dead Branches to summon it.
 
 === Bloody Branch ===
-Adding your mob to {{git|db/pre-re/mob_boss.txt}} or {{git|db/re/mob_boss.txt}} will allow Bloody Branches to summon it.
+Adding your mob to [`db/pre-re/mob_boss.txt`](https://github.com/HerculesWS/Hercules/blob/stable/db/pre-re/mob_boss.txt) or [`db/re/mob_boss.txt`](https://github.com/HerculesWS/Hercules/blob/stable/db/re/mob_boss.txt) will allow Bloody Branches to summon it.
 
 === Poring Box ===
-Adding your mob to {{git|db/pre-re/mob_poring.txt}} or {{git|db/re/mob_poring.txt}} will make your mob spawnable via the Poring Box.
+Adding your mob to [`db/pre-re/mob_poring.txt`](https://github.com/HerculesWS/Hercules/blob/stable/db/pre-re/mob_poring.txt) or [`db/re/mob_poring.txt`](https://github.com/HerculesWS/Hercules/blob/stable/db/re/mob_poring.txt) will make your mob spawnable via the Poring Box.
 
 === Monster Racial Groups ===
-Adding your mob to {{git|db/pre-re/mob_race2_db.txt}} or {{git|db/re/mob_race2_db.txt}} will add your mob to a [[Racial_Group|Racial Group]]. Guardians, Goblins and other mobs are members of particular Racial Groups.
+Adding your mob to [`db/pre-re/mob_race2_db.txt`](https://github.com/HerculesWS/Hercules/blob/stable/db/pre-re/mob_race2_db.txt) or [`db/re/mob_race2_db.txt`](https://github.com/HerculesWS/Hercules/blob/stable/db/re/mob_race2_db.txt) will add your mob to a [[Racial_Group|Racial Group]]. Guardians, Goblins and other mobs are members of particular Racial Groups.
 
 === Red Pouch of Surprise ===
-Adding your mob to {{git|db/mob_pouch.txt}} will make your mob spawnable via the Red Pouch of Surprise.
+Adding your mob to [`db/mob_pouch.txt`](https://github.com/HerculesWS/Hercules/blob/stable/db/mob_pouch.txt) will make your mob spawnable via the Red Pouch of Surprise.
 
 
 == Spawn Points ==
@@ -455,7 +455,7 @@ e_ic 5
 etc
 </pre>
 
-For more info, go to your {{git|db/const.txt}} file.
+For more info, go to your [`db/const.txt`](https://github.com/HerculesWS/Hercules/blob/stable/db/const.txt) file.
 
 == Making it talk! ==
 Another add, suggested by chronocrosser_x and Fenrir Soarblade:
