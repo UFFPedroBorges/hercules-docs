@@ -1,0 +1,62 @@
+copyright: Copyright &copy; 2013-2024 Hercules Dev Team
+edit_uri: edit/master/docs/
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/HerculesWS/Hercules
+    - icon: fontawesome/brands/discord
+      link: https://board.herc.ws/discord/invite/general/
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - md_in_html
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      linenums_style: pymdownx-inline
+      pygments_lang_class: true
+      use_pygments: true
+  - pymdownx.superfences:
+      custom_fences:
+        - class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+          name: mermaid
+      preserve_tabs: true
+  - tables
+repo_url: https://github.com/HerculesWS/hercules-docs
+site_name: Hercules Docs
+theme:
+  features:
+    - content.action.edit
+    - content.action.view
+    - content.code.copy
+    - navigation.indexes
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - toc.follow
+    - toc.integrate
+  favicon: assets/Hercules48.png
+  logo: assets/Hercules48.png
+  name: material
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
