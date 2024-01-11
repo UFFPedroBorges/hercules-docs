@@ -27,9 +27,9 @@ MySQL server loses its connection to Hercules, as Hercules currently does not re
 If you intend to let your players play from an external internet connection, you ''must'' forward ports 6900, 6121, and 5121 respectively in your router's control panel. Simply forwarding port 6900 is not enough to allow clients to connect, and traffic will not be passed solely through your login server, even though they can communicate with one another internally on your localhost address.
 
 ==Configuring Hercules for use==
-After you have finished [[compiling]] Hercules, you can set it up for use. There will be four files that we will concentrate on. Any settings we change in these files should '''always''' be moved to the relevant import folder files. If your compiler hasn't already made a copy of the {{git|conf/import-tmpl}} folder and named it /conf/import do that now.
+After you have finished [[compiling]] Hercules, you can set it up for use. There will be four files that we will concentrate on. Any settings we change in these files should '''always''' be moved to the relevant import folder files. If your compiler hasn't already made a copy of the [`conf/import-tmpl`](https://github.com/HerculesWS/Hercules/tree/stable/conf/import-tmpl) folder and named it /conf/import do that now.
 
-=====Using the /conf/import/ folder ({{git|conf/import-tmpl/}})=====
+=====Using the /conf/import/ folder ([`conf/import-tmpl/`](https://github.com/HerculesWS/Hercules/tree/stable/conf/import-tmpl))=====
 In this folder, you can 'import' your settings into each of the respected files. All you need is each parameter. When you do this, your settings will never be overwritten when you need
 to update your GIT, as the import folder is built once. You can throw all of your settings in here and they will remain as they are, and will read AFTER the
 main settings, which means these settings will take priority. 
@@ -38,12 +38,12 @@ main settings, which means these settings will take priority.
 First, you will need to set an intercommunication password and user. This is one of the most important steps to securing your server.
 
 In order for the char-server to accept commands and packets from the login server, and for the map-server to accept commands and packets from the char-server they have to 'log-in' to each other, using the Server Communication passwords. 
-You MUST set these to something other than defaults, but you can set them to random characters, as long as they are the same in the three places they appear in, which are: {{git|conf/char-server.conf}}, {{git|conf/map-server.conf}} and your login sql table.
+You MUST set these to something other than defaults, but you can set them to random characters, as long as they are the same in the three places they appear in, which are: [`conf/char-server.conf`](https://github.com/HerculesWS/Hercules/blob/stable/conf/char-server.conf), [`conf/map-server.conf`](https://github.com/HerculesWS/Hercules/blob/stable/conf/map-server.conf) and your login sql table.
 They are defaulted to s1/p1, and '''MUST''' be changed.
 
 Changes must be made to the import folder to ensure proper upgradability. A good habit to get into when working with GIT.
 Simply copy and paste the lines you wish to alter from the .conf file to the relevant .txt file in the import folder.
-Your /conf/import/char_conf.txt ''and'' /conf/import/map_conf.txt files should look as follows, with ''no'' changes made to {{git|conf/char-server.conf}} or {{git|conf/map-server.conf}}: <br />
+Your /conf/import/char_conf.txt ''and'' /conf/import/map_conf.txt files should look as follows, with ''no'' changes made to [`conf/char-server.conf`](https://github.com/HerculesWS/Hercules/blob/stable/conf/char-server.conf) or [`conf/map-server.conf`](https://github.com/HerculesWS/Hercules/blob/stable/conf/map-server.conf): <br />
 <code><pre>// Server Communication username and password.
 userid: [new user]
 passwd: [new password]</pre></code>
@@ -55,7 +55,7 @@ set `userid` = "[new user]", `user_pass` = "[new password]" where `account_id` =
 
 After the user and password is set, you can move on down the page.
 
-===Step 2. {{git|conf/login-server.conf}}===
+===Step 2. [`conf/login-server.conf`](https://github.com/HerculesWS/Hercules/blob/stable/conf/login-server.conf)===
 Usually there is nothing to be done here in terms on connection. 
 You may want to edit your login_port to something other than default, but it must be an unused port by your OS. 
 
@@ -67,11 +67,11 @@ Goto Start, then click 'Run'. Type 'cmd' and press enter. Run the following comm
 '''If using *nix:'''
 <code><pre>$ lsof -i</pre></code>
 
-Once you have selected a port if you're going to change it, your /conf/import/login_conf.txt file should look as follows, with ''no'' changes made to {{git|conf/login-server.conf}} (again just copy pasting the lines we want to change from one file to the other): <br />
+Once you have selected a port if you're going to change it, your /conf/import/login_conf.txt file should look as follows, with ''no'' changes made to [`conf/login-server.conf`](https://github.com/HerculesWS/Hercules/blob/stable/conf/login-server.conf) (again just copy pasting the lines we want to change from one file to the other): <br />
 <code><pre>// Login Server Port
 login_port: [new port]</pre></code>
 
-===Step 3. {{git|conf/char-server.conf}}===
+===Step 3. [`conf/char-server.conf`](https://github.com/HerculesWS/Hercules/blob/stable/conf/char-server.conf)===
 This file sets parameters for the char-server to read. 
 When you open this up, there are a few things we need to do in here. 
 
@@ -110,7 +110,7 @@ login_port: [new port]</pre></code>
 
 Make sure to make any changes in the import folder as always.
 
-===Step 4. {{git|conf/map-server.conf}}===
+===Step 4. [`conf/map-server.conf`](https://github.com/HerculesWS/Hercules/blob/stable/conf/map-server.conf)===
 This file sets parameters for the map-server to read.
 
 The char_ip will point to the IP address where the login server will be running. Usually this is the localhost, or 127.0.0.1. 
@@ -132,7 +132,7 @@ map_ip: [your wan ip here]</pre></code>
 
 Make sure to make any changes in the import folder as always.
 
-===Step 5. {{git|conf/inter-server.conf}}===
+===Step 5. [`conf/inter-server.conf`](https://github.com/HerculesWS/Hercules/blob/stable/connf/inter-server.conf)===
 About midway down this file, you will find your SQL settings. These will be set as accordingly. 
 
 * The 'sql.db' settings control what the login-server reads for it's database settings. 

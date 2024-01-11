@@ -70,7 +70,7 @@ for.
 |-
 |/src/plugins/||Plugins source files.
 |-
-|/src/tool/||[https://github.com/HerculesWS/Hercules/tree/master/src/tool Tools] source files, such as the mapcache builder.
+|/src/tool/||[Tools](https://github.com/HerculesWS/Hercules/tree/stable/src/tool) source files, such as the mapcache builder.
 |-
 |'''/tools/'''||Contains tool scripts for various maintenance-related tasks.
 |-
