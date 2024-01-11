@@ -906,7 +906,7 @@ You used the callshop command, to call a shop. However, this shop does not exist
 
 ### Solution
 
-Verify that the shop you want to call is actually a shop, and of course, that it exists. And make sure the shop you are calling obeys the rules of shops that can be called with callshop. (More info regarding this, view the callshop example file: {{git|doc/sample/npc_dynamic_shop.txt}})
+Verify that the shop you want to call is actually a shop, and of course, that it exists. And make sure the shop you are calling obeys the rules of shops that can be called with callshop. (More info regarding this, view the callshop example file: [`doc/sample/npc_dynamic_shop.txt`](https://github.com/HerculesWS/Hercules/blob/stable/doc/sample/npc_dynamic_shop.txt))
 
 
 ## buildin_checkweight: Wrong item ID or amount.
@@ -4105,4 +4105,3 @@ Correct code:
 
 
 [[Category:Debugging]]
-[[Category:Scripting]]

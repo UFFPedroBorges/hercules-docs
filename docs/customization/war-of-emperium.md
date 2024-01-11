@@ -1,7 +1,7 @@
 The '''War of Emperium''' is a battle between guilds for castles (5 castles in each of 4 towns, for a total of 20).  Guilds fight against each other and the guild that owns the castle at the end of WoE has access to dungeons and treasures that are not accessible to people who are not in the residing guild.
 
 ==agit_controller.txt==
-Open {{git|npc/guild/agit_controller.txt}} <br />
+Open [`npc/guild/agit_controller.txt`](https://github.com/HerculesWS/Hercules/blob/stable/npc/guild/agit_controller.txt) <br />
 The body of the script should look similar to the following:
 
  -	script	Agit_Event	-1,{
@@ -120,22 +120,22 @@ It is Wednesday, it is 10pm
 
 If you still don't understand this, try the WoE Setter NPC I made to guide you through the process. Add the script to your scripts_custom.conf and talk to the NPC in game with a GM level 99.
 
-WoE Controller script - {{git|npc/custom/woe_controller.txt}}
+WoE Controller script - [`npc/custom/woe_controller.txt`](https://github.com/HerculesWS/Hercules/blob/stable/npc/custom/woe_controller.txt)
 
-Original guide can be found at {{git|doc/woe_time_explanation.txt}}
+Original guide can be found at [`doc/woe_time_explanation.txt`](https://github.com/HerculesWS/Hercules/blob/stable/doc/woe_time_explanation.txt)
 
 
 ==Turn OFF WoE in Some Castles==
 WoE is a server-wide setting, so it's either ON everywhere, or OFF everywhere.<br />
 To get around this and "turn off" woe in certain castles, this is what you can do:
-# Edit {{git|npc/scripts_guild.conf}} and comment out the castles you are NOT using for WoE (put // in front of the line). This turns of all woe functions for that castle.
-# Optional: to remove the warp portal entrance, edit {{git|npc/warps/guildcastles.txt}} and comment-out the warps into the castles you are not using.
+# Edit [`npc/scripts_guild.conf`](https://github.com/HerculesWS/Hercules/blob/stable/npc/scripts_guild.conf) and comment out the castles you are NOT using for WoE (put // in front of the line). This turns of all woe functions for that castle.
+# Optional: to remove the warp portal entrance, edit [`npc/warps/guildcastles.txt`](https://github.com/HerculesWS/Hercules/blob/stable/npc/warps/guildcastles.txt) and comment-out the warps into the castles you are not using.
 
 
 ==Separate WoE Times in Separate Towns/Castles==
 WoE is a server-wide setting, so it's either ON everywhere, or OFF everywhere.<br />
 (you can't have it on in one castle only).<br />
-To get around this, you need to code 3 separate events in the {{git|npc/guild/agit_controller.txt}}
+To get around this, you need to code 3 separate events in the [`npc/guild/agit_controller.txt`](https://github.com/HerculesWS/Hercules/blob/stable/npc/guild/agit_controller.txt)
 ===StartWOE1:===
 * close portal into WoE castle2
 * kick people out of WoE castle2

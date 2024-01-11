@@ -1,6 +1,6 @@
 [[Category:Incomplete]]
 
-{{git|src/common/mmo.h}} This source file holds global declarations and hard-coded settings, that are used by the login, char and map server. If you modify anything, you have to recompile all three servers, otherwise you may run into errors.
+[`src/common/mmo.h`](https://github.com/HerculesWS/Hercules/blob/stable/src/common/mmo.h) This source file holds global declarations and hard-coded settings, that are used by the login, char and map server. If you modify anything, you have to recompile all three servers, otherwise you may run into errors.
 
 === PACKETVER ===
 Specifies the packet version to use for server-client communication. It must be set to date, your client has been released at, e. g. 20090922 for 2009-09-22aRagexeRE. Note: If you have a client, that is newer, than the latest packet version in the comment, some things might not work properly, if the client packets have changed since then.
