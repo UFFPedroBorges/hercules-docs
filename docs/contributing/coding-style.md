@@ -1,3 +1,5 @@
+# Coding style
+
 **WORK IN PROGRESS**
 
 
@@ -10,7 +12,7 @@ is pretty much always right, and he doubtlessly knows what he's doing),
 with some small modifications.  The original, unmodified, document can
 be found at: https://www.kernel.org/doc/html/latest/process/coding-style.html
 
-# Linux kernel coding style (Hercules version)
+## Linux kernel coding style (Hercules version)
 
 This is a short document describing the preferred coding style for the
 linux kernel.  Coding style is very personal, and I won't _force_ my
@@ -21,36 +23,7 @@ at least consider the points made here.
 First off, I'd suggest printing out a copy of the GNU coding standards,
 and NOT read it.  Burn them, it's a great symbolic gesture.
 
-# Contents
-
-* [Chapter 1: Indentation](#chapter-1-indentation)
-* [Chapter 2: Breaking long lines and strings](#chapter-2-breaking-long-lines-and-strings)
-* [Chapter 3: Placing Braces and Spaces](#chapter-3-placing-braces-and-spaces)
-  * [3.1: Braces](#31-braces)
-  * [3.2: Spaces](#32-spaces)
-* [Chapter 4: Naming](#chapter-4-naming)
-* [Chapter 5: Typedefs](#chapter-5-typedefs)
-* [Chapter 6: Functions](#chapter-6-functions)
-* [Chapter 7: Centralized exiting of functions](#chapter-7-centralized-exiting-of-functions)
-* [Chapter 8: Commenting](#chapter-8-commenting)
-* [Chapter 9: You've made a mess of it](#chapter-9-youve-made-a-mess-of-it)
-* [Chapter 10: (empty)](#chapter-10-empty)
-* [Chapter 11: (empty)](#chapter-11-empty)
-* [Chapter 12: Macros, Enums and RTL](#chapter-12-macros-enums-and-rtl)
-* [Chapter 13: Printing Hercules messages](#chapter-13-printing-hercules-messages)
-* [Chapter 14: Allocating memory](#chapter-14-allocating-memory)
-* [Chapter 15: The inline disease](#chapter-15-the-inline-disease)
-* [Chapter 16: Function return values and names](#chapter-16-function-return-values-and-names)
-* [Chapter 17: (empty)](#chapter-17-empty)
-* [Chapter 18: Don't re-invent the Hercules macros](#chapter-18-dont-re-invent-the-hercules-macros)
-* [Chapter 19: Editor modelines and other cruft](#chapter-19-editor-modelines-and-other-cruft)
-* [Chapter 20: (empty)](#chapter-20-empty)
-* [Chapter 21: (empty)](#chapter-21-empty)
-* [Appendix I: References](#appendix-i-references)
-
-***
-
-## Chapter 1: Indentation
+### Chapter 1: Indentation
 
 Tabs are 8 characters, and thus indentations are also 8 characters.
 There are heretic movements that try to make indentations 4 (or even 2!)
@@ -116,7 +89,7 @@ indentation, and the above example is deliberately broken.
 
 Get a decent editor and don't leave whitespace at the end of lines.
 
-## Chapter 2: Breaking long lines and strings
+### Chapter 2: Breaking long lines and strings
 
 Coding style is all about readability and maintainability using commonly available tools.
 
@@ -149,9 +122,9 @@ static void do_this(int parameter1, int parameter2,
 * A calculation should not be broken. Split it into logical chunks by creating variables for partial results instead.
 * However, never break user-visible strings such as `ShowMessage` messages, because that breaks the ability to grep for them.
 
-## Chapter 3: Placing Braces and Spaces
+### Chapter 3: Placing Braces and Spaces
 
-### 3.1: Braces
+#### 3.1: Braces
 
 The other issue that always comes up in C styling is the placement of
 braces.  Unlike the indent size, there are few technical reasons to
@@ -266,7 +239,7 @@ If the condition is broken into multiple lines use braces, too:
 	}
 ```
 
-### 3.2: Spaces
+#### 3.2: Spaces
 
 Linux kernel style for use of spaces depends (mostly) on
 function-versus-keyword usage.  Use a space after (most) keywords.  The
@@ -345,7 +318,7 @@ can optionally strip the trailing whitespace for you; however, if
 applying a series of patches, this may make later patches in the series
 fail by changing their context lines.
 
-## Chapter 4: Naming
+### Chapter 4: Naming
 
 C is a Spartan language, and so should your naming be.  Unlike Modula-2
 and Pascal programmers, C programmers do not use cute names like
@@ -377,7 +350,7 @@ If you are afraid to mix up your local variable names, you have another
 problem, which is called the function-growth-hormone-imbalance syndrome.
 See chapter 6 (Functions).
 
-## Chapter 5: Typedefs
+### Chapter 5: Typedefs
 
 Please don't use things like `vps_t`.  
 It's a _mistake_ to use `typedef` for structures and pointers. When you
@@ -449,7 +422,7 @@ rules.
 In general, a pointer, or a `struct` that has elements that can
 reasonably be directly accessed should _never_ be a typedef.
 
-## Chapter 6: Functions
+### Chapter 6: Functions
 
 Functions should be short and sweet, and do just one thing.  They should
 fit on one or two screenfuls of text (the ISO/ANSI screen size is 80x24,
@@ -484,7 +457,7 @@ In function prototypes, include parameter names with their data types.
 Although this is not required by the C language, it is preferred in Linux
 because it is a simple way to add valuable information for the reader.
 
-## Chapter 7: Centralized exiting of functions
+### Chapter 7: Centralized exiting of functions
 
 _Hercules comment: What follows is quite controversial. Don't just start
 adding goto everywhere, if you can avoid it. If there is a real need,
@@ -548,7 +521,7 @@ The bug in this code is that on some exit paths `foo` is NULL.  Normally
 the fix for this is to split it up into two error labels `err_bar:` and
 `err_foo:`.
 
-## Chapter 8: Commenting
+### Chapter 8: Commenting
 
 Comments are good, but there is also a danger of over-commenting.  NEVER
 try to explain HOW your code works in a comment: it's much better to
@@ -595,7 +568,7 @@ derived types.  To this end, use just one data declaration per line (no
 commas for multiple data declarations).  This leaves you room for a
 small comment on each item, explaining its use.
 
-## Chapter 9: You've made a mess of it
+### Chapter 9: You've made a mess of it
 
 That's OK, we all do.  You've probably been told by your long-time Unix
 user helper that "GNU emacs" automatically formats the C sources for
@@ -658,17 +631,17 @@ options `-kr -i8` (stands for "K&R, 8 character indents"), or use
 re-formatting you may want to take a look at the man page.  But
 remember: "indent" is not a fix for bad programming.
 
-## Chapter 10: (empty)
+### Chapter 10: (empty)
 
 _Hercules note: This chapter has been intentionally left blank, to
 preserve chapter numbers.  It may get re-used at a later time._
 
-## Chapter 11: (empty)
+### Chapter 11: (empty)
 
 _Hercules note: This chapter has been intentionally left blank, to
 preserve chapter numbers.  It may get re-used at a later time._
 
-## Chapter 12: Macros, Enums and RTL
+### Chapter 12: Macros, Enums and RTL
 
 Names of macros defining constants and labels in enums are capitalized.
 
@@ -751,7 +724,7 @@ Things to avoid when using macros:
    `ret` is a common name for a local variable - `__foo_ret` is less
    likely to collide with an existing variable.
 
-## Chapter 13: Printing Hercules messages
+### Chapter 13: Printing Hercules messages
 
 Kernel developers like to be seen as literate. Do mind the spelling of
 Hercules messages to make a good impression. Do not use crippled words
@@ -763,7 +736,7 @@ avoided.
 
 _Hercules note: Removed a lot of linux-specific information._
 
-## Chapter 14: Allocating memory
+### Chapter 14: Allocating memory
 
 Hercules provides the following general purpose memory allocators:
 `aMalloc()`, `aCalloc()`, `aRealloc()`, `aReallocz()`, `CREATE()`,
@@ -799,7 +772,7 @@ The preferred form for allocating a zeroed array is the following:
 
 _Hercules note: Replaced with Hercules-specific information._
 
-## Chapter 15: The inline disease
+### Chapter 15: The inline disease
 
 There appears to be a common misperception that gcc has a magic "make me
 faster" speedup option called `inline`. While the use of inlines can be
@@ -824,7 +797,7 @@ _Hercules remark: Please take note that inline functions can't be part
 of interfaces, and as such, can't be overridden or hooked into by
 plugins._
 
-## Chapter 16: Function return values and names
+### Chapter 16: Function return values and names
 
 Functions can return values of many different kinds, and one of the most
 common is a value indicating whether the function succeeded or failed.
@@ -860,12 +833,12 @@ pointers; they use `NULL` to report failure.
 
 _Hercules note: Minor Hercules-specific edits_
 
-## Chapter 17: (empty)
+### Chapter 17: (empty)
 
 _Hercules note: This chapter has been intentionally left blank, to
 preserve chapter numbers.  It may get re-used at a later time._
 
-## Chapter 18: Don't re-invent the Hercules macros
+### Chapter 18: Don't re-invent the Hercules macros
 
 The header files `common/cbasetypes.h`, `common/utils.h` and
 `common/db.h` contain a number of macros that you should use, rather
@@ -890,7 +863,7 @@ Similarly, if you need to find an element in an array, use
 
 _Hercules note: Edited with Hercules-specific information._
 
-## Chapter 19: Editor modelines and other cruft
+### Chapter 19: Editor modelines and other cruft
 
 Some editors can interpret configuration information embedded in source
 files, indicated with special markers.  For example, emacs interprets
@@ -922,17 +895,17 @@ override them.  This includes markers for indentation and mode
 configuration.  People may use their own custom mode, or may have some
 other magic method for making indentation work correctly.
 
-## Chapter 20: (empty)
+### Chapter 20: (empty)
 
 _Hercules note: This chapter has been intentionally left blank, to
 preserve chapter numbers.  It may get re-used at a later time._
 
-## Chapter 21: (empty)
+### Chapter 21: (empty)
 
 _Hercules note: This chapter has been intentionally left blank, to
 preserve chapter numbers.  It may get re-used at a later time._
 
-## Appendix I: References
+### Appendix I: References
 
 - The C Programming Language, Second Edition  
   by Brian W. Kernighan and Dennis M. Ritchie.  

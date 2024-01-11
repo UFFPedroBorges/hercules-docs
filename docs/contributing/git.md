@@ -23,7 +23,7 @@ When you '''pull''' commits, you are downloading the latest commits that were pu
 Please see the [[:Category:Installation]] appropriate category for installation of Git on your operating system of choice and how to utilize it.
 
 ==Hercules Git Details==
-You can find the root or index of the Hercules source code at the following link: <code>{{git||full}}</code>. This link can be used if you need to view a single file and don't want to dig up your "copy" of the source code.
+You can find the root or index of the Hercules source code at the following link: [https://github.com/HerculesWS/Hercules/](https://github.com/HerculesWS/Hercules/). This link can be used if you need to view a single file and don't want to dig up your "copy" of the source code.
 
 ===Hercules Developer Branches===
 Each developer that contributes to the Hercules Project is welcome to their own branches on the git repository. A lot of times, these separate branches branch are a testing bed for a new feature. You should never assume that any branch that is not trunk or not stable is usable. Often times, it is not.
