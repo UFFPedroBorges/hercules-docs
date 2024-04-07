@@ -8,16 +8,16 @@
 
 Editing pallets with Photoshop is a simple task. Simply load a sprite with a sprite viewer such as SPR Conview or SprTool+4-6 and export a single frame of the sprite as an image and load it with Photoshop. If your doing job sprites use a image from the job class you wish to make your pallet for and the same goes for hairs, head gear and monsters. As each sprite can have it's own pallet.
 
-![Sprite in SPR Conview](https://github.com/HerculesWS/Hercules/assets/10552039/0525c7e2-e159-4123-9ad6-d14b4b525c40)
-![Sprite in PhotoShop](https://github.com/HerculesWS/Hercules/assets/10552039/0ea16ead-a3fa-40c1-834f-1cc7ae63b251)
+![Sprite in SPR Conview](assets/sprite_in_spr_conview.jpg)
+![Sprite in PhotoShop](assets/sprite_in_photoshop.jpg)
 
 Once loaded into Photoshop load the color table via the 'Image > Mode > Color Table' like so:
 
-![Load color table in PhotoShop](https://github.com/HerculesWS/Hercules/assets/10552039/c4caf18e-dcce-4a29-bdf9-7bd10482b6da)
+![Load color table in PhotoShop](assets/load_color_table_in_phoshop.jpg)
 
 If the color table is grayed out then the image isn't 256 colors and you won't be able to proceed. Once the color table window is up you'll see the range of colors available and used in the original sprite. Edit them is simple, either click a single color box or select a group (Selecting a group allows you to easily create a gradient range of colors by picking a light color and then picking a darker color, remember to click the 'ok' button.) then pick the new color or enter in the color values into any of the color boxes.
 
-![Edit color table in Photoshop](https://github.com/HerculesWS/Hercules/assets/10552039/563edfa8-c4a2-4764-81d4-9da60436220a)
+![Edit color table in Photoshop](assets/edit_color_table_in_photoshop.jpg)
 
 Once your new pallet is created simple click the save button in the color table window and save your pallet to a .pal file.
 
@@ -26,7 +26,7 @@ Once your new pallet is created simple click the save button in the color table 
 
 Ragnarok Online Pallet files are simply normal pallet files (.pal) with the header removed. Simply open the file like so
 
-![Editing header in notepad](https://github.com/HerculesWS/Hercules/assets/10552039/f8bc36ca-8ff7-4b65-9d0f-022dc9e084db)
+![Editing header in notepad](assets/editing_palette_in_notepad.jpg)
 
 Then selecting whats highlighted in the image and delete it and save. It's that simple.
 

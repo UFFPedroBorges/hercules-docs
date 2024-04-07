@@ -47,59 +47,59 @@ Download the `YourProject.c` from the [Hercules Board, Plugin Releases](https://
 #### Step 2
 
 Copy or move the `YourProject.c` file into your `/src/plugins/` folder.  
-![](https://raw.githubusercontent.com/AnnieRuru/customs/master/screenshots/MSVC_step1.png)
+![](assets/MSVC_step1.png)
 
 #### Step 3
 
 Depending on which Visual Studio C project version (`.vcproj`) you are using, navigate to the appropriate folder.
 
 For example, if you are using Microsoft Visual Studio IDE (Community 2017), navigate to the directory `\vcproj-15\`. We use 15 because that is the latest build type available (better to use 15 instead of using the older build solutions).
-![](https://raw.githubusercontent.com/AnnieRuru/customs/master/screenshots/MSVC_step2.png)
+![](assets/MSVC_step2.png)
 
 #### Step 4
 
 Select `plugin-sample.vcxproj`, copy the file, and paste it on the same directory. This will produce a copy of the file with filename `plugin-sample - Copy.vcxproj`.
-![](https://raw.githubusercontent.com/AnnieRuru/customs/master/screenshots/MSVC_step3.png)
+![](assets/MSVC_step3.png)
 
 #### Step 5
 
 Rename `plugin-sample - Copy.vcxproj` into `YourProject.vcxproj`  
 While renaming, Highlight the word `YourProject` and Copy it by **Ctrl+C**
-![](https://raw.githubusercontent.com/AnnieRuru/customs/master/screenshots/MSVC_step4.png)
+![](assets/MSVC_step4.png)
 
 #### Step 6
 
 Right click on `YourProject.vcxproj`, select `Edit with Notepad++` or Microsoft Notepad.
-![](https://raw.githubusercontent.com/AnnieRuru/customs/master/screenshots/MSVC_step5.png)
+![](assets/MSVC_step5.png)
 
 #### Step 7
 
 Find the following line:  
 `<ProjectName>plugin-sample</ProjectName>`  
-![](https://raw.githubusercontent.com/AnnieRuru/customs/master/screenshots/MSVC_step6.png)  
+![](assets/MSVC_step6.png)  
 Replace `plugin-sample` with `YourProject`. Make sure that you copy this correctly and not make typos.
 
 To avoid typos, you can use `CTRL+C` to copy the name of the plugin and `CTRL+V` to paste the name of the plugin without making mistakes.
-![](https://raw.githubusercontent.com/AnnieRuru/customs/master/screenshots/MSVC_step6_.png)
+![](assets/MSVC_step6_.png)
 
 #### Step 8
 
 Find the following line:  
 `<TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sample</TargetName>`  
-![](https://raw.githubusercontent.com/AnnieRuru/customs/master/screenshots/MSVC_step7.png)
+![](assets/MSVC_step7.png)
 
 Replace `sample` to `YourProject`.  
 `<TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">YourProject</TargetName>`  
-![](https://raw.githubusercontent.com/AnnieRuru/customs/master/screenshots/MSVC_step7_.png)
+![](assets/MSVC_step7_.png)
 
 #### Step 9
 
 Find the following line:  
 `<ClCompile Include="..\src\plugins\sample.c" />`  
-![](https://raw.githubusercontent.com/AnnieRuru/customs/master/screenshots/MSVC_step8.png)
+![](assets/MSVC_step8.png)
 
 Replace `sample` to `YourProject`.  
-![](https://raw.githubusercontent.com/AnnieRuru/customs/master/screenshots/MSVC_step8_.png)
+![](assets/MSVC_step8_.png)
 
 #### Step 10
 
@@ -108,22 +108,22 @@ Save the file by pressing `CTRL+S`.
 #### Step 11
 
 From your the main folder of your server, open the appropriate Visual Studio solution file `Hercules-N.sln` using your IDE. In this example, we used `Hercules-15.sln` because we are using Microsoft Visual Studio (Community 2017).  
-![](https://raw.githubusercontent.com/AnnieRuru/customs/master/screenshots/MSVC_step10.png)
+![](assets/MSVC_step10.png)
 
 #### Step 12
 
 On the Solution Explorer tab, right click `Hercules-15`, select `Add > Existing Project...`  
-![](https://raw.githubusercontent.com/AnnieRuru/customs/master/screenshots/MSVC_step11.png)
+![](assets/MSVC_step11.png)
 
 #### Step 13
 
 Select `YourProject.vcxproj` in the `\vcproj-15\` folder.  
-![](https://raw.githubusercontent.com/AnnieRuru/customs/master/screenshots/MSVC_step12.png)
+![](assets/MSVC_step12.png)
 
 #### Step 14
 
 Right click `Solution 'Hercules-15' and select Build Solution.
-![](https://raw.githubusercontent.com/AnnieRuru/customs/master/screenshots/MSVC_step13.png)
+![](assets/MSVC_step13.png)
 
 This will now re-build your Hercules server while also integrating your plugin. This patches up the source code as necessary and includes the code into the appropriate `.c` files without you having to go to the individual files.
 
