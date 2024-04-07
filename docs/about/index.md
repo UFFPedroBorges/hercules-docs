@@ -13,7 +13,11 @@ Hercules is available via [Git](https://herc.ws/board/topic/152-obtaining-hercul
 
 ## Support
 
-You may access our [forums](https://herc.ws/board/) or [IRC channel](irc) for support.
+For support you may use the following channels:
+
+- [Forums](https://herc.ws/board/)
+- [Discord](https://board.herc.ws/discord/invite/general/)
+- [IRC channel](irc)
 
 ## External Links
 
