@@ -19,6 +19,6 @@ of content that should not be on the wiki is listed at [Editing the wiki](contri
 
 ![](assets/GitRepo.png) [Git Repository](https://github.com/HerculesWS/Hercules)
  | ![](assets/WikiEdit.png) [Editing the wiki]()
- | ![](assets/Support.png) [Assistance & Support](http://herc.ws/board/)
+ | ![](assets/Support.png) [Assistance & Support](https://herc.ws/board/)
 
 </center>

@@ -9,33 +9,33 @@ All staff titles, regardless of their description, possesses full moderation pow
 
 They administrate.
 
-- [Haru](http://herc.ws/board/user/307-haru/) ([Development
-  Administrator](http://herc.ws/board/index.php?app=members&filter=4))
-- [Mysterious](http://herc.ws/board/user/43-mysterious/) ([Community
-  Administrator](http://herc.ws/board/index.php?app=members&filter=4))
+- [Haru](https://herc.ws/board/user/307-haru/) ([Development
+  Administrator](https://herc.ws/board/index.php?app=members&filter=4))
+- [Mysterious](https://herc.ws/board/user/43-mysterious/) ([Community
+  Administrator](https://herc.ws/board/index.php?app=members&filter=4))
 
 ## Core Developers
 
 The kings of the code hill.
 
-- [4144](http://herc.ws/board/user/7100-4144/)
-- [hemagx](http://herc.ws/board/user/45-hemagx/)
-- [malufett](http://herc.ws/board/user/20-malufett/)
-- [mkbu95](http://herc.ws/board/user/49-mkbu95/)
-- [Pan](http://herc.ws/board/user/4055-pan/)
-- [Michieru](http://herc.ws/board/user/50-michieru/)
+- [4144](https://herc.ws/board/user/7100-4144/)
+- [hemagx](https://herc.ws/board/user/45-hemagx/)
+- [malufett](https://herc.ws/board/user/20-malufett/)
+- [mkbu95](https://herc.ws/board/user/49-mkbu95/)
+- [Pan](https://herc.ws/board/user/4055-pan/)
+- [Michieru](https://herc.ws/board/user/50-michieru/)
 
 ## Script Developers
 
 Usually the members with the fastest key/second typing ratio.
 
-- [Dastgir](http://herc.ws/board/user/48-dastgir/)
-- [Kisuka](http://herc.ws/board/user/1664-kisuka/)
-- [Frost](http://herc.ws/board/user/82-frost/)
+- [Dastgir](https://herc.ws/board/user/48-dastgir/)
+- [Kisuka](https://herc.ws/board/user/1664-kisuka/)
+- [Frost](https://herc.ws/board/user/82-frost/)
 
 ## Scripting Moderators
 
-- [AnnieRuru](http://herc.ws/board/user/4102-annieruru/)
+- [AnnieRuru](https://herc.ws/board/user/4102-annieruru/)
 
 ## Global Moderators
 
@@ -47,21 +47,21 @@ Global Moderators also provide support to support topics, however, not to an ext
 position one can apply to, but be promoted to from other moderation position thanks to one's efforts and commitment to
 moderation.
 
-- [jaBote](http://herc.ws/board/user/387-jabote/)
-- [Mumbles](http://herc.ws/board/user/83-mumbles/)
+- [jaBote](https://herc.ws/board/user/387-jabote/)
+- [Mumbles](https://herc.ws/board/user/83-mumbles/)
 
 ## Support Leaders
 
 In charge of all the main supporting areas.
 
-- [Aeromesi](http://herc.ws/board/user/4149-aeromesi/)
+- [Aeromesi](https://herc.ws/board/user/4149-aeromesi/)
 
 ## Graphics Moderators
 
 In charge of all the main graphics areas.
 
-- [Uzieal](http://herc.ws/board/user/1460-uzieal/)
-- [Orlox](http://herc.ws/board/user/11-olrox/)
+- [Uzieal](https://herc.ws/board/user/1460-uzieal/)
+- [Orlox](https://herc.ws/board/user/11-olrox/)
 
 ## Int'l Moderators
 
@@ -73,31 +73,31 @@ support to individuals in their community.
 
 #### Filipino
 
-- [Mhalicot](http://herc.ws/board/user/1582-mhalicot/)
+- [Mhalicot](https://herc.ws/board/user/1582-mhalicot/)
 
 #### Portuguese
 
-- [JulioCF](http://herc.ws/board/user/63-juliocf/)
-- [Wolf](http://herc.ws/board/user/192-wolf/)
+- [JulioCF](https://herc.ws/board/user/63-juliocf/)
+- [Wolf](https://herc.ws/board/user/192-wolf/)
 
 #### Spanish
 
-- [M45T3R](http://herc.ws/board/user/125-m45t3r/)
+- [M45T3R](https://herc.ws/board/user/125-m45t3r/)
 
 ## High Council
 
 They're an upgrade from the [ Community Contributor](#Community_Contributor "wikilink") title.
 
-- [Beret](http://herc.ws/board/user/59-beret/)
-- [csnv](http://herc.ws/board/user/6674-csnv/)
-- [Eiphes](http://herc.ws/board/user/6-eiphes/)
-- [Eurydice](http://herc.ws/board/user/8-eurydice/)
-- [Gepard](http://herc.ws/board/user/1160-gepard/)
-- [kyeme](http://herc.ws/board/user/88-kyeme/)
-- [Muad_Dib](http://herc.ws/board/user/99-muad_dib/)
-- [Rytech](http://herc.ws/board/user/456-rytech/)
-- [Yommy](http://herc.ws/board/user/409-yommy/)
-- [Xgear](http://herc.ws/board/user/67-xgear/)
+- [Beret](https://herc.ws/board/user/59-beret/)
+- [csnv](https://herc.ws/board/user/6674-csnv/)
+- [Eiphes](https://herc.ws/board/user/6-eiphes/)
+- [Eurydice](https://herc.ws/board/user/8-eurydice/)
+- [Gepard](https://herc.ws/board/user/1160-gepard/)
+- [kyeme](https://herc.ws/board/user/88-kyeme/)
+- [Muad_Dib](https://herc.ws/board/user/99-muad_dib/)
+- [Rytech](https://herc.ws/board/user/456-rytech/)
+- [Yommy](https://herc.ws/board/user/409-yommy/)
+- [Xgear](https://herc.ws/board/user/67-xgear/)
 
 # Former Staff Members
 
@@ -105,53 +105,53 @@ Former staff members who've contributed throughout Hercules.
 
 ## Former Administrators
 
-- [Ind](http://herc.ws/board/user/1-ind/)
-- [Jman](http://herc.ws/board/user/2-jman/)
+- [Ind](https://herc.ws/board/user/1-ind/)
+- [Jman](https://herc.ws/board/user/2-jman/)
 
 ## Former Core Developers
 
-- [GreenBox](http://herc.ws/board/user/28-greenbox/)
-- [Susu](http://herc.ws/board/user/725-susu/)
+- [GreenBox](https://herc.ws/board/user/28-greenbox/)
+- [Susu](https://herc.ws/board/user/725-susu/)
 
 ## Former Script Developers
 
-- [Joseph](http://herc.ws/board/user/756-joseph/)
-- [Kenpachi](http://herc.ws/board/user/5-kenpachi/)
-- [Martin](http://herc.ws/board/user/23-martin/)
-- [Masao](http://herc.ws/board/user/757-masao/)
-- [Nameless2you](http://herc.ws/board/user/7-nameless2you/)
+- [Joseph](https://herc.ws/board/user/756-joseph/)
+- [Kenpachi](https://herc.ws/board/user/5-kenpachi/)
+- [Martin](https://herc.ws/board/user/23-martin/)
+- [Masao](https://herc.ws/board/user/757-masao/)
+- [Nameless2you](https://herc.ws/board/user/7-nameless2you/)
 
 ## Former Scripting Moderators
 
 ## Former Global Moderators
 
-- [Judas](http://herc.ws/board/user/10-judas/)
+- [Judas](https://herc.ws/board/user/10-judas/)
 
 ## Former Support Leaders
 
-- [Emistry](http://herc.ws/board/user/4-emistry/)
+- [Emistry](https://herc.ws/board/user/4-emistry/)
 
 ## Former Graphic Moderators
 
-- [Adel](http://herc.ws/board/user/129-adel/)
+- [Adel](https://herc.ws/board/user/129-adel/)
 
 ## Former International Moderators
 
 #### Filipino
 
-- [JayPee](http://herc.ws/board/user/25-jaypee/)
+- [JayPee](https://herc.ws/board/user/25-jaypee/)
 
 # Community Contributors
 
 This title is awarded to community members for their outstanding support of Hercules. For more information, [read the
-thread about it on the forum.](http://herc.ws/board/topic/376-hercules-cc-program/)
+thread about it on the forum.](https://herc.ws/board/topic/376-hercules-cc-program/)
 
-- [bgamez23](http://herc.ws/board/user/137-bgamez23/)
-- [evilpuncker](http://herc.ws/board/user/1352-evilpuncker/)
-- [GmOcean](http://herc.ws/board/user/5970-gmocean/)
-- [mleo1](http://herc.ws/board/user/118-mleo1/)
-- [Neo](http://herc.ws/board/user/315-neo/)
-- [ossi0110](http://herc.ws/board/user/87-ossi0110/)
-- [Patskie](http://herc.ws/board/user/449-patskie/)
-- [Ryuuzaki](http://herc.ws/board/user/303-ryuuzaki/)
-- [Shakto](http://herc.ws/board/user/297-shakto/)
+- [bgamez23](https://herc.ws/board/user/137-bgamez23/)
+- [evilpuncker](https://herc.ws/board/user/1352-evilpuncker/)
+- [GmOcean](https://herc.ws/board/user/5970-gmocean/)
+- [mleo1](https://herc.ws/board/user/118-mleo1/)
+- [Neo](https://herc.ws/board/user/315-neo/)
+- [ossi0110](https://herc.ws/board/user/87-ossi0110/)
+- [Patskie](https://herc.ws/board/user/449-patskie/)
+- [Ryuuzaki](https://herc.ws/board/user/303-ryuuzaki/)
+- [Shakto](https://herc.ws/board/user/297-shakto/)

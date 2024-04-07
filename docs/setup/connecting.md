@@ -158,7 +158,7 @@ See [[Hexing#Creating_custom_RagRE_client_using_a_DIFF_patcher|Hexing]].
 Execute your exe.
 
 ==Trouble Shooting==
-Its always best to post in the [http://herc.ws/board/forum/31-client-side-support/ client support] sub-forum for things that go wrong with the client, and [http://herc.ws/board/forum/14-general-server-support/ server support] sub-forum for things that go wrong with Hercules connecting or if errors pop up in your server log.
+Its always best to post in the [https://herc.ws/board/forum/31-client-side-support/ client support] sub-forum for things that go wrong with the client, and [https://herc.ws/board/forum/14-general-server-support/ server support] sub-forum for things that go wrong with Hercules connecting or if errors pop up in your server log.
 
 ===CHARACTER_INFO size error!!===
 To fix this, locate the src/common folder and open mmo.h in notepad. Find the following line:

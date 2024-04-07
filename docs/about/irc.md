@@ -8,7 +8,7 @@ you to chat with people in real-time around the world.
 ## Connecting to IRC
 
 The official [Hercules](Hercules "wikilink") channel room can be found [here](irc://irc.rizon.net/Hercules).  
-Web-based IRC chat is available too: <http://herc.ws/board/page/irc.html>
+Web-based IRC chat is available too: <https://herc.ws/board/page/irc.html>
 
 To actually connect to [IRC](#), if you do not already have an [IRC
 client](https://en.wikipedia.org/wiki/Comparison_of_Internet_Relay_Chat_clients) and do not wish to run the java chat, you're

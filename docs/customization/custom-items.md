@@ -341,7 +341,7 @@ In the doc folder look for a text file called "item\_bonus", it shows
 all the scripts items can have and how they work.  
   
 For more information about this structure read [Item DB file structure
-overhaul](http://herc.ws/board/topic/2954-item-db-file-structure-overhaul/)
+overhaul](https://herc.ws/board/topic/2954-item-db-file-structure-overhaul/)
 
 # Defining Items clientside - all clients
 
@@ -352,7 +352,7 @@ For old and new clients alike, the following two files need to be updated
 accname.lub can be found with the other lua files under RO
 folder/data/luafiles514/luafiles/datainfo. If you do not have these
 folders or this file, [see this
-topic](http://herc.ws/board/topic/398-client-translation-project/) and
+topic](https://herc.ws/board/topic/398-client-translation-project/) and
 download the latest translated data folder. It points to the item's
 sprite file. It is as follows:
 
