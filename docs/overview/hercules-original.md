@@ -1,8 +1,11 @@
-List of [[Hercules Original|Original Hercules Features]]
-* <span style="color:red;">'''[New]'''</span>[https://herc.ws/board/topic/2954-item-db-file-structure-overhaul/ Item DB File Structure Overhaul]
-* [https://herc.ws/board/topic/302-introducing-hercules-map-zone-database/ Hercules Map Zone DB]
-* [[HPM|Hercules Plugin Mananger]]
-* [https://herc.ws/board/topic/316-introducing-hercules-channel-system/ Hercules Channel System]
-* [https://herc.ws/board/topic/353-packetdb-overhaul/ Packet DB Overhaul]
-* [https://herc.ws/board/topic/548-hercules-console-input-update/ Console Input Redesign]
-[[Category:Hercules]]
+List of [Original Hercules Features](Hercules_Original "wikilink")
+
+- <span style="color:red;">**\[New\]**</span>[Item DB File Structure
+  Overhaul](https://herc.ws/board/topic/2954-item-db-file-structure-overhaul/)
+- [Hercules Map Zone DB](https://herc.ws/board/topic/302-introducing-hercules-map-zone-database/)
+- [Hercules Plugin Mananger](HPM "wikilink")
+- [Hercules Channel System](https://herc.ws/board/topic/316-introducing-hercules-channel-system/)
+- [Packet DB Overhaul](https://herc.ws/board/topic/353-packetdb-overhaul/)
+- [Console Input Redesign](https://herc.ws/board/topic/548-hercules-console-input-update/)
+
+[Category:Hercules](Category:Hercules "wikilink")
