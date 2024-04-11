@@ -1,12 +1,18 @@
-To download Hercules, you need to perform a '''clone''' from [[wikipedia:Git|Git]] (Git) repository. Checking out from a repository creates a working copy of it on your local machine.
+To download Hercules, you need to perform a **clone** from [Git](wikipedia:Git "wikilink") (Git) repository. Checking
+out from a repository creates a working copy of it on your local machine.
 
 A Git is required to perform a clone. Recommended applications are:
-* [http://git-scm.com/ git] for Unix systems
-* [http://code.google.com/p/msysgit/downloads/list?can=2 MSysGit] And [http://code.google.com/p/tortoisegit/wiki/Download?tm=2 TortoiseGit] for Windows systems (Both Required
 
-== Unix ==
-<blockquote>''For detailed instructions on how to install subversion, please refer to OS specific [[:Category:Installation Guides|installation guides]].''</blockquote>
-{{:Git Clone/Unix}}
+- [git](http://git-scm.com/) for Unix systems
+- [MSysGit](http://code.google.com/p/msysgit/downloads/list?can=2) And
+  [TortoiseGit](http://code.google.com/p/tortoisegit/wiki/Download?tm=2) for Windows systems (Both Required
 
-== Windows ==
-Check [https://herc.ws/board/topic/152-obtaining-hercules/?p=845#entry845 Obtaining Hercules] for info on how to clone in windows
+## Unix
+
+> *For detailed instructions on how to install subversion, please refer to OS specific [installation
+> guides](:Category:Installation_Guides "wikilink").*
+
+## Windows
+
+Check [Obtaining Hercules](https://herc.ws/board/topic/152-obtaining-hercules/?p=845#entry845) for info on how to clone
+in windows
