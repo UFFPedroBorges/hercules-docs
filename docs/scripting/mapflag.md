@@ -1,259 +1,233 @@
-
-[[Category:incomplete]]
-== Map Flags are used to set serval permissions on maps. ==
-<br /><br /><br />
-
-# Battleground
-# GvG
-# Nightenabled
-# Nightmare
-# Nobranch
-# Noexp
-# Noicewall
-# Noloot
-# Nomemo
-# Nopenalty
-# Nopvp
-# Noreturn
-# Nosave
-# Noskill
-# Noteleport
-# Novending
-# Nowarp
-# Nowarpto
-# Partylock
-# Pvp
-# Pvpnoguild
-# Pvpnoparty
-# Reset
-# Skillduration
-# Skillmodifier
-# Town
-# Zone
-
-
-
-
-
-Battleground<br />
- '''Description:''' Defines the Map as Battleground.<br />
- '''File:''' npc/mapflag/battleground.txt<br />
- '''Parameter:''' 2 ( Activate Scoreboard )<br />
-
-<code> usage: <map> mapflag battleground <parameter(Optional)></code><br />
-<br /><br />
-Gvg <br />
- '''Description:''' Defines the Map as Guild Vs. Guild Map, so Guilds can Fight each other.<br />
- '''File:''' npc/mapflag/gvg.txt<br />
- '''Parameter:''' <none><br />
-
-<code> usage: <map> mapflag gvg</code><br /> 
- 
-<br /><br />
-Nightenabled <br />
- '''Description:''' Nightmode Effects on defined Maps.<br />
- '''File:''' npc/mapflag/night.txt <br />
- '''Parameter:''' <none><br />
-
-<code> usage: <map> mapflag nightenabled</code><br />
-<br /><br />
-
-
-Nightmare <br />
- '''Description:''' Drops Player Items or Equipments on player death.<br />
- '''File:''' npc/mapflag/nightmare.txt<br />
- '''ID:''' ItemID,random<br />
- '''Type:''' inventory, equip, all<br />
- '''Percent:''' Droprate<br />
-
-<code> usage: <map> mapflag pvpnightmaredrop <id>,<type>,<percent></code><br />
-
-<br /><br />
-Nobranch<br />
- '''Description:''' Disables Dead Branch / Bloody Brunch / Red Brunch and Porinx Box.<br />
- '''File:''' npc/mapflag/nobranch.txt<br />
- '''Parameter:''' <none><br />
-
-<code> usage: <map> mapflag nobranch
-</code><br /><br /><br />
-
-
-Noexp<br />
- '''Description:''' Disable Exp gain for Players.<br />
- '''File:'''npc/mapflag/noexp.php<br />
- '''Parameter:''' <none><br />
-
-<code> usage: <map> mapflag noexp</code><br />
-<br /><br />
-
-
-Noicewall<br />
- '''Description:''' Disable Icewall on a Map.<br />
- '''File:''' npc/mapflag/noicewall.txt<br />
- '''Parameter:'''<br />
-
-<code> usage: <map> mapflag noicewall</code><br />
-<br /><br />
-
-Noloot<br />
- '''Description:''' Disable loot on a Map.<br />
- '''File:''' npc/mapflag/noloot.txt<br />
- '''Parameter:''' <map> mapflag noloot<br />
-
-<code> usage: <map> mapflag noloot</code><br />
-<br /><br />
-
-
-Nomemo<br />
- '''Description:''' Disable /memo on a Map<br />
- '''File:''' npc/mapflag/nomemo.txt<br />
- '''Parameter:''' <none><br />
-
-<code> usage: <map> mapflag nomemo</code><br />
-
-<br /><br />
-Nopenalty<br />
- '''Description:''' Disable death penalty.<br />
- '''File:''' npc/mapflag/nopenalty.txt<br />
- '''Parameter:''' <none><br />
-
-<code> usage: <map> mapflag nopenalty</code><br />
-<br /><br />
-
-
-Nopvp<br />
- '''Description:''' Disable PvP (Player vs. Player) on a Map<br />
- '''File:''' npc/mapflag/nopvp.txt<br />
- '''Parameter:''' off<br />
-
-<code> usage: <map> mapflag pvp <parameter></code><br />
-<br /><br />
-
-Noreturn<br />
- '''Description:''' Disables the Return Warp.<br />
- '''File:''' npc/mapflag/noreturn.php<br />
- '''Parameter:''' <none><br />
-
-<code> usage: <map> mapflag noreturn</code><br />
-<br /><br />
-
-Nosave<br />
- '''Description:''' Disables Autosave on a Map, if the Parameter isnt defined, Warp to the last field.<br />
- '''File:''' npc/mapflag/nosave.txt<br />
- '''Parameter:''' SavePoint<br />
-
-<code> usage: <map> mapflag nosave <parameter(Optional)></code><br />
-<br /><br />
-
-Noskill<br />
- '''Description:''' Disable Skills<br />
- '''File:''' npc/mapflag/noskill.txt<br />
- '''Parameter:''' <none><br />
-
-<code> usage: <map> mapflag noskill</code><br />
-<br /><br />
-
-
-Noteleport<br />
- '''Description:''' Disable all kinds of Teleport.<br />
- '''File:''' npc/mapflag/noteleport.txt<br />
- '''Parameter:''' <none><br />
-
-<code> usage: <map> mapflag noteleport</code><br />
-<br /><br />
-
-Novending<br />
- '''Description:''' Disable Vending<br />
- '''File:''' npc/mapflag/novending.txt<br />
- '''Parameter:''' <none><br />
-
-<code> usage: <map> mapflag novending</code><br />
-<br /><br />
-
-Nowarp<br />
- '''Description:''' Disable @GO<br />
- '''File:''' npc/mapflag/nowarp.txt<br />
- '''Parameter:''' <none><br />
-
-<code> usage: <map> mapflag nowarp</code><br />
-<br /><br />
-
-Nowarpto<br />
- '''Description:''' Disable Warp to<br />
- '''File:''' npc/mapflag/nowarpto.txt<br />
- '''Parameter:''' <none><br />
-
-<code> usage: <map> mapflag nowarpto</code><br />
-<br /><br />
-
-Partylock<br />
- '''Description:''' Disables Party modifications<br />
- '''File:''' npc/mapflag/partylock.txt<br />
- '''Parameter:''' <none><br />
-
-<code> usage: <map> mapflag partylock</code><br />
-<br /><br />
-
-Pvp<br />
- '''Description:''' Defines the Map as Player vs Player Map<br />
- '''File:''' npc/mapflag/pvp.txt<br />
- '''Parameter:''' <none><br />
-
-<code> usage: <map> mapflag pvp</code><br />
-<br /><br />
-
-Pvpnoguild<br />
- '''Description:''' Ignore Aliances on Guild vs Guild Maps<br />
- '''File:''' npc/mapflag/pvpnoguild.txt<br />
- '''Parameter:''' <none><br />
-
-<code> usage: <map> mapflag pvpnoguild </code><br />
-<br /><br />
-
-Pvpnoparty<br />
- '''Description:''' Ignore Party on Player vs Player Maps<br />
- '''File:''' npc/mapflag/pvpnoparty.txt<br />
- '''Parameter:''' <none><br />
-
-<code> usage: <map> mapflag pvpnoparty</code><br />
-<br /><br />
-
-Reset<br />
- '''Description:''' Disable Neuralizer Item(12213) usage<br />
- '''File:''' npc/mapflag/reset.txt<br />
- '''Parameter:''' <none><br />
-
-<code> usage: <map> mapflag reset</code><br />
-<br /><br />
-
-Skillduration<br />
- '''Description:''' Set Duration for a Skill on a Map<br />
- '''File:''' npc/mapflag/skillduration.txt<br />
- '''Parameter:''' 0-...(?) <br />
-
-<code> usage: <map> mapflag skillduration <parameter></code><br />
-<br /><br />
-
-Skillmodifier<br />
- '''Description:''' Set the Damage for a Skill on a Map<br />
- '''File:''' npc/mapflag/skillmodifier.txt<br />
- '''Parameter:'''0-...(?)<br />
-
-<code> usage: <map> mapflag skillmodifier <parameter></code><br />
-<br /><br />
-
-Town<br />
- '''Description:''' Defines a Map as a Town.<br />
- '''File:''' npc/mapflag/town.txt<br />
- '''Parameter:''' <none><br />
-
-<code> usage: <map> mapflag town</code><br />
-<br /><br />
-
-Zone<br />
- '''Description:''' Flags maps as part of zones<br />
- '''File:''' npc/mapflag/zone.txt<br />
- '''Parameter:''' see mapzonedb.txt<br />
-
-<code> usage: (?)	mapflag	zone	Aldebaran Turbo Track (?)</code><br />
-<br /><br />
+## Map Flags are used to set serval permissions on maps.
+
+  
+  
+  
+
+1.  Battleground
+2.  GvG
+3.  Nightenabled
+4.  Nightmare
+5.  Nobranch
+6.  Noexp
+7.  Noicewall
+8.  Noloot
+9.  Nomemo
+10. Nopenalty
+11. Nopvp
+12. Noreturn
+13. Nosave
+14. Noskill
+15. Noteleport
+16. Novending
+17. Nowarp
+18. Nowarpto
+19. Partylock
+20. Pvp
+21. Pvpnoguild
+22. Pvpnoparty
+23. Reset
+24. Skillduration
+25. Skillmodifier
+26. Town
+27. Zone
+
+Battleground  
+**Description:** Defines the Map as Battleground.  
+**File:** npc/mapflag/battleground.txt  
+**Parameter:** 2 ( Activate Scoreboard )  
+`usage: `<map>` mapflag battleground <parameter(Optional)>`  
+  
+  
+Gvg  
+**Description:** Defines the Map as Guild Vs. Guild Map, so Guilds can Fight each other.  
+**File:** npc/mapflag/gvg.txt  
+**Parameter:** <none>  
+`usage: `<map>` mapflag gvg`  
+  
+  
+Nightenabled  
+**Description:** Nightmode Effects on defined Maps.  
+**File:** npc/mapflag/night.txt  
+**Parameter:** <none>  
+`usage: `<map>` mapflag nightenabled`  
+  
+  
+
+Nightmare  
+**Description:** Drops Player Items or Equipments on player death.  
+**File:** npc/mapflag/nightmare.txt  
+**ID:** ItemID,random  
+**Type:** inventory, equip, all  
+**Percent:** Droprate  
+`usage: `<map>` mapflag pvpnightmaredrop `<id>`,`<type>`,`<percent>  
+  
+  
+Nobranch  
+**Description:** Disables Dead Branch / Bloody Brunch / Red Brunch and Porinx Box.  
+**File:** npc/mapflag/nobranch.txt  
+**Parameter:** <none>  
+`usage: `<map>` mapflag nobranch`  
+  
+  
+
+Noexp  
+**Description:** Disable Exp gain for Players.  
+**File:**npc/mapflag/noexp.php  
+**Parameter:** <none>  
+`usage: `<map>` mapflag noexp`  
+  
+  
+
+Noicewall  
+**Description:** Disable Icewall on a Map.  
+**File:** npc/mapflag/noicewall.txt  
+**Parameter:**  
+`usage: `<map>` mapflag noicewall`  
+  
+  
+Noloot  
+**Description:** Disable loot on a Map.  
+**File:** npc/mapflag/noloot.txt  
+**Parameter:** <map> mapflag noloot  
+`usage: `<map>` mapflag noloot`  
+  
+  
+
+Nomemo  
+**Description:** Disable /memo on a Map  
+**File:** npc/mapflag/nomemo.txt  
+**Parameter:** <none>  
+`usage: `<map>` mapflag nomemo`  
+  
+  
+Nopenalty  
+**Description:** Disable death penalty.  
+**File:** npc/mapflag/nopenalty.txt  
+**Parameter:** <none>  
+`usage: `<map>` mapflag nopenalty`  
+  
+  
+
+Nopvp  
+**Description:** Disable PvP (Player vs. Player) on a Map  
+**File:** npc/mapflag/nopvp.txt  
+**Parameter:** off  
+`usage: `<map>` mapflag pvp `<parameter>  
+  
+  
+Noreturn  
+**Description:** Disables the Return Warp.  
+**File:** npc/mapflag/noreturn.php  
+**Parameter:** <none>  
+`usage: `<map>` mapflag noreturn`  
+  
+  
+Nosave  
+**Description:** Disables Autosave on a Map, if the Parameter isnt defined, Warp to the last field.  
+**File:** npc/mapflag/nosave.txt  
+**Parameter:** SavePoint  
+`usage: `<map>` mapflag nosave <parameter(Optional)>`  
+  
+  
+Noskill  
+**Description:** Disable Skills  
+**File:** npc/mapflag/noskill.txt  
+**Parameter:** <none>  
+`usage: `<map>` mapflag noskill`  
+  
+  
+
+Noteleport  
+**Description:** Disable all kinds of Teleport.  
+**File:** npc/mapflag/noteleport.txt  
+**Parameter:** <none>  
+`usage: `<map>` mapflag noteleport`  
+  
+  
+Novending  
+**Description:** Disable Vending  
+**File:** npc/mapflag/novending.txt  
+**Parameter:** <none>  
+`usage: `<map>` mapflag novending`  
+  
+  
+Nowarp  
+**Description:** Disable @GO  
+**File:** npc/mapflag/nowarp.txt  
+**Parameter:** <none>  
+`usage: `<map>` mapflag nowarp`  
+  
+  
+Nowarpto  
+**Description:** Disable Warp to  
+**File:** npc/mapflag/nowarpto.txt  
+**Parameter:** <none>  
+`usage: `<map>` mapflag nowarpto`  
+  
+  
+Partylock  
+**Description:** Disables Party modifications  
+**File:** npc/mapflag/partylock.txt  
+**Parameter:** <none>  
+`usage: `<map>` mapflag partylock`  
+  
+  
+Pvp  
+**Description:** Defines the Map as Player vs Player Map  
+**File:** npc/mapflag/pvp.txt  
+**Parameter:** <none>  
+`usage: `<map>` mapflag pvp`  
+  
+  
+Pvpnoguild  
+**Description:** Ignore Aliances on Guild vs Guild Maps  
+**File:** npc/mapflag/pvpnoguild.txt  
+**Parameter:** <none>  
+`usage: `<map>` mapflag pvpnoguild`  
+  
+  
+Pvpnoparty  
+**Description:** Ignore Party on Player vs Player Maps  
+**File:** npc/mapflag/pvpnoparty.txt  
+**Parameter:** <none>  
+`usage: `<map>` mapflag pvpnoparty`  
+  
+  
+Reset  
+**Description:** Disable Neuralizer Item(12213) usage  
+**File:** npc/mapflag/reset.txt  
+**Parameter:** <none>  
+`usage: `<map>` mapflag reset`  
+  
+  
+Skillduration  
+**Description:** Set Duration for a Skill on a Map  
+**File:** npc/mapflag/skillduration.txt  
+**Parameter:** 0-...(?)  
+`usage: `<map>` mapflag skillduration `<parameter>  
+  
+  
+Skillmodifier  
+**Description:** Set the Damage for a Skill on a Map  
+**File:** npc/mapflag/skillmodifier.txt  
+**Parameter:**0-...(?)  
+`usage: `<map>` mapflag skillmodifier `<parameter>  
+  
+  
+Town  
+**Description:** Defines a Map as a Town.  
+**File:** npc/mapflag/town.txt  
+**Parameter:** <none>  
+`usage: `<map>` mapflag town`  
+  
+  
+Zone  
+**Description:** Flags maps as part of zones  
+**File:** npc/mapflag/zone.txt  
+**Parameter:** see mapzonedb.txt  
+`usage: (?) mapflag zone Aldebaran Turbo Track (?)`  
+  
+  
+
+[Category:incomplete](Category:incomplete "wikilink")

@@ -1,255 +1,253 @@
-== Quest Log System ==
+## Quest Log System
 
-==== Basic Structure of NPC ====
+#### Basic Structure of NPC
 
-First of all you must have a knowledge on basic scripting, if not please kindly Click [[Basic_Scripting|Here!]].
+First of all you must have a knowledge on basic scripting, if not please kindly Click
+[Here!](Basic_Scripting "wikilink").
 
-==== Quest Window ====
+#### Quest Window
 
-The Quest Window or Quest Journal (Opened via Alt+U) allows the player to view all quests their character has started but not yet completed (Except for instance dungeon quests and Battlegrounds instances, which always remain once started).
-To place a quest in the Inactive tab, right click once on it and the name will turn gray. It will then appear on the Inactive tab instead of Active. Right clicking the name again will bring it back to the Active tab. Moving the quest back and forth has no effect on whether you can continue it or not.
-Not every quest has a quest window component. Those quests who have quest window walkthroughs can be found in this category as well as by having their infobox in gold. Additionally, the Quest Window guides are not comprehensive, and do not specify the exact coordinates of the next NPC or location the player must visit. It is highly recommended to continue using the wiki guides along with the in-game walkthroughs.
+The Quest Window or Quest Journal (Opened via Alt+U) allows the player to view all quests their character has started
+but not yet completed (Except for instance dungeon quests and Battlegrounds instances, which always remain once
+started). To place a quest in the Inactive tab, right click once on it and the name will turn gray. It will then appear
+on the Inactive tab instead of Active. Right clicking the name again will bring it back to the Active tab. Moving the
+quest back and forth has no effect on whether you can continue it or not. Not every quest has a quest window component.
+Those quests who have quest window walkthroughs can be found in this category as well as by having their infobox in
+gold. Additionally, the Quest Window guides are not comprehensive, and do not specify the exact coordinates of the next
+NPC or location the player must visit. It is highly recommended to continue using the wiki guides along with the in-game
+walkthroughs.
 
-[[File:QWindow.jpg|center|caption]]
+<figure>
+<img src="QWindow.jpg" title="caption" />
+<figcaption>caption</figcaption>
+</figure>
 
-== Quest Database - Adding Quest ==
+## Quest Database - Adding Quest
 
-=== Structure ===
+### Structure
 
-<pre>
-{
-	Id: Quest ID
-	Name: "Quest Name"
-	TimeLimit: seconds
-	Targets: (
-	{
-		MobId: Mob_ID
-		Count: number
-	},
-	)
-	Drops: (
-	{
-		ItemId: item_to_drop
-		Rate: Drop_Rate
-		MobId: Mob_ID_to_match
-	},
-	)
-},
-</pre>
+    {
+    	Id: Quest ID
+    	Name: "Quest Name"
+    	TimeLimit: seconds
+    	Targets: (
+    	{
+    		MobId: Mob_ID
+    		Count: number
+    	},
+    	)
+    	Drops: (
+    	{
+    		ItemId: item_to_drop
+    		Rate: Drop_Rate
+    		MobId: Mob_ID_to_match
+    	},
+    	)
+    },
 
-Quest ID - ID of the quest, must increment and should not be duplicated.<br>
-Name - The title of the Quest you made.<br>
-Time Limit - Time limit for the quest to be finish in seconds.<br>
-Targets - Monsters killing list contain mob ids and count.<br>
+Quest ID - ID of the quest, must increment and should not be duplicated.  
+Name - The title of the Quest you made.  
+Time Limit - Time limit for the quest to be finish in seconds.  
+Targets - Monsters killing list contain mob ids and count.  
 Drops - Item id to drop.
 
-=== Example ===
+### Example
+
 For this example I will make a quest that will require to kill 10 Poring's.
 
-<pre>
-{
-	Id: 65000
-	Name: "Quest - Poring Hunt"
-	Targets: (
-	{
-		MobId: 1002
-		Count: 10
-	},
-	)
-},
-</pre>
+    {
+    	Id: 65000
+    	Name: "Quest - Poring Hunt"
+    	Targets: (
+    	{
+    		MobId: 1002
+    		Count: 10
+    	},
+    	)
+    },
 
-==== Client Side Editing ====
+#### Client Side Editing
 
 You have to edit your questid2display.txt
 
-==== Structure ====
-<pre>
-QUESTID#Quest Name#FILENAME#LOG_FILENAME#
-Summary description#
-Objective description#
-</pre>
+#### Structure
 
-=== Example ===
-<pre>
-65000#Quest - Poring Hunt#SG_FEEL#QUE_NOIMAGE#
-Find the monster named Poring and kill 10#
-Hunting 10 Poring#
-</pre>
+    QUESTID#Quest Name#FILENAME#LOG_FILENAME#
+    Summary description#
+    Objective description#
 
- 
-== Quest Log Commands ==
+### Example
 
-=== Set Quest ===
-<pre>*setquest <ID>;</pre>
+    65000#Quest - Poring Hunt#SG_FEEL#QUE_NOIMAGE#
+    Find the monster named Poring and kill 10#
+    Hunting 10 Poring#
+
+## Quest Log Commands
+
+### Set Quest
+
+    *setquest <ID>;
 
 Place quest of <ID> in the users quest log, the state of which is "active".
 
-=== Example ===
-<pre>prontera,xx,xx,4	script	SetQuest	51,{
-setquest 65000;	// This will add the Quest ID 65000 to your Quest Window.
-}
-</pre>
+### Example
 
-This sample will add the quest "Quest - Poring Hunt" which I stated on the Adding Quest.
-'''Note''': The example is just a simple NPC that will add Quest ID 65000 every time you click it, You can add conditions so that it can only be taken once. 
+    prontera,xx,xx,4	script	SetQuest	51,{
+    setquest 65000;	// This will add the Quest ID 65000 to your Quest Window.
+    }
 
-=== Complete Quest ===
-<pre>*completequest <ID>{,<ID2>};</pre>
+This sample will add the quest "Quest - Poring Hunt" which I stated on the Adding Quest. **Note**: The example is just a
+simple NPC that will add Quest ID 65000 every time you click it, You can add conditions so that it can only be taken
+once.
 
-Change the state for the given quest <ID> to "complete" and remove from 
-the users quest log.
-<br><br>
-If a second quest id of greater value is specified, all quests between the two
-will be completed.
+### Complete Quest
 
-=== Example ===
-<pre>prontera,xx,xx,4	script	CompleteQuest	51,{
-completequest 65000;	// This will change the state of the quest to "complete"
-set zeny,zeny + 100;   //just add line like this if you want to give zeny reward if a player finish the quest.
-getitem 501,1;         //just add line like this if you want to give item reward if a player finish the quest.
-}
-</pre>
+    *completequest <ID>{,<ID2>};
 
-=== Erase Quest ===
-<pre>*erasequest <ID>{,<ID2>};</pre>
+Change the state for the given quest <ID> to "complete" and remove from the users quest log.  
+  
+If a second quest id of greater value is specified, all quests between the two will be completed.
 
-Remove the quest of the given <ID> from the user's quest log.
-<br><br>
-If a second quest id of greater value is specified, all quests between the two
-will be erased.
+### Example
 
-=== Example ===
-<pre>prontera,xx,xx,4	script	EraseQuest	51,{
-erasequest 65000;	// This will remove the quest to your Quest Window.
-}
-</pre>
+    prontera,xx,xx,4	script	CompleteQuest	51,{
+    completequest 65000;	// This will change the state of the quest to "complete"
+    set zeny,zeny + 100;   //just add line like this if you want to give zeny reward if a player finish the quest.
+    getitem 501,1;         //just add line like this if you want to give item reward if a player finish the quest.
+    }
 
-=== Change Quest ===
-<pre>*changequest <ID>,<ID2>;</pre>
+### Erase Quest
 
-Remove quest of the given <ID> from the user's quest log.
-Add quest of the <ID2> to the the quest log, and the state is "active".
+    *erasequest <ID>{,<ID2>};
 
-=== Example ===
-<pre>prontera,xx,xx,4	script	ChangeQuest	51,{
-changequest 65000,65001; // This will remove the quest ID 65000 and change it to 65001 with the state "active".
-}
-</pre>
+Remove the quest of the given <ID> from the user's quest log.  
+  
+If a second quest id of greater value is specified, all quests between the two will be erased.
 
+### Example
 
-=== Check Quest Progress ===
+    prontera,xx,xx,4	script	EraseQuest	51,{
+    erasequest 65000;	// This will remove the quest to your Quest Window.
+    }
 
-<pre>*questprogress(<ID>{,PLAYTIME|HUNTING})</pre>
+### Change Quest
 
+    *changequest <ID>,<ID2>;
 
-If no additional argument supplied, return the state of the quest: 
-<pre>
-0 = Quest not started (not in quest log)
-1  = Quest has been given
-2  = Quest completed
-</pre>
+Remove quest of the given <ID> from the user's quest log. Add quest of the <ID2> to the the quest log, and the state is
+"active".
 
-<pre>*questactive(<ID>)</pre>
-Check whether the given quest is in its active state.
-Returns true if the quest is active, false otherwise (quest not started, inactive or completed)
+### Example
 
-=== Example ===
-<pre>prontera,xx,xx,4	script	CheckQuest	51,{
+    prontera,xx,xx,4	script	ChangeQuest	51,{
+    changequest 65000,65001; // This will remove the quest ID 65000 and change it to 65001 with the state "active".
+    }
 
-if(!questactive(65000)) { //Quest is Inactive
-mes "[Jelly]";
-mes "Quest is Inactive";
-close;
-} else if(!questprogress(65000)) { //Quest Not started yet 
-mes "[Jelly]";
-mes "Quest Not Started";
-close;
-} else if(questactive(65000)) { //Quest is Active
-mes "[Jelly]";
-mes "Quest is Active!";
-close;
-} else if(questprogress(65000) == 2) {	// Quest finished.
-mes "[Jelly]";
-mes "Quest Finished!";
-completequest 65000;
-close;
-} 
-}
-</pre>
+### Check Quest Progress
 
+    *questprogress(<ID>{,PLAYTIME|HUNTING})
+
+If no additional argument supplied, return the state of the quest:
+
+    0 = Quest not started (not in quest log)
+    1  = Quest has been given
+    2  = Quest completed
+
+    *questactive(<ID>)
+
+Check whether the given quest is in its active state. Returns true if the quest is active, false otherwise (quest not
+started, inactive or completed)
+
+### Example
+
+    prontera,xx,xx,4	script	CheckQuest	51,{
+
+    if(!questactive(65000)) { //Quest is Inactive
+    mes "[Jelly]";
+    mes "Quest is Inactive";
+    close;
+    } else if(!questprogress(65000)) { //Quest Not started yet 
+    mes "[Jelly]";
+    mes "Quest Not Started";
+    close;
+    } else if(questactive(65000)) { //Quest is Active
+    mes "[Jelly]";
+    mes "Quest is Active!";
+    close;
+    } else if(questprogress(65000) == 2) {	// Quest finished.
+    mes "[Jelly]";
+    mes "Quest Finished!";
+    completequest 65000;
+    close;
+    } 
+    }
 
 If parameter "PLAYTIME" is supplied:
-<pre>
-0 = Quest not started (not in quest log)
-1  = the time limit has not yet been reached
-2  = the time limit has been reached
-</pre>
+
+    0 = Quest not started (not in quest log)
+    1  = the time limit has not yet been reached
+    2  = the time limit has been reached
 
 If parameter "HUNTING" is supplied:
-<pre>
-0 = Quest not started (not in quest log)
-1 = Player hasn't killed all of the target monsters
-2 = Player has killed all of the target monsters
-</pre>
 
-=== Example | Hunting ===
-<pre>prontera,xx,xx,4	script	CheckQuest	51,{
+    0 = Quest not started (not in quest log)
+    1 = Player hasn't killed all of the target monsters
+    2 = Player has killed all of the target monsters
 
-if (!questprogress(65000,HUNTING)) {
-mes "[Jelly]";
-mes "Quest not Started",
-close;
-} else if (questprogress(65000,HUNTING) == 1) {
-mes "[Jelly]";
-mes "You haven't killed all of the target monsters.";
-close;
-} else if (questprogress(65000,HUNTING) == 2) {
-completequest 65000;
-set zeny,zeny+100;      //Zeny Reward
-getitem 501,1;          // Item Reward
-mes "[Jelly]";
-mes "Quest Finished";
-close;
-}
-}
-</pre>
+### Example \| Hunting
 
-=== Show Event ===
-<pre>
-*showevent <state>, <color>;
+    prontera,xx,xx,4	script	CheckQuest	51,{
 
-Show a colored mark in the mini-map like "viewpoint" and an emotion on top 
-of a NPC. This is used to indicate that a NPC has a quest or an event to 
-certain player/s. 
+    if (!questprogress(65000,HUNTING)) {
+    mes "[Jelly]";
+    mes "Quest not Started",
+    close;
+    } else if (questprogress(65000,HUNTING) == 1) {
+    mes "[Jelly]";
+    mes "You haven't killed all of the target monsters.";
+    close;
+    } else if (questprogress(65000,HUNTING) == 2) {
+    completequest 65000;
+    set zeny,zeny+100;      //Zeny Reward
+    getitem 501,1;          // Item Reward
+    mes "[Jelly]";
+    mes "Quest Finished";
+    close;
+    }
+    }
 
-state can be:
-	0 = disable ( Used to disable and remove the mark and the emotion from 
-		the NPC. )
-	1 = exclamation emotion ( Used to show an important quest event to 
-		certain player. )
-	2 = interrogation emotion ( Used to show an non-important quest event 
-		to certain player. )
-Other value may cause client crashes.
+### Show Event
 
-color can be:
-	0 = yellow "Quest"
-	1 = orange "Job"
-	2 = green "Event"
-	3 = an MVP flag
-Other values show a transparent mark in the mini-map.
-</pre>
+    *showevent <state>, <color>;
 
-=== Increasing Max Quest DB ===
-<pre>
-trunk/src/map/quest.h 
-</pre>
+    Show a colored mark in the mini-map like "viewpoint" and an emotion on top 
+    of a NPC. This is used to indicate that a NPC has a quest or an event to 
+    certain player/s. 
+
+    state can be:
+    	0 = disable ( Used to disable and remove the mark and the emotion from 
+    		the NPC. )
+    	1 = exclamation emotion ( Used to show an important quest event to 
+    		certain player. )
+    	2 = interrogation emotion ( Used to show an non-important quest event 
+    		to certain player. )
+    Other value may cause client crashes.
+
+    color can be:
+    	0 = yellow "Quest"
+    	1 = orange "Job"
+    	2 = green "Event"
+    	3 = an MVP flag
+    Other values show a transparent mark in the mini-map.
+
+### Increasing Max Quest DB
+
+    trunk/src/map/quest.h 
 
 Find this line and increase the value.
-<pre>
-#define MAX_QUEST_DB (60355+1) // Highest quest ID + 1
-</pre>
+
+    #define MAX_QUEST_DB (60355+1) // Highest quest ID + 1
 
 Recompile, Cheers!
 
-(If you don't know how to recompile click [[Compiling|Here!]])
+(If you don't know how to recompile click [Here!](Compiling "wikilink"))
