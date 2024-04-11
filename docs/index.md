@@ -13,12 +13,12 @@ License version 1.2, this means that the wiki and any works put on it can be edi
 distributed, provided all history and copylefts remain intact.
 
 Please do not create pages for custom content, such as custom projects not relating to Hercules in any way. A full list
-of content that should not be on the wiki is listed at [Editing the wiki](contributing/editing-the-wiki.md).
+of content that should not be on the wiki is listed at [Editing the Docs](contributing/editing-the-docs.md).
 
 <center>
 
 ![](assets/GitRepo.png) [Git Repository](https://github.com/HerculesWS/Hercules)
- | ![](assets/WikiEdit.png) [Editing the wiki]()
+ | ![](assets/WikiEdit.png) [Editing the Docs](contributing/editing-the-docs.md)
  | ![](assets/Support.png) [Assistance & Support](https://herc.ws/board/)
 
 </center>
