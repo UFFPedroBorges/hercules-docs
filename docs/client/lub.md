@@ -1,2 +1,1 @@
-
-Lub files are the compiled version of [[Lua]]
+Lub files are the compiled version of [Lua](Lua "wikilink")
