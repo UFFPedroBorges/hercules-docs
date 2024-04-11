@@ -85,7 +85,7 @@ Next, you must inherit the item in item_db2.conf for information about the tamin
 	Script: <" pet 1370; ">
 },
 </pre>
-<small>''Note: Read more information about [http://herc.ws/board/topic/2954-item-db-file-structure-overhaul/ Item DB file structure overhaul]''</small><br>
+<small>''Note: Read more information about [https://herc.ws/board/topic/2954-item-db-file-structure-overhaul/ Item DB file structure overhaul]''</small><br>
 Now you are done, and have a Succubus instead of a Poring. To catch a Succubus, you will use an Unripe Apple (619). To change the item descriptions and egg sprites, please refer to another section of this guide.
 
 ==Adding A New Pet==

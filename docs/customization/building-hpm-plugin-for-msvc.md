@@ -20,13 +20,13 @@ As of December 2018, the IDE version I used for updating this guide uses `Micros
 
 #### The plugin you wish to install
 
-For this tutorial on how to build your HPM plugin, we will use `YourProject` as the name of the plugin. This means that it is contained in a file called `YourProject.c`. Plugins can be downloaded from the [Hercules Board, Plugin Releases](http://herc.ws/board/forum/142-plugin-releases/).
+For this tutorial on how to build your HPM plugin, we will use `YourProject` as the name of the plugin. This means that it is contained in a file called `YourProject.c`. Plugins can be downloaded from the [Hercules Board, Plugin Releases](https://herc.ws/board/forum/142-plugin-releases/).
 
 ## Are there any tools that I can use to automate this?
 
-In May 2018, User [Kiriez](http://herc.ws/board/profile/8365-kiriez/) introduced the [VS Plugin Creator](http://herc.ws/board/topic/15917-vs-plugin-creator), which automates steps 1 to 13 of the New Method described below. I suggest you try this first to see if it works. Give feedback on the tool (whether it works or not, errors you might encounter) on the thread itself.
+In May 2018, User [Kiriez](https://herc.ws/board/profile/8365-kiriez/) introduced the [VS Plugin Creator](https://herc.ws/board/topic/15917-vs-plugin-creator), which automates steps 1 to 13 of the New Method described below. I suggest you try this first to see if it works. Give feedback on the tool (whether it works or not, errors you might encounter) on the thread itself.
 
-If his tool didn't work, try using the [Plugin Automator for Windows](http://herc.ws/board/topic/16480-plugin-automator-for-windows) by User [fourxhackd](http://herc.ws/board/profile/17499-fourxhackd/), which automates steps 1 to 10 of the New Method.
+If his tool didn't work, try using the [Plugin Automator for Windows](https://herc.ws/board/topic/16480-plugin-automator-for-windows) by User [fourxhackd](https://herc.ws/board/profile/17499-fourxhackd/), which automates steps 1 to 10 of the New Method.
 
 Using the tools will make sure you don't make simple typo-related mistakes, or placing the files in the wrong folder. Doing it manually, as described in the New Method, will show you exactly what the tools do.
 
@@ -42,64 +42,64 @@ This method was imported from the Wiki data in 2016, and was updated as of Decem
 
 #### Step 1
 
-Download the `YourProject.c` from the [Hercules Board, Plugin Releases](http://herc.ws/board/forum/142-plugin-releases/) or build it yourself.
+Download the `YourProject.c` from the [Hercules Board, Plugin Releases](https://herc.ws/board/forum/142-plugin-releases/) or build it yourself.
 
 #### Step 2
 
 Copy or move the `YourProject.c` file into your `/src/plugins/` folder.  
-![](https://raw.githubusercontent.com/AnnieRuru/customs/master/screenshots/MSVC_step1.png)
+![](assets/MSVC_step1.png)
 
 #### Step 3
 
 Depending on which Visual Studio C project version (`.vcproj`) you are using, navigate to the appropriate folder.
 
 For example, if you are using Microsoft Visual Studio IDE (Community 2017), navigate to the directory `\vcproj-15\`. We use 15 because that is the latest build type available (better to use 15 instead of using the older build solutions).
-![](https://raw.githubusercontent.com/AnnieRuru/customs/master/screenshots/MSVC_step2.png)
+![](assets/MSVC_step2.png)
 
 #### Step 4
 
 Select `plugin-sample.vcxproj`, copy the file, and paste it on the same directory. This will produce a copy of the file with filename `plugin-sample - Copy.vcxproj`.
-![](https://raw.githubusercontent.com/AnnieRuru/customs/master/screenshots/MSVC_step3.png)
+![](assets/MSVC_step3.png)
 
 #### Step 5
 
 Rename `plugin-sample - Copy.vcxproj` into `YourProject.vcxproj`  
 While renaming, Highlight the word `YourProject` and Copy it by **Ctrl+C**
-![](https://raw.githubusercontent.com/AnnieRuru/customs/master/screenshots/MSVC_step4.png)
+![](assets/MSVC_step4.png)
 
 #### Step 6
 
 Right click on `YourProject.vcxproj`, select `Edit with Notepad++` or Microsoft Notepad.
-![](https://raw.githubusercontent.com/AnnieRuru/customs/master/screenshots/MSVC_step5.png)
+![](assets/MSVC_step5.png)
 
 #### Step 7
 
 Find the following line:  
 `<ProjectName>plugin-sample</ProjectName>`  
-![](https://raw.githubusercontent.com/AnnieRuru/customs/master/screenshots/MSVC_step6.png)  
+![](assets/MSVC_step6.png)  
 Replace `plugin-sample` with `YourProject`. Make sure that you copy this correctly and not make typos.
 
 To avoid typos, you can use `CTRL+C` to copy the name of the plugin and `CTRL+V` to paste the name of the plugin without making mistakes.
-![](https://raw.githubusercontent.com/AnnieRuru/customs/master/screenshots/MSVC_step6_.png)
+![](assets/MSVC_step6_.png)
 
 #### Step 8
 
 Find the following line:  
 `<TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">sample</TargetName>`  
-![](https://raw.githubusercontent.com/AnnieRuru/customs/master/screenshots/MSVC_step7.png)
+![](assets/MSVC_step7.png)
 
 Replace `sample` to `YourProject`.  
 `<TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">YourProject</TargetName>`  
-![](https://raw.githubusercontent.com/AnnieRuru/customs/master/screenshots/MSVC_step7_.png)
+![](assets/MSVC_step7_.png)
 
 #### Step 9
 
 Find the following line:  
 `<ClCompile Include="..\src\plugins\sample.c" />`  
-![](https://raw.githubusercontent.com/AnnieRuru/customs/master/screenshots/MSVC_step8.png)
+![](assets/MSVC_step8.png)
 
 Replace `sample` to `YourProject`.  
-![](https://raw.githubusercontent.com/AnnieRuru/customs/master/screenshots/MSVC_step8_.png)
+![](assets/MSVC_step8_.png)
 
 #### Step 10
 
@@ -108,22 +108,22 @@ Save the file by pressing `CTRL+S`.
 #### Step 11
 
 From your the main folder of your server, open the appropriate Visual Studio solution file `Hercules-N.sln` using your IDE. In this example, we used `Hercules-15.sln` because we are using Microsoft Visual Studio (Community 2017).  
-![](https://raw.githubusercontent.com/AnnieRuru/customs/master/screenshots/MSVC_step10.png)
+![](assets/MSVC_step10.png)
 
 #### Step 12
 
 On the Solution Explorer tab, right click `Hercules-15`, select `Add > Existing Project...`  
-![](https://raw.githubusercontent.com/AnnieRuru/customs/master/screenshots/MSVC_step11.png)
+![](assets/MSVC_step11.png)
 
 #### Step 13
 
 Select `YourProject.vcxproj` in the `\vcproj-15\` folder.  
-![](https://raw.githubusercontent.com/AnnieRuru/customs/master/screenshots/MSVC_step12.png)
+![](assets/MSVC_step12.png)
 
 #### Step 14
 
 Right click `Solution 'Hercules-15' and select Build Solution.
-![](https://raw.githubusercontent.com/AnnieRuru/customs/master/screenshots/MSVC_step13.png)
+![](assets/MSVC_step13.png)
 
 This will now re-build your Hercules server while also integrating your plugin. This patches up the source code as necessary and includes the code into the appropriate `.c` files without you having to go to the individual files.
 

@@ -79,4 +79,4 @@ data_dir: C:\Users\JohnD\Documents\Data Folder\
 This will refer to the data folder found at `C:\Users\JohnD\Documents\Data Folder\data`.
 
 ## References / Extended Reading
-1. [Myriad's Mapcache Generation 2018](http://herc.ws/board/topic/15868-guide-mapcache-generation-2018/#comment-90027)
+1. [Myriad's Mapcache Generation 2018](https://herc.ws/board/topic/15868-guide-mapcache-generation-2018/#comment-90027)

@@ -26,6 +26,8 @@ markdown_extensions:
           name: mermaid
       preserve_tabs: true
   - tables
+  - toc:
+      permalink: true
 repo_url: https://github.com/HerculesWS/hercules-docs
 site_name: Hercules Docs
 theme:

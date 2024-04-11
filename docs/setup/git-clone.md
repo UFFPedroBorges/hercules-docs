@@ -9,4 +9,4 @@ A Git is required to perform a clone. Recommended applications are:
 {{:Git Clone/Unix}}
 
 == Windows ==
-Check [http://herc.ws/board/topic/152-obtaining-hercules/?p=845#entry845 Obtaining Hercules] for info on how to clone in windows
+Check [https://herc.ws/board/topic/152-obtaining-hercules/?p=845#entry845 Obtaining Hercules] for info on how to clone in windows

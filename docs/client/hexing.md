@@ -4,7 +4,7 @@ As '''hexing''' is considered the process of modifying raw contents of a file on
 ==Creating custom RagRE client using a DIFF patcher==
 RagRE is the abbreviation for Ragnarok Renewal client (ragexeRE.exe), which is normally updated by Gravity weekly, to add new items or features, to fix bugs and the like. This is also the client, which is currently used for Hercules. Although it is possible to use an unmodified client with Hercules (up to 2010/08/04), it is typically modified using a DIFF patcher.
 
-Each new client requires [http://herc.ws/board/topic/827-weediff-aka-shins-diff-patcher-weediffgen-continuation/ Wee Diff Gen plugin/Shins Diff Patcher] OR [http://herc.ws/board/topic/852-xdiffpatcher-xdiffgen2-packet-parser-and-packet-extractor/ xDiffPatcher].
+Each new client requires [https://herc.ws/board/topic/827-weediff-aka-shins-diff-patcher-weediffgen-continuation/ Wee Diff Gen plugin/Shins Diff Patcher] OR [https://herc.ws/board/topic/852-xdiffpatcher-xdiffgen2-packet-parser-and-packet-extractor/ xDiffPatcher].
 
 ===Diffing your client===
 ====Download your client====
@@ -125,8 +125,8 @@ All changes in OllyDbg is not affected on our Sakexe until we save these changes
 * [[clientinfo.xml]]
 
 ==External Links==
-* [http://herc.ws/board/topic/852-xdiffpatcher-xdiffgen2-packet-parser-and-packet-extractor/ xDiff Patcher]
-* [http://herc.ws/board/topic/827-weediff-aka-shins-diff-patcher-weediffgen-continuation/ WeeDif/Shin's Diff Patcher]
+* [https://herc.ws/board/topic/852-xdiffpatcher-xdiffgen2-packet-parser-and-packet-extractor/ xDiff Patcher]
+* [https://herc.ws/board/topic/827-weediff-aka-shins-diff-patcher-weediffgen-continuation/ WeeDif/Shin's Diff Patcher]
 * [http://www.7-zip.org/download.html 7zip]
 * [http://subversion.assembla.com/svn/weetools/ Weetools Repository]
 

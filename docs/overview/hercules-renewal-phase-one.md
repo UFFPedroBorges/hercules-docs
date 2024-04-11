@@ -1,4 +1,4 @@
-The [[Hercules Renewal Phase One]] started March 01, 2013, as [http://herc.ws/board/topic/237-hercules-renewal/ announced over the forum by Ind]<br/>
+The [[Hercules Renewal Phase One]] started March 01, 2013, as [https://herc.ws/board/topic/237-hercules-renewal/ announced over the forum by Ind]<br/>
 The primary goal of the [[Hercules Renewal Phase One]] was to prepare the core for the [[Hercules Plugin Manager]]<br/>
 The [[Hercules Renewal Phase One]] is Completed[[https://github.com/HerculesWS/Hercules/commit/2f2afbd3b63a75695f8f96e3bcb4db9fff5a7dc6 2f2afbd]].
 = Available Interfaces =

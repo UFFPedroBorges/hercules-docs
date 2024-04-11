@@ -7,7 +7,7 @@ A Compilation of noteworthy changes done by Hercules throughout its existence, n
 == April ==
 == May ==
 === Instances / Instancing ===
-Since May 30th on the [http://herc.ws/board/topic/928-memory-slasher-may-30-patch/|Memory Slasher Patch]
+Since May 30th on the [https://herc.ws/board/topic/928-memory-slasher-may-30-patch/|Memory Slasher Patch]
 ==== Functionality/Feature ====
 * map server was made capable of creating instances of any maps regardless of client-side edits, e.g. one can clone prontera and call it "mymapname"
 * instances were modified to be employed in 4 distinct ways:

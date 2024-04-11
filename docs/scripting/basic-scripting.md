@@ -217,5 +217,5 @@ That's it!  You're finished!
 * http://www.colorschemer.com/online.html
 
 '''Support, Request and Release'''
-* [http://herc.ws/board/forum/22-script-support/ Scripting support on Hercules Boards]
+* [https://herc.ws/board/forum/22-script-support/ Scripting support on Hercules Boards]
 * #Hercules on irc.rizon.net : Main Hercules channel.

@@ -4,7 +4,7 @@ The **Hercules Plugin Manager**, often referred to as the [[HPM]], is yet anothe
 
 ### What does building a plugin mean?
 
-To build a plugin is the same as to [compile](https://github.com/HerculesWS/Hercules/wiki/Compiling) a plugin. This means that you want to use an existing plugin (that you may have downloaded from [the Plugin Releases forum](http://herc.ws/board/forum/142-plugin-releases/)) in a server.
+To build a plugin is the same as to [compile](https://github.com/HerculesWS/Hercules/wiki/Compiling) a plugin. This means that you want to use an existing plugin (that you may have downloaded from [the Plugin Releases forum](https://herc.ws/board/forum/142-plugin-releases/)) in a server.
 
 ### Where do I start?
 
@@ -22,7 +22,7 @@ There are two (2) guides below: One for Windows and the other for everything els
 
 ### What does creating a plugin mean?
 
-Creating a plugin means to develop/design your custom source code edits that introduces new systems into RO. For example, the people who release plugins in the [Plugin Releases](http://herc.ws/board/forum/142-plugin-releases/) forum created plugins. People who use the plugins that they made should follow the **building a plugin** guide shown above.
+Creating a plugin means to develop/design your custom source code edits that introduces new systems into RO. For example, the people who release plugins in the [Plugin Releases](https://herc.ws/board/forum/142-plugin-releases/) forum created plugins. People who use the plugins that they made should follow the **building a plugin** guide shown above.
 
 **This is usually what more advanced users do, so if you're not sure if you're creating a plugin or not, you most likely aren't creating a plugin.**
 
@@ -221,12 +221,12 @@ and voila, your plugin just overloaded the game server's **battle\_check\_target
 
 # Other Features
 
-Is there something you'd like to do with your plugin that requires modifications to [HPM](HPM "wikilink")'s core? [let us know](http://herc.ws/board/forum/55-suggestions/), and we'll do our best to make it happen.  
-[Post your suggestions here](http://herc.ws/board/forum/55-suggestions/)
+Is there something you'd like to do with your plugin that requires modifications to [HPM](HPM "wikilink")'s core? [let us know](https://herc.ws/board/forum/55-suggestions/), and we'll do our best to make it happen.  
+[Post your suggestions here](https://herc.ws/board/forum/55-suggestions/)
 
 # Support
 
-Need help writing your plugin? [post your question on our support forum](http://herc.ws/board/forum/26-source-support/)
+Need help writing your plugin? [post your question on our support forum](https://herc.ws/board/forum/26-source-support/)
 
 [script commands](Category:Script_Command "wikilink")  
 [console commands](Category:Console_Command "wikilink")  
