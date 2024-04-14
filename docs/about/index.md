@@ -17,7 +17,7 @@ For support you may use the following channels:
 
 - [Forums](https://herc.ws/board/)
 - [Discord](https://board.herc.ws/discord/invite/general/)
-- [IRC channel](irc)
+- [IRC channel](./irc.md)
 
 ## External Links
 

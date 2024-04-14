@@ -7,7 +7,7 @@ you to chat with people in real-time around the world.
 
 ## Connecting to IRC
 
-The official [Hercules](Hercules "wikilink") channel room can be found [here](irc://irc.rizon.net/Hercules).  
+The official [Hercules](./index.md) channel room can be found [here](irc://irc.rizon.net/Hercules).  
 Web-based IRC chat is available too: <https://herc.ws/board/page/irc.html>
 
 To actually connect to [IRC](#), if you do not already have an [IRC
@@ -21,8 +21,10 @@ but not on \*nix.
 For those not looking to go in-depth into manuals to figure out how to connect, you can actually be up and running by
 simply installing mIRC, and then typing the following two commands into the mIRC command line on the status window:
 
-` /nick NickYouWantHere`  
-` /server irc.rizon.net -j #Hercules `
+```
+/nick NickYouWantHere
+/server irc.rizon.net -j #Hercules
+```
 
 And you'll be connected.
 
