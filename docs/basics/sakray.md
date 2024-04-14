@@ -1,4 +1,6 @@
-**Sakray** is what official [Ragnarok Online](Ragnarok_Online "wikilink") test servers are usually referred to. They are
+# Sakray
+
+**Sakray** is what official [Ragnarok Online](https://en.wikipedia.org/wiki/Ragnarok_Online) test servers are usually referred to. They are
 used to test new content and features, before they get installed on the normal servers. When the name "Sakray" is used
 alone, it typically refers to the kRO Sakray server. Sakray servers are always accessible via a separate client, which
 is available through a separate download.
@@ -23,20 +25,21 @@ calculation.
 Schedule for tests of Renewal Server:
 
 -  Closed Beta Test
-
-` Start Date: 2008/07/30`  
-` Server Name: Sakray Renewal Test Server`  
-` Participation: Accepted testers`  
-` Test Period: 2008/07/30 ~ 2008/08/27 (4 weeks)`
-
+```
+    Start Date: 2008/07/30
+    Server Name: Sakray Renewal Test Server
+    Participation: Accepted testers
+    Test Period: 2008/07/30 ~ 2008/08/27 (4 weeks)
+``` 
 -  Open Beta Test
-
-` Start Date: 2008/08/27`  
-` Server Name: Sakray Renewal Test Server`  
-` Participation: Anyone`  
-` Test Period: 2008/08/27 ~ 2008/09/24 (4 weeks)`
+```
+    Start Date: 2008/08/27  
+    Server Name: Sakray Renewal Test Server  
+    Participation: Anyone  
+    Test Period: 2008/08/27 ~ 2008/09/24 (4 weeks)
+```
 
 ## Usage
 
-[Hexed](Hexing "wikilink") kRO Sakray clients are the most used clients with [Hercules](Hercules "wikilink"), although a
+[Hexed](../client/hexing.md) kRO Sakray clients are the most used clients with [Hercules](../about/index.md), although a
 few people prefer using kRO (live server) clients or clients from different service providers.
