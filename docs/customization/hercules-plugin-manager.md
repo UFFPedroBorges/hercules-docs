@@ -213,7 +213,7 @@ Thanks to [Hercules Renewal Phase One](Hercules_Renewal_Phase_One "wikilink"), y
 int my_custom_check_target_function(struct block_list *src, struct block_list *target, int flag) {
 	//<...> code
 }
-void server_ready(void) {
+void plugin_init(void) {
 	battle->check_target = &my_custom_check_target_function;
 }
 ```
